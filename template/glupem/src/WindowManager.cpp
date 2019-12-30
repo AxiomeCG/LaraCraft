@@ -2,7 +2,7 @@
 // Created by Matthias Hudelot on 30/12/2019.
 //
 
-#include "glupem/WindowManager"
+#include "glupem/WindowManager.hpp"
 
 WindowManager::WindowManager(int w, int h, const char* app_name, uint32_t window_mode) : width(w), height(h), windowMode(window_mode) {
     createWindow(app_name);
@@ -43,7 +43,7 @@ void WindowManager::createWindow(const char* app_name) {
     else {
         window = glfwCreateWindow(width, height, app_name, nullptr, nullptr);
     }
-    glfwMakeContextCurrent(windowManager);
+    glfwMakeContextCurrent(window);
 }
 
 GLFWwindow* WindowManager::getWindow() {

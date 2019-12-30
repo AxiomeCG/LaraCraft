@@ -8,7 +8,6 @@
 
 #include <vector>
 #include <glimac/common.hpp>
-#include <tiff.h>
 
 using namespace glimac;
 using namespace glm;

@@ -5,10 +5,13 @@ project(ImacGL)
 add_definitions(-std=c++11)
 
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/CMake)
+include_directories(/usr/local/include)
+
 find_package(SDL REQUIRED)
 set(OPENGL_GL_PREFERENCE GLVND)
 find_package(OpenGL REQUIRED)
 find_package(GLEW REQUIRED)
+find_package(glfw3 3.2 REQUIRED)
 
 # Pour gérer un bug a la fac, a supprimer sur machine perso:
 #set(OPENGL_LIBRARIES /usr/lib/x86_64-linux-gnu/libGL.so.1)

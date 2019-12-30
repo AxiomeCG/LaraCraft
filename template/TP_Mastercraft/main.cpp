@@ -5,6 +5,7 @@
 #include <glimac/Program.hpp>
 #include <glimac/FreeFlyCamera.hpp>
 #include <glupem/Cube.hpp>
+#include <glupem/WindowManager.hpp>
 
 
 using namespace glimac;
@@ -15,7 +16,10 @@ int main(int argc, char **argv) {
 
     int width = 800;
     int height = 800;
-    SDLWindowManager windowManager(width, height, "GLImac");
+    //SDLWindowManager windowManager(width, height, "GLImac");
+
+    WindowManager window(width, height, "LaraCraft", 0);
+
 
 
     // Initialize glew for OpenGL3+ support
@@ -26,8 +30,8 @@ int main(int argc, char **argv) {
     }
 
 
-    SDL_ShowCursor(0);
-    SDL_WM_GrabInput(SDL_GRAB_ON);
+    //SDL_ShowCursor(0);
+    //SDL_WM_GrabInput(SDL_GRAB_ON);
 
 
     FilePath applicationPath(argv[0]);
@@ -121,27 +125,29 @@ int main(int argc, char **argv) {
 
     glm::mat4 ProjMatrix = glm::perspective(glm::radians(70.f), (float)width/(float)height,0.1f,100.f);
 
+    double xpos, ypos;
+    xpos = ypos = 0;
 
     // Application loop:
-    bool done = false;
-    bool firstMouseLaunch = true;
-    while (!done) {
+    //bool done = false;
+    //bool firstMouseLaunch = true;
+    while (!window.windowShouldClose()) {
         // Event loop:
-        SDL_Event e;
-        float cameraMoveForward = 0.f;
+        //SDL_Event e;
+        /*float cameraMoveForward = 0.f;
         float cameraMoveLeft = 0.f;
         float cameraRotateLeft = 0.f;
-        float cameraRotateUp = 0.f;
+        float cameraRotateUp = 0.f;*/
 
-        while (windowManager.pollEvent(e)) {
+        /*while (windowManager.pollEvent(e)) {
             switch (e.type) {
                 case SDL_QUIT:
                     done = true; // Leave the loop after this iteration
                     break;
             }
-        }
+        }*/
 
-        int x = 0;
+        /*int x = 0;
         int y = 0;
 
         if (firstMouseLaunch){
@@ -170,17 +176,17 @@ int main(int argc, char **argv) {
         }
         if (keyboardState[SDLK_ESCAPE]) {
             done = true;
-        }
+        }*/
 
         /*********************************
          * HERE SHOULD COME THE RENDERING CODE
          *********************************/
 
 
-        camera.moveFront(cameraMoveForward / 10);
+        /*camera.moveFront(cameraMoveForward / 10);
         camera.moveLeft(cameraMoveLeft / 10);
         camera.rotateLeft(cameraRotateLeft / 10);
-        camera.rotateUp(cameraRotateUp / 10);
+        camera.rotateUp(cameraRotateUp / 10);*/
 
         // Matrix calculations
         glm::mat4 VMatrix = camera.getViewMatrix();
@@ -202,7 +208,27 @@ int main(int argc, char **argv) {
         //Flush VAO
         glBindVertexArray(0);
         // Update the display
-        windowManager.swapBuffers();
+        window.swapBuffer();
+        window.pollEvent();
+        int stateUpKey = window.getKey(GLFW_KEY_UP);
+        if(stateUpKey == GLFW_PRESS) {
+            camera.moveFront(0.01f);
+        }
+        int stateDownKey = window.getKey(GLFW_KEY_DOWN);
+        if(stateDownKey == GLFW_PRESS) {
+            camera.moveFront(-0.01f);
+        }
+        double tmpxPos, tmpyPos;
+        window.getCursorPos(&tmpxPos, &tmpyPos);
+        float xrel = xpos - tmpxPos;
+        float yrel = ypos - tmpyPos;
+        int stateMouseClick = window.getMouseButton(GLFW_MOUSE_BUTTON_LEFT);
+        if(stateMouseClick == GLFW_PRESS) {
+            camera.rotateUp(yrel);
+            camera.rotateLeft(xrel);
+        }
+        xpos = tmpxPos;
+        ypos = tmpyPos;
     }
 
     // Memory cleaning

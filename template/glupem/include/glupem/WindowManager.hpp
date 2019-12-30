@@ -1,13 +1,14 @@
 //
 // Created by Matthias Hudelot on 30/12/2019.
 //
+
+#ifndef LARACRAFT_WINDOWMANAGER_HPP
+#define LARACRAFT_WINDOWMANAGER_HPP
+
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include <iostream>
 #include <cstdint>
-
-#ifndef LARACRAFT_WINDOWMANAGER_HPP
-#define LARACRAFT_WINDOWMANAGER_HPP
 
 namespace windowing_modes {
     enum e : uint32_t {
@@ -25,8 +26,13 @@ public :
 
     GLFWwindow* getWindow();
 
+    int windowShouldClose();
+
     void swapBuffer();
     void pollEvent();
+    int getMouseButton(int key);
+    int getKey(int key);
+    void getCursorPos(double *x, double *y);
 
 private :
     void createWindow(const char* app_name);

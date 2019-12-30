@@ -1,7 +1,6 @@
 //
 // Created by Matthias Hudelot on 30/12/2019.
 //
-
 #include "glupem/WindowManager.hpp"
 
 WindowManager::WindowManager(int w, int h, const char* app_name, uint32_t window_mode) : width(w), height(h), windowMode(window_mode) {
@@ -48,4 +47,28 @@ void WindowManager::createWindow(const char* app_name) {
 
 GLFWwindow* WindowManager::getWindow() {
     return window;
+}
+
+int WindowManager::windowShouldClose(){
+    return glfwWindowShouldClose(window);
+}
+
+void WindowManager::swapBuffer(){
+    glfwSwapBuffers(window);
+}
+
+void WindowManager::pollEvent(){
+    glfwPollEvents();
+}
+
+int WindowManager::getMouseButton(int key){
+    return glfwGetMouseButton(window, key);
+}
+
+int WindowManager::getKey(int key){
+    return glfwGetKey(window, key);
+}
+
+void WindowManager::getCursorPos(double *x, double *y){
+    glfwGetCursorPos(window, x, y);
 }

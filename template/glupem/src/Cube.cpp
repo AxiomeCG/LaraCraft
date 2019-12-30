@@ -357,8 +357,8 @@ void Cube::generateTopFace() {
     vertex.texCoords.x = 0.f;
     vertex.texCoords.y = 0.f;
 
-    vertex.normal.x = 1.f;
-    vertex.normal.y = 0.f;
+    vertex.normal.x = 0.f;
+    vertex.normal.y = 1.f;
     vertex.normal.z = 0.f;
 
     vertex.position = glm::vec3(-1.f, 1.f, -1.f);
@@ -382,8 +382,8 @@ void Cube::generateTopFace() {
     vertex.texCoords.y = 0.f;
 
     vertex.normal.x = 0.f;
-    vertex.normal.y = 0.f;
-    vertex.normal.z = 1.f;
+    vertex.normal.y = 1.f;
+    vertex.normal.z = 0.f;
 
     vertex.position = vec3(1.f, 1.f, 1.f);
 
@@ -394,7 +394,7 @@ void Cube::generateTopFace() {
     vertex.texCoords.x = 0.f;
     vertex.texCoords.y = 0.f;
 
-    vertex.normal.x = 1.f;
+    vertex.normal.x = 0.f;
     vertex.normal.y = 1.f;
     vertex.normal.z = 0.f;
 
@@ -406,12 +406,11 @@ void Cube::generateTopFace() {
     vertex.texCoords.x = 0.f;
     vertex.texCoords.y = 0.f;
 
-    vertex.normal.x = 1.f;
-    vertex.normal.y = 0.f;
+    vertex.normal.x = 0.f;
+    vertex.normal.y = 1.f;
     vertex.normal.z = 0.f;
 
     vertex.position = glm::vec3(-1.f, 1.f, -1.f);
-
     m_Vertices.push_back(vertex);
 
 
@@ -420,8 +419,8 @@ void Cube::generateTopFace() {
     vertex.texCoords.y = 0.f;
 
     vertex.normal.x = 0.f;
-    vertex.normal.y = 0.f;
-    vertex.normal.z = 1.f;
+    vertex.normal.y = 1.f;
+    vertex.normal.z = 0.f;
 
     vertex.position = vec3(1.f, 1.f, 1.f);
 
@@ -440,7 +439,7 @@ void Cube::generateBottomFace() {
     vertex.texCoords.y = 0.f;
 
     vertex.normal.x = 0.f;
-    vertex.normal.y = 1.f;
+    vertex.normal.y = -1.f;
     vertex.normal.z = 0.f;
 
     vertex.position = vec3(-1.f, -1.f, 1.f);
@@ -451,8 +450,8 @@ void Cube::generateBottomFace() {
     vertex.texCoords.x = 0.f;
     vertex.texCoords.y = 0.f;
 
-    vertex.normal.x = 1.f;
-    vertex.normal.y = 0.f;
+    vertex.normal.x = 0.f;
+    vertex.normal.y = -1.f;
     vertex.normal.z = 0.f;
 
     vertex.position = glm::vec3(-1.f, -1.f, -1.f);
@@ -462,8 +461,8 @@ void Cube::generateBottomFace() {
     vertex.texCoords.x = 0.f;
     vertex.texCoords.y = 0.f;
 
-    vertex.normal.x = 1.f;
-    vertex.normal.y = 1.f;
+    vertex.normal.x = 0.f;
+    vertex.normal.y = -1.f;
     vertex.normal.z = 0.f;
 
     vertex.position = vec3(1.f, -1.f, -1.f);
@@ -478,8 +477,8 @@ void Cube::generateBottomFace() {
     vertex.texCoords.y = 0.f;
 
     vertex.normal.x = 0.f;
-    vertex.normal.y = 0.f;
-    vertex.normal.z = 1.f;
+    vertex.normal.y = -1.f;
+    vertex.normal.z = 0.f;
 
     vertex.position = vec3(1.f, -1.f, 1.f);
     m_Vertices.push_back(vertex);
@@ -489,7 +488,7 @@ void Cube::generateBottomFace() {
     vertex.texCoords.y = 0.f;
 
     vertex.normal.x = 0.f;
-    vertex.normal.y = 1.f;
+    vertex.normal.y = -1.f;
     vertex.normal.z = 0.f;
 
     vertex.position = vec3(-1.f, -1.f, 1.f);
@@ -500,8 +499,8 @@ void Cube::generateBottomFace() {
     vertex.texCoords.x = 0.f;
     vertex.texCoords.y = 0.f;
 
-    vertex.normal.x = 1.f;
-    vertex.normal.y = 1.f;
+    vertex.normal.x = 0.f;
+    vertex.normal.y = -1.f;
     vertex.normal.z = 0.f;
 
     vertex.position = vec3(1.f, -1.f, -1.f);

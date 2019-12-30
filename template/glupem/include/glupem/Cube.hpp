@@ -58,6 +58,14 @@ private:
     void generateFrontFace();
 
     void generateLeftFace();
+
+    void generateBackFace();
+
+    void generateRightFace();
+
+    void generateTopFace();
+
+    void generateBottomFace();
 };
 
 

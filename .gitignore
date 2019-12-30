@@ -34,4 +34,6 @@
 # Custom
 .idea
 build/*
-
+.directory
+cmake-build-debug
+template/.idea/vcs.xml

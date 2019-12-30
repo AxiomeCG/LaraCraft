@@ -3,6 +3,9 @@
 //
 #include "glupem/WindowManager.hpp"
 
+#include <GL/glew.h>
+#include <GLFW/glfw3.h>
+
 WindowManager::WindowManager(int w, int h, const char* app_name, uint32_t window_mode) : width(w), height(h), windowMode(window_mode) {
     createWindow(app_name);
 }

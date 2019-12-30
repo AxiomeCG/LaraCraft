@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/TP1_exo1_triangle_blanc.dir/exo1_triangle_blanc.o  -o TP1_exo1_triangle_blanc 

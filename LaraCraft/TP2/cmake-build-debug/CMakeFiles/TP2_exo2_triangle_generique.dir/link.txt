@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/TP2_exo2_triangle_generique.dir/exo2_triangle_generique.o  -o TP2_exo2_triangle_generique 

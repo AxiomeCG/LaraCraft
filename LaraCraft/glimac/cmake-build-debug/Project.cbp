@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Project"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glimac">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/cmake-build-debug/libglimac.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/../third-party/include/glm"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/cmake-build-debug/Makefile&quot;  VERBOSE=1 glimac"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glimac/fast">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/cmake-build-debug/libglimac.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/../third-party/include/glm"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/cmake-build-debug/Makefile&quot;  VERBOSE=1 glimac/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdCXX/CMakeCXXCompilerId.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/include/glimac/BBox.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/include/glimac/Cone.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/include/glimac/FilePath.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/include/glimac/FreeFlyCamera.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/include/glimac/Geometry.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/include/glimac/Image.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/include/glimac/Program.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/include/glimac/SDLWindowManager.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/include/glimac/Shader.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/include/glimac/Sphere.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/include/glimac/TrackBallCamera.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/include/glimac/common.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/include/glimac/glm.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/src/Cone.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/src/Geometry.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/src/Image.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/src/Program.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/src/SDLWindowManager.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/src/Shader.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/src/Sphere.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/src/tiny_obj_loader.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/src/tiny_obj_loader.h">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

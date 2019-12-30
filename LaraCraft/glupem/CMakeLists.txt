@@ -1,0 +1,5 @@
+include_directories(include)
+include_directories(../third-party/include/)
+include_directories(../glimac/include/)
+file(GLOB_RECURSE SRC_FILES *.cpp *.hpp)
+add_library(glupem ${SRC_FILES})

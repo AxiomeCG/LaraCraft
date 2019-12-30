@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="ImacGL" targetName="TP_Mastercraft_main" />
+      <config projectName="ImacGL" targetName="TP2_matrix_send" />
+      <config projectName="ImacGL" targetName="TP1_exo3_structure_vertex" />
+      <config projectName="ImacGL" targetName="TP4_freeflyCamera" />
+      <config projectName="ImacGL" targetName="TP2_multipleTriangle" />
+      <config projectName="ImacGL" targetName="glimac" />
+      <config projectName="ImacGL" targetName="TP2_texturePreparation" />
+      <config projectName="ImacGL" targetName="TP3_earth_cloud" />
+      <config projectName="ImacGL" targetName="TP1_exo2_triangle_couleurs" />
+      <config projectName="ImacGL" targetName="TP1_exo4_quad" />
+      <config projectName="ImacGL" targetName="TP2_tourne" />
+      <config projectName="ImacGL" targetName="TP3_multiShaders" />
+      <config projectName="ImacGL" targetName="TP_test_SDLtemplate" />
+      <config projectName="ImacGL" targetName="TP5_directionalLight" />
+      <config projectName="ImacGL" targetName="TP3_earth" />
+      <config projectName="ImacGL" targetName="TP1_exo1_triangle_blanc" />
+      <config projectName="ImacGL" targetName="glupem" />
+      <config projectName="ImacGL" targetName="TP2_triforce" />
+      <config projectName="ImacGL" targetName="TP3_drawSphere" />
+      <config projectName="ImacGL" targetName="TP4_trackballCamera" />
+      <config projectName="ImacGL" targetName="TP2_exo1" />
+      <config projectName="ImacGL" targetName="TP2_exo2_triangle_generique" />
+      <config projectName="ImacGL" targetName="TP_template_SDLtemplate" />
+      <config projectName="ImacGL" targetName="TP2_mandelbrot" />
+      <config projectName="ImacGL" targetName="TP5_trackballCamera" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5bce9d24-f9c2-4750-8c87-c838f036abd9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ImacGL.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ImacGL.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/TP_template/CMakeFiles/TP_template_SDLtemplate.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/TP_template/CMakeFiles/TP_template_SDLtemplate.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/TP_test/CMakeFiles/TP_test_SDLtemplate.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/TP_test/CMakeFiles/TP_test_SDLtemplate.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/glimac/CMakeFiles/glimac.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/glimac/CMakeFiles/glimac.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../build/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/TP_template/CMakeFiles/TP_template_SDLtemplate.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/TP_template/CMakeFiles/TP_template_SDLtemplate.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/TP_test/CMakeFiles/TP_test_SDLtemplate.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/TP_test/CMakeFiles/TP_test_SDLtemplate.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/glimac/CMakeFiles/glimac.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/glimac/CMakeFiles/glimac.dir/progress.make" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
+  </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
+  <component name="OCResolveContextSettings">
+    <option name="configuration" value="0-TP4_freeflyCamera" />
+  </component>
+  <component name="ProjectId" id="1TeDDnUj7hD2hpZsPCoMqCNpoeG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/glupem/include" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/glupem/include/glupem" />
+      <recent name="$PROJECT_DIR$/TP_Mastercraft/src" />
+      <recent name="$PROJECT_DIR$/TP_Mastercraft/include" />
+      <recent name="$PROJECT_DIR$/TP_Mastercraft/" />
+      <recent name="$PROJECT_DIR$/glimac/include/glimac" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/glupem/include" />
+      <recent name="$PROJECT_DIR$/glupem/src" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/TP_Mastercraft/shaders" />
+      <recent name="$PROJECT_DIR$/TP5/shaders" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="CMake Application.TP_template_SDLtemplate">
+    <configuration name="TP1_exo1_triangle_blanc" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImacGL" TARGET_NAME="TP1_exo1_triangle_blanc" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImacGL" RUN_TARGET_NAME="TP1_exo1_triangle_blanc">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TP1_exo2_triangle_couleurs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImacGL" TARGET_NAME="TP1_exo2_triangle_couleurs" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImacGL" RUN_TARGET_NAME="TP1_exo2_triangle_couleurs">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TP1_exo3_structure_vertex" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImacGL" TARGET_NAME="TP1_exo3_structure_vertex" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImacGL" RUN_TARGET_NAME="TP1_exo3_structure_vertex">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TP1_exo4_quad" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImacGL" TARGET_NAME="TP1_exo4_quad" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImacGL" RUN_TARGET_NAME="TP1_exo4_quad">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TP2_exo1" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImacGL" TARGET_NAME="TP2_exo1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImacGL" RUN_TARGET_NAME="TP2_exo1">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TP2_exo2_triangle_generique" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImacGL" TARGET_NAME="TP2_exo2_triangle_generique" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImacGL" RUN_TARGET_NAME="TP2_exo2_triangle_generique">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TP2_mandelbrot" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImacGL" TARGET_NAME="TP2_mandelbrot" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImacGL" RUN_TARGET_NAME="TP2_mandelbrot">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TP2_matrix_send" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImacGL" TARGET_NAME="TP2_matrix_send" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImacGL" RUN_TARGET_NAME="TP2_matrix_send">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TP2_multipleTriangle" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImacGL" TARGET_NAME="TP2_multipleTriangle" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImacGL" RUN_TARGET_NAME="TP2_multipleTriangle">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TP2_texturePreparation" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImacGL" TARGET_NAME="TP2_texturePreparation" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImacGL" RUN_TARGET_NAME="TP2_texturePreparation">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TP2_tourne" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImacGL" TARGET_NAME="TP2_tourne" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImacGL" RUN_TARGET_NAME="TP2_tourne">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TP2_triforce" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImacGL" TARGET_NAME="TP2_triforce" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImacGL" RUN_TARGET_NAME="TP2_triforce">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TP3_drawSphere" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImacGL" TARGET_NAME="TP3_drawSphere" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImacGL" RUN_TARGET_NAME="TP3_drawSphere">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TP3_earth" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImacGL" TARGET_NAME="TP3_earth" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImacGL" RUN_TARGET_NAME="TP3_earth">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TP3_earth_cloud" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImacGL" TARGET_NAME="TP3_earth_cloud" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImacGL" RUN_TARGET_NAME="TP3_earth_cloud">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TP3_multiShaders" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImacGL" TARGET_NAME="TP3_multiShaders" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImacGL" RUN_TARGET_NAME="TP3_multiShaders">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TP4_freeflyCamera" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImacGL" TARGET_NAME="TP4_freeflyCamera" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImacGL" RUN_TARGET_NAME="TP4_freeflyCamera">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TP4_trackballCamera" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImacGL" TARGET_NAME="TP4_trackballCamera" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImacGL" RUN_TARGET_NAME="TP4_trackballCamera">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TP5_directionalLight" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImacGL" TARGET_NAME="TP5_directionalLight" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImacGL" RUN_TARGET_NAME="TP5_directionalLight">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TP5_trackballCamera" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImacGL" TARGET_NAME="TP5_trackballCamera" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImacGL" RUN_TARGET_NAME="TP5_trackballCamera">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TP_Mastercraft_main" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImacGL" TARGET_NAME="TP_Mastercraft_main" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImacGL" RUN_TARGET_NAME="TP_Mastercraft_main">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TP_template_SDLtemplate" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImacGL" TARGET_NAME="TP_template_SDLtemplate" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImacGL" RUN_TARGET_NAME="TP_template_SDLtemplate">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TP_test_SDLtemplate" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImacGL" TARGET_NAME="TP_test_SDLtemplate" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImacGL" RUN_TARGET_NAME="TP_test_SDLtemplate">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="glimac" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImacGL" TARGET_NAME="glimac" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="glupem" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImacGL" TARGET_NAME="glupem" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.glimac" />
+      <item itemvalue="CMake Application.glupem" />
+      <item itemvalue="CMake Application.TP1_exo1_triangle_blanc" />
+      <item itemvalue="CMake Application.TP1_exo2_triangle_couleurs" />
+      <item itemvalue="CMake Application.TP1_exo3_structure_vertex" />
+      <item itemvalue="CMake Application.TP1_exo4_quad" />
+      <item itemvalue="CMake Application.TP2_exo1" />
+      <item itemvalue="CMake Application.TP2_exo2_triangle_generique" />
+      <item itemvalue="CMake Application.TP2_mandelbrot" />
+      <item itemvalue="CMake Application.TP2_matrix_send" />
+      <item itemvalue="CMake Application.TP2_multipleTriangle" />
+      <item itemvalue="CMake Application.TP2_texturePreparation" />
+      <item itemvalue="CMake Application.TP2_tourne" />
+      <item itemvalue="CMake Application.TP2_triforce" />
+      <item itemvalue="CMake Application.TP3_drawSphere" />
+      <item itemvalue="CMake Application.TP3_earth" />
+      <item itemvalue="CMake Application.TP3_earth_cloud" />
+      <item itemvalue="CMake Application.TP3_multiShaders" />
+      <item itemvalue="CMake Application.TP4_freeflyCamera" />
+      <item itemvalue="CMake Application.TP4_trackballCamera" />
+      <item itemvalue="CMake Application.TP5_directionalLight" />
+      <item itemvalue="CMake Application.TP5_trackballCamera" />
+      <item itemvalue="CMake Application.TP_Mastercraft_main" />
+      <item itemvalue="CMake Application.TP_template_SDLtemplate" />
+      <item itemvalue="CMake Application.TP_test_SDLtemplate" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5bce9d24-f9c2-4750-8c87-c838f036abd9" name="Default Changelist" comment="" />
+      <created>1573811550982</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1573811550982</updated>
+      <workItem from="1573811552481" duration="5250000" />
+      <workItem from="1575019373107" duration="1068000" />
+      <workItem from="1575026347940" duration="106000" />
+      <workItem from="1576579384452" duration="697000" />
+      <workItem from="1576580364862" duration="15115000" />
+      <workItem from="1576675279723" duration="12451000" />
+      <workItem from="1576700976341" duration="23000" />
+      <workItem from="1576827999294" duration="12189000" />
+      <workItem from="1577120548661" duration="22464000" />
+      <workItem from="1577193202972" duration="7179000" />
+      <workItem from="1577705943767" duration="8775000" />
+      <workItem from="1577714932574" duration="6130000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

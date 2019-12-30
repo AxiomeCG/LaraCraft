@@ -25,6 +25,9 @@ public :
 
     GLFWwindow* getWindow();
 
+    void swapBuffer();
+    void pollEvent();
+
 private :
     void createWindow(const char* app_name);
 

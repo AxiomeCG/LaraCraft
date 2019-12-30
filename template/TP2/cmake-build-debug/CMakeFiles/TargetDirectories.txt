@@ -1,4 +1,0 @@
-/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/TP2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/TP2/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/TP2/cmake-build-debug/CMakeFiles/TP2_exo1.dir
-/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/TP2/cmake-build-debug/CMakeFiles/TP2_exo2_triangle_generique.dir

@@ -114,7 +114,7 @@ int main(int argc, char** argv) {
         glBindVertexArray(0);
 
         windowManager.swapBuffers();
-        windowManager.handleEventsForFPSview(camera, saveXPosition, saveYPosition);
+        windowManager.handleEventsForFPSview(camera);
 
     }
     glDeleteBuffers(1, &vbo);

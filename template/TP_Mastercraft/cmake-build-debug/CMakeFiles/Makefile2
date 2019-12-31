@@ -53,11 +53,13 @@ CMAKE_BINARY_DIR = /Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mast
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/TP_Mastercraft_old_main.dir/all
 all: CMakeFiles/TP_Mastercraft_main.dir/all
 
 .PHONY : all
 
 # The main recursive "clean" target.
+clean: CMakeFiles/TP_Mastercraft_old_main.dir/clean
 clean: CMakeFiles/TP_Mastercraft_main.dir/clean
 
 .PHONY : clean
@@ -66,6 +68,33 @@ clean: CMakeFiles/TP_Mastercraft_main.dir/clean
 preinstall:
 
 .PHONY : preinstall
+
+#=============================================================================
+# Target rules for target CMakeFiles/TP_Mastercraft_old_main.dir
+
+# All Build rule for target.
+CMakeFiles/TP_Mastercraft_old_main.dir/all:
+	$(MAKE) -f CMakeFiles/TP_Mastercraft_old_main.dir/build.make CMakeFiles/TP_Mastercraft_old_main.dir/depend
+	$(MAKE) -f CMakeFiles/TP_Mastercraft_old_main.dir/build.make CMakeFiles/TP_Mastercraft_old_main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target TP_Mastercraft_old_main"
+.PHONY : CMakeFiles/TP_Mastercraft_old_main.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/TP_Mastercraft_old_main.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/TP_Mastercraft_old_main.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/TP_Mastercraft_old_main.dir/rule
+
+# Convenience name for target.
+TP_Mastercraft_old_main: CMakeFiles/TP_Mastercraft_old_main.dir/rule
+
+.PHONY : TP_Mastercraft_old_main
+
+# clean rule for target.
+CMakeFiles/TP_Mastercraft_old_main.dir/clean:
+	$(MAKE) -f CMakeFiles/TP_Mastercraft_old_main.dir/build.make CMakeFiles/TP_Mastercraft_old_main.dir/clean
+.PHONY : CMakeFiles/TP_Mastercraft_old_main.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/TP_Mastercraft_main.dir

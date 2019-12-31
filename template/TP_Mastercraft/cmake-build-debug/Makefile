@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named TP_Mastercraft_old_main
+
+# Build rule for target.
+TP_Mastercraft_old_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TP_Mastercraft_old_main
+.PHONY : TP_Mastercraft_old_main
+
+# fast build rule for target.
+TP_Mastercraft_old_main/fast:
+	$(MAKE) -f CMakeFiles/TP_Mastercraft_old_main.dir/build.make CMakeFiles/TP_Mastercraft_old_main.dir/build
+.PHONY : TP_Mastercraft_old_main/fast
+
+#=============================================================================
 # Target rules for targets named TP_Mastercraft_main
 
 # Build rule for target.
@@ -138,6 +151,21 @@ main.s:
 	$(MAKE) -f CMakeFiles/TP_Mastercraft_main.dir/build.make CMakeFiles/TP_Mastercraft_main.dir/main.s
 .PHONY : main.s
 
+# target to build an object file
+old_main.o:
+	$(MAKE) -f CMakeFiles/TP_Mastercraft_old_main.dir/build.make CMakeFiles/TP_Mastercraft_old_main.dir/old_main.o
+.PHONY : old_main.o
+
+# target to preprocess a source file
+old_main.i:
+	$(MAKE) -f CMakeFiles/TP_Mastercraft_old_main.dir/build.make CMakeFiles/TP_Mastercraft_old_main.dir/old_main.i
+.PHONY : old_main.i
+
+# target to generate assembly for a file
+old_main.s:
+	$(MAKE) -f CMakeFiles/TP_Mastercraft_old_main.dir/build.make CMakeFiles/TP_Mastercraft_old_main.dir/old_main.s
+.PHONY : old_main.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -146,10 +174,14 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... TP_Mastercraft_old_main"
 	@echo "... TP_Mastercraft_main"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... old_main.o"
+	@echo "... old_main.i"
+	@echo "... old_main.s"
 .PHONY : help
 
 

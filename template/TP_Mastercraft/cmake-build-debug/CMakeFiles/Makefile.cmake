@@ -52,5 +52,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/TP_Mastercraft_old_main.dir/DependInfo.cmake"
   "CMakeFiles/TP_Mastercraft_main.dir/DependInfo.cmake"
   )

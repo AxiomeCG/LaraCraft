@@ -1,1 +1,0 @@
-/usr/bin/c++  -g  -rdynamic CMakeFiles/TP3_exo3_earth.dir/exo3_earth.cpp.o  -o TP3_exo3_earth ../glimac/libglimac.a -Wl,-Bstatic -lSDLmain -Wl,-Bdynamic -lSDL -lpthread -lGL -lGLU -lGLEW /usr/lib/x86_64-linux-gnu/libglfw.so.3.2 

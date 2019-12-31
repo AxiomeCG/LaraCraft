@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Project"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="clang"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP_Mastercraft_main">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/cmake-build-debug/TP_Mastercraft_main" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir=""/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/../glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/../glupem/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/cmake-build-debug/Makefile&quot;  VERBOSE=1 TP_Mastercraft_main"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP_Mastercraft_main/fast">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/cmake-build-debug/TP_Mastercraft_main" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir=""/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/../glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/../glupem/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/cmake-build-debug/Makefile&quot;  VERBOSE=1 TP_Mastercraft_main/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/cmake-build-debug/shaders/3D.vs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/cmake-build-debug/shaders/debug.fs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/cmake-build-debug/shaders/debug2D.vs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/cmake-build-debug/shaders/directionallight.fs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/cmake-build-debug/shaders/multiTex3D.fs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/cmake-build-debug/shaders/normals.fs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/cmake-build-debug/shaders/tex3D.fs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/main.cpp">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/shaders/3D.vs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/shaders/debug.fs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/shaders/debug2D.vs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/shaders/directionallight.fs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/shaders/multiTex3D.fs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/shaders/normals.fs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/shaders/tex3D.fs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

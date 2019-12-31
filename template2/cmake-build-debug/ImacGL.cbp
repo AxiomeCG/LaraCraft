@@ -1,0 +1,1667 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="ImacGL"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="clang"/>
+		<Option virtualFolders="CMake Files\;CMake Files\CMake\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\glfw3\;CMake Files\glimac\;CMake Files\glupem\;CMake Files\TP1\;CMake Files\TP2\;CMake Files\TP3\;CMake Files\TP4\;CMake Files\TP5\;CMake Files\TP_Mastercraft\;CMake Files\TP_template\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glimac">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/glimac/libglimac.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/glimac"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/third-party/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/glimac/Makefile&quot;  VERBOSE=1 glimac"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/glimac/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/glimac/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/glimac/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glimac/fast">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/glimac/libglimac.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/glimac"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/third-party/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/glimac/Makefile&quot;  VERBOSE=1 glimac/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/glimac/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/glimac/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/glimac/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glupem">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/glupem/libglupem.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/glupem"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/third-party/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glupem/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glupem/../third-party/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glupem/../glimac/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/glupem/Makefile&quot;  VERBOSE=1 glupem"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/glupem/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/glupem/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/glupem/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glupem/fast">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/glupem/libglupem.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/glupem"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/third-party/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glupem/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glupem/../third-party/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glupem/../glimac/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/glupem/Makefile&quot;  VERBOSE=1 glupem/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/glupem/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/glupem/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/glupem/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP1_exo4_quad_color">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1/TP1_exo4_quad_color" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/third-party/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP1/../glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP1/../glupem/include"/>
+					<Add directory="/usr/local/Cellar/glfw/3.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 TP1_exo4_quad_color"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP1_exo4_quad_color/fast">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1/TP1_exo4_quad_color" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/third-party/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP1/../glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP1/../glupem/include"/>
+					<Add directory="/usr/local/Cellar/glfw/3.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 TP1_exo4_quad_color/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP1_exo1_triangle_couleurs">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1/TP1_exo1_triangle_couleurs" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/third-party/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP1/../glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP1/../glupem/include"/>
+					<Add directory="/usr/local/Cellar/glfw/3.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 TP1_exo1_triangle_couleurs"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP1_exo1_triangle_couleurs/fast">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1/TP1_exo1_triangle_couleurs" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/third-party/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP1/../glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP1/../glupem/include"/>
+					<Add directory="/usr/local/Cellar/glfw/3.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 TP1_exo1_triangle_couleurs/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP1_exo3_structure_vertex">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1/TP1_exo3_structure_vertex" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/third-party/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP1/../glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP1/../glupem/include"/>
+					<Add directory="/usr/local/Cellar/glfw/3.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 TP1_exo3_structure_vertex"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP1_exo3_structure_vertex/fast">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1/TP1_exo3_structure_vertex" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/third-party/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP1/../glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP1/../glupem/include"/>
+					<Add directory="/usr/local/Cellar/glfw/3.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 TP1_exo3_structure_vertex/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP1_exo1_triangle_blanc">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1/TP1_exo1_triangle_blanc" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/third-party/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP1/../glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP1/../glupem/include"/>
+					<Add directory="/usr/local/Cellar/glfw/3.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 TP1_exo1_triangle_blanc"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP1_exo1_triangle_blanc/fast">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1/TP1_exo1_triangle_blanc" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/third-party/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP1/../glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP1/../glupem/include"/>
+					<Add directory="/usr/local/Cellar/glfw/3.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 TP1_exo1_triangle_blanc/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP2_triforce">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/TP2_triforce" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/third-party/include"/>
+					<Add directory="/usr/local/Cellar/glfw/3.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 TP2_triforce"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP2_triforce/fast">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/TP2_triforce" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/third-party/include"/>
+					<Add directory="/usr/local/Cellar/glfw/3.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 TP2_triforce/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP2_mandelbrot">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/TP2_mandelbrot" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/third-party/include"/>
+					<Add directory="/usr/local/Cellar/glfw/3.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 TP2_mandelbrot"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP2_mandelbrot/fast">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/TP2_mandelbrot" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/third-party/include"/>
+					<Add directory="/usr/local/Cellar/glfw/3.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 TP2_mandelbrot/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP2_multiSpin">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/TP2_multiSpin" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/third-party/include"/>
+					<Add directory="/usr/local/Cellar/glfw/3.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 TP2_multiSpin"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP2_multiSpin/fast">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/TP2_multiSpin" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/third-party/include"/>
+					<Add directory="/usr/local/Cellar/glfw/3.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 TP2_multiSpin/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP2_suite">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/TP2_suite" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/third-party/include"/>
+					<Add directory="/usr/local/Cellar/glfw/3.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 TP2_suite"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP2_suite/fast">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/TP2_suite" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/third-party/include"/>
+					<Add directory="/usr/local/Cellar/glfw/3.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 TP2_suite/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP2_spin">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/TP2_spin" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/third-party/include"/>
+					<Add directory="/usr/local/Cellar/glfw/3.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 TP2_spin"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP2_spin/fast">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/TP2_spin" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/third-party/include"/>
+					<Add directory="/usr/local/Cellar/glfw/3.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 TP2_spin/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP2_color2D">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/TP2_color2D" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/third-party/include"/>
+					<Add directory="/usr/local/Cellar/glfw/3.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 TP2_color2D"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP2_color2D/fast">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/TP2_color2D" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/third-party/include"/>
+					<Add directory="/usr/local/Cellar/glfw/3.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 TP2_color2D/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP3_exo5_multi_shaders">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/TP3_exo5_multi_shaders" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/third-party/include"/>
+					<Add directory="/usr/local/Cellar/glfw/3.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 TP3_exo5_multi_shaders"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP3_exo5_multi_shaders/fast">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/TP3_exo5_multi_shaders" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/third-party/include"/>
+					<Add directory="/usr/local/Cellar/glfw/3.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 TP3_exo5_multi_shaders/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP3_exo4_multi_tex">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/TP3_exo4_multi_tex" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/third-party/include"/>
+					<Add directory="/usr/local/Cellar/glfw/3.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 TP3_exo4_multi_tex"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP3_exo4_multi_tex/fast">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/TP3_exo4_multi_tex" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/third-party/include"/>
+					<Add directory="/usr/local/Cellar/glfw/3.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 TP3_exo4_multi_tex/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP3_exo2_luna">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/TP3_exo2_luna" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/third-party/include"/>
+					<Add directory="/usr/local/Cellar/glfw/3.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 TP3_exo2_luna"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP3_exo2_luna/fast">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/TP3_exo2_luna" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/third-party/include"/>
+					<Add directory="/usr/local/Cellar/glfw/3.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 TP3_exo2_luna/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP3_exo3_earth">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/TP3_exo3_earth" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/third-party/include"/>
+					<Add directory="/usr/local/Cellar/glfw/3.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 TP3_exo3_earth"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP3_exo3_earth/fast">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/TP3_exo3_earth" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/third-party/include"/>
+					<Add directory="/usr/local/Cellar/glfw/3.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 TP3_exo3_earth/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP3_exo1_sphere">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/TP3_exo1_sphere" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/third-party/include"/>
+					<Add directory="/usr/local/Cellar/glfw/3.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 TP3_exo1_sphere"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP3_exo1_sphere/fast">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/TP3_exo1_sphere" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/third-party/include"/>
+					<Add directory="/usr/local/Cellar/glfw/3.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 TP3_exo1_sphere/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP4_exo2_freefly">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP4/TP4_exo2_freefly" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP4"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/third-party/include"/>
+					<Add directory="/usr/local/Cellar/glfw/3.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP4/Makefile&quot;  VERBOSE=1 TP4_exo2_freefly"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP4/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP4/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP4/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP4_exo2_freefly/fast">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP4/TP4_exo2_freefly" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP4"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/third-party/include"/>
+					<Add directory="/usr/local/Cellar/glfw/3.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP4/Makefile&quot;  VERBOSE=1 TP4_exo2_freefly/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP4/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP4/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP4/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP4_exo1_track">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP4/TP4_exo1_track" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP4"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/third-party/include"/>
+					<Add directory="/usr/local/Cellar/glfw/3.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP4/Makefile&quot;  VERBOSE=1 TP4_exo1_track"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP4/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP4/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP4/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP4_exo1_track/fast">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP4/TP4_exo1_track" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP4"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/third-party/include"/>
+					<Add directory="/usr/local/Cellar/glfw/3.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP4/Makefile&quot;  VERBOSE=1 TP4_exo1_track/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP4/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP4/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP4/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP5_exo1_dirlight">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP5/TP5_exo1_dirlight" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP5"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/third-party/include"/>
+					<Add directory="/usr/local/Cellar/glfw/3.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP5/Makefile&quot;  VERBOSE=1 TP5_exo1_dirlight"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP5/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP5/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP5/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP5_exo1_dirlight/fast">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP5/TP5_exo1_dirlight" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP5"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/third-party/include"/>
+					<Add directory="/usr/local/Cellar/glfw/3.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP5/Makefile&quot;  VERBOSE=1 TP5_exo1_dirlight/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP5/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP5/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP5/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP_Mastercraft_main">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP_Mastercraft/TP_Mastercraft_main" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP_Mastercraft"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/third-party/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP_Mastercraft/../glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP_Mastercraft/../glupem/include"/>
+					<Add directory="/usr/local/Cellar/glfw/3.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP_Mastercraft/Makefile&quot;  VERBOSE=1 TP_Mastercraft_main"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP_Mastercraft/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP_Mastercraft/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP_Mastercraft/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP_Mastercraft_main/fast">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP_Mastercraft/TP_Mastercraft_main" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP_Mastercraft"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/third-party/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP_Mastercraft/../glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP_Mastercraft/../glupem/include"/>
+					<Add directory="/usr/local/Cellar/glfw/3.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP_Mastercraft/Makefile&quot;  VERBOSE=1 TP_Mastercraft_main/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP_Mastercraft/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP_Mastercraft/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP_Mastercraft/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP_template_SDLtemplate">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP_template/TP_template_SDLtemplate" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP_template"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/third-party/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP_template/Makefile&quot;  VERBOSE=1 TP_template_SDLtemplate"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP_template/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP_template/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP_template/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP_template_SDLtemplate/fast">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP_template/TP_template_SDLtemplate" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP_template"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/third-party/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP_template/Makefile&quot;  VERBOSE=1 TP_template_SDLtemplate/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP_template/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP_template/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template2/cmake-build-debug/TP_template/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP1">
+			<Option target="TP1_exo4_quad_color"/>
+			<Option target="TP1_exo1_triangle_couleurs"/>
+			<Option target="TP1_exo3_structure_vertex"/>
+			<Option target="TP1_exo1_triangle_blanc"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP1/exo1_triangle_blanc.cpp">
+			<Option target="TP1_exo1_triangle_blanc"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP1/exo1_triangle_couleurs.cpp">
+			<Option target="TP1_exo1_triangle_couleurs"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP1/exo3_structure_vertex.cpp">
+			<Option target="TP1_exo3_structure_vertex"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP1/exo4_quad_color.cpp">
+			<Option target="TP1_exo4_quad_color"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP1/shaders/triangle.fs.glsl">
+			<Option target="TP1_exo4_quad_color"/>
+			<Option target="TP1_exo1_triangle_couleurs"/>
+			<Option target="TP1_exo3_structure_vertex"/>
+			<Option target="TP1_exo1_triangle_blanc"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP1/shaders/triangle.vs.glsl">
+			<Option target="TP1_exo4_quad_color"/>
+			<Option target="TP1_exo1_triangle_couleurs"/>
+			<Option target="TP1_exo3_structure_vertex"/>
+			<Option target="TP1_exo1_triangle_blanc"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP2/color2D.cpp">
+			<Option target="TP2_color2D"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP2/mandelbrot.cpp">
+			<Option target="TP2_mandelbrot"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP2/multiSpin.cpp">
+			<Option target="TP2_multiSpin"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP2/shaders/color2D.fs.glsl">
+			<Option target="TP2_triforce"/>
+			<Option target="TP2_mandelbrot"/>
+			<Option target="TP2_multiSpin"/>
+			<Option target="TP2_suite"/>
+			<Option target="TP2_spin"/>
+			<Option target="TP2_color2D"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP2/shaders/color2D.vs.glsl">
+			<Option target="TP2_triforce"/>
+			<Option target="TP2_mandelbrot"/>
+			<Option target="TP2_multiSpin"/>
+			<Option target="TP2_suite"/>
+			<Option target="TP2_spin"/>
+			<Option target="TP2_color2D"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP2/shaders/grey2D.fs.glsl">
+			<Option target="TP2_triforce"/>
+			<Option target="TP2_mandelbrot"/>
+			<Option target="TP2_multiSpin"/>
+			<Option target="TP2_suite"/>
+			<Option target="TP2_spin"/>
+			<Option target="TP2_color2D"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP2/shaders/halo2D.fs.glsl">
+			<Option target="TP2_triforce"/>
+			<Option target="TP2_mandelbrot"/>
+			<Option target="TP2_multiSpin"/>
+			<Option target="TP2_suite"/>
+			<Option target="TP2_spin"/>
+			<Option target="TP2_color2D"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP2/shaders/mandelbrot.fs.glsl">
+			<Option target="TP2_triforce"/>
+			<Option target="TP2_mandelbrot"/>
+			<Option target="TP2_multiSpin"/>
+			<Option target="TP2_suite"/>
+			<Option target="TP2_spin"/>
+			<Option target="TP2_color2D"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP2/shaders/mandelbrot.vs.glsl">
+			<Option target="TP2_triforce"/>
+			<Option target="TP2_mandelbrot"/>
+			<Option target="TP2_multiSpin"/>
+			<Option target="TP2_suite"/>
+			<Option target="TP2_spin"/>
+			<Option target="TP2_color2D"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP2/shaders/matrix.vs.glsl">
+			<Option target="TP2_triforce"/>
+			<Option target="TP2_mandelbrot"/>
+			<Option target="TP2_multiSpin"/>
+			<Option target="TP2_suite"/>
+			<Option target="TP2_spin"/>
+			<Option target="TP2_color2D"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP2/shaders/proc.fs.glsl">
+			<Option target="TP2_triforce"/>
+			<Option target="TP2_mandelbrot"/>
+			<Option target="TP2_multiSpin"/>
+			<Option target="TP2_suite"/>
+			<Option target="TP2_spin"/>
+			<Option target="TP2_color2D"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP2/shaders/spin.fs.glsl">
+			<Option target="TP2_triforce"/>
+			<Option target="TP2_mandelbrot"/>
+			<Option target="TP2_multiSpin"/>
+			<Option target="TP2_suite"/>
+			<Option target="TP2_spin"/>
+			<Option target="TP2_color2D"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP2/shaders/spin.vs.glsl">
+			<Option target="TP2_triforce"/>
+			<Option target="TP2_mandelbrot"/>
+			<Option target="TP2_multiSpin"/>
+			<Option target="TP2_suite"/>
+			<Option target="TP2_spin"/>
+			<Option target="TP2_color2D"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP2/shaders/tex2D.fs.glsl">
+			<Option target="TP2_triforce"/>
+			<Option target="TP2_mandelbrot"/>
+			<Option target="TP2_multiSpin"/>
+			<Option target="TP2_suite"/>
+			<Option target="TP2_spin"/>
+			<Option target="TP2_color2D"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP2/shaders/tex2D.vs.glsl">
+			<Option target="TP2_triforce"/>
+			<Option target="TP2_mandelbrot"/>
+			<Option target="TP2_multiSpin"/>
+			<Option target="TP2_suite"/>
+			<Option target="TP2_spin"/>
+			<Option target="TP2_color2D"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP2/shaders/triforce.fs.glsl">
+			<Option target="TP2_triforce"/>
+			<Option target="TP2_mandelbrot"/>
+			<Option target="TP2_multiSpin"/>
+			<Option target="TP2_suite"/>
+			<Option target="TP2_spin"/>
+			<Option target="TP2_color2D"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP2/shaders/triforce.vs.glsl">
+			<Option target="TP2_triforce"/>
+			<Option target="TP2_mandelbrot"/>
+			<Option target="TP2_multiSpin"/>
+			<Option target="TP2_suite"/>
+			<Option target="TP2_spin"/>
+			<Option target="TP2_color2D"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP2/spin.cpp">
+			<Option target="TP2_spin"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP2/suite.cpp">
+			<Option target="TP2_suite"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP2/triforce.cpp">
+			<Option target="TP2_triforce"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP3/exo1_sphere.cpp">
+			<Option target="TP3_exo1_sphere"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP3/exo2_luna.cpp">
+			<Option target="TP3_exo2_luna"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP3/exo3_earth.cpp">
+			<Option target="TP3_exo3_earth"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP3/exo4_multi_tex.cpp">
+			<Option target="TP3_exo4_multi_tex"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP3/exo5_multi_shaders.cpp">
+			<Option target="TP3_exo5_multi_shaders"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP3/shaders/3D.vs.glsl">
+			<Option target="TP3_exo5_multi_shaders"/>
+			<Option target="TP3_exo4_multi_tex"/>
+			<Option target="TP3_exo2_luna"/>
+			<Option target="TP3_exo3_earth"/>
+			<Option target="TP3_exo1_sphere"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP3/shaders/multiTex3D.fs.glsl">
+			<Option target="TP3_exo5_multi_shaders"/>
+			<Option target="TP3_exo4_multi_tex"/>
+			<Option target="TP3_exo2_luna"/>
+			<Option target="TP3_exo3_earth"/>
+			<Option target="TP3_exo1_sphere"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP3/shaders/normals.fs.glsl">
+			<Option target="TP3_exo5_multi_shaders"/>
+			<Option target="TP3_exo4_multi_tex"/>
+			<Option target="TP3_exo2_luna"/>
+			<Option target="TP3_exo3_earth"/>
+			<Option target="TP3_exo1_sphere"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP3/shaders/tex3D.fs.glsl">
+			<Option target="TP3_exo5_multi_shaders"/>
+			<Option target="TP3_exo4_multi_tex"/>
+			<Option target="TP3_exo2_luna"/>
+			<Option target="TP3_exo3_earth"/>
+			<Option target="TP3_exo1_sphere"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP4/exo1_track.cpp">
+			<Option target="TP4_exo1_track"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP4/exo2_freefly.cpp">
+			<Option target="TP4_exo2_freefly"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP4/shaders/3D.vs.glsl">
+			<Option target="TP4_exo2_freefly"/>
+			<Option target="TP4_exo1_track"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP4/shaders/multiTex3D.fs.glsl">
+			<Option target="TP4_exo2_freefly"/>
+			<Option target="TP4_exo1_track"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP4/shaders/normals.fs.glsl">
+			<Option target="TP4_exo2_freefly"/>
+			<Option target="TP4_exo1_track"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP4/shaders/tex3D.fs.glsl">
+			<Option target="TP4_exo2_freefly"/>
+			<Option target="TP4_exo1_track"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP5/exo1_dirlight.cpp">
+			<Option target="TP5_exo1_dirlight"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP5/shaders/3D.vs.glsl">
+			<Option target="TP5_exo1_dirlight"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP5/shaders/directionallight.fs.glsl">
+			<Option target="TP5_exo1_dirlight"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP5/shaders/multiTex3D.fs.glsl">
+			<Option target="TP5_exo1_dirlight"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP5/shaders/normals.fs.glsl">
+			<Option target="TP5_exo1_dirlight"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP5/shaders/tex3D.fs.glsl">
+			<Option target="TP5_exo1_dirlight"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP_Mastercraft">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP_Mastercraft/cmake-build-debug/shaders/3D.vs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP_Mastercraft/cmake-build-debug/shaders/debug.fs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP_Mastercraft/cmake-build-debug/shaders/debug2D.vs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP_Mastercraft/cmake-build-debug/shaders/directionallight.fs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP_Mastercraft/cmake-build-debug/shaders/multiTex3D.fs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP_Mastercraft/cmake-build-debug/shaders/normals.fs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP_Mastercraft/cmake-build-debug/shaders/tex3D.fs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP_Mastercraft/main.cpp">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP_Mastercraft/shaders/3D.vs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP_Mastercraft/shaders/debug.fs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP_Mastercraft/shaders/debug2D.vs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP_Mastercraft/shaders/directionallight.fs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP_Mastercraft/shaders/multiTex3D.fs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP_Mastercraft/shaders/normals.fs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP_Mastercraft/shaders/tex3D.fs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP_template/SDLtemplate.cpp">
+			<Option target="TP_template_SDLtemplate"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include/glimac/BBox.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include/glimac/Cone.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include/glimac/FilePath.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include/glimac/FreeflyCamera.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include/glimac/Geometry.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include/glimac/Image.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include/glimac/Program.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include/glimac/SDLWindowManager.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include/glimac/Shader.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include/glimac/Sphere.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include/glimac/TrackballCamera.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include/glimac/common.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/include/glimac/glm.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/src/Cone.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/src/FreeflyCamera.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/src/Geometry.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/src/Image.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/src/Program.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/src/SDLWindowManager.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/src/Shader.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/src/Sphere.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/src/TrackballCamera.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/src/tiny_obj_loader.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/src/tiny_obj_loader.h">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glupem/include/glupem/Cube.hpp">
+			<Option target="glupem"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glupem/include/glupem/WindowManager.hpp">
+			<Option target="glupem"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glupem/src/Cube.cpp">
+			<Option target="glupem"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glupem/src/WindowManager.cpp">
+			<Option target="glupem"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/CMake/FindGLEW.cmake">
+			<Option virtualFolder="CMake Files\CMake\"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/../../../../../../usr/local/lib/cmake/glfw3/glfw3Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\glfw3\"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/../../../../../../usr/local/lib/cmake/glfw3/glfw3ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\glfw3\"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/../../../../../../usr/local/lib/cmake/glfw3/glfw3Targets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\glfw3\"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/../../../../../../usr/local/lib/cmake/glfw3/glfw3Targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\glfw3\"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glimac/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\glimac\"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/glupem/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\glupem\"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP1/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\TP1\"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP2/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\TP2\"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP3/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\TP3\"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP4/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\TP4\"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP5/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\TP5\"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP_Mastercraft/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\TP_Mastercraft\"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP_template/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\TP_template\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="LaraCraft"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="clang"/>
+		<Option virtualFolders="CMake Files\;CMake Files\CMake\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\glfw3\;CMake Files\glimac\;CMake Files\glupem\;CMake Files\TP_Mastercraft\;CMake Files\TP_template\;CMake Files\TP_test\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glimac">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/glimac/libglimac.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/glimac"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template/third-party/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glimac/../third-party/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/glimac/Makefile&quot;  VERBOSE=1 glimac"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/glimac/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/glimac/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/glimac/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glimac/fast">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/glimac/libglimac.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/glimac"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template/third-party/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glimac/../third-party/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/glimac/Makefile&quot;  VERBOSE=1 glimac/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/glimac/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/glimac/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/glimac/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glupem">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/glupem/libglupem.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/glupem"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template/third-party/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glupem/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glupem/../third-party/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glupem/../glimac/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/glupem/Makefile&quot;  VERBOSE=1 glupem"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/glupem/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/glupem/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/glupem/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glupem/fast">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/glupem/libglupem.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/glupem"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template/third-party/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glupem/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glupem/../third-party/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glupem/../glimac/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/glupem/Makefile&quot;  VERBOSE=1 glupem/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/glupem/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/glupem/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/glupem/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP_Mastercraft_main">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_Mastercraft/TP_Mastercraft_main" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_Mastercraft"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template/third-party/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/../glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/../glupem/include"/>
+					<Add directory="/usr/local/Cellar/glfw/3.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_Mastercraft/Makefile&quot;  VERBOSE=1 TP_Mastercraft_main"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_Mastercraft/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_Mastercraft/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_Mastercraft/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP_Mastercraft_main/fast">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_Mastercraft/TP_Mastercraft_main" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_Mastercraft"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template/third-party/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/../glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/../glupem/include"/>
+					<Add directory="/usr/local/Cellar/glfw/3.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_Mastercraft/Makefile&quot;  VERBOSE=1 TP_Mastercraft_main/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_Mastercraft/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_Mastercraft/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_Mastercraft/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP_template_SDLtemplate">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_template/TP_template_SDLtemplate" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_template"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template/third-party/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_template/../glimac/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_template/Makefile&quot;  VERBOSE=1 TP_template_SDLtemplate"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_template/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_template/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_template/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP_template_SDLtemplate/fast">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_template/TP_template_SDLtemplate" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_template"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template/third-party/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_template/../glimac/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_template/Makefile&quot;  VERBOSE=1 TP_template_SDLtemplate/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_template/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_template/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_template/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP_test_SDLtemplate">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_test/TP_test_SDLtemplate" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template/third-party/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_test/../glimac/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_test/Makefile&quot;  VERBOSE=1 TP_test_SDLtemplate"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP_test_SDLtemplate/fast">
+				<Option output="/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_test/TP_test_SDLtemplate" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glimac/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template/third-party/include"/>
+					<Add directory="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_test/../glimac/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_test/Makefile&quot;  VERBOSE=1 TP_test_SDLtemplate/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/cmake-build-debug/shaders/3D.vs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/cmake-build-debug/shaders/debug.fs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/cmake-build-debug/shaders/debug2D.vs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/cmake-build-debug/shaders/directionallight.fs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/cmake-build-debug/shaders/multiTex3D.fs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/cmake-build-debug/shaders/normals.fs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/cmake-build-debug/shaders/tex3D.fs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/main.cpp">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/shaders/3D.vs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/shaders/debug.fs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/shaders/debug2D.vs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/shaders/directionallight.fs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/shaders/multiTex3D.fs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/shaders/normals.fs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/shaders/tex3D.fs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_template">
+			<Option target="TP_template_SDLtemplate"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_template/SDLtemplate.cpp">
+			<Option target="TP_template_SDLtemplate"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_test">
+			<Option target="TP_test_SDLtemplate"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_test/SDLtemplate.cpp">
+			<Option target="TP_test_SDLtemplate"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glimac/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdCXX/CMakeCXXCompilerId.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glimac/include/glimac/BBox.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glimac/include/glimac/Cone.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glimac/include/glimac/FilePath.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glimac/include/glimac/FreeFlyCamera.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glimac/include/glimac/Geometry.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glimac/include/glimac/Image.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glimac/include/glimac/Program.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glimac/include/glimac/SDLWindowManager.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glimac/include/glimac/Shader.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glimac/include/glimac/Sphere.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glimac/include/glimac/TrackBallCamera.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glimac/include/glimac/common.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glimac/include/glimac/glm.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glimac/src/Cone.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glimac/src/Geometry.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glimac/src/Image.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glimac/src/Program.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glimac/src/SDLWindowManager.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glimac/src/Shader.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glimac/src/Sphere.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glimac/src/tiny_obj_loader.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glimac/src/tiny_obj_loader.h">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glupem/include/glupem/Cube.hpp">
+			<Option target="glupem"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glupem/include/glupem/WindowManager.hpp">
+			<Option target="glupem"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glupem/src/Cube.cpp">
+			<Option target="glupem"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glupem/src/WindowManager.cpp">
+			<Option target="glupem"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/CMake/FindGLEW.cmake">
+			<Option virtualFolder="CMake Files\CMake\"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/../../../../../../usr/local/lib/cmake/glfw3/glfw3Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\glfw3\"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/../../../../../../usr/local/lib/cmake/glfw3/glfw3ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\glfw3\"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/../../../../../../usr/local/lib/cmake/glfw3/glfw3Targets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\glfw3\"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/../../../../../../usr/local/lib/cmake/glfw3/glfw3Targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\glfw3\"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glimac/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\glimac\"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/glupem/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\glupem\"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_Mastercraft/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\TP_Mastercraft\"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_template/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\TP_template\"/>
+		</Unit>
+		<Unit filename="/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\TP_test\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

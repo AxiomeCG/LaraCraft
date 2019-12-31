@@ -86,9 +86,6 @@ int main(int argc, char** argv) {
 
     ProjMatrix = glm::perspective(glm::radians(70.f), 1.f, 0.1f, 100.f);
 
-    float saveXPosition, saveYPosition;
-    saveXPosition = saveYPosition = 0.f;
-
     FreeflyCamera camera;
 
     // Application loop:

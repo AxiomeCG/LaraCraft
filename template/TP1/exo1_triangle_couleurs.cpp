@@ -4,7 +4,7 @@
 #include <glimac/FilePath.hpp>
 #include <GLFW/glfw3.h>
 #include <iostream>
-#include <glimac/WindowManager.hpp>
+#include <glimac/GLFWWindowManager.hpp>
 
 using namespace glimac;
 
@@ -33,7 +33,7 @@ int main(int argc, char** argv) {
 //    }
 //    glfwMakeContextCurrent(windowManager);
 
-    WindowManager window(800, 800, "LaraCraft", 0);
+    GLFWWindowManager window(800, 800, "LaraCraft", windowModes::Windowed);
 
     // Initialize glew for OpenGL3+ support
     glewExperimental = GL_TRUE;
@@ -99,7 +99,7 @@ int main(int argc, char** argv) {
         glBindVertexArray(vao);
         glDrawArrays(GL_TRIANGLES, 0, 3);
         glBindVertexArray(0);
-        window.swapBuffer();;
+        window.swapBuffers();;
         window.pollEvent();
     }
     glDeleteBuffers(1, &vbo);

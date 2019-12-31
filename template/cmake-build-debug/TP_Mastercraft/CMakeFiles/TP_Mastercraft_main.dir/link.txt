@@ -1,1 +1,0 @@
-/usr/bin/c++  -g  -rdynamic CMakeFiles/TP_Mastercraft_main.dir/main.cpp.o  -o TP_Mastercraft_main ../glimac/libglimac.a -Wl,-Bstatic -lSDLmain -Wl,-Bdynamic -lSDL -lpthread -lGL -lGLU -lGLEW /usr/lib/x86_64-linux-gnu/libglfw.so.3.2 

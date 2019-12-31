@@ -5,7 +5,7 @@
 #include <glimac/Program.hpp>
 #include <glimac/FreeflyCamera.hpp>
 #include <GLFW/glfw3.h>
-#include <glimac/WindowManager.hpp>
+#include <glimac/GLFWWindowManager.hpp>
 #include <glimac/Cube.hpp>
 #include <glimac/TrackballCamera.hpp>
 
@@ -26,7 +26,7 @@ int main(int argc, char **argv) {
     int height = 800;
     //SDLWindowManager windowManager(width, height, "GLImac");
 
-    WindowManager window(width, height, "LaraCraft", 0);
+    GLFWWindowManager window(width, height, "LaraCraft", windowModes::Windowed);
 
 
     std::cout << "Before GLEW initialisation" << std::endl;
@@ -213,7 +213,7 @@ int main(int argc, char **argv) {
         //Flush VAO
         glBindVertexArray(0);
         // Update the display
-        window.swapBuffer();
+        window.swapBuffers();
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         window.pollEvent();
@@ -226,7 +226,7 @@ int main(int argc, char **argv) {
             camera.moveFront(-0.01f);
         }
         double tmpxPos, tmpyPos;
-        window.getCursorPos(&tmpxPos, &tmpyPos);
+        window.getCursorPosition(&tmpxPos, &tmpyPos);
         float xrel = xpos - tmpxPos;
         float yrel = ypos - tmpyPos;
         int stateMouseClick = window.getMouseButton(GLFW_MOUSE_BUTTON_LEFT);

@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/TP4_exo1_track.dir/exo1_track.cpp.o  -o TP4_exo1_track ../glimac/libglimac.a -Wl,-Bstatic -lSDLmain -Wl,-Bdynamic -lSDL -lpthread -lGL -lGLU -lGLEW /usr/lib/x86_64-linux-gnu/libglfw.so.3.2 

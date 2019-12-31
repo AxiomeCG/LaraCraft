@@ -426,28 +426,28 @@ std::string LoadMtl (
       continue;
     }
 
-    // ambient textures
+    // ambient texture
     if ((0 == strncmp(token, "map_Ka", 6)) && isSpace(token[6])) {
       token += 7;
       material.ambient_texname = token;
       continue;
     }
 
-    // diffuse textures
+    // diffuse texture
     if ((0 == strncmp(token, "map_Kd", 6)) && isSpace(token[6])) {
       token += 7;
       material.diffuse_texname = token;
       continue;
     }
 
-    // specular textures
+    // specular texture
     if ((0 == strncmp(token, "map_Ks", 6)) && isSpace(token[6])) {
       token += 7;
       material.specular_texname = token;
       continue;
     }
 
-    // normal textures
+    // normal texture
     if ((0 == strncmp(token, "map_Ns", 6)) && isSpace(token[6])) {
       token += 7;
       material.normal_texname = token;

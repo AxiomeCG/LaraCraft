@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP1/exo3_structure_vertex.cpp" "/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP1/CMakeFiles/TP1_exo3_structure_vertex.dir/exo3_structure_vertex.cpp.o"
+  "/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP1/exo3_structure_vertex.cpp" "/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1/CMakeFiles/TP1_exo3_structure_vertex.dir/exo3_structure_vertex.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "Clang")
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
@@ -15,17 +15,16 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/usr/local/include"
-  "/usr/local/include/SDL"
-  "/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"
+  "/usr/include/SDL"
   "../glimac/include"
   "../third-party/include"
-  "/usr/local/Cellar/glfw/3.3/include"
+  "../TP1/../glimac/include"
+  "../TP1/../glupem/include"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/glimac/CMakeFiles/glimac.dir/DependInfo.cmake"
+  "/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/glimac/CMakeFiles/glimac.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

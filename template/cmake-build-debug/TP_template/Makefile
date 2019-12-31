@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /opt/clion-2019.2.3/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /opt/clion-2019.2.3/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/mhudelot/Documents/Synthese/LaraCraft/template
+CMAKE_SOURCE_DIR = /home/adam/Bureau/upem/M2/s1/synthese/projet/template
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug
+CMAKE_BINARY_DIR = /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-b
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/opt/clion-2019.2.3/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/opt/clion-2019.2.3/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/CMakeFiles /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_template/CMakeFiles/progress.marks
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 TP_template/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/CMakeFiles 0
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/CMakeFiles /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_template/CMakeFiles/progress.marks
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 TP_template/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 TP_template/clean
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 TP_template/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 TP_template/preinstall
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 TP_template/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 TP_template/preinstall
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 TP_template/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 TP_template/CMakeFiles/TP_template_SDLtemplate.dir/rule:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 TP_template/CMakeFiles/TP_template_SDLtemplate.dir/rule
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 TP_template/CMakeFiles/TP_template_SDLtemplate.dir/rule
 .PHONY : TP_template/CMakeFiles/TP_template_SDLtemplate.dir/rule
 
 # Convenience name for target.
@@ -122,7 +122,7 @@ TP_template_SDLtemplate: TP_template/CMakeFiles/TP_template_SDLtemplate.dir/rule
 
 # fast build rule for target.
 TP_template_SDLtemplate/fast:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f TP_template/CMakeFiles/TP_template_SDLtemplate.dir/build.make TP_template/CMakeFiles/TP_template_SDLtemplate.dir/build
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f TP_template/CMakeFiles/TP_template_SDLtemplate.dir/build.make TP_template/CMakeFiles/TP_template_SDLtemplate.dir/build
 .PHONY : TP_template_SDLtemplate/fast
 
 SDLtemplate.o: SDLtemplate.cpp.o
@@ -131,7 +131,7 @@ SDLtemplate.o: SDLtemplate.cpp.o
 
 # target to build an object file
 SDLtemplate.cpp.o:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f TP_template/CMakeFiles/TP_template_SDLtemplate.dir/build.make TP_template/CMakeFiles/TP_template_SDLtemplate.dir/SDLtemplate.cpp.o
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f TP_template/CMakeFiles/TP_template_SDLtemplate.dir/build.make TP_template/CMakeFiles/TP_template_SDLtemplate.dir/SDLtemplate.cpp.o
 .PHONY : SDLtemplate.cpp.o
 
 SDLtemplate.i: SDLtemplate.cpp.i
@@ -140,7 +140,7 @@ SDLtemplate.i: SDLtemplate.cpp.i
 
 # target to preprocess a source file
 SDLtemplate.cpp.i:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f TP_template/CMakeFiles/TP_template_SDLtemplate.dir/build.make TP_template/CMakeFiles/TP_template_SDLtemplate.dir/SDLtemplate.cpp.i
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f TP_template/CMakeFiles/TP_template_SDLtemplate.dir/build.make TP_template/CMakeFiles/TP_template_SDLtemplate.dir/SDLtemplate.cpp.i
 .PHONY : SDLtemplate.cpp.i
 
 SDLtemplate.s: SDLtemplate.cpp.s
@@ -149,7 +149,7 @@ SDLtemplate.s: SDLtemplate.cpp.s
 
 # target to generate assembly for a file
 SDLtemplate.cpp.s:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f TP_template/CMakeFiles/TP_template_SDLtemplate.dir/build.make TP_template/CMakeFiles/TP_template_SDLtemplate.dir/SDLtemplate.cpp.s
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f TP_template/CMakeFiles/TP_template_SDLtemplate.dir/build.make TP_template/CMakeFiles/TP_template_SDLtemplate.dir/SDLtemplate.cpp.s
 .PHONY : SDLtemplate.cpp.s
 
 # Help Target
@@ -159,8 +159,8 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
 	@echo "... TP_template_SDLtemplate"
+	@echo "... edit_cache"
 	@echo "... SDLtemplate.o"
 	@echo "... SDLtemplate.i"
 	@echo "... SDLtemplate.s"
@@ -175,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

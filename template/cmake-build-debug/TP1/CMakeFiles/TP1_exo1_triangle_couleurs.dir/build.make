@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /opt/clion-2019.2.3/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /opt/clion-2019.2.3/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/mhudelot/Documents/Synthese/LaraCraft/template
+CMAKE_SOURCE_DIR = /home/adam/Bureau/upem/M2/s1/synthese/projet/template
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug
+CMAKE_BINARY_DIR = /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/depend.make
@@ -59,16 +59,16 @@ include TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/flags.make
 
 TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/exo1_triangle_couleurs.cpp.o: TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/flags.make
 TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/exo1_triangle_couleurs.cpp.o: ../TP1/exo1_triangle_couleurs.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/exo1_triangle_couleurs.cpp.o"
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP1 && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP1_exo1_triangle_couleurs.dir/exo1_triangle_couleurs.cpp.o -c /Users/mhudelot/Documents/Synthese/LaraCraft/template/TP1/exo1_triangle_couleurs.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/exo1_triangle_couleurs.cpp.o"
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP1_exo1_triangle_couleurs.dir/exo1_triangle_couleurs.cpp.o -c /home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP1/exo1_triangle_couleurs.cpp
 
 TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/exo1_triangle_couleurs.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP1_exo1_triangle_couleurs.dir/exo1_triangle_couleurs.cpp.i"
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP1 && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mhudelot/Documents/Synthese/LaraCraft/template/TP1/exo1_triangle_couleurs.cpp > CMakeFiles/TP1_exo1_triangle_couleurs.dir/exo1_triangle_couleurs.cpp.i
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP1/exo1_triangle_couleurs.cpp > CMakeFiles/TP1_exo1_triangle_couleurs.dir/exo1_triangle_couleurs.cpp.i
 
 TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/exo1_triangle_couleurs.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP1_exo1_triangle_couleurs.dir/exo1_triangle_couleurs.cpp.s"
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP1 && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mhudelot/Documents/Synthese/LaraCraft/template/TP1/exo1_triangle_couleurs.cpp -o CMakeFiles/TP1_exo1_triangle_couleurs.dir/exo1_triangle_couleurs.cpp.s
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP1/exo1_triangle_couleurs.cpp -o CMakeFiles/TP1_exo1_triangle_couleurs.dir/exo1_triangle_couleurs.cpp.s
 
 # Object files for target TP1_exo1_triangle_couleurs
 TP1_exo1_triangle_couleurs_OBJECTS = \
@@ -80,13 +80,15 @@ TP1_exo1_triangle_couleurs_EXTERNAL_OBJECTS =
 TP1/TP1_exo1_triangle_couleurs: TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/exo1_triangle_couleurs.cpp.o
 TP1/TP1_exo1_triangle_couleurs: TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/build.make
 TP1/TP1_exo1_triangle_couleurs: glimac/libglimac.a
-TP1/TP1_exo1_triangle_couleurs: /usr/local/lib/libSDLmain.a
-TP1/TP1_exo1_triangle_couleurs: /usr/local/lib/libSDL.dylib
-TP1/TP1_exo1_triangle_couleurs: /usr/local/lib/libGLEW.dylib
-TP1/TP1_exo1_triangle_couleurs: /usr/local/lib/libglfw.3.3.dylib
+TP1/TP1_exo1_triangle_couleurs: /usr/lib/x86_64-linux-gnu/libSDLmain.a
+TP1/TP1_exo1_triangle_couleurs: /usr/lib/x86_64-linux-gnu/libSDL.so
+TP1/TP1_exo1_triangle_couleurs: /usr/lib/x86_64-linux-gnu/libGL.so
+TP1/TP1_exo1_triangle_couleurs: /usr/lib/x86_64-linux-gnu/libGLU.so
+TP1/TP1_exo1_triangle_couleurs: /usr/lib/x86_64-linux-gnu/libGLEW.so
+TP1/TP1_exo1_triangle_couleurs: /usr/lib/x86_64-linux-gnu/libglfw.so.3.2
 TP1/TP1_exo1_triangle_couleurs: TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable TP1_exo1_triangle_couleurs"
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP1 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TP1_exo1_triangle_couleurs.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable TP1_exo1_triangle_couleurs"
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TP1_exo1_triangle_couleurs.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/build: TP1/TP1_exo1_triangle_couleurs
@@ -94,10 +96,10 @@ TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/build: TP1/TP1_exo1_triangle_coule
 .PHONY : TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/build
 
 TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/clean:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP1 && $(CMAKE_COMMAND) -P CMakeFiles/TP1_exo1_triangle_couleurs.dir/cmake_clean.cmake
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1 && $(CMAKE_COMMAND) -P CMakeFiles/TP1_exo1_triangle_couleurs.dir/cmake_clean.cmake
 .PHONY : TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/clean
 
 TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/depend:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/mhudelot/Documents/Synthese/LaraCraft/template /Users/mhudelot/Documents/Synthese/LaraCraft/template/TP1 /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP1 /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/adam/Bureau/upem/M2/s1/synthese/projet/template /home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP1 /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1 /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/depend
 

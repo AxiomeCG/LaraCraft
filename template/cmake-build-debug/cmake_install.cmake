@@ -1,4 +1,4 @@
-# Install script for directory: /Users/mhudelot/Documents/Synthese/LaraCraft/template
+# Install script for directory: /home/adam/Bureau/upem/M2/s1/synthese/projet/template
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -27,6 +27,11 @@ if(NOT CMAKE_INSTALL_COMPONENT)
   endif()
 endif()
 
+# Install shared libraries without execute permission?
+if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
+  set(CMAKE_INSTALL_SO_NO_EXE "1")
+endif()
+
 # Is this installation the result of a crosscompile?
 if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
@@ -34,12 +39,14 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/glimac/cmake_install.cmake")
-  include("/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/glupem/cmake_install.cmake")
-  include("/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP1/cmake_install.cmake")
-  include("/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_Mastercraft/cmake_install.cmake")
-  include("/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_template/cmake_install.cmake")
-  include("/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_test/cmake_install.cmake")
+  include("/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/glimac/cmake_install.cmake")
+  include("/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1/cmake_install.cmake")
+  include("/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/cmake_install.cmake")
+  include("/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/cmake_install.cmake")
+  include("/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP4/cmake_install.cmake")
+  include("/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP5/cmake_install.cmake")
+  include("/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_Mastercraft/cmake_install.cmake")
+  include("/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_template/cmake_install.cmake")
 
 endif()
 
@@ -51,5 +58,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

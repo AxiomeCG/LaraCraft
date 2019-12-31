@@ -12,6 +12,6 @@ out vec3 fFragColor;
 
 void main() {
     //fFragColor = vec3(texture(uTexture, vFragTexture));
-    fFragColor = normalize(vFragNormal_vs);
-    //fFragColor = vec3(255,0,0);
+    //fFragColor = normalize(vFragNormal_vs);
+    fFragColor = vec3(255,0,0);
 }

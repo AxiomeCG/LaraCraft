@@ -4,34 +4,36 @@
 #include <glimac/FilePath.hpp>
 #include <GLFW/glfw3.h>
 #include <iostream>
+#include <glimac/WindowManager.hpp>
 
 using namespace glimac;
 
 int main(int argc, char** argv) {
     // Initialize glfw
-    std::cout << "Begin main" << std::endl;
-    if (!glfwInit())
-    {
-        std::cerr << "Failed in initialization GLFW" << std::endl;
-        return -1;
-    }
+//    if (!glfwInit())
+//    {
+//        std::cerr << "Failed in initialization GLFW" << std::endl;
+//        return -1;
+//    }
+//
+//    //Hint the GL version to use
+//    glfwWindowHint(GLFW_SAMPLES, 4);
+//    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+//    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+//    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+//    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+//
+//    //Create the window
+//    GLFWwindow* windowManager = glfwCreateWindow(800, 600, "GLImac", NULL, NULL);
+//    if (!windowManager)
+//    {
+//        std::cerr << "Failed in create Windows" << std::endl;
+//        glfwTerminate();
+//        return -1;
+//    }
+//    glfwMakeContextCurrent(windowManager);
 
-    //Hint the GL version to use
-    glfwWindowHint(GLFW_SAMPLES, 4);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
-
-    //Create the window
-    GLFWwindow* windowManager = glfwCreateWindow(800, 800, "GLImac", NULL, NULL);
-    if (!windowManager)
-    {
-        std::cerr << "Failed in create Windows" << std::endl;
-        glfwTerminate();
-        return -1;
-    }
-    glfwMakeContextCurrent(windowManager);
+    WindowManager window(800, 800, "LaraCraft", 0);
 
     // Initialize glew for OpenGL3+ support
     glewExperimental = GL_TRUE;
@@ -92,19 +94,19 @@ int main(int argc, char** argv) {
 
     glBindVertexArray(0);
 
-    while (!glfwWindowShouldClose(windowManager)) {
+    while (!window.windowShouldClose()) {
         glClear(GL_COLOR_BUFFER_BIT);
         glBindVertexArray(vao);
         glDrawArrays(GL_TRIANGLES, 0, 3);
         glBindVertexArray(0);
-        glfwSwapBuffers(windowManager);
-        glfwPollEvents();
+        window.swapBuffer();;
+        window.pollEvent();
     }
     glDeleteBuffers(1, &vbo);
     glDeleteVertexArrays(1, &vao);
-
-    glfwDestroyWindow(windowManager);
-    glfwTerminate();
+//
+//    glfwDestroyWindow(windowManager);
+//    glfwTerminate();
 
     return EXIT_SUCCESS;
 }

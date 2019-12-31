@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /opt/clion-2019.2.3/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /opt/clion-2019.2.3/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/mhudelot/Documents/Synthese/LaraCraft/template
+CMAKE_SOURCE_DIR = /home/adam/Bureau/upem/M2/s1/synthese/projet/template
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug
+CMAKE_BINARY_DIR = /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include TP_template/CMakeFiles/TP_template_SDLtemplate.dir/depend.make
@@ -59,16 +59,16 @@ include TP_template/CMakeFiles/TP_template_SDLtemplate.dir/flags.make
 
 TP_template/CMakeFiles/TP_template_SDLtemplate.dir/SDLtemplate.cpp.o: TP_template/CMakeFiles/TP_template_SDLtemplate.dir/flags.make
 TP_template/CMakeFiles/TP_template_SDLtemplate.dir/SDLtemplate.cpp.o: ../TP_template/SDLtemplate.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object TP_template/CMakeFiles/TP_template_SDLtemplate.dir/SDLtemplate.cpp.o"
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_template && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP_template_SDLtemplate.dir/SDLtemplate.cpp.o -c /Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_template/SDLtemplate.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object TP_template/CMakeFiles/TP_template_SDLtemplate.dir/SDLtemplate.cpp.o"
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_template && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP_template_SDLtemplate.dir/SDLtemplate.cpp.o -c /home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP_template/SDLtemplate.cpp
 
 TP_template/CMakeFiles/TP_template_SDLtemplate.dir/SDLtemplate.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP_template_SDLtemplate.dir/SDLtemplate.cpp.i"
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_template && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_template/SDLtemplate.cpp > CMakeFiles/TP_template_SDLtemplate.dir/SDLtemplate.cpp.i
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_template && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP_template/SDLtemplate.cpp > CMakeFiles/TP_template_SDLtemplate.dir/SDLtemplate.cpp.i
 
 TP_template/CMakeFiles/TP_template_SDLtemplate.dir/SDLtemplate.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP_template_SDLtemplate.dir/SDLtemplate.cpp.s"
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_template && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_template/SDLtemplate.cpp -o CMakeFiles/TP_template_SDLtemplate.dir/SDLtemplate.cpp.s
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_template && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP_template/SDLtemplate.cpp -o CMakeFiles/TP_template_SDLtemplate.dir/SDLtemplate.cpp.s
 
 # Object files for target TP_template_SDLtemplate
 TP_template_SDLtemplate_OBJECTS = \
@@ -80,12 +80,14 @@ TP_template_SDLtemplate_EXTERNAL_OBJECTS =
 TP_template/TP_template_SDLtemplate: TP_template/CMakeFiles/TP_template_SDLtemplate.dir/SDLtemplate.cpp.o
 TP_template/TP_template_SDLtemplate: TP_template/CMakeFiles/TP_template_SDLtemplate.dir/build.make
 TP_template/TP_template_SDLtemplate: glimac/libglimac.a
-TP_template/TP_template_SDLtemplate: /usr/local/lib/libSDLmain.a
-TP_template/TP_template_SDLtemplate: /usr/local/lib/libSDL.dylib
-TP_template/TP_template_SDLtemplate: /usr/local/lib/libGLEW.dylib
+TP_template/TP_template_SDLtemplate: /usr/lib/x86_64-linux-gnu/libSDLmain.a
+TP_template/TP_template_SDLtemplate: /usr/lib/x86_64-linux-gnu/libSDL.so
+TP_template/TP_template_SDLtemplate: /usr/lib/x86_64-linux-gnu/libGL.so
+TP_template/TP_template_SDLtemplate: /usr/lib/x86_64-linux-gnu/libGLU.so
+TP_template/TP_template_SDLtemplate: /usr/lib/x86_64-linux-gnu/libGLEW.so
 TP_template/TP_template_SDLtemplate: TP_template/CMakeFiles/TP_template_SDLtemplate.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable TP_template_SDLtemplate"
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_template && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TP_template_SDLtemplate.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable TP_template_SDLtemplate"
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_template && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TP_template_SDLtemplate.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 TP_template/CMakeFiles/TP_template_SDLtemplate.dir/build: TP_template/TP_template_SDLtemplate
@@ -93,10 +95,10 @@ TP_template/CMakeFiles/TP_template_SDLtemplate.dir/build: TP_template/TP_templat
 .PHONY : TP_template/CMakeFiles/TP_template_SDLtemplate.dir/build
 
 TP_template/CMakeFiles/TP_template_SDLtemplate.dir/clean:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_template && $(CMAKE_COMMAND) -P CMakeFiles/TP_template_SDLtemplate.dir/cmake_clean.cmake
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_template && $(CMAKE_COMMAND) -P CMakeFiles/TP_template_SDLtemplate.dir/cmake_clean.cmake
 .PHONY : TP_template/CMakeFiles/TP_template_SDLtemplate.dir/clean
 
 TP_template/CMakeFiles/TP_template_SDLtemplate.dir/depend:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/mhudelot/Documents/Synthese/LaraCraft/template /Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_template /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_template /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_template/CMakeFiles/TP_template_SDLtemplate.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/adam/Bureau/upem/M2/s1/synthese/projet/template /home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP_template /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_template /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_template/CMakeFiles/TP_template_SDLtemplate.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : TP_template/CMakeFiles/TP_template_SDLtemplate.dir/depend
 

@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /opt/clion-2019.2.3/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /opt/clion-2019.2.3/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/mhudelot/Documents/Synthese/LaraCraft/template
+CMAKE_SOURCE_DIR = /home/adam/Bureau/upem/M2/s1/synthese/projet/template
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug
+CMAKE_BINARY_DIR = /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-b
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/opt/clion-2019.2.3/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/opt/clion-2019.2.3/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/CMakeFiles /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/CMakeFiles /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -124,17 +124,30 @@ glimac/fast:
 .PHONY : glimac/fast
 
 #=============================================================================
-# Target rules for targets named glupem
+# Target rules for targets named TP1_exo3_structure_vertex
 
 # Build rule for target.
-glupem: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 glupem
-.PHONY : glupem
+TP1_exo3_structure_vertex: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TP1_exo3_structure_vertex
+.PHONY : TP1_exo3_structure_vertex
 
 # fast build rule for target.
-glupem/fast:
-	$(MAKE) -f glupem/CMakeFiles/glupem.dir/build.make glupem/CMakeFiles/glupem.dir/build
-.PHONY : glupem/fast
+TP1_exo3_structure_vertex/fast:
+	$(MAKE) -f TP1/CMakeFiles/TP1_exo3_structure_vertex.dir/build.make TP1/CMakeFiles/TP1_exo3_structure_vertex.dir/build
+.PHONY : TP1_exo3_structure_vertex/fast
+
+#=============================================================================
+# Target rules for targets named TP1_exo1_triangle_blanc
+
+# Build rule for target.
+TP1_exo1_triangle_blanc: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TP1_exo1_triangle_blanc
+.PHONY : TP1_exo1_triangle_blanc
+
+# fast build rule for target.
+TP1_exo1_triangle_blanc/fast:
+	$(MAKE) -f TP1/CMakeFiles/TP1_exo1_triangle_blanc.dir/build.make TP1/CMakeFiles/TP1_exo1_triangle_blanc.dir/build
+.PHONY : TP1_exo1_triangle_blanc/fast
 
 #=============================================================================
 # Target rules for targets named TP1_exo4_quad_color
@@ -163,30 +176,186 @@ TP1_exo1_triangle_couleurs/fast:
 .PHONY : TP1_exo1_triangle_couleurs/fast
 
 #=============================================================================
-# Target rules for targets named TP1_exo3_structure_vertex
+# Target rules for targets named TP2_mandelbrot
 
 # Build rule for target.
-TP1_exo3_structure_vertex: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TP1_exo3_structure_vertex
-.PHONY : TP1_exo3_structure_vertex
+TP2_mandelbrot: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TP2_mandelbrot
+.PHONY : TP2_mandelbrot
 
 # fast build rule for target.
-TP1_exo3_structure_vertex/fast:
-	$(MAKE) -f TP1/CMakeFiles/TP1_exo3_structure_vertex.dir/build.make TP1/CMakeFiles/TP1_exo3_structure_vertex.dir/build
-.PHONY : TP1_exo3_structure_vertex/fast
+TP2_mandelbrot/fast:
+	$(MAKE) -f TP2/CMakeFiles/TP2_mandelbrot.dir/build.make TP2/CMakeFiles/TP2_mandelbrot.dir/build
+.PHONY : TP2_mandelbrot/fast
 
 #=============================================================================
-# Target rules for targets named TP1_exo1_triangle_blanc
+# Target rules for targets named TP2_color2D
 
 # Build rule for target.
-TP1_exo1_triangle_blanc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TP1_exo1_triangle_blanc
-.PHONY : TP1_exo1_triangle_blanc
+TP2_color2D: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TP2_color2D
+.PHONY : TP2_color2D
 
 # fast build rule for target.
-TP1_exo1_triangle_blanc/fast:
-	$(MAKE) -f TP1/CMakeFiles/TP1_exo1_triangle_blanc.dir/build.make TP1/CMakeFiles/TP1_exo1_triangle_blanc.dir/build
-.PHONY : TP1_exo1_triangle_blanc/fast
+TP2_color2D/fast:
+	$(MAKE) -f TP2/CMakeFiles/TP2_color2D.dir/build.make TP2/CMakeFiles/TP2_color2D.dir/build
+.PHONY : TP2_color2D/fast
+
+#=============================================================================
+# Target rules for targets named TP2_spin
+
+# Build rule for target.
+TP2_spin: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TP2_spin
+.PHONY : TP2_spin
+
+# fast build rule for target.
+TP2_spin/fast:
+	$(MAKE) -f TP2/CMakeFiles/TP2_spin.dir/build.make TP2/CMakeFiles/TP2_spin.dir/build
+.PHONY : TP2_spin/fast
+
+#=============================================================================
+# Target rules for targets named TP2_suite
+
+# Build rule for target.
+TP2_suite: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TP2_suite
+.PHONY : TP2_suite
+
+# fast build rule for target.
+TP2_suite/fast:
+	$(MAKE) -f TP2/CMakeFiles/TP2_suite.dir/build.make TP2/CMakeFiles/TP2_suite.dir/build
+.PHONY : TP2_suite/fast
+
+#=============================================================================
+# Target rules for targets named TP2_multiSpin
+
+# Build rule for target.
+TP2_multiSpin: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TP2_multiSpin
+.PHONY : TP2_multiSpin
+
+# fast build rule for target.
+TP2_multiSpin/fast:
+	$(MAKE) -f TP2/CMakeFiles/TP2_multiSpin.dir/build.make TP2/CMakeFiles/TP2_multiSpin.dir/build
+.PHONY : TP2_multiSpin/fast
+
+#=============================================================================
+# Target rules for targets named TP2_triforce
+
+# Build rule for target.
+TP2_triforce: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TP2_triforce
+.PHONY : TP2_triforce
+
+# fast build rule for target.
+TP2_triforce/fast:
+	$(MAKE) -f TP2/CMakeFiles/TP2_triforce.dir/build.make TP2/CMakeFiles/TP2_triforce.dir/build
+.PHONY : TP2_triforce/fast
+
+#=============================================================================
+# Target rules for targets named TP3_exo2_luna
+
+# Build rule for target.
+TP3_exo2_luna: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TP3_exo2_luna
+.PHONY : TP3_exo2_luna
+
+# fast build rule for target.
+TP3_exo2_luna/fast:
+	$(MAKE) -f TP3/CMakeFiles/TP3_exo2_luna.dir/build.make TP3/CMakeFiles/TP3_exo2_luna.dir/build
+.PHONY : TP3_exo2_luna/fast
+
+#=============================================================================
+# Target rules for targets named TP3_exo1_sphere
+
+# Build rule for target.
+TP3_exo1_sphere: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TP3_exo1_sphere
+.PHONY : TP3_exo1_sphere
+
+# fast build rule for target.
+TP3_exo1_sphere/fast:
+	$(MAKE) -f TP3/CMakeFiles/TP3_exo1_sphere.dir/build.make TP3/CMakeFiles/TP3_exo1_sphere.dir/build
+.PHONY : TP3_exo1_sphere/fast
+
+#=============================================================================
+# Target rules for targets named TP3_exo4_multi_tex
+
+# Build rule for target.
+TP3_exo4_multi_tex: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TP3_exo4_multi_tex
+.PHONY : TP3_exo4_multi_tex
+
+# fast build rule for target.
+TP3_exo4_multi_tex/fast:
+	$(MAKE) -f TP3/CMakeFiles/TP3_exo4_multi_tex.dir/build.make TP3/CMakeFiles/TP3_exo4_multi_tex.dir/build
+.PHONY : TP3_exo4_multi_tex/fast
+
+#=============================================================================
+# Target rules for targets named TP3_exo3_earth
+
+# Build rule for target.
+TP3_exo3_earth: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TP3_exo3_earth
+.PHONY : TP3_exo3_earth
+
+# fast build rule for target.
+TP3_exo3_earth/fast:
+	$(MAKE) -f TP3/CMakeFiles/TP3_exo3_earth.dir/build.make TP3/CMakeFiles/TP3_exo3_earth.dir/build
+.PHONY : TP3_exo3_earth/fast
+
+#=============================================================================
+# Target rules for targets named TP3_exo5_multi_shaders
+
+# Build rule for target.
+TP3_exo5_multi_shaders: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TP3_exo5_multi_shaders
+.PHONY : TP3_exo5_multi_shaders
+
+# fast build rule for target.
+TP3_exo5_multi_shaders/fast:
+	$(MAKE) -f TP3/CMakeFiles/TP3_exo5_multi_shaders.dir/build.make TP3/CMakeFiles/TP3_exo5_multi_shaders.dir/build
+.PHONY : TP3_exo5_multi_shaders/fast
+
+#=============================================================================
+# Target rules for targets named TP4_exo1_track
+
+# Build rule for target.
+TP4_exo1_track: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TP4_exo1_track
+.PHONY : TP4_exo1_track
+
+# fast build rule for target.
+TP4_exo1_track/fast:
+	$(MAKE) -f TP4/CMakeFiles/TP4_exo1_track.dir/build.make TP4/CMakeFiles/TP4_exo1_track.dir/build
+.PHONY : TP4_exo1_track/fast
+
+#=============================================================================
+# Target rules for targets named TP4_exo2_freefly
+
+# Build rule for target.
+TP4_exo2_freefly: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TP4_exo2_freefly
+.PHONY : TP4_exo2_freefly
+
+# fast build rule for target.
+TP4_exo2_freefly/fast:
+	$(MAKE) -f TP4/CMakeFiles/TP4_exo2_freefly.dir/build.make TP4/CMakeFiles/TP4_exo2_freefly.dir/build
+.PHONY : TP4_exo2_freefly/fast
+
+#=============================================================================
+# Target rules for targets named TP5_exo1_dirlight
+
+# Build rule for target.
+TP5_exo1_dirlight: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TP5_exo1_dirlight
+.PHONY : TP5_exo1_dirlight
+
+# fast build rule for target.
+TP5_exo1_dirlight/fast:
+	$(MAKE) -f TP5/CMakeFiles/TP5_exo1_dirlight.dir/build.make TP5/CMakeFiles/TP5_exo1_dirlight.dir/build
+.PHONY : TP5_exo1_dirlight/fast
 
 #=============================================================================
 # Target rules for targets named TP_Mastercraft_main
@@ -202,6 +371,19 @@ TP_Mastercraft_main/fast:
 .PHONY : TP_Mastercraft_main/fast
 
 #=============================================================================
+# Target rules for targets named TP_Mastercraft_old_main
+
+# Build rule for target.
+TP_Mastercraft_old_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TP_Mastercraft_old_main
+.PHONY : TP_Mastercraft_old_main
+
+# fast build rule for target.
+TP_Mastercraft_old_main/fast:
+	$(MAKE) -f TP_Mastercraft/CMakeFiles/TP_Mastercraft_old_main.dir/build.make TP_Mastercraft/CMakeFiles/TP_Mastercraft_old_main.dir/build
+.PHONY : TP_Mastercraft_old_main/fast
+
+#=============================================================================
 # Target rules for targets named TP_template_SDLtemplate
 
 # Build rule for target.
@@ -214,19 +396,6 @@ TP_template_SDLtemplate/fast:
 	$(MAKE) -f TP_template/CMakeFiles/TP_template_SDLtemplate.dir/build.make TP_template/CMakeFiles/TP_template_SDLtemplate.dir/build
 .PHONY : TP_template_SDLtemplate/fast
 
-#=============================================================================
-# Target rules for targets named TP_test_SDLtemplate
-
-# Build rule for target.
-TP_test_SDLtemplate: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TP_test_SDLtemplate
-.PHONY : TP_test_SDLtemplate
-
-# fast build rule for target.
-TP_test_SDLtemplate/fast:
-	$(MAKE) -f TP_test/CMakeFiles/TP_test_SDLtemplate.dir/build.make TP_test/CMakeFiles/TP_test_SDLtemplate.dir/build
-.PHONY : TP_test_SDLtemplate/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -236,14 +405,27 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... glimac"
-	@echo "... glupem"
-	@echo "... TP1_exo4_quad_color"
-	@echo "... TP1_exo1_triangle_couleurs"
 	@echo "... TP1_exo3_structure_vertex"
 	@echo "... TP1_exo1_triangle_blanc"
+	@echo "... TP1_exo4_quad_color"
+	@echo "... TP1_exo1_triangle_couleurs"
+	@echo "... TP2_mandelbrot"
+	@echo "... TP2_color2D"
+	@echo "... TP2_spin"
+	@echo "... TP2_suite"
+	@echo "... TP2_multiSpin"
+	@echo "... TP2_triforce"
+	@echo "... TP3_exo2_luna"
+	@echo "... TP3_exo1_sphere"
+	@echo "... TP3_exo4_multi_tex"
+	@echo "... TP3_exo3_earth"
+	@echo "... TP3_exo5_multi_shaders"
+	@echo "... TP4_exo1_track"
+	@echo "... TP4_exo2_freefly"
+	@echo "... TP5_exo1_dirlight"
 	@echo "... TP_Mastercraft_main"
+	@echo "... TP_Mastercraft_old_main"
 	@echo "... TP_template_SDLtemplate"
-	@echo "... TP_test_SDLtemplate"
 .PHONY : help
 
 

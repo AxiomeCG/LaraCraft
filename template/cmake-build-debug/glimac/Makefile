@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /opt/clion-2019.2.3/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /opt/clion-2019.2.3/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/mhudelot/Documents/Synthese/LaraCraft/template
+CMAKE_SOURCE_DIR = /home/adam/Bureau/upem/M2/s1/synthese/projet/template
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug
+CMAKE_BINARY_DIR = /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-b
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/opt/clion-2019.2.3/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/opt/clion-2019.2.3/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/CMakeFiles /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/glimac/CMakeFiles/progress.marks
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 glimac/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/CMakeFiles 0
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/CMakeFiles /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/glimac/CMakeFiles/progress.marks
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 glimac/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 glimac/clean
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 glimac/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 glimac/preinstall
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 glimac/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 glimac/preinstall
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 glimac/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 glimac/CMakeFiles/glimac.dir/rule:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 glimac/CMakeFiles/glimac.dir/rule
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 glimac/CMakeFiles/glimac.dir/rule
 .PHONY : glimac/CMakeFiles/glimac.dir/rule
 
 # Convenience name for target.
@@ -122,35 +122,8 @@ glimac: glimac/CMakeFiles/glimac.dir/rule
 
 # fast build rule for target.
 glimac/fast:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/build
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/build
 .PHONY : glimac/fast
-
-cmake-build-debug/CMakeFiles/3.15.3/CompilerIdCXX/CMakeCXXCompilerId.o: cmake-build-debug/CMakeFiles/3.15.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.o
-
-.PHONY : cmake-build-debug/CMakeFiles/3.15.3/CompilerIdCXX/CMakeCXXCompilerId.o
-
-# target to build an object file
-cmake-build-debug/CMakeFiles/3.15.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.o:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.o
-.PHONY : cmake-build-debug/CMakeFiles/3.15.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.o
-
-cmake-build-debug/CMakeFiles/3.15.3/CompilerIdCXX/CMakeCXXCompilerId.i: cmake-build-debug/CMakeFiles/3.15.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.i
-
-.PHONY : cmake-build-debug/CMakeFiles/3.15.3/CompilerIdCXX/CMakeCXXCompilerId.i
-
-# target to preprocess a source file
-cmake-build-debug/CMakeFiles/3.15.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.i:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.i
-.PHONY : cmake-build-debug/CMakeFiles/3.15.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.i
-
-cmake-build-debug/CMakeFiles/3.15.3/CompilerIdCXX/CMakeCXXCompilerId.s: cmake-build-debug/CMakeFiles/3.15.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.s
-
-.PHONY : cmake-build-debug/CMakeFiles/3.15.3/CompilerIdCXX/CMakeCXXCompilerId.s
-
-# target to generate assembly for a file
-cmake-build-debug/CMakeFiles/3.15.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.s:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.s
-.PHONY : cmake-build-debug/CMakeFiles/3.15.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.s
 
 src/Cone.o: src/Cone.cpp.o
 
@@ -158,7 +131,7 @@ src/Cone.o: src/Cone.cpp.o
 
 # target to build an object file
 src/Cone.cpp.o:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/Cone.cpp.o
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/Cone.cpp.o
 .PHONY : src/Cone.cpp.o
 
 src/Cone.i: src/Cone.cpp.i
@@ -167,7 +140,7 @@ src/Cone.i: src/Cone.cpp.i
 
 # target to preprocess a source file
 src/Cone.cpp.i:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/Cone.cpp.i
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/Cone.cpp.i
 .PHONY : src/Cone.cpp.i
 
 src/Cone.s: src/Cone.cpp.s
@@ -176,8 +149,62 @@ src/Cone.s: src/Cone.cpp.s
 
 # target to generate assembly for a file
 src/Cone.cpp.s:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/Cone.cpp.s
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/Cone.cpp.s
 .PHONY : src/Cone.cpp.s
+
+src/Cube.o: src/Cube.cpp.o
+
+.PHONY : src/Cube.o
+
+# target to build an object file
+src/Cube.cpp.o:
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/Cube.cpp.o
+.PHONY : src/Cube.cpp.o
+
+src/Cube.i: src/Cube.cpp.i
+
+.PHONY : src/Cube.i
+
+# target to preprocess a source file
+src/Cube.cpp.i:
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/Cube.cpp.i
+.PHONY : src/Cube.cpp.i
+
+src/Cube.s: src/Cube.cpp.s
+
+.PHONY : src/Cube.s
+
+# target to generate assembly for a file
+src/Cube.cpp.s:
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/Cube.cpp.s
+.PHONY : src/Cube.cpp.s
+
+src/FreeflyCamera.o: src/FreeflyCamera.cpp.o
+
+.PHONY : src/FreeflyCamera.o
+
+# target to build an object file
+src/FreeflyCamera.cpp.o:
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/FreeflyCamera.cpp.o
+.PHONY : src/FreeflyCamera.cpp.o
+
+src/FreeflyCamera.i: src/FreeflyCamera.cpp.i
+
+.PHONY : src/FreeflyCamera.i
+
+# target to preprocess a source file
+src/FreeflyCamera.cpp.i:
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/FreeflyCamera.cpp.i
+.PHONY : src/FreeflyCamera.cpp.i
+
+src/FreeflyCamera.s: src/FreeflyCamera.cpp.s
+
+.PHONY : src/FreeflyCamera.s
+
+# target to generate assembly for a file
+src/FreeflyCamera.cpp.s:
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/FreeflyCamera.cpp.s
+.PHONY : src/FreeflyCamera.cpp.s
 
 src/Geometry.o: src/Geometry.cpp.o
 
@@ -185,7 +212,7 @@ src/Geometry.o: src/Geometry.cpp.o
 
 # target to build an object file
 src/Geometry.cpp.o:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/Geometry.cpp.o
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/Geometry.cpp.o
 .PHONY : src/Geometry.cpp.o
 
 src/Geometry.i: src/Geometry.cpp.i
@@ -194,7 +221,7 @@ src/Geometry.i: src/Geometry.cpp.i
 
 # target to preprocess a source file
 src/Geometry.cpp.i:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/Geometry.cpp.i
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/Geometry.cpp.i
 .PHONY : src/Geometry.cpp.i
 
 src/Geometry.s: src/Geometry.cpp.s
@@ -203,7 +230,7 @@ src/Geometry.s: src/Geometry.cpp.s
 
 # target to generate assembly for a file
 src/Geometry.cpp.s:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/Geometry.cpp.s
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/Geometry.cpp.s
 .PHONY : src/Geometry.cpp.s
 
 src/Image.o: src/Image.cpp.o
@@ -212,7 +239,7 @@ src/Image.o: src/Image.cpp.o
 
 # target to build an object file
 src/Image.cpp.o:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/Image.cpp.o
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/Image.cpp.o
 .PHONY : src/Image.cpp.o
 
 src/Image.i: src/Image.cpp.i
@@ -221,7 +248,7 @@ src/Image.i: src/Image.cpp.i
 
 # target to preprocess a source file
 src/Image.cpp.i:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/Image.cpp.i
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/Image.cpp.i
 .PHONY : src/Image.cpp.i
 
 src/Image.s: src/Image.cpp.s
@@ -230,7 +257,7 @@ src/Image.s: src/Image.cpp.s
 
 # target to generate assembly for a file
 src/Image.cpp.s:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/Image.cpp.s
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/Image.cpp.s
 .PHONY : src/Image.cpp.s
 
 src/Program.o: src/Program.cpp.o
@@ -239,7 +266,7 @@ src/Program.o: src/Program.cpp.o
 
 # target to build an object file
 src/Program.cpp.o:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/Program.cpp.o
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/Program.cpp.o
 .PHONY : src/Program.cpp.o
 
 src/Program.i: src/Program.cpp.i
@@ -248,7 +275,7 @@ src/Program.i: src/Program.cpp.i
 
 # target to preprocess a source file
 src/Program.cpp.i:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/Program.cpp.i
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/Program.cpp.i
 .PHONY : src/Program.cpp.i
 
 src/Program.s: src/Program.cpp.s
@@ -257,7 +284,7 @@ src/Program.s: src/Program.cpp.s
 
 # target to generate assembly for a file
 src/Program.cpp.s:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/Program.cpp.s
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/Program.cpp.s
 .PHONY : src/Program.cpp.s
 
 src/SDLWindowManager.o: src/SDLWindowManager.cpp.o
@@ -266,7 +293,7 @@ src/SDLWindowManager.o: src/SDLWindowManager.cpp.o
 
 # target to build an object file
 src/SDLWindowManager.cpp.o:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/SDLWindowManager.cpp.o
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/SDLWindowManager.cpp.o
 .PHONY : src/SDLWindowManager.cpp.o
 
 src/SDLWindowManager.i: src/SDLWindowManager.cpp.i
@@ -275,7 +302,7 @@ src/SDLWindowManager.i: src/SDLWindowManager.cpp.i
 
 # target to preprocess a source file
 src/SDLWindowManager.cpp.i:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/SDLWindowManager.cpp.i
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/SDLWindowManager.cpp.i
 .PHONY : src/SDLWindowManager.cpp.i
 
 src/SDLWindowManager.s: src/SDLWindowManager.cpp.s
@@ -284,7 +311,7 @@ src/SDLWindowManager.s: src/SDLWindowManager.cpp.s
 
 # target to generate assembly for a file
 src/SDLWindowManager.cpp.s:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/SDLWindowManager.cpp.s
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/SDLWindowManager.cpp.s
 .PHONY : src/SDLWindowManager.cpp.s
 
 src/Shader.o: src/Shader.cpp.o
@@ -293,7 +320,7 @@ src/Shader.o: src/Shader.cpp.o
 
 # target to build an object file
 src/Shader.cpp.o:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/Shader.cpp.o
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/Shader.cpp.o
 .PHONY : src/Shader.cpp.o
 
 src/Shader.i: src/Shader.cpp.i
@@ -302,7 +329,7 @@ src/Shader.i: src/Shader.cpp.i
 
 # target to preprocess a source file
 src/Shader.cpp.i:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/Shader.cpp.i
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/Shader.cpp.i
 .PHONY : src/Shader.cpp.i
 
 src/Shader.s: src/Shader.cpp.s
@@ -311,7 +338,7 @@ src/Shader.s: src/Shader.cpp.s
 
 # target to generate assembly for a file
 src/Shader.cpp.s:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/Shader.cpp.s
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/Shader.cpp.s
 .PHONY : src/Shader.cpp.s
 
 src/Sphere.o: src/Sphere.cpp.o
@@ -320,7 +347,7 @@ src/Sphere.o: src/Sphere.cpp.o
 
 # target to build an object file
 src/Sphere.cpp.o:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/Sphere.cpp.o
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/Sphere.cpp.o
 .PHONY : src/Sphere.cpp.o
 
 src/Sphere.i: src/Sphere.cpp.i
@@ -329,7 +356,7 @@ src/Sphere.i: src/Sphere.cpp.i
 
 # target to preprocess a source file
 src/Sphere.cpp.i:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/Sphere.cpp.i
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/Sphere.cpp.i
 .PHONY : src/Sphere.cpp.i
 
 src/Sphere.s: src/Sphere.cpp.s
@@ -338,8 +365,62 @@ src/Sphere.s: src/Sphere.cpp.s
 
 # target to generate assembly for a file
 src/Sphere.cpp.s:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/Sphere.cpp.s
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/Sphere.cpp.s
 .PHONY : src/Sphere.cpp.s
+
+src/TrackballCamera.o: src/TrackballCamera.cpp.o
+
+.PHONY : src/TrackballCamera.o
+
+# target to build an object file
+src/TrackballCamera.cpp.o:
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/TrackballCamera.cpp.o
+.PHONY : src/TrackballCamera.cpp.o
+
+src/TrackballCamera.i: src/TrackballCamera.cpp.i
+
+.PHONY : src/TrackballCamera.i
+
+# target to preprocess a source file
+src/TrackballCamera.cpp.i:
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/TrackballCamera.cpp.i
+.PHONY : src/TrackballCamera.cpp.i
+
+src/TrackballCamera.s: src/TrackballCamera.cpp.s
+
+.PHONY : src/TrackballCamera.s
+
+# target to generate assembly for a file
+src/TrackballCamera.cpp.s:
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/TrackballCamera.cpp.s
+.PHONY : src/TrackballCamera.cpp.s
+
+src/WindowManager.o: src/WindowManager.cpp.o
+
+.PHONY : src/WindowManager.o
+
+# target to build an object file
+src/WindowManager.cpp.o:
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/WindowManager.cpp.o
+.PHONY : src/WindowManager.cpp.o
+
+src/WindowManager.i: src/WindowManager.cpp.i
+
+.PHONY : src/WindowManager.i
+
+# target to preprocess a source file
+src/WindowManager.cpp.i:
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/WindowManager.cpp.i
+.PHONY : src/WindowManager.cpp.i
+
+src/WindowManager.s: src/WindowManager.cpp.s
+
+.PHONY : src/WindowManager.s
+
+# target to generate assembly for a file
+src/WindowManager.cpp.s:
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/WindowManager.cpp.s
+.PHONY : src/WindowManager.cpp.s
 
 src/tiny_obj_loader.o: src/tiny_obj_loader.cpp.o
 
@@ -347,7 +428,7 @@ src/tiny_obj_loader.o: src/tiny_obj_loader.cpp.o
 
 # target to build an object file
 src/tiny_obj_loader.cpp.o:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/tiny_obj_loader.cpp.o
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/tiny_obj_loader.cpp.o
 .PHONY : src/tiny_obj_loader.cpp.o
 
 src/tiny_obj_loader.i: src/tiny_obj_loader.cpp.i
@@ -356,7 +437,7 @@ src/tiny_obj_loader.i: src/tiny_obj_loader.cpp.i
 
 # target to preprocess a source file
 src/tiny_obj_loader.cpp.i:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/tiny_obj_loader.cpp.i
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/tiny_obj_loader.cpp.i
 .PHONY : src/tiny_obj_loader.cpp.i
 
 src/tiny_obj_loader.s: src/tiny_obj_loader.cpp.s
@@ -365,7 +446,7 @@ src/tiny_obj_loader.s: src/tiny_obj_loader.cpp.s
 
 # target to generate assembly for a file
 src/tiny_obj_loader.cpp.s:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/tiny_obj_loader.cpp.s
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/src/tiny_obj_loader.cpp.s
 .PHONY : src/tiny_obj_loader.cpp.s
 
 # Help Target
@@ -375,14 +456,17 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
 	@echo "... glimac"
-	@echo "... cmake-build-debug/CMakeFiles/3.15.3/CompilerIdCXX/CMakeCXXCompilerId.o"
-	@echo "... cmake-build-debug/CMakeFiles/3.15.3/CompilerIdCXX/CMakeCXXCompilerId.i"
-	@echo "... cmake-build-debug/CMakeFiles/3.15.3/CompilerIdCXX/CMakeCXXCompilerId.s"
+	@echo "... edit_cache"
 	@echo "... src/Cone.o"
 	@echo "... src/Cone.i"
 	@echo "... src/Cone.s"
+	@echo "... src/Cube.o"
+	@echo "... src/Cube.i"
+	@echo "... src/Cube.s"
+	@echo "... src/FreeflyCamera.o"
+	@echo "... src/FreeflyCamera.i"
+	@echo "... src/FreeflyCamera.s"
 	@echo "... src/Geometry.o"
 	@echo "... src/Geometry.i"
 	@echo "... src/Geometry.s"
@@ -401,6 +485,12 @@ help:
 	@echo "... src/Sphere.o"
 	@echo "... src/Sphere.i"
 	@echo "... src/Sphere.s"
+	@echo "... src/TrackballCamera.o"
+	@echo "... src/TrackballCamera.i"
+	@echo "... src/TrackballCamera.s"
+	@echo "... src/WindowManager.o"
+	@echo "... src/WindowManager.i"
+	@echo "... src/WindowManager.s"
 	@echo "... src/tiny_obj_loader.o"
 	@echo "... src/tiny_obj_loader.i"
 	@echo "... src/tiny_obj_loader.s"
@@ -415,6 +505,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -1,2 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/ar qc libglupem.a  CMakeFiles/glupem.dir/src/Cube.cpp.o CMakeFiles/glupem.dir/src/WindowManager.cpp.o
-/Library/Developer/CommandLineTools/usr/bin/ranlib libglupem.a

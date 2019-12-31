@@ -4,16 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/mhudelot/Documents/Synthese/LaraCraft/template/glupem/src/Cube.cpp" "/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/glupem/CMakeFiles/glupem.dir/src/Cube.cpp.o"
-  "/Users/mhudelot/Documents/Synthese/LaraCraft/template/glupem/src/WindowManager.cpp" "/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/glupem/CMakeFiles/glupem.dir/src/WindowManager.cpp.o"
+  "/home/adam/Bureau/upem/M2/s1/synthese/projet/template2/glupem/src/Cube.cpp" "/home/adam/Bureau/upem/M2/s1/synthese/projet/template2/cmake-build-debug/glupem/CMakeFiles/glupem.dir/src/Cube.cpp.o"
+  "/home/adam/Bureau/upem/M2/s1/synthese/projet/template2/glupem/src/WindowManager.cpp" "/home/adam/Bureau/upem/M2/s1/synthese/projet/template2/cmake-build-debug/glupem/CMakeFiles/glupem.dir/src/WindowManager.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "Clang")
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/usr/local/include"
-  "/usr/local/include/SDL"
-  "/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"
+  "/usr/include/SDL"
   "../glimac/include"
   "../third-party/include"
   "../glupem/include"

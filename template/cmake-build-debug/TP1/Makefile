@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /opt/clion-2019.2.3/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /opt/clion-2019.2.3/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/mhudelot/Documents/Synthese/LaraCraft/template
+CMAKE_SOURCE_DIR = /home/adam/Bureau/upem/M2/s1/synthese/projet/template
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug
+CMAKE_BINARY_DIR = /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-b
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/opt/clion-2019.2.3/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/opt/clion-2019.2.3/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/CMakeFiles /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP1/CMakeFiles/progress.marks
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 TP1/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/CMakeFiles 0
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/CMakeFiles /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1/CMakeFiles/progress.marks
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 TP1/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 TP1/clean
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 TP1/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,52 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 TP1/preinstall
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 TP1/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 TP1/preinstall
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 TP1/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
-TP1/CMakeFiles/TP1_exo4_quad_color.dir/rule:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 TP1/CMakeFiles/TP1_exo4_quad_color.dir/rule
-.PHONY : TP1/CMakeFiles/TP1_exo4_quad_color.dir/rule
-
-# Convenience name for target.
-TP1_exo4_quad_color: TP1/CMakeFiles/TP1_exo4_quad_color.dir/rule
-
-.PHONY : TP1_exo4_quad_color
-
-# fast build rule for target.
-TP1_exo4_quad_color/fast:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f TP1/CMakeFiles/TP1_exo4_quad_color.dir/build.make TP1/CMakeFiles/TP1_exo4_quad_color.dir/build
-.PHONY : TP1_exo4_quad_color/fast
-
-# Convenience name for target.
-TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/rule:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/rule
-.PHONY : TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/rule
-
-# Convenience name for target.
-TP1_exo1_triangle_couleurs: TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/rule
-
-.PHONY : TP1_exo1_triangle_couleurs
-
-# fast build rule for target.
-TP1_exo1_triangle_couleurs/fast:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/build.make TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/build
-.PHONY : TP1_exo1_triangle_couleurs/fast
-
-# Convenience name for target.
 TP1/CMakeFiles/TP1_exo3_structure_vertex.dir/rule:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 TP1/CMakeFiles/TP1_exo3_structure_vertex.dir/rule
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 TP1/CMakeFiles/TP1_exo3_structure_vertex.dir/rule
 .PHONY : TP1/CMakeFiles/TP1_exo3_structure_vertex.dir/rule
 
 # Convenience name for target.
@@ -152,12 +122,12 @@ TP1_exo3_structure_vertex: TP1/CMakeFiles/TP1_exo3_structure_vertex.dir/rule
 
 # fast build rule for target.
 TP1_exo3_structure_vertex/fast:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f TP1/CMakeFiles/TP1_exo3_structure_vertex.dir/build.make TP1/CMakeFiles/TP1_exo3_structure_vertex.dir/build
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f TP1/CMakeFiles/TP1_exo3_structure_vertex.dir/build.make TP1/CMakeFiles/TP1_exo3_structure_vertex.dir/build
 .PHONY : TP1_exo3_structure_vertex/fast
 
 # Convenience name for target.
 TP1/CMakeFiles/TP1_exo1_triangle_blanc.dir/rule:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 TP1/CMakeFiles/TP1_exo1_triangle_blanc.dir/rule
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 TP1/CMakeFiles/TP1_exo1_triangle_blanc.dir/rule
 .PHONY : TP1/CMakeFiles/TP1_exo1_triangle_blanc.dir/rule
 
 # Convenience name for target.
@@ -167,8 +137,38 @@ TP1_exo1_triangle_blanc: TP1/CMakeFiles/TP1_exo1_triangle_blanc.dir/rule
 
 # fast build rule for target.
 TP1_exo1_triangle_blanc/fast:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f TP1/CMakeFiles/TP1_exo1_triangle_blanc.dir/build.make TP1/CMakeFiles/TP1_exo1_triangle_blanc.dir/build
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f TP1/CMakeFiles/TP1_exo1_triangle_blanc.dir/build.make TP1/CMakeFiles/TP1_exo1_triangle_blanc.dir/build
 .PHONY : TP1_exo1_triangle_blanc/fast
+
+# Convenience name for target.
+TP1/CMakeFiles/TP1_exo4_quad_color.dir/rule:
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 TP1/CMakeFiles/TP1_exo4_quad_color.dir/rule
+.PHONY : TP1/CMakeFiles/TP1_exo4_quad_color.dir/rule
+
+# Convenience name for target.
+TP1_exo4_quad_color: TP1/CMakeFiles/TP1_exo4_quad_color.dir/rule
+
+.PHONY : TP1_exo4_quad_color
+
+# fast build rule for target.
+TP1_exo4_quad_color/fast:
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f TP1/CMakeFiles/TP1_exo4_quad_color.dir/build.make TP1/CMakeFiles/TP1_exo4_quad_color.dir/build
+.PHONY : TP1_exo4_quad_color/fast
+
+# Convenience name for target.
+TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/rule:
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/rule
+.PHONY : TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/rule
+
+# Convenience name for target.
+TP1_exo1_triangle_couleurs: TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/rule
+
+.PHONY : TP1_exo1_triangle_couleurs
+
+# fast build rule for target.
+TP1_exo1_triangle_couleurs/fast:
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/build.make TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/build
+.PHONY : TP1_exo1_triangle_couleurs/fast
 
 exo1_triangle_blanc.o: exo1_triangle_blanc.cpp.o
 
@@ -176,7 +176,7 @@ exo1_triangle_blanc.o: exo1_triangle_blanc.cpp.o
 
 # target to build an object file
 exo1_triangle_blanc.cpp.o:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f TP1/CMakeFiles/TP1_exo1_triangle_blanc.dir/build.make TP1/CMakeFiles/TP1_exo1_triangle_blanc.dir/exo1_triangle_blanc.cpp.o
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f TP1/CMakeFiles/TP1_exo1_triangle_blanc.dir/build.make TP1/CMakeFiles/TP1_exo1_triangle_blanc.dir/exo1_triangle_blanc.cpp.o
 .PHONY : exo1_triangle_blanc.cpp.o
 
 exo1_triangle_blanc.i: exo1_triangle_blanc.cpp.i
@@ -185,7 +185,7 @@ exo1_triangle_blanc.i: exo1_triangle_blanc.cpp.i
 
 # target to preprocess a source file
 exo1_triangle_blanc.cpp.i:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f TP1/CMakeFiles/TP1_exo1_triangle_blanc.dir/build.make TP1/CMakeFiles/TP1_exo1_triangle_blanc.dir/exo1_triangle_blanc.cpp.i
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f TP1/CMakeFiles/TP1_exo1_triangle_blanc.dir/build.make TP1/CMakeFiles/TP1_exo1_triangle_blanc.dir/exo1_triangle_blanc.cpp.i
 .PHONY : exo1_triangle_blanc.cpp.i
 
 exo1_triangle_blanc.s: exo1_triangle_blanc.cpp.s
@@ -194,7 +194,7 @@ exo1_triangle_blanc.s: exo1_triangle_blanc.cpp.s
 
 # target to generate assembly for a file
 exo1_triangle_blanc.cpp.s:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f TP1/CMakeFiles/TP1_exo1_triangle_blanc.dir/build.make TP1/CMakeFiles/TP1_exo1_triangle_blanc.dir/exo1_triangle_blanc.cpp.s
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f TP1/CMakeFiles/TP1_exo1_triangle_blanc.dir/build.make TP1/CMakeFiles/TP1_exo1_triangle_blanc.dir/exo1_triangle_blanc.cpp.s
 .PHONY : exo1_triangle_blanc.cpp.s
 
 exo1_triangle_couleurs.o: exo1_triangle_couleurs.cpp.o
@@ -203,7 +203,7 @@ exo1_triangle_couleurs.o: exo1_triangle_couleurs.cpp.o
 
 # target to build an object file
 exo1_triangle_couleurs.cpp.o:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/build.make TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/exo1_triangle_couleurs.cpp.o
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/build.make TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/exo1_triangle_couleurs.cpp.o
 .PHONY : exo1_triangle_couleurs.cpp.o
 
 exo1_triangle_couleurs.i: exo1_triangle_couleurs.cpp.i
@@ -212,7 +212,7 @@ exo1_triangle_couleurs.i: exo1_triangle_couleurs.cpp.i
 
 # target to preprocess a source file
 exo1_triangle_couleurs.cpp.i:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/build.make TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/exo1_triangle_couleurs.cpp.i
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/build.make TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/exo1_triangle_couleurs.cpp.i
 .PHONY : exo1_triangle_couleurs.cpp.i
 
 exo1_triangle_couleurs.s: exo1_triangle_couleurs.cpp.s
@@ -221,7 +221,7 @@ exo1_triangle_couleurs.s: exo1_triangle_couleurs.cpp.s
 
 # target to generate assembly for a file
 exo1_triangle_couleurs.cpp.s:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/build.make TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/exo1_triangle_couleurs.cpp.s
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/build.make TP1/CMakeFiles/TP1_exo1_triangle_couleurs.dir/exo1_triangle_couleurs.cpp.s
 .PHONY : exo1_triangle_couleurs.cpp.s
 
 exo3_structure_vertex.o: exo3_structure_vertex.cpp.o
@@ -230,7 +230,7 @@ exo3_structure_vertex.o: exo3_structure_vertex.cpp.o
 
 # target to build an object file
 exo3_structure_vertex.cpp.o:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f TP1/CMakeFiles/TP1_exo3_structure_vertex.dir/build.make TP1/CMakeFiles/TP1_exo3_structure_vertex.dir/exo3_structure_vertex.cpp.o
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f TP1/CMakeFiles/TP1_exo3_structure_vertex.dir/build.make TP1/CMakeFiles/TP1_exo3_structure_vertex.dir/exo3_structure_vertex.cpp.o
 .PHONY : exo3_structure_vertex.cpp.o
 
 exo3_structure_vertex.i: exo3_structure_vertex.cpp.i
@@ -239,7 +239,7 @@ exo3_structure_vertex.i: exo3_structure_vertex.cpp.i
 
 # target to preprocess a source file
 exo3_structure_vertex.cpp.i:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f TP1/CMakeFiles/TP1_exo3_structure_vertex.dir/build.make TP1/CMakeFiles/TP1_exo3_structure_vertex.dir/exo3_structure_vertex.cpp.i
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f TP1/CMakeFiles/TP1_exo3_structure_vertex.dir/build.make TP1/CMakeFiles/TP1_exo3_structure_vertex.dir/exo3_structure_vertex.cpp.i
 .PHONY : exo3_structure_vertex.cpp.i
 
 exo3_structure_vertex.s: exo3_structure_vertex.cpp.s
@@ -248,7 +248,7 @@ exo3_structure_vertex.s: exo3_structure_vertex.cpp.s
 
 # target to generate assembly for a file
 exo3_structure_vertex.cpp.s:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f TP1/CMakeFiles/TP1_exo3_structure_vertex.dir/build.make TP1/CMakeFiles/TP1_exo3_structure_vertex.dir/exo3_structure_vertex.cpp.s
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f TP1/CMakeFiles/TP1_exo3_structure_vertex.dir/build.make TP1/CMakeFiles/TP1_exo3_structure_vertex.dir/exo3_structure_vertex.cpp.s
 .PHONY : exo3_structure_vertex.cpp.s
 
 exo4_quad_color.o: exo4_quad_color.cpp.o
@@ -257,7 +257,7 @@ exo4_quad_color.o: exo4_quad_color.cpp.o
 
 # target to build an object file
 exo4_quad_color.cpp.o:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f TP1/CMakeFiles/TP1_exo4_quad_color.dir/build.make TP1/CMakeFiles/TP1_exo4_quad_color.dir/exo4_quad_color.cpp.o
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f TP1/CMakeFiles/TP1_exo4_quad_color.dir/build.make TP1/CMakeFiles/TP1_exo4_quad_color.dir/exo4_quad_color.cpp.o
 .PHONY : exo4_quad_color.cpp.o
 
 exo4_quad_color.i: exo4_quad_color.cpp.i
@@ -266,7 +266,7 @@ exo4_quad_color.i: exo4_quad_color.cpp.i
 
 # target to preprocess a source file
 exo4_quad_color.cpp.i:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f TP1/CMakeFiles/TP1_exo4_quad_color.dir/build.make TP1/CMakeFiles/TP1_exo4_quad_color.dir/exo4_quad_color.cpp.i
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f TP1/CMakeFiles/TP1_exo4_quad_color.dir/build.make TP1/CMakeFiles/TP1_exo4_quad_color.dir/exo4_quad_color.cpp.i
 .PHONY : exo4_quad_color.cpp.i
 
 exo4_quad_color.s: exo4_quad_color.cpp.s
@@ -275,7 +275,7 @@ exo4_quad_color.s: exo4_quad_color.cpp.s
 
 # target to generate assembly for a file
 exo4_quad_color.cpp.s:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(MAKE) -f TP1/CMakeFiles/TP1_exo4_quad_color.dir/build.make TP1/CMakeFiles/TP1_exo4_quad_color.dir/exo4_quad_color.cpp.s
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(MAKE) -f TP1/CMakeFiles/TP1_exo4_quad_color.dir/build.make TP1/CMakeFiles/TP1_exo4_quad_color.dir/exo4_quad_color.cpp.s
 .PHONY : exo4_quad_color.cpp.s
 
 # Help Target
@@ -285,11 +285,11 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... TP1_exo4_quad_color"
 	@echo "... edit_cache"
-	@echo "... TP1_exo1_triangle_couleurs"
 	@echo "... TP1_exo3_structure_vertex"
 	@echo "... TP1_exo1_triangle_blanc"
+	@echo "... TP1_exo4_quad_color"
+	@echo "... TP1_exo1_triangle_couleurs"
 	@echo "... exo1_triangle_blanc.o"
 	@echo "... exo1_triangle_blanc.i"
 	@echo "... exo1_triangle_blanc.s"
@@ -313,6 +313,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

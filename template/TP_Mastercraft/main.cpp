@@ -1,239 +1,166 @@
-#include <glimac/SDLWindowManager.hpp>
-#include <GL/glew.h>
-#include <iostream>
-#include <glimac/Sphere.hpp>
-#include <glimac/Program.hpp>
-#include <glimac/FreeFlyCamera.hpp>
-#include <glupem/Cube.hpp>
-#include <GLFW/glfw3.h>
-#include <glupem/WindowManager.hpp>
 
+#include <glimac/Program.hpp>
+#include <glimac/FilePath.hpp>
+
+#include <glimac/common.hpp>
+
+#include <glimac/FreeflyCamera.hpp>
+#include <GL/glew.h>
+#include <GLFW/glfw3.h>
+#include <iostream>
+#include <cstddef>
+#include <glimac/Cube.hpp>
+#include <glimac/WindowManager.hpp>
 
 using namespace glimac;
 
-void errorCallback(int, const char* err_str)
-{
-    std::cout << "GLFW Error: " << err_str << std::endl;
-}
+int main(int argc, char** argv) {
+    // Initialize glfw
+    /*if (!glfwInit())
+    {
+        std::cerr << "Failed in initialization GLFW" << std::endl;
+        return -1;
+    }
 
-int main(int argc, char **argv) {
-    // Initialize SDL and open a window
-    glfwSetErrorCallback(errorCallback);
+    //Hint the GL version to use
+    glfwWindowHint(GLFW_SAMPLES, 4);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 
-    std::cout << "Begin Main" << std::endl;
+    //Create the window
+    GLFWwindow* windowManager = glfwCreateWindow(800, 800, "GLImac", NULL, NULL);
+    if (!windowManager)
+    {
+        std::cerr << "Failed in create Windows" << std::endl;
+        glfwTerminate();
+        return -1;
+    }
+    glfwMakeContextCurrent(windowManager);*/
 
-    int width = 800;
-    int height = 800;
-    //SDLWindowManager windowManager(width, height, "GLImac");
+    WindowManager windowManager = WindowManager(800, 800, "Matthias", 0);
 
-    std::cout << "Before window initialisation" << std::endl;
+    //glfwSetInputMode(windowManager, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
-    WindowManager window(width, height, "LaraCraft", 0);
-
-
-    std::cout << "Before GLEW initialisation" << std::endl;
     // Initialize glew for OpenGL3+ support
     glewExperimental = GL_TRUE;
     GLenum glewInitError = glewInit();
-    if (GLEW_OK != glewInitError) {
+    if(GLEW_OK != glewInitError) {
         std::cerr << glewGetErrorString(glewInitError) << std::endl;
         return EXIT_FAILURE;
     }
 
+    std::cout << "OpenGL Version : " << glGetString(GL_VERSION) << std::endl;
+    std::cout << "GLEW Version : " << glewGetString(GLEW_VERSION) << std::endl;
 
-    //SDL_ShowCursor(0);
-    //SDL_WM_GrabInput(SDL_GRAB_ON);
-
-    std::cout << "Before LoadProgram initialisation" << std::endl;
     FilePath applicationPath(argv[0]);
     Program program = loadProgram(applicationPath.dirPath() + "shaders/3D.vs.glsl",
                                   applicationPath.dirPath() + "shaders/normals.fs.glsl");
     program.use();
 
-    std::cout << "OpenGL Version : " << glGetString(GL_VERSION) << std::endl;
-    std::cout << "GLEW Version : " << glewGetString(GLEW_VERSION) << std::endl;
+    GLuint locateMVPMatrix = glGetUniformLocation(program.getGLId(), "uMVPMatrix");
+    GLuint locateMVMatrix = glGetUniformLocation(program.getGLId(), "uMVMatrix");
+    GLuint locateNormalMatrix = glGetUniformLocation(program.getGLId(), "uNormalMatrix");
+
+    glEnable(GL_DEPTH_TEST);
+    glEnable(GL_CULL_FACE);
 
     /*********************************
      * HERE SHOULD COME THE INITIALIZATION CODE
      *********************************/
-    int uMVPMatrixId = glGetUniformLocation(program.getGLId(),"uMVPMatrix");
-    int uMVMatrixId = glGetUniformLocation(program.getGLId(),"uMVMatrix");
-    int uNormalMatrixId =glGetUniformLocation(program.getGLId(),"uNormalMatrix");
-    glEnable(GL_DEPTH_TEST);
-    glEnable(GL_CULL_FACE);
 
-
-    /**
-     * VBO
-     * Shape init
-     */
     Cube cube;
 
-    GLuint vbo;
+    GLuint vbo, vao;
+
     glGenBuffers(1, &vbo);
+
     glBindBuffer(GL_ARRAY_BUFFER, vbo);
 
-    glBufferData(GL_ARRAY_BUFFER, cube.getVertexCount() * sizeof(ShapeVertex), cube.getDataPointer(),
-                 GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, cube.getVertexCount() * sizeof(ShapeVertex), cube.getDataPointer(), GL_STATIC_DRAW);
 
+    // Debinding d'un VBO sur la cible GL_ARRAY_BUFFER:
     glBindBuffer(GL_ARRAY_BUFFER, 0);
 
+    glGenVertexArrays(1, &vao);
 
-    /**
-     * IBO
-     * Index vertices
-     */
-
-    /*GLuint ibo;
-    glGenBuffers(1, &ibo);
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo);
-
-    const uint32_t *indicePointerArray = cube.getIBOIndices();
-
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, cube.getIndiceCount() * sizeof(uint32_t), indicePointerArray, GL_STATIC_DRAW);
-
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);*/
-
-    /**
-     * VAO
-     * Attribute indexing
-     */
-
-    GLuint vao;
-    glGenBuffers(1, &vao);
+    // Binding de l'unique VAO:
     glBindVertexArray(vao);
-
-    // Declaration of the ibo in the vao
-   // glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo);
-
 
     const GLuint VERTEX_ATTR_POSITION = 0;
     const GLuint VERTEX_ATTR_NORMAL = 1;
     const GLuint VERTEX_ATTR_TEXTURE = 2;
-
     glEnableVertexAttribArray(VERTEX_ATTR_POSITION);
     glEnableVertexAttribArray(VERTEX_ATTR_NORMAL);
     glEnableVertexAttribArray(VERTEX_ATTR_TEXTURE);
 
-    /**
-     * VBO specification attributes
-     * Attribution of the index to attributes
-     */
-
+    // Re-binding du VBO sur la cible GL_ARRAY_BUFFER pour glVertexAttribPointer:
     glBindBuffer(GL_ARRAY_BUFFER, vbo);
-    glVertexAttribPointer(VERTEX_ATTR_POSITION, 3, GL_FLOAT, GL_FALSE, sizeof(ShapeVertex),
-                          (const GLvoid *) offsetof(ShapeVertex, position));
-    glVertexAttribPointer(VERTEX_ATTR_NORMAL, 3, GL_FLOAT, GL_FALSE, sizeof(ShapeVertex),
-                          (const GLvoid *) offsetof(ShapeVertex, normal));
-    glVertexAttribPointer(VERTEX_ATTR_TEXTURE, 2, GL_FLOAT, GL_FALSE, sizeof(ShapeVertex),
-                          (const GLvoid *) offsetof(ShapeVertex, texCoords));
 
+    // Specification des attributs de position :
+    glVertexAttribPointer(VERTEX_ATTR_POSITION, 3, GL_FLOAT, GL_FALSE, sizeof(ShapeVertex), (const GLvoid *) offsetof(ShapeVertex, position));
+    glVertexAttribPointer(VERTEX_ATTR_NORMAL, 3, GL_FLOAT, GL_FALSE, sizeof(ShapeVertex), (const GLvoid *) offsetof(ShapeVertex, normal));
+    glVertexAttribPointer(VERTEX_ATTR_TEXTURE, 2, GL_FLOAT, GL_FALSE, sizeof(ShapeVertex), (const GLvoid *) offsetof(ShapeVertex, texCoords));
+
+    // Debinding d'un VBO sur la cible GL_ARRAY_BUFFER:
     glBindBuffer(GL_ARRAY_BUFFER, 0);
+
+    // Debinding de l'unique VAO:
     glBindVertexArray(0);
 
-    FreeFlyCamera camera;
+    glm::mat4 ProjMatrix, MVMatrix, NormalMatrix;
 
-
-    glm::mat4 ProjMatrix = glm::perspective(glm::radians(70.f), (float)width/(float)height,0.1f,100.f);
-
+    ProjMatrix = glm::perspective(glm::radians(70.f), 1.f, 0.1f, 100.f);
     double xpos, ypos;
     xpos = ypos = 0;
 
+    FreeflyCamera camera;
     // Application loop:
-    //bool done = false;
-    //bool firstMouseLaunch = true;
-    while (!window.windowShouldClose()) {
-        // Event loop:
-        //SDL_Event e;
-        /*float cameraMoveForward = 0.f;
-        float cameraMoveLeft = 0.f;
-        float cameraRotateLeft = 0.f;
-        float cameraRotateUp = 0.f;*/
+    while (!windowManager.windowShouldClose()) {
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+        glBindVertexArray(vao);
 
-        /*while (windowManager.pollEvent(e)) {
-            switch (e.type) {
-                case SDL_QUIT:
-                    done = true; // Leave the loop after this iteration
-                    break;
-            }
-        }*/
-
-        /*int x = 0;
-        int y = 0;
-
-        if (firstMouseLaunch){
-            firstMouseLaunch = false;
-            SDL_WarpMouse(0,0);
-        } else {
-            SDL_GetRelativeMouseState(&x, &y);
-        }
-
-        cameraRotateLeft -= (float) x;
-        cameraRotateUp -= (float) y;
-
-        auto keyboardState = SDL_GetKeyState(nullptr);
-
-        if (keyboardState[SDLK_z]) {
-            cameraMoveForward++;
-        }
-        if (keyboardState[SDLK_q]) {
-            cameraMoveLeft++;
-        }
-        if (keyboardState[SDLK_s]) {
-            cameraMoveForward--;
-        }
-        if (keyboardState[SDLK_d]) {
-            cameraMoveLeft--;
-        }
-        if (keyboardState[SDLK_ESCAPE]) {
-            done = true;
-        }*/
-
-        /*********************************
-         * HERE SHOULD COME THE RENDERING CODE
-         *********************************/
-
-
-        /*camera.moveFront(cameraMoveForward / 10);
-        camera.moveLeft(cameraMoveLeft / 10);
-        camera.rotateLeft(cameraRotateLeft / 10);
-        camera.rotateUp(cameraRotateUp / 10);*/
-
-        // Matrix calculations
         glm::mat4 VMatrix = camera.getViewMatrix();
-        glm::mat4 MVMatrix = VMatrix;
 
-        glm::mat4 NormalMatrix = glm::transpose(glm::inverse(MVMatrix));
+        MVMatrix = VMatrix;
 
         glm::mat4 MVPMatrix = ProjMatrix * MVMatrix;
 
-        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+        NormalMatrix = glm::transpose(glm::inverse(MVMatrix));
 
-        glBindVertexArray(vao);
+        glUniformMatrix4fv(locateMVPMatrix, 1, GL_FALSE, glm::value_ptr(MVPMatrix));
+        glUniformMatrix4fv(locateMVMatrix, 1, GL_FALSE, glm::value_ptr(MVMatrix));
+        glUniformMatrix4fv(locateNormalMatrix, 1, GL_FALSE, glm::value_ptr(NormalMatrix));
 
-        glUniformMatrix4fv(uMVMatrixId,1,GL_FALSE,glm::value_ptr(MVMatrix));
-        glUniformMatrix4fv(uMVPMatrixId,1,GL_FALSE,glm::value_ptr(MVPMatrix));
-        glUniformMatrix4fv(uNormalMatrixId,1,GL_FALSE,glm::value_ptr(NormalMatrix));
         glDrawArrays(GL_TRIANGLES, 0, cube.getVertexCount());
 
-        //Flush VAO
+
         glBindVertexArray(0);
-        // Update the display
-        window.swapBuffer();
-        window.pollEvent();
-        int stateUpKey = window.getKey(GLFW_KEY_UP);
+
+        windowManager.swapBuffer();
+        glfwPollEvents();
+        int stateUpKey = windowManager.getKey(GLFW_KEY_W);
         if(stateUpKey == GLFW_PRESS) {
-            camera.moveFront(0.01f);
+            camera.moveFront(0.1f);
         }
-        int stateDownKey = window.getKey(GLFW_KEY_DOWN);
+        int stateDownKey = windowManager.getKey(GLFW_KEY_S);
         if(stateDownKey == GLFW_PRESS) {
-            camera.moveFront(-0.01f);
+            camera.moveFront(-0.1f);
+        }
+        int stateLeftKey = windowManager.getKey(GLFW_KEY_A);
+        if(stateLeftKey == GLFW_PRESS) {
+            camera.moveLeft(0.1f);
+        }
+        int stateRightKey = windowManager.getKey(GLFW_KEY_D);
+        if(stateRightKey == GLFW_PRESS) {
+            camera.moveLeft(-0.1f);
         }
         double tmpxPos, tmpyPos;
-        window.getCursorPos(&tmpxPos, &tmpyPos);
+        windowManager.getCursorPos(&tmpxPos, &tmpyPos);
         float xrel = xpos - tmpxPos;
         float yrel = ypos - tmpyPos;
-        int stateMouseClick = window.getMouseButton(GLFW_MOUSE_BUTTON_LEFT);
+        int stateMouseClick = windowManager.getMouseButton(GLFW_MOUSE_BUTTON_LEFT);
         if(stateMouseClick == GLFW_PRESS) {
             camera.rotateUp(yrel);
             camera.rotateLeft(xrel);
@@ -241,10 +168,12 @@ int main(int argc, char **argv) {
         xpos = tmpxPos;
         ypos = tmpyPos;
     }
-
-    // Memory cleaning
-    //glDeleteBuffers(1, &ibo);
     glDeleteBuffers(1, &vbo);
     glDeleteVertexArrays(1, &vao);
+
+    /*
+    glfwDestroyWindow(windowManager);
+    glfwTerminate();*/
+
     return EXIT_SUCCESS;
 }

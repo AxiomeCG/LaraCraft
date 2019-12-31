@@ -4,23 +4,20 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/mhudelot/Documents/Synthese/LaraCraft/template/TP_template/SDLtemplate.cpp" "/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/TP_template/CMakeFiles/TP_template_SDLtemplate.dir/SDLtemplate.cpp.o"
+  "/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP_template/SDLtemplate.cpp" "/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_template/CMakeFiles/TP_template_SDLtemplate.dir/SDLtemplate.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "Clang")
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/usr/local/include"
-  "/usr/local/include/SDL"
-  "/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"
+  "/usr/include/SDL"
   "../glimac/include"
   "../third-party/include"
-  "../TP_template/../glimac/include"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/glimac/CMakeFiles/glimac.dir/DependInfo.cmake"
+  "/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/glimac/CMakeFiles/glimac.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

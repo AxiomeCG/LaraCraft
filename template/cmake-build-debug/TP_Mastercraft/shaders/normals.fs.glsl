@@ -1,7 +1,7 @@
-#version 320 es
+#version 330 core
 precision mediump float;
 
-uniform sampler2D uTexture;
+//uniform sampler2D uTexture;
 
 in vec3 vFragPosition_vs;
 in vec3 vFragNormal_vs;

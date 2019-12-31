@@ -20,10 +20,7 @@ include_directories(${SDL_INCLUDE_DIR} ${OPENGL_INCLUDE_DIR} ${GLEW_INCLUDE_DIR}
 
 set(ALL_LIBRARIES glimac ${SDL_LIBRARY} ${OPENGL_LIBRARIES} ${GLEW_LIBRARY})
 
-set(CUSTOM_LIBRARY glupem)
-
 add_subdirectory(glimac)
-add_subdirectory(glupem)
 
 file(GLOB TP_DIRECTORIES "TP*")
 

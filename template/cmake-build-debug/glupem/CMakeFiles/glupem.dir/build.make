@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /opt/clion-2019.2.3/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /opt/clion-2019.2.3/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/mhudelot/Documents/Synthese/LaraCraft/template
+CMAKE_SOURCE_DIR = /home/adam/Bureau/upem/M2/s1/synthese/projet/template2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug
+CMAKE_BINARY_DIR = /home/adam/Bureau/upem/M2/s1/synthese/projet/template2/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include glupem/CMakeFiles/glupem.dir/depend.make
@@ -59,29 +59,29 @@ include glupem/CMakeFiles/glupem.dir/flags.make
 
 glupem/CMakeFiles/glupem.dir/src/Cube.cpp.o: glupem/CMakeFiles/glupem.dir/flags.make
 glupem/CMakeFiles/glupem.dir/src/Cube.cpp.o: ../glupem/src/Cube.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object glupem/CMakeFiles/glupem.dir/src/Cube.cpp.o"
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/glupem && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/glupem.dir/src/Cube.cpp.o -c /Users/mhudelot/Documents/Synthese/LaraCraft/template/glupem/src/Cube.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adam/Bureau/upem/M2/s1/synthese/projet/template2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object glupem/CMakeFiles/glupem.dir/src/Cube.cpp.o"
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template2/cmake-build-debug/glupem && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/glupem.dir/src/Cube.cpp.o -c /home/adam/Bureau/upem/M2/s1/synthese/projet/template2/glupem/src/Cube.cpp
 
 glupem/CMakeFiles/glupem.dir/src/Cube.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/glupem.dir/src/Cube.cpp.i"
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/glupem && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mhudelot/Documents/Synthese/LaraCraft/template/glupem/src/Cube.cpp > CMakeFiles/glupem.dir/src/Cube.cpp.i
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template2/cmake-build-debug/glupem && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adam/Bureau/upem/M2/s1/synthese/projet/template2/glupem/src/Cube.cpp > CMakeFiles/glupem.dir/src/Cube.cpp.i
 
 glupem/CMakeFiles/glupem.dir/src/Cube.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/glupem.dir/src/Cube.cpp.s"
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/glupem && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mhudelot/Documents/Synthese/LaraCraft/template/glupem/src/Cube.cpp -o CMakeFiles/glupem.dir/src/Cube.cpp.s
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template2/cmake-build-debug/glupem && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adam/Bureau/upem/M2/s1/synthese/projet/template2/glupem/src/Cube.cpp -o CMakeFiles/glupem.dir/src/Cube.cpp.s
 
 glupem/CMakeFiles/glupem.dir/src/WindowManager.cpp.o: glupem/CMakeFiles/glupem.dir/flags.make
 glupem/CMakeFiles/glupem.dir/src/WindowManager.cpp.o: ../glupem/src/WindowManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object glupem/CMakeFiles/glupem.dir/src/WindowManager.cpp.o"
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/glupem && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/glupem.dir/src/WindowManager.cpp.o -c /Users/mhudelot/Documents/Synthese/LaraCraft/template/glupem/src/WindowManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adam/Bureau/upem/M2/s1/synthese/projet/template2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object glupem/CMakeFiles/glupem.dir/src/WindowManager.cpp.o"
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template2/cmake-build-debug/glupem && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/glupem.dir/src/WindowManager.cpp.o -c /home/adam/Bureau/upem/M2/s1/synthese/projet/template2/glupem/src/WindowManager.cpp
 
 glupem/CMakeFiles/glupem.dir/src/WindowManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/glupem.dir/src/WindowManager.cpp.i"
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/glupem && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mhudelot/Documents/Synthese/LaraCraft/template/glupem/src/WindowManager.cpp > CMakeFiles/glupem.dir/src/WindowManager.cpp.i
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template2/cmake-build-debug/glupem && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adam/Bureau/upem/M2/s1/synthese/projet/template2/glupem/src/WindowManager.cpp > CMakeFiles/glupem.dir/src/WindowManager.cpp.i
 
 glupem/CMakeFiles/glupem.dir/src/WindowManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/glupem.dir/src/WindowManager.cpp.s"
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/glupem && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mhudelot/Documents/Synthese/LaraCraft/template/glupem/src/WindowManager.cpp -o CMakeFiles/glupem.dir/src/WindowManager.cpp.s
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template2/cmake-build-debug/glupem && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adam/Bureau/upem/M2/s1/synthese/projet/template2/glupem/src/WindowManager.cpp -o CMakeFiles/glupem.dir/src/WindowManager.cpp.s
 
 # Object files for target glupem
 glupem_OBJECTS = \
@@ -95,9 +95,9 @@ glupem/libglupem.a: glupem/CMakeFiles/glupem.dir/src/Cube.cpp.o
 glupem/libglupem.a: glupem/CMakeFiles/glupem.dir/src/WindowManager.cpp.o
 glupem/libglupem.a: glupem/CMakeFiles/glupem.dir/build.make
 glupem/libglupem.a: glupem/CMakeFiles/glupem.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libglupem.a"
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/glupem && $(CMAKE_COMMAND) -P CMakeFiles/glupem.dir/cmake_clean_target.cmake
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/glupem && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/glupem.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/adam/Bureau/upem/M2/s1/synthese/projet/template2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libglupem.a"
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template2/cmake-build-debug/glupem && $(CMAKE_COMMAND) -P CMakeFiles/glupem.dir/cmake_clean_target.cmake
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template2/cmake-build-debug/glupem && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/glupem.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 glupem/CMakeFiles/glupem.dir/build: glupem/libglupem.a
@@ -105,10 +105,10 @@ glupem/CMakeFiles/glupem.dir/build: glupem/libglupem.a
 .PHONY : glupem/CMakeFiles/glupem.dir/build
 
 glupem/CMakeFiles/glupem.dir/clean:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/glupem && $(CMAKE_COMMAND) -P CMakeFiles/glupem.dir/cmake_clean.cmake
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template2/cmake-build-debug/glupem && $(CMAKE_COMMAND) -P CMakeFiles/glupem.dir/cmake_clean.cmake
 .PHONY : glupem/CMakeFiles/glupem.dir/clean
 
 glupem/CMakeFiles/glupem.dir/depend:
-	cd /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/mhudelot/Documents/Synthese/LaraCraft/template /Users/mhudelot/Documents/Synthese/LaraCraft/template/glupem /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/glupem /Users/mhudelot/Documents/Synthese/LaraCraft/template/cmake-build-debug/glupem/CMakeFiles/glupem.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/adam/Bureau/upem/M2/s1/synthese/projet/template2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/adam/Bureau/upem/M2/s1/synthese/projet/template2 /home/adam/Bureau/upem/M2/s1/synthese/projet/template2/glupem /home/adam/Bureau/upem/M2/s1/synthese/projet/template2/cmake-build-debug /home/adam/Bureau/upem/M2/s1/synthese/projet/template2/cmake-build-debug/glupem /home/adam/Bureau/upem/M2/s1/synthese/projet/template2/cmake-build-debug/glupem/CMakeFiles/glupem.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : glupem/CMakeFiles/glupem.dir/depend
 

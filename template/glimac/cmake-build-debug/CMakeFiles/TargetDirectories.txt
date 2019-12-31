@@ -1,3 +1,0 @@
-/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/cmake-build-debug/CMakeFiles/glimac.dir
-/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/glimac/cmake-build-debug/CMakeFiles/edit_cache.dir

@@ -5,24 +5,35 @@
 #include <glimac/Program.hpp>
 #include <glimac/FreeFlyCamera.hpp>
 #include <glupem/Cube.hpp>
+#include <GLFW/glfw3.h>
 #include <glupem/WindowManager.hpp>
 
 
 using namespace glimac;
 
+void errorCallback(int, const char* err_str)
+{
+    std::cout << "GLFW Error: " << err_str << std::endl;
+}
 
 int main(int argc, char **argv) {
     // Initialize SDL and open a window
+    glfwSetErrorCallback(errorCallback);
+
+    std::cout << "Begin Main" << std::endl;
 
     int width = 800;
     int height = 800;
     //SDLWindowManager windowManager(width, height, "GLImac");
 
+    std::cout << "Before window initialisation" << std::endl;
+
     WindowManager window(width, height, "LaraCraft", 0);
 
 
-
+    std::cout << "Before GLEW initialisation" << std::endl;
     // Initialize glew for OpenGL3+ support
+    glewExperimental = GL_TRUE;
     GLenum glewInitError = glewInit();
     if (GLEW_OK != glewInitError) {
         std::cerr << glewGetErrorString(glewInitError) << std::endl;
@@ -33,7 +44,7 @@ int main(int argc, char **argv) {
     //SDL_ShowCursor(0);
     //SDL_WM_GrabInput(SDL_GRAB_ON);
 
-
+    std::cout << "Before LoadProgram initialisation" << std::endl;
     FilePath applicationPath(argv[0]);
     Program program = loadProgram(applicationPath.dirPath() + "shaders/3D.vs.glsl",
                                   applicationPath.dirPath() + "shaders/normals.fs.glsl");

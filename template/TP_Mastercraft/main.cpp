@@ -10,39 +10,12 @@
 #include <iostream>
 #include <cstddef>
 #include <glimac/Cube.hpp>
-#include <glimac/WindowManager.hpp>
+#include <glimac/GLFWWindowManager.hpp>
 
 using namespace glimac;
 
 int main(int argc, char** argv) {
-    // Initialize glfw
-    /*if (!glfwInit())
-    {
-        std::cerr << "Failed in initialization GLFW" << std::endl;
-        return -1;
-    }
-
-    //Hint the GL version to use
-    glfwWindowHint(GLFW_SAMPLES, 4);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
-
-    //Create the window
-    GLFWwindow* windowManager = glfwCreateWindow(800, 800, "GLImac", NULL, NULL);
-    if (!windowManager)
-    {
-        std::cerr << "Failed in create Windows" << std::endl;
-        glfwTerminate();
-        return -1;
-    }
-    glfwMakeContextCurrent(windowManager);*/
-
-    WindowManager windowManager = WindowManager(800, 800, "Matthias", 0);
-
-    //glfwSetInputMode(windowManager, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
-
+    GLFWWindowManager windowManager = GLFWWindowManager(800, 800, "LaraCraft", windowModes::Windowed);
     // Initialize glew for OpenGL3+ support
     glewExperimental = GL_TRUE;
     GLenum glewInitError = glewInit();
@@ -59,9 +32,9 @@ int main(int argc, char** argv) {
                                   applicationPath.dirPath() + "shaders/normals.fs.glsl");
     program.use();
 
-    GLuint locateMVPMatrix = glGetUniformLocation(program.getGLId(), "uMVPMatrix");
-    GLuint locateMVMatrix = glGetUniformLocation(program.getGLId(), "uMVMatrix");
-    GLuint locateNormalMatrix = glGetUniformLocation(program.getGLId(), "uNormalMatrix");
+    GLuint MVPMatrixLocation = glGetUniformLocation(program.getGLId(), "uMVPMatrix");
+    GLuint MVMatrixLocation = glGetUniformLocation(program.getGLId(), "uMVMatrix");
+    GLuint NormalMatrixLocation = glGetUniformLocation(program.getGLId(), "uNormalMatrix");
 
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_CULL_FACE);
@@ -112,10 +85,12 @@ int main(int argc, char** argv) {
     glm::mat4 ProjMatrix, MVMatrix, NormalMatrix;
 
     ProjMatrix = glm::perspective(glm::radians(70.f), 1.f, 0.1f, 100.f);
-    double xpos, ypos;
-    xpos = ypos = 0;
+
+    float saveXPosition, saveYPosition;
+    saveXPosition = saveYPosition = 0.f;
 
     FreeflyCamera camera;
+
     // Application loop:
     while (!windowManager.windowShouldClose()) {
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -129,51 +104,21 @@ int main(int argc, char** argv) {
 
         NormalMatrix = glm::transpose(glm::inverse(MVMatrix));
 
-        glUniformMatrix4fv(locateMVPMatrix, 1, GL_FALSE, glm::value_ptr(MVPMatrix));
-        glUniformMatrix4fv(locateMVMatrix, 1, GL_FALSE, glm::value_ptr(MVMatrix));
-        glUniformMatrix4fv(locateNormalMatrix, 1, GL_FALSE, glm::value_ptr(NormalMatrix));
+        glUniformMatrix4fv(MVPMatrixLocation, 1, GL_FALSE, glm::value_ptr(MVPMatrix));
+        glUniformMatrix4fv(MVMatrixLocation, 1, GL_FALSE, glm::value_ptr(MVMatrix));
+        glUniformMatrix4fv(NormalMatrixLocation, 1, GL_FALSE, glm::value_ptr(NormalMatrix));
 
         glDrawArrays(GL_TRIANGLES, 0, cube.getVertexCount());
 
 
         glBindVertexArray(0);
 
-        windowManager.swapBuffer();
-        glfwPollEvents();
-        int stateUpKey = windowManager.getKey(GLFW_KEY_W);
-        if(stateUpKey == GLFW_PRESS) {
-            camera.moveFront(0.1f);
-        }
-        int stateDownKey = windowManager.getKey(GLFW_KEY_S);
-        if(stateDownKey == GLFW_PRESS) {
-            camera.moveFront(-0.1f);
-        }
-        int stateLeftKey = windowManager.getKey(GLFW_KEY_A);
-        if(stateLeftKey == GLFW_PRESS) {
-            camera.moveLeft(0.1f);
-        }
-        int stateRightKey = windowManager.getKey(GLFW_KEY_D);
-        if(stateRightKey == GLFW_PRESS) {
-            camera.moveLeft(-0.1f);
-        }
-        double tmpxPos, tmpyPos;
-        windowManager.getCursorPos(&tmpxPos, &tmpyPos);
-        float xrel = xpos - tmpxPos;
-        float yrel = ypos - tmpyPos;
-        int stateMouseClick = windowManager.getMouseButton(GLFW_MOUSE_BUTTON_LEFT);
-        if(stateMouseClick == GLFW_PRESS) {
-            camera.rotateUp(yrel);
-            camera.rotateLeft(xrel);
-        }
-        xpos = tmpxPos;
-        ypos = tmpyPos;
+        windowManager.swapBuffers();
+        windowManager.handleEventsForFPSview(camera);
+
     }
     glDeleteBuffers(1, &vbo);
     glDeleteVertexArrays(1, &vao);
-
-    /*
-    glfwDestroyWindow(windowManager);
-    glfwTerminate();*/
 
     return EXIT_SUCCESS;
 }

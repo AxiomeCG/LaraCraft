@@ -6,7 +6,6 @@
 
 #include <glimac/FreeflyCamera.hpp>
 #include <GL/glew.h>
-#include <GLFW/glfw3.h>
 #include <iostream>
 #include <cstddef>
 #include <glimac/Cube.hpp>

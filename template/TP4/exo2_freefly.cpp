@@ -60,13 +60,13 @@ int main(int argc, char** argv) {
     GLuint locateNormalMatrix = glGetUniformLocation(program.getGLId(), "uNormalMatrix");
     GLuint locateTexture = glGetUniformLocation(program.getGLId(), "uTexture");
 
-    std::unique_ptr<Image> earth_image = loadImage("/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/TP4/assets/textures/EarthMap.jpg");
+    std::unique_ptr<Image> earth_image = loadImage("/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP4/asset/textures/EarthMap.jpg");
     if(earth_image == NULL) {
         std::cerr << "Failed to load Image" << std::endl;
         return EXIT_FAILURE;
     }
 
-    std::unique_ptr<Image> moon_image = loadImage("/home/adam/Bureau/upem/M2/s1/synthese/tp1/GLImac-Template/TP4/assets/textures/MoonMap.jpg");
+    std::unique_ptr<Image> moon_image = loadImage("/Users/mhudelot/Documents/Synthese/LaraCraft/template2/TP4/asset/textures/MoonMap.jpg");
     if(moon_image == NULL) {
         std::cerr << "Failed to load Image" << std::endl;
         return EXIT_FAILURE;

@@ -21,13 +21,10 @@ int main(int argc, char **argv) {
     // Initialize SDL and open a window
     glfwSetErrorCallback(errorCallback);
 
-    std::cout << "Begin Main" << std::endl;
 
     int width = 800;
     int height = 800;
     //SDLWindowManager windowManager(width, height, "GLImac");
-
-    std::cout << "Before window initialisation" << std::endl;
 
     WindowManager window(width, height, "LaraCraft", 0);
 
@@ -44,8 +41,6 @@ int main(int argc, char **argv) {
 
     //SDL_ShowCursor(0);
     //SDL_WM_GrabInput(SDL_GRAB_ON);
-
-    std::cout << "Before LoadProgram initialisation" << std::endl;
     FilePath applicationPath(argv[0]);
     Program program = loadProgram(applicationPath.dirPath() + "shaders/3D.vs.glsl",
                                   applicationPath.dirPath() + "shaders/normals.fs.glsl");

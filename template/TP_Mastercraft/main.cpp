@@ -10,6 +10,7 @@
 #include <cstddef>
 #include <glimac/Cube.hpp>
 #include <glimac/GLFWWindowManager.hpp>
+#include <glimac/TexturedCubeProgram.hpp>
 
 using namespace glimac;
 
@@ -27,13 +28,16 @@ int main(int argc, char** argv) {
     std::cout << "GLEW Version : " << glewGetString(GLEW_VERSION) << std::endl;
 
     FilePath applicationPath(argv[0]);
-    Program program = loadProgram(applicationPath.dirPath() + "shaders/3D.vs.glsl",
+    /*Program program = loadProgram(applicationPath.dirPath() + "shaders/3D.vs.glsl",
                                   applicationPath.dirPath() + "shaders/normals.fs.glsl");
-    program.use();
+    program.use();*/
 
-    GLuint MVPMatrixLocation = glGetUniformLocation(program.getGLId(), "uMVPMatrix");
+    TexturedCubeProgram program = TexturedCubeProgram(applicationPath);
+
+    program.m_Program.use();
+    /*GLuint MVPMatrixLocation = glGetUniformLocation(program.getGLId(), "uMVPMatrix");
     GLuint MVMatrixLocation = glGetUniformLocation(program.getGLId(), "uMVMatrix");
-    GLuint NormalMatrixLocation = glGetUniformLocation(program.getGLId(), "uNormalMatrix");
+    GLuint NormalMatrixLocation = glGetUniformLocation(program.getGLId(), "uNormalMatrix");*/
 
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_CULL_FACE);
@@ -100,10 +104,21 @@ int main(int argc, char** argv) {
 
         NormalMatrix = glm::transpose(glm::inverse(MVMatrix));
 
-        glUniformMatrix4fv(MVPMatrixLocation, 1, GL_FALSE, glm::value_ptr(MVPMatrix));
-        glUniformMatrix4fv(MVMatrixLocation, 1, GL_FALSE, glm::value_ptr(MVMatrix));
-        glUniformMatrix4fv(NormalMatrixLocation, 1, GL_FALSE, glm::value_ptr(NormalMatrix));
+        glm::mat4 lightMMatrix = glm::rotate(glm::mat4(), (float) glfwGetTime(), glm::vec3(0, 1, 0));
+        glm::mat4 lightMVMatrix =  camera.getViewMatrix() * lightMMatrix;
 
+        glUniformMatrix4fv(program.uMVPMatrixId, 1, GL_FALSE, glm::value_ptr(MVPMatrix));
+        glUniformMatrix4fv(program.uMVMatrixId, 1, GL_FALSE, glm::value_ptr(MVMatrix));
+        glUniformMatrix4fv(program.uNormalMatrixId, 1, GL_FALSE, glm::value_ptr(NormalMatrix));
+
+
+
+        glUniform3fv(program.uKdId, 1, glm::value_ptr(glm::vec3(1., 1., 1.)));
+        glUniform3fv(program.uKsId, 1, glm::value_ptr(glm::vec3(1., 1., 1.)));
+        glUniform1f(program.uShininessId, 10.);
+
+        glUniform3fv(program.uLightDir_vsId, 1, glm::value_ptr(glm::vec3(VMatrix * glm::vec4(1., 1., 1., 0.) * lightMMatrix))); // TODO Check if it's natural
+        glUniform3fv(program.uLightIntensityId, 1, glm::value_ptr(glm::vec3(1., 1., 1.)));
         glDrawArrays(GL_TRIANGLES, 0, cube.getVertexCount());
 
 

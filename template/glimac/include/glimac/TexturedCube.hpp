@@ -1,8 +1,0 @@
-//
-// Created by adam on 31/12/2019.
-//
-
-#ifndef IMACGL_TEXTUREDCUBE_HPP
-#define IMACGL_TEXTUREDCUBE_HPP
-
-#endif //IMACGL_TEXTUREDCUBE_HPP

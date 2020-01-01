@@ -43,7 +43,7 @@ void Cube::generateFrontFace() {
 
     //BOTTOM LEFT CORNER
     vertex.texCoords.x = 0.f;
-    vertex.texCoords.y = 0.f;
+    vertex.texCoords.y = 1.f;
 
     vertex.normal.x = 0.f;
     vertex.normal.y = 0.f;
@@ -54,8 +54,8 @@ void Cube::generateFrontFace() {
     m_Vertices.push_back(vertex);
 
     //BOTTOM RIGHT CORNER
-    vertex.texCoords.x = 0.f;
-    vertex.texCoords.y = 0.f;
+    vertex.texCoords.x = 1.f;
+    vertex.texCoords.y = 1.f;
 
     vertex.normal.x = 0.f;
     vertex.normal.y = 0.f;
@@ -67,7 +67,7 @@ void Cube::generateFrontFace() {
 
     //Triangle 2
     //TOP RIGHT CORNER
-    vertex.texCoords.x = 0.f;
+    vertex.texCoords.x = 1.f;
     vertex.texCoords.y = 0.f;
 
     vertex.normal.x = 0.f;
@@ -92,8 +92,8 @@ void Cube::generateFrontFace() {
 
 
     //BOTTOM RIGHT CORNER
-    vertex.texCoords.x = 0.f;
-    vertex.texCoords.y = 0.f;
+    vertex.texCoords.x = 1.f;
+    vertex.texCoords.y = 1.f;
 
     vertex.normal.x = 0.f;
     vertex.normal.y = 0.f;
@@ -125,7 +125,7 @@ void Cube::generateLeftFace() {
 
     //BOTTOM LEFT CORNER
     vertex.texCoords.x = 0.f;
-    vertex.texCoords.y = 0.f;
+    vertex.texCoords.y = 1.f;
 
     vertex.normal.x = -1.f;
     vertex.normal.y = 0.f;
@@ -136,8 +136,8 @@ void Cube::generateLeftFace() {
     m_Vertices.push_back(vertex);
 
     //BOTTOM RIGHT CORNER
-    vertex.texCoords.x = 0.f;
-    vertex.texCoords.y = 0.f;
+    vertex.texCoords.x = 1.f;
+    vertex.texCoords.y = 1.f;
 
     vertex.normal.x = -1.f;
     vertex.normal.y = 0.f;
@@ -149,7 +149,7 @@ void Cube::generateLeftFace() {
 
     //Triangle 2
     //TOP RIGHT CORNER
-    vertex.texCoords.x = 0.f;
+    vertex.texCoords.x = 1.f;
     vertex.texCoords.y = 0.f;
 
     vertex.normal.x = -1.f;
@@ -173,8 +173,8 @@ void Cube::generateLeftFace() {
 
 
     //BOTTOM RIGHT CORNER
-    vertex.texCoords.x = 0.f;
-    vertex.texCoords.y = 0.f;
+    vertex.texCoords.x = 1.f;
+    vertex.texCoords.y = 1.f;
 
     vertex.normal.x = -1.f;
     vertex.normal.y = 0.f;
@@ -204,7 +204,7 @@ void Cube::generateBackFace() {
 
     //BOTTOM LEFT CORNER
     vertex.texCoords.x = 0.f;
-    vertex.texCoords.y = 0.f;
+    vertex.texCoords.y = 1.f;
 
     vertex.normal.x = 0.f;
     vertex.normal.y = 0.f;
@@ -215,8 +215,8 @@ void Cube::generateBackFace() {
     m_Vertices.push_back(vertex);
 
     //BOTTOM RIGHT CORNER
-    vertex.texCoords.x = 0.f;
-    vertex.texCoords.y = 0.f;
+    vertex.texCoords.x = 1.f;
+    vertex.texCoords.y = 1.f;
 
     vertex.normal.x = 0.f;
     vertex.normal.y = 0.f;
@@ -231,7 +231,7 @@ void Cube::generateBackFace() {
 
     // TOP RIGHT CORNER
 
-    vertex.texCoords.x = 0.f;
+    vertex.texCoords.x = 1.f;
     vertex.texCoords.y = 0.f;
 
     vertex.normal.x = 0.f;
@@ -254,8 +254,8 @@ void Cube::generateBackFace() {
     m_Vertices.push_back(vertex);
 
     //BOTTOM RIGHT CORNER
-    vertex.texCoords.x = 0.f;
-    vertex.texCoords.y = 0.f;
+    vertex.texCoords.x = 1.f;
+    vertex.texCoords.y = 1.f;
 
     vertex.normal.x = 0.f;
     vertex.normal.y = 0.f;
@@ -286,7 +286,7 @@ void Cube::generateRightFace() {
 
     //BOTTOM LEFT CORNER
     vertex.texCoords.x = 0.f;
-    vertex.texCoords.y = 0.f;
+    vertex.texCoords.y = 1.f;
 
     vertex.normal.x = 1.f;
     vertex.normal.y = 0.f;
@@ -297,8 +297,8 @@ void Cube::generateRightFace() {
     m_Vertices.push_back(vertex);
 
     //BOTTOM RIGHT CORNER
-    vertex.texCoords.x = 0.f;
-    vertex.texCoords.y = 0.f;
+    vertex.texCoords.x = 1.f;
+    vertex.texCoords.y = 1.f;
 
     vertex.normal.x = 1.f;
     vertex.normal.y = 0.f;
@@ -311,7 +311,7 @@ void Cube::generateRightFace() {
     //Triangle 2
     // TOP RIGHT CORNER
 
-    vertex.texCoords.x = 0.f;
+    vertex.texCoords.x = 1.f;
     vertex.texCoords.y = 0.f;
 
     vertex.normal.x = 1.f;
@@ -335,8 +335,8 @@ void Cube::generateRightFace() {
 
 
     //BOTTOM RIGHT CORNER
-    vertex.texCoords.x = 0.f;
-    vertex.texCoords.y = 0.f;
+    vertex.texCoords.x = 1.f;
+    vertex.texCoords.y = 1.f;
 
     vertex.normal.x = 1.f;
     vertex.normal.y = 0.f;
@@ -367,7 +367,7 @@ void Cube::generateTopFace() {
 
     //BOTTOM LEFT CORNER
     vertex.texCoords.x = 0.f;
-    vertex.texCoords.y = 0.f;
+    vertex.texCoords.y = 1.f;
 
     vertex.normal.x = 0.f;
     vertex.normal.y = 1.f;
@@ -378,8 +378,8 @@ void Cube::generateTopFace() {
     m_Vertices.push_back(vertex);
 
     //BOTTOM RIGHT CORNER
-    vertex.texCoords.x = 0.f;
-    vertex.texCoords.y = 0.f;
+    vertex.texCoords.x = 1.f;
+    vertex.texCoords.y = 1.f;
 
     vertex.normal.x = 0.f;
     vertex.normal.y = 1.f;
@@ -391,7 +391,7 @@ void Cube::generateTopFace() {
 
     //Triangle 2
     //TOP RIGHT CORNER
-    vertex.texCoords.x = 0.f;
+    vertex.texCoords.x = 1.f;
     vertex.texCoords.y = 0.f;
 
     vertex.normal.x = 0.f;
@@ -415,8 +415,8 @@ void Cube::generateTopFace() {
 
 
     //BOTTOM RIGHT CORNER
-    vertex.texCoords.x = 0.f;
-    vertex.texCoords.y = 0.f;
+    vertex.texCoords.x = 1.f;
+    vertex.texCoords.y = 1.f;
 
     vertex.normal.x = 0.f;
     vertex.normal.y = 1.f;
@@ -448,7 +448,7 @@ void Cube::generateBottomFace() {
     // BOTTOM LEFT CORNER
 
     vertex.texCoords.x = 0.f;
-    vertex.texCoords.y = 0.f;
+    vertex.texCoords.y = 1.f;
 
     vertex.normal.x = 0.f;
     vertex.normal.y = -1.f;
@@ -458,8 +458,8 @@ void Cube::generateBottomFace() {
     m_Vertices.push_back(vertex);
 
     //BOTTOM RIGHT CORNER
-    vertex.texCoords.x = 0.f;
-    vertex.texCoords.y = 0.f;
+    vertex.texCoords.x = 1.f;
+    vertex.texCoords.y = 1.f;
 
     vertex.normal.x = 0.f;
     vertex.normal.y = -1.f;
@@ -473,7 +473,7 @@ void Cube::generateBottomFace() {
     //Triangle 2
 
     //TOP RIGHT CORNER
-    vertex.texCoords.x = 0.f;
+    vertex.texCoords.x = 1.f;
     vertex.texCoords.y = 0.f;
 
     vertex.normal.x = 0.f;
@@ -496,8 +496,8 @@ void Cube::generateBottomFace() {
 
 
     //BOTTOM RIGHT CORNER
-    vertex.texCoords.x = 0.f;
-    vertex.texCoords.y = 0.f;
+    vertex.texCoords.x = 1.f;
+    vertex.texCoords.y = 1.f;
 
     vertex.normal.x = 0.f;
     vertex.normal.y = -1.f;
@@ -513,12 +513,4 @@ GLsizei Cube::getVertexCount() const {
 
 const glimac::ShapeVertex *Cube::getDataPointer() const {
     return &m_Vertices[0];
-}
-
-const uint32_t *Cube::getIBOIndices() const {
-    return indices;
-}
-
-GLsizei Cube::getIndiceCount() const {
-    return 6;
 }

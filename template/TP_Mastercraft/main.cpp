@@ -10,13 +10,35 @@
 #include <cstddef>
 #include <glimac/Cube.hpp>
 #include <glimac/GLFWWindowManager.hpp>
-#include <glimac/TexturedCubeProgram.hpp>
+#include <glimac/SimpleTexturedCubeProgram.hpp>
 #include <glimac/DirectionalLight.hpp>
 #include <glimac/ChunkSection.hpp>
+#include <glimac/Image.hpp>
 
 using namespace glimac;
 
 
+
+void drawACube(const SimpleTexturedCubeProgram &program, int vertexCount, const mat4 &projMatrix, const mat4 &viewMatrix,
+               const mat4 &modelMatrix, const DirectionalLight &light) {
+    mat4 ModelViewMatrix2 = viewMatrix * modelMatrix;
+    mat4 ModelViewProjectionMatrix2 = projMatrix * ModelViewMatrix2;
+    mat4 NormalMatrix2 = transpose(glm::inverse(ModelViewMatrix2));
+    glUniformMatrix4fv(program.uMVPMatrixId, 1, GL_FALSE, value_ptr(ModelViewProjectionMatrix2));
+    glUniformMatrix4fv(program.uMVMatrixId, 1, GL_FALSE, value_ptr(ModelViewMatrix2));
+    glUniformMatrix4fv(program.uNormalMatrixId, 1, GL_FALSE, value_ptr(NormalMatrix2));
+
+    const vec3 &kd2 = vec3(1., 1., 1.);
+    const vec3 &ks2 = vec3(1., 1., 1.);
+    const float shininess2 = 10.;
+    glUniform3fv(program.uKdId, 1, value_ptr(kd2));
+    glUniform3fv(program.uKsId, 1, value_ptr(ks2));
+    glUniform1f(program.uShininessId, shininess2);
+
+    glUniform3fv(program.uLightDir_vsId, 1, value_ptr(light.getLightDirection(viewMatrix))); // TODO Check if it's natural
+    glUniform3fv(program.uLightIntensityId, 1, value_ptr(light.lightIntensity));
+    glDrawArrays(GL_TRIANGLES, 0, vertexCount);
+}
 
 int main(int argc, char** argv) {
     GLFWWindowManager windowManager = GLFWWindowManager(800, 800, "LaraCraft", windowModes::Windowed);
@@ -32,16 +54,36 @@ int main(int argc, char** argv) {
     std::cout << "GLEW Version : " << glewGetString(GLEW_VERSION) << std::endl;
 
     FilePath applicationPath(argv[0]);
-    /*Program program = loadProgram(applicationPath.dirPath() + "shaders/3D.vs.glsl",
-                                  applicationPath.dirPath() + "shaders/normals.fs.glsl");
-    program.use();*/
 
-    TexturedCubeProgram program = TexturedCubeProgram(applicationPath);
+    SimpleTexturedCubeProgram simpleTexturedCubeProgram = SimpleTexturedCubeProgram(applicationPath);
+    simpleTexturedCubeProgram.m_Program.use();
 
-    program.m_Program.use();
-    /*GLuint MVPMatrixLocation = glGetUniformLocation(program.getGLId(), "uMVPMatrix");
-    GLuint MVMatrixLocation = glGetUniformLocation(program.getGLId(), "uMVMatrix");
-    GLuint NormalMatrixLocation = glGetUniformLocation(program.getGLId(), "uNormalMatrix");*/
+
+    /***************
+     * TEXTURE INIT
+     ***************/
+
+    auto dirtImagePtr = loadImage(
+            "TP_Mastercraft/assets/textures/blocks/dirt.png");
+    assert(dirtImagePtr != nullptr);
+
+
+    GLuint dirtTextureLocation;
+
+    glGenTextures(1, &dirtTextureLocation);
+
+
+    /**
+     * Earth texture
+     */
+    glBindTexture(GL_TEXTURE_2D, dirtTextureLocation);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, dirtImagePtr->getWidth(), dirtImagePtr->getHeight(), 0, GL_RGBA, GL_FLOAT,
+                 dirtImagePtr->getPixels());
+
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glBindTexture(GL_TEXTURE_2D, 0);
+
 
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_CULL_FACE);
@@ -94,7 +136,6 @@ int main(int argc, char** argv) {
 
     // Application loop:
     ChunkSection chunkSection = ChunkSection(glm::vec3(0.,0.,0.));
-    ChunkSection chunkSection2 = ChunkSection(glm::vec3(17.,0.,0.));
 
     while (!windowManager.windowShouldClose()) {
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -103,30 +144,27 @@ int main(int argc, char** argv) {
         viewMatrix = camera.getViewMatrix();
 
         //Light object
-        DirectionalLight light;
+        DirectionalLight light = DirectionalLight(glm::rotate(glm::mat4(), (float) 0, glm::vec3(0., 1., 0.)));
+        glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_2D, dirtTextureLocation);
+        glUniform1i(simpleTexturedCubeProgram.uTextureId, 0);
 
-        chunkSection.draw(program,cube.getVertexCount(),projMatrix,viewMatrix,light);
-        chunkSection2.draw(program,cube.getVertexCount(),projMatrix,viewMatrix,light);
+
+        chunkSection.draw(simpleTexturedCubeProgram, cube.getVertexCount(), projMatrix, viewMatrix, light);
 
 
-        /*
-        //Cube 1
-        glm::mat4 modelMatrix = glm::mat4();
-        drawACube(program, cube.getVertexCount(), projMatrix, viewMatrix, modelMatrix , light);
-
-        //Cube 2
-
-        glm::mat4 modelMatrix2 = glm::translate(glm::mat4(1.0), glm::vec3(1., 0., 0.));
-
-        drawACube(program, cube.getVertexCount(), projMatrix, viewMatrix, modelMatrix2, light);*/
-
+        //Flush texture
+        glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_2D, 0);
 
         glBindVertexArray(0);
 
         windowManager.swapBuffers();
         windowManager.handleEventsForFPSview(camera);
 
+
     }
+    glDeleteTextures(1, &dirtTextureLocation);
     glDeleteBuffers(1, &vbo);
     glDeleteVertexArrays(1, &vao);
 

@@ -5,7 +5,7 @@
 #ifndef IMACGL_CUBE_HPP
 #define IMACGL_CUBE_HPP
 
-#include "TexturedCubeProgram.hpp"
+#include "MultiTexturedCubeProgram.hpp"
 #include <vector>
 #include <glimac/common.hpp>
 
@@ -33,18 +33,10 @@ public:
     const ShapeVertex *getDataPointer() const;
 
     /**
-     * Getter on the indices list of the vertices to build the shape via IBO
-     * @return
-     */
-    const uint32_t *getIBOIndices() const;
-
-    /**
      * Getter on the number of vertices in the cube
      * @return the number of vertices in the cube
      */
     GLsizei getVertexCount() const;
-
-    GLsizei getIndiceCount() const;
 
 private:
     std::vector<glimac::ShapeVertex> m_Vertices;

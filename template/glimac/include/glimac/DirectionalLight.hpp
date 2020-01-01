@@ -10,7 +10,10 @@
 
 class DirectionalLight {
 public:
-    glm::mat4 lightModelMatrix = glm::rotate(glm::mat4(), (float) glfwGetTime(), glm::vec3(0., 1., 0.));
+    explicit DirectionalLight(const glm::mat4& modelMatrix): lightModelMatrix(modelMatrix) {
+
+    }
+    glm::mat4 lightModelMatrix;
     glm::vec3 lightIntensity = glm::vec3(1., 1., 1.);
 
     glm::vec3 getLightDirection(const glm::mat4 &viewMatrix) const{

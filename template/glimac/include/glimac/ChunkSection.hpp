@@ -8,7 +8,8 @@
 
 #include <vector>
 #include "glm.hpp"
-#include "TexturedCubeProgram.hpp"
+#include "SimpleTexturedCubeProgram.hpp"
+#include "DirectionalLight.hpp"
 
 /**
  * Represents a 16*16*16 bundle of cubes.
@@ -21,27 +22,27 @@ public:
 
     }
 
-    void draw(const TexturedCubeProgram &program, int vertexCount, const mat4 &projMatrix, const mat4 &viewMatrix,
+    void draw(const SimpleTexturedCubeProgram &program, int vertexCount, const mat4 &projMatrix, const mat4 &viewMatrix,
               const DirectionalLight &light);
 private:
     /**
      * Number of cube on the x axis
      */
-    static const int WIDTH = 16;
+    static const int WIDTH = 4;
     /**
      * Number of cube on the z axis
      */
-    static const int LENGTH = 16;
+    static const int LENGTH = 4;
     /**
      * Number of cube on the y axis
      */
-    static const int HEIGHT = 16;
+    static const int HEIGHT = 4;
 
     glm::mat4 globalModelMatrix;
 
     glm::mat4 getCubeModelMatrix(int x, int y, int z);
 
-    static void drawACube(const TexturedCubeProgram &program, int vertexCount, const mat4 &projMatrix, const mat4 &viewMatrix,
+    static void drawACube(const SimpleTexturedCubeProgram &program, int vertexCount, const mat4 &projMatrix, const mat4 &viewMatrix,
                           const mat4 &modelMatrix, const DirectionalLight &light) {
         mat4 ModelViewMatrix2 = viewMatrix * modelMatrix;
         mat4 ModelViewProjectionMatrix2 = projMatrix * ModelViewMatrix2;

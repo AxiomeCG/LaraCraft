@@ -11,8 +11,12 @@
 #include <glimac/Cube.hpp>
 #include <glimac/GLFWWindowManager.hpp>
 #include <glimac/TexturedCubeProgram.hpp>
+#include <glimac/DirectionalLight.hpp>
+#include <glimac/ChunkSection.hpp>
 
 using namespace glimac;
+
+
 
 int main(int argc, char** argv) {
     GLFWWindowManager windowManager = GLFWWindowManager(800, 800, "LaraCraft", windowModes::Windowed);
@@ -51,11 +55,8 @@ int main(int argc, char** argv) {
     GLuint vbo, vao;
 
     glGenBuffers(1, &vbo);
-
     glBindBuffer(GL_ARRAY_BUFFER, vbo);
-
     glBufferData(GL_ARRAY_BUFFER, cube.getVertexCount() * sizeof(ShapeVertex), cube.getDataPointer(), GL_STATIC_DRAW);
-
     // Debinding d'un VBO sur la cible GL_ARRAY_BUFFER:
     glBindBuffer(GL_ARRAY_BUFFER, 0);
 
@@ -85,41 +86,39 @@ int main(int argc, char** argv) {
     // Debinding de l'unique VAO:
     glBindVertexArray(0);
 
-    glm::mat4 ProjMatrix, MVMatrix, NormalMatrix;
+    glm::mat4 projMatrix, viewMatrix;
 
-    ProjMatrix = glm::perspective(glm::radians(70.f), 1.f, 0.1f, 100.f);
+    projMatrix = glm::perspective(glm::radians(70.f), 1.f, 0.1f, 100.f);
 
-    FreeflyCamera camera;
+    FreeflyCamera camera = FreeflyCamera(glm::vec3(0.,1.,5.));
 
     // Application loop:
+    ChunkSection chunkSection = ChunkSection(glm::vec3(0.,0.,0.));
+    ChunkSection chunkSection2 = ChunkSection(glm::vec3(17.,0.,0.));
+
     while (!windowManager.windowShouldClose()) {
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         glBindVertexArray(vao);
 
-        glm::mat4 VMatrix = camera.getViewMatrix();
+        viewMatrix = camera.getViewMatrix();
 
-        MVMatrix = VMatrix;
+        //Light object
+        DirectionalLight light;
 
-        glm::mat4 MVPMatrix = ProjMatrix * MVMatrix;
-
-        NormalMatrix = glm::transpose(glm::inverse(MVMatrix));
-
-        glm::mat4 lightMMatrix = glm::rotate(glm::mat4(), (float) glfwGetTime(), glm::vec3(0, 1, 0));
-        glm::mat4 lightMVMatrix =  camera.getViewMatrix() * lightMMatrix;
-
-        glUniformMatrix4fv(program.uMVPMatrixId, 1, GL_FALSE, glm::value_ptr(MVPMatrix));
-        glUniformMatrix4fv(program.uMVMatrixId, 1, GL_FALSE, glm::value_ptr(MVMatrix));
-        glUniformMatrix4fv(program.uNormalMatrixId, 1, GL_FALSE, glm::value_ptr(NormalMatrix));
+        chunkSection.draw(program,cube.getVertexCount(),projMatrix,viewMatrix,light);
+        chunkSection2.draw(program,cube.getVertexCount(),projMatrix,viewMatrix,light);
 
 
+        /*
+        //Cube 1
+        glm::mat4 modelMatrix = glm::mat4();
+        drawACube(program, cube.getVertexCount(), projMatrix, viewMatrix, modelMatrix , light);
 
-        glUniform3fv(program.uKdId, 1, glm::value_ptr(glm::vec3(1., 1., 1.)));
-        glUniform3fv(program.uKsId, 1, glm::value_ptr(glm::vec3(1., 1., 1.)));
-        glUniform1f(program.uShininessId, 10.);
+        //Cube 2
 
-        glUniform3fv(program.uLightDir_vsId, 1, glm::value_ptr(glm::vec3(VMatrix * glm::vec4(1., 1., 1., 0.) * lightMMatrix))); // TODO Check if it's natural
-        glUniform3fv(program.uLightIntensityId, 1, glm::value_ptr(glm::vec3(1., 1., 1.)));
-        glDrawArrays(GL_TRIANGLES, 0, cube.getVertexCount());
+        glm::mat4 modelMatrix2 = glm::translate(glm::mat4(1.0), glm::vec3(1., 0., 0.));
+
+        drawACube(program, cube.getVertexCount(), projMatrix, viewMatrix, modelMatrix2, light);*/
 
 
         glBindVertexArray(0);

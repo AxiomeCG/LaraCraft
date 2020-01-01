@@ -20,6 +20,14 @@ public :
                     m_fTheta(0){
         computeDirectionVectors();
     }
+
+    FreeflyCamera(const glm::vec3& initialPosition):
+            m_Position(initialPosition),
+            m_fPhi(M_PI),
+            m_fTheta(0){
+        computeDirectionVectors();
+    }
+
     void moveLeft(float t);
     void moveFront(float t);
 

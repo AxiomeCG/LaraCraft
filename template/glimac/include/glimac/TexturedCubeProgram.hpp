@@ -8,8 +8,9 @@
 
 #include "Cube.hpp"
 #include "Program.hpp"
-
+using namespace glimac;
 class TexturedCubeProgram {
+
 public:
     Program m_Program;
 

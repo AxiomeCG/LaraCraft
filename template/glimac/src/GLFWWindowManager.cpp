@@ -93,6 +93,11 @@ void GLFWWindowManager::handleEventsForFPSview(glimac::FreeflyCamera &camera) {
     if (stateRightKey == GLFW_PRESS) {
         camera.moveLeft(-0.1f);
     }
+
+    int stateEscapeKey = getKey(GLFW_KEY_ESCAPE);
+    if (stateEscapeKey == GLFW_PRESS) {
+        glfwSetWindowShouldClose(window,1);
+    }
     double tmpxPos, tmpyPos;
     getCursorPosition(&tmpxPos, &tmpyPos);
     float xrel = oldX - (float) tmpxPos;

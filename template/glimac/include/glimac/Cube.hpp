@@ -5,7 +5,7 @@
 #ifndef IMACGL_CUBE_HPP
 #define IMACGL_CUBE_HPP
 
-
+#include "TexturedCubeProgram.hpp"
 #include <vector>
 #include <glimac/common.hpp>
 

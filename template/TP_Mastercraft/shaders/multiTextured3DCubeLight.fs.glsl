@@ -1,4 +1,4 @@
-#version 320 es
+#version 330 core
 precision mediump float;
 //TODO Maybe not possible to do that this way
 uniform sampler2D uTexture;

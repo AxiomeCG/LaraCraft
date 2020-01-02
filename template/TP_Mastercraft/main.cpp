@@ -14,6 +14,7 @@
 #include <glimac/DirectionalLight.hpp>
 #include <glimac/ChunkSection.hpp>
 #include <glimac/Image.hpp>
+#include <glimac/HeightMap.hpp>
 
 using namespace glimac;
 
@@ -63,10 +64,34 @@ int main(int argc, char** argv) {
      * TEXTURE INIT
      ***************/
 
-    auto dirtImagePtr = loadImage(
+    std::unique_ptr<Image> dirtImagePtr = loadImage(
             "TP_Mastercraft/assets/textures/blocks/dirt.png");
     assert(dirtImagePtr != nullptr);
 
+//    std::cout << dirtImagePtr->getWidth() << std::endl;
+//    unsigned int size = dirtImagePtr->getWidth() * dirtImagePtr->getHeight();
+//    auto ptr = dirtImagePtr->getPixels();
+//    for(auto i = 0u; i < size; ++i) {
+//        std::cout << ptr->r << std::endl;
+//        std::cout << ptr->g << std::endl;
+//        std::cout << ptr->b << std::endl;
+//        std::cout << ptr->a << std::endl;
+//        ++ptr;
+//    }
+    std::unique_ptr<HeightMap> heightMapPtr = loadHeightMap(
+            "TP_Mastercraft/assets/textures/heightmap/heightmap.jpeg", 1.0f, 1.0f, 1.0f);
+    assert(heightMapPtr != nullptr);
+
+//    std::cout << heightMapPtr->getWidth() << std::endl;
+//    unsigned int width = heightMapPtr->getWidth();
+//    unsigned int height = heightMapPtr->getHeight();
+//    auto ptr = heightMapPtr->getHeightData();
+//    for(auto i = 0u; i < width; ++i) {
+//        for (auto j = 0u; j < height; ++j) {
+//            std::cout << ptr[i][j] << " ";
+//        }
+//        std::cout << std::endl;
+//    }
 
     GLuint dirtTextureLocation;
 

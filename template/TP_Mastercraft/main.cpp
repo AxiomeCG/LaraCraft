@@ -173,13 +173,12 @@ int main(int argc, char **argv) {
         glBindTexture(GL_TEXTURE_2D, dirtTextureLocation);
         glUniform1i(simpleTexturedCubeProgram.uTextureId, 0);
 
-        /*
+
         for (auto x = 0u; x < heightMapWidth; ++x) {
             for (auto z = 0u; z < heightMapHeight; ++z) {
                 drawACube(simpleTexturedCubeProgram,cube.getVertexCount(),projMatrix,viewMatrix,scale(translate(mat4(),vec3((float)x,(float)ptr[x][z],(float)z)),vec3(0.5,0.5,0.5)),light);
             }
-        }*/
-        chunkSection.draw(simpleTexturedCubeProgram, cube.getVertexCount(), projMatrix, viewMatrix, light);
+        }
 
         //Flush texture
         glActiveTexture(GL_TEXTURE0);

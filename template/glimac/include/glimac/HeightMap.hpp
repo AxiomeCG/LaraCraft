@@ -7,7 +7,8 @@
 
 #include "FilePath.hpp"
 #include <vector>
-
+#include <iostream>
+#include <memory>
 
 namespace glimac {
 

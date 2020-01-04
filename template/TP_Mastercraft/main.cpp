@@ -19,9 +19,9 @@
 using namespace glimac;
 
 
-
-void drawACube(const SimpleTexturedCubeProgram &program, int vertexCount, const mat4 &projMatrix, const mat4 &viewMatrix,
-               const mat4 &modelMatrix, const DirectionalLight &light) {
+void
+drawACube(const SimpleTexturedCubeProgram &program, int vertexCount, const mat4 &projMatrix, const mat4 &viewMatrix,
+          const mat4 &modelMatrix, const DirectionalLight &light) {
     mat4 ModelViewMatrix2 = viewMatrix * modelMatrix;
     mat4 ModelViewProjectionMatrix2 = projMatrix * ModelViewMatrix2;
     mat4 NormalMatrix2 = transpose(glm::inverse(ModelViewMatrix2));
@@ -36,17 +36,18 @@ void drawACube(const SimpleTexturedCubeProgram &program, int vertexCount, const 
     glUniform3fv(program.uKsId, 1, value_ptr(ks2));
     glUniform1f(program.uShininessId, shininess2);
 
-    glUniform3fv(program.uLightDir_vsId, 1, value_ptr(light.getLightDirection(viewMatrix))); // TODO Check if it's natural
+    glUniform3fv(program.uLightDir_vsId, 1,
+                 value_ptr(light.getLightDirection(viewMatrix))); // TODO Check if it's natural
     glUniform3fv(program.uLightIntensityId, 1, value_ptr(light.lightIntensity));
     glDrawArrays(GL_TRIANGLES, 0, vertexCount);
 }
 
-int main(int argc, char** argv) {
-    GLFWWindowManager windowManager = GLFWWindowManager(800, 800, "LaraCraft", windowModes::Windowed);
+int main(int argc, char **argv) {
+    GLFWWindowManager windowManager = GLFWWindowManager(1920, 1920, "LaraCraft", windowModes::Windowed);
     // Initialize glew for OpenGL3+ support
     glewExperimental = GL_TRUE;
     GLenum glewInitError = glewInit();
-    if(GLEW_OK != glewInitError) {
+    if (GLEW_OK != glewInitError) {
         std::cerr << glewGetErrorString(glewInitError) << std::endl;
         return EXIT_FAILURE;
     }
@@ -79,19 +80,14 @@ int main(int argc, char** argv) {
 //        ++ptr;
 //    }
     std::unique_ptr<HeightMap> heightMapPtr = loadHeightMap(
-            "TP_Mastercraft/assets/textures/heightmap/heightmap.jpeg", 1.0f, 1.0f, 1.0f);
+            "TP_Mastercraft/assets/map/perlin64_64.png", 1.0f, 1.0f, 1.0f);
     assert(heightMapPtr != nullptr);
 
-//    std::cout << heightMapPtr->getWidth() << std::endl;
-//    unsigned int width = heightMapPtr->getWidth();
-//    unsigned int height = heightMapPtr->getHeight();
-//    auto ptr = heightMapPtr->getHeightData();
-//    for(auto i = 0u; i < width; ++i) {
-//        for (auto j = 0u; j < height; ++j) {
-//            std::cout << ptr[i][j] << " ";
-//        }
-//        std::cout << std::endl;
-//    }
+    std::cout << heightMapPtr->getWidth() << std::endl;
+    unsigned int heightMapWidth = heightMapPtr->getWidth();
+    unsigned int heightMapHeight = heightMapPtr->getHeight();
+    auto ptr = heightMapPtr->getHeightData();
+
 
     GLuint dirtTextureLocation;
 
@@ -143,9 +139,12 @@ int main(int argc, char** argv) {
     glBindBuffer(GL_ARRAY_BUFFER, vbo);
 
     // Specification des attributs de position :
-    glVertexAttribPointer(VERTEX_ATTR_POSITION, 3, GL_FLOAT, GL_FALSE, sizeof(ShapeVertex), (const GLvoid *) offsetof(ShapeVertex, position));
-    glVertexAttribPointer(VERTEX_ATTR_NORMAL, 3, GL_FLOAT, GL_FALSE, sizeof(ShapeVertex), (const GLvoid *) offsetof(ShapeVertex, normal));
-    glVertexAttribPointer(VERTEX_ATTR_TEXTURE, 2, GL_FLOAT, GL_FALSE, sizeof(ShapeVertex), (const GLvoid *) offsetof(ShapeVertex, texCoords));
+    glVertexAttribPointer(VERTEX_ATTR_POSITION, 3, GL_FLOAT, GL_FALSE, sizeof(ShapeVertex),
+                          (const GLvoid *) offsetof(ShapeVertex, position));
+    glVertexAttribPointer(VERTEX_ATTR_NORMAL, 3, GL_FLOAT, GL_FALSE, sizeof(ShapeVertex),
+                          (const GLvoid *) offsetof(ShapeVertex, normal));
+    glVertexAttribPointer(VERTEX_ATTR_TEXTURE, 2, GL_FLOAT, GL_FALSE, sizeof(ShapeVertex),
+                          (const GLvoid *) offsetof(ShapeVertex, texCoords));
 
     // Debinding d'un VBO sur la cible GL_ARRAY_BUFFER:
     glBindBuffer(GL_ARRAY_BUFFER, 0);
@@ -157,10 +156,10 @@ int main(int argc, char** argv) {
 
     projMatrix = glm::perspective(glm::radians(70.f), 1.f, 0.1f, 100.f);
 
-    FreeflyCamera camera = FreeflyCamera(glm::vec3(0.,1.,5.));
+    FreeflyCamera camera = FreeflyCamera(glm::vec3(0.,  + 2, 5.)); //(float)ptr[0][0]
 
     // Application loop:
-    ChunkSection chunkSection = ChunkSection(glm::vec3(0.,0.,0.));
+    ChunkSection chunkSection = ChunkSection(glm::vec3(0., 0., 0.));
 
     while (!windowManager.windowShouldClose()) {
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -169,14 +168,18 @@ int main(int argc, char** argv) {
         viewMatrix = camera.getViewMatrix();
 
         //Light object
-        DirectionalLight light = DirectionalLight(glm::rotate(glm::mat4(), (float) 0, glm::vec3(0., 1., 0.)));
+        DirectionalLight light = DirectionalLight(glm::rotate(glm::mat4(), (float) glfwGetTime(), glm::vec3(1., 0., 0.)));
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, dirtTextureLocation);
         glUniform1i(simpleTexturedCubeProgram.uTextureId, 0);
 
-
+        /*
+        for (auto x = 0u; x < heightMapWidth; ++x) {
+            for (auto z = 0u; z < heightMapHeight; ++z) {
+                drawACube(simpleTexturedCubeProgram,cube.getVertexCount(),projMatrix,viewMatrix,scale(translate(mat4(),vec3((float)x,(float)ptr[x][z],(float)z)),vec3(0.5,0.5,0.5)),light);
+            }
+        }*/
         chunkSection.draw(simpleTexturedCubeProgram, cube.getVertexCount(), projMatrix, viewMatrix, light);
-
 
         //Flush texture
         glActiveTexture(GL_TEXTURE0);

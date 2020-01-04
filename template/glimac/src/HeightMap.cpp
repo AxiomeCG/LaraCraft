@@ -4,7 +4,6 @@
 
 #include "glimac/HeightMap.hpp"
 #include "stb_image.h"
-#include <iostream>
 
 namespace glimac {
 

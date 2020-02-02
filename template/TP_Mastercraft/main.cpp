@@ -42,6 +42,41 @@ drawACube(const SimpleTexturedCubeProgram &program, int vertexCount, const mat4 
     glDrawArrays(GL_TRIANGLES, 0, vertexCount);
 }
 
+void
+draw(const SimpleTexturedCubeProgram &program, long vertexCount, const mat4 &projMatrix, const mat4 &viewMatrix,
+     const mat4 &modelMatrix, const DirectionalLight &light) {
+    mat4 ModelViewMatrix2 = viewMatrix * modelMatrix;
+    mat4 ModelViewProjectionMatrix2 = projMatrix * ModelViewMatrix2;
+    mat4 NormalMatrix2 = transpose(glm::inverse(ModelViewMatrix2));
+    glUniformMatrix4fv(program.uMVPMatrixId, 1, GL_FALSE, value_ptr(ModelViewProjectionMatrix2));
+    glUniformMatrix4fv(program.uMVMatrixId, 1, GL_FALSE, value_ptr(ModelViewMatrix2));
+    glUniformMatrix4fv(program.uNormalMatrixId, 1, GL_FALSE, value_ptr(NormalMatrix2));
+
+    const vec3 &kd2 = vec3(1., 1., 1.);
+    const vec3 &ks2 = vec3(1., 1., 1.);
+    const float shininess2 = 10.;
+    glUniform3fv(program.uKdId, 1, value_ptr(kd2));
+    glUniform3fv(program.uKsId, 1, value_ptr(ks2));
+    glUniform1f(program.uShininessId, shininess2);
+
+    glUniform3fv(program.uLightDir_vsId, 1,
+                 value_ptr(light.getLightDirection(viewMatrix))); // TODO Check if it's natural
+    glUniform3fv(program.uLightIntensityId, 1, value_ptr(light.lightIntensity));
+    glDrawArrays(GL_TRIANGLES, 0, vertexCount);
+}
+
+long concatDataVector(const std::unique_ptr<HeightMap> &heightMapPtr, long &globalCount, std::vector<ShapeVertex> &v) {
+    for(int i = 0 ; i < heightMapPtr->getWidth() ; i+=16) {
+        for( int j = 0 ; j < heightMapPtr->getHeight() ; j+=16) {
+            auto chunkSection = ChunkSection(vec2(i, j), *heightMapPtr, i, j);
+            auto vector = chunkSection.getDataVector();
+            globalCount += chunkSection.getVertexCount();
+            v.insert(v.end(), vector.begin(), vector.end());
+        }
+    }
+    return globalCount;
+}
+
 int main(int argc, char **argv) {
     GLFWWindowManager windowManager = GLFWWindowManager(1920, 1920, "LaraCraft", windowModes::Windowed);
     // Initialize glew for OpenGL3+ support
@@ -114,12 +149,32 @@ int main(int argc, char **argv) {
      *********************************/
 
     Cube cube;
+    long globalCount = 0;
+    std::vector<ShapeVertex> concatDataList;
+
+
+    concatDataVector(heightMapPtr, globalCount, concatDataList);
+
+
+    /*ChunkSection chunkSection = ChunkSection(glm::vec2(0., 0.),*heightMapPtr, 0, 0);
+    ChunkSection chunkSection2 = ChunkSection(glm::vec2(32., 0.),*heightMapPtr, 16, 0);
+
+
+    globalCount = chunkSection.getVertexCount() + chunkSection2.getVertexCount();
+    auto vector = chunkSection.getDataVector();
+    auto vector2 = chunkSection2.getDataVector();
+
+    concatDataList.insert(concatDataList.end(), vector.begin(), vector.end());
+    concatDataList.insert(concatDataList.end(), vector2.begin(), vector2.end());*/
+
 
     GLuint vbo, vao;
 
     glGenBuffers(1, &vbo);
     glBindBuffer(GL_ARRAY_BUFFER, vbo);
-    glBufferData(GL_ARRAY_BUFFER, cube.getVertexCount() * sizeof(ShapeVertex), cube.getDataPointer(), GL_STATIC_DRAW);
+    //glBufferData(GL_ARRAY_BUFFER, cube.getVertexCount() * sizeof(ShapeVertex), cube.getDataPointer(), GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, concatDataList.size() * sizeof(ShapeVertex), &concatDataList[0], GL_STATIC_DRAW);
+    //glBufferData(GL_ARRAY_BUFFER, chunkSection2.getVertexCount() * sizeof(ShapeVertex), chunkSection2.getDataPointer(), GL_STATIC_DRAW);
     // Debinding d'un VBO sur la cible GL_ARRAY_BUFFER:
     glBindBuffer(GL_ARRAY_BUFFER, 0);
 
@@ -156,10 +211,18 @@ int main(int argc, char **argv) {
 
     projMatrix = glm::perspective(glm::radians(70.f), 1.f, 0.1f, 100.f);
 
-    FreeflyCamera camera = FreeflyCamera(glm::vec3(0.,  + 2, 5.)); //(float)ptr[0][0]
+    FreeflyCamera camera = FreeflyCamera(glm::vec3(0.,  ((float) ptr[0][0]) + 2, 5.)); //(float)ptr[0][0]
 
+
+    /*
+    std::cout << "Height map" << std::endl;
+    for (int i = 0; i < 16; i++){
+        for (int j = 0; j < 16; j++) {
+            std::cout << heightMapPtr->getHeightData().at(i).at(j) << ", ";
+        }
+        std::cout << std::endl;
+    }*/
     // Application loop:
-    ChunkSection chunkSection = ChunkSection(glm::vec3(0., 0., 0.));
 
     while (!windowManager.windowShouldClose()) {
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -173,12 +236,15 @@ int main(int argc, char **argv) {
         glBindTexture(GL_TEXTURE_2D, dirtTextureLocation);
         glUniform1i(simpleTexturedCubeProgram.uTextureId, 0);
 
-
+        //glDrawArrays(GL_TRIANGLES,0,globalCount);
+/*
         for (auto x = 0u; x < heightMapWidth; ++x) {
             for (auto z = 0u; z < heightMapHeight; ++z) {
                 drawACube(simpleTexturedCubeProgram,cube.getVertexCount(),projMatrix,viewMatrix,scale(translate(mat4(),vec3((float)x,(float)ptr[x][z],(float)z)),vec3(0.5,0.5,0.5)),light);
             }
-        }
+        } */
+
+        draw(simpleTexturedCubeProgram, globalCount, projMatrix, viewMatrix, mat4(), light);
 
         //Flush texture
         glActiveTexture(GL_TEXTURE0);

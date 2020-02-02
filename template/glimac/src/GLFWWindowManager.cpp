@@ -79,19 +79,19 @@ void GLFWWindowManager::handleEventsForFPSview(glimac::FreeflyCamera &camera) {
     glfwPollEvents();
     int stateUpKey = getKey(GLFW_KEY_W);
     if (stateUpKey == GLFW_PRESS) {
-        camera.moveFront(0.1f);
+        camera.moveFront(0.5f);
     }
     int stateDownKey = getKey(GLFW_KEY_S);
     if (stateDownKey == GLFW_PRESS) {
-        camera.moveFront(-0.1f);
+        camera.moveFront(-0.5f);
     }
     int stateLeftKey = getKey(GLFW_KEY_A);
     if (stateLeftKey == GLFW_PRESS) {
-        camera.moveLeft(0.1f);
+        camera.moveLeft(0.5f);
     }
     int stateRightKey = getKey(GLFW_KEY_D);
     if (stateRightKey == GLFW_PRESS) {
-        camera.moveLeft(-0.1f);
+        camera.moveLeft(-0.5f);
     }
 
     int stateEscapeKey = getKey(GLFW_KEY_ESCAPE);

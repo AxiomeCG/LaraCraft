@@ -12,7 +12,7 @@
 #include <glimac/GLFWWindowManager.hpp>
 #include <glimac/SimpleTexturedCubeProgram.hpp>
 #include <glimac/DirectionalLight.hpp>
-#include <glimac/ChunkSection.hpp>
+#include <glimac/Chunk.hpp>
 #include <glimac/Image.hpp>
 #include <glimac/HeightMap.hpp>
 
@@ -68,7 +68,7 @@ draw(const SimpleTexturedCubeProgram &program, long vertexCount, const mat4 &pro
 long concatDataVector(const std::unique_ptr<HeightMap> &heightMapPtr, long &globalCount, std::vector<ShapeVertex> &v) {
     for(int i = 0 ; i < heightMapPtr->getWidth() ; i+=16) {
         for( int j = 0 ; j < heightMapPtr->getHeight() ; j+=16) {
-            auto chunkSection = ChunkSection(vec2(i, j), *heightMapPtr, i, j);
+            auto chunkSection = Chunk(vec2(i, j), *heightMapPtr);
             auto vector = chunkSection.getDataVector();
             globalCount += chunkSection.getVertexCount();
             v.insert(v.end(), vector.begin(), vector.end());
@@ -156,8 +156,8 @@ int main(int argc, char **argv) {
     concatDataVector(heightMapPtr, globalCount, concatDataList);
 
 
-    /*ChunkSection chunkSection = ChunkSection(glm::vec2(0., 0.),*heightMapPtr, 0, 0);
-    ChunkSection chunkSection2 = ChunkSection(glm::vec2(32., 0.),*heightMapPtr, 16, 0);
+    /*Chunk chunkSection = Chunk(glm::vec2(0., 0.),*heightMapPtr, 0, 0);
+    Chunk chunkSection2 = Chunk(glm::vec2(32., 0.),*heightMapPtr, 16, 0);
 
 
     globalCount = chunkSection.getVertexCount() + chunkSection2.getVertexCount();

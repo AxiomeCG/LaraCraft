@@ -15,6 +15,7 @@
 #include <glimac/Chunk.hpp>
 #include <glimac/Image.hpp>
 #include <glimac/HeightMap.hpp>
+#include <glimac/ColorMap.hpp>
 
 using namespace glimac;
 
@@ -165,6 +166,13 @@ int main(int argc, char **argv) {
     std::cout << heightMapPtr->getWidth() << std::endl;
     auto ptr = heightMapPtr->getHeightData();
 
+    std::unique_ptr<ColorMap> colorMapPtr = loadColorMap(
+            "TP_Mastercraft/assets/map/perlincolor64_64.png", 1.0f, 1.0f, 1.0f);
+    assert(colorMapPtr != nullptr);
+    std::cout << colorMapPtr->getWidth() << std::endl;
+    unsigned int colorMapWidth = colorMapPtr->getWidth();
+    unsigned int colorMapHeight = colorMapPtr->getHeight();
+    auto ptrColor = colorMapPtr->getColorData();
 
     GLuint dirtTextureLocation;
 

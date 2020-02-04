@@ -78,7 +78,8 @@ void generateChunkVertexFromHeightMap(const std::unique_ptr<HeightMap> &heightMa
 }
 
 void generateSurroundingChunkVertexFromHeightMap(const std::unique_ptr<HeightMap> &heightMapPtr, long &globalCount,
-                                                 std::vector<ShapeVertex> &concatDataList, int offsetX1, int offsetX2, int offsetZ1,
+                                                 std::vector<ShapeVertex> &concatDataList, int offsetX1, int offsetX2,
+                                                 int offsetZ1,
                                                  int offsetZ2) {
 
     std::cout << "Generate chunk for [" << offsetX1 << " " << offsetX2 << "]" << "[" << offsetZ1 << ";" << offsetZ2
@@ -106,7 +107,7 @@ void refreshChunkVBO(const std::unique_ptr<HeightMap> &heightMapPtr, std::vector
                                                 currentChunkZ + distanceChunkLoaded);
 
     glBindBuffer(GL_ARRAY_BUFFER, vbo);
-    glBufferData(GL_ARRAY_BUFFER, concatDataList.size() * sizeof(ShapeVertex), &concatDataList[0], GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, concatDataList.size() * sizeof(ShapeVertex), &concatDataList[0], GL_DYNAMIC_DRAW);
     // Debinding d'un VBO sur la cible GL_ARRAY_BUFFER:
     glBindBuffer(GL_ARRAY_BUFFER, 0);
 }
@@ -158,7 +159,7 @@ int main(int argc, char **argv) {
 //        ++ptr;
 //    }
     std::unique_ptr<HeightMap> heightMapPtr = loadHeightMap(
-            "TP_Mastercraft/assets/map/perlin.png", 1.0f, 1.0f, 1.0f);
+            "TP_Mastercraft/assets/map/perlin.png", 1.0f, 1.0f, 0.2f);
     assert(heightMapPtr != nullptr);
 
     std::cout << heightMapPtr->getWidth() << std::endl;
@@ -193,6 +194,7 @@ int main(int argc, char **argv) {
     long globalCount = 0;
     std::vector<ShapeVertex> concatDataList;
 
+    int distanceChunkLoaded = 5;
 
 
 
@@ -212,7 +214,7 @@ int main(int argc, char **argv) {
 
     glGenBuffers(1, &vbo);
 
-    refreshChunkVBO(heightMapPtr, concatDataList, globalCount, vbo, 0, 0, 3);
+    refreshChunkVBO(heightMapPtr, concatDataList, globalCount, vbo, 0, 0, distanceChunkLoaded);
 
     glGenVertexArrays(1, &vao);
 
@@ -269,18 +271,17 @@ int main(int argc, char **argv) {
     while (!windowManager.windowShouldClose()) {
 
         whereAmI(camera, currentChunkPositionX, currentChunkPositionZ);
-        if (currentChunkPositionX != oldChunkPositionX || currentChunkPositionZ != oldChunkPositionZ) {
+        if ((currentChunkPositionX < oldChunkPositionX - distanceChunkLoaded / 2 ||
+             currentChunkPositionX > oldChunkPositionX + distanceChunkLoaded / 2) ||
+            (currentChunkPositionZ < oldChunkPositionZ - distanceChunkLoaded / 2 ||
+             currentChunkPositionZ > oldChunkPositionZ + distanceChunkLoaded / 2)) {
             std::cout << "Need reload" << "(" << currentChunkPositionX << ";" << currentChunkPositionZ << ")"
                       << std::endl;
-            needReload = true;
+            refreshChunkVBO(heightMapPtr, concatDataList, globalCount, vbo, currentChunkPositionX,
+                            currentChunkPositionZ, distanceChunkLoaded);
             oldChunkPositionX = currentChunkPositionX;
             oldChunkPositionZ = currentChunkPositionZ;
-        } else {
-            needReload = false;
         }
-        if (needReload)
-            refreshChunkVBO(heightMapPtr, concatDataList, globalCount, vbo, currentChunkPositionX,
-                            currentChunkPositionZ, 2);
 
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 

@@ -13,7 +13,7 @@
 #include "HeightMap.hpp"
 
 /**
- * Represents a 16*256*16 bundle of cubes.
+ * Represents a 16*resv*16 bundle of cubes.
  * In first approximation, a chunk section is made of only one texture.
  * A coordinate (x,y,z) coordinate in the matrix can be either empty (no cube) or filled with a cube of the material.
  */

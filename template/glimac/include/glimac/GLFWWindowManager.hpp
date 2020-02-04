@@ -10,6 +10,7 @@
 #include <iostream>
 #include <cstdint>
 #include "FreeflyCamera.hpp"
+#include "ConstrainedCamera.hpp"
 
 namespace windowModes {
     enum WindowMode : uint32_t {
@@ -88,6 +89,13 @@ public :
      * @param camera
      */
     void handleEventsForFPSview(glimac::FreeflyCamera &camera);
+
+    /**
+     * Handles the inputs received to simulate an FPS view with a ConstrainedCamera
+     * @see ConstrainedCamera
+     * @param camera
+     */
+    void handleEventsForFPSConstrainedView(glimac::ConstrainedCamera &camera);
 
 private :
     /**

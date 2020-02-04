@@ -5,6 +5,7 @@
 #include <glimac/common.hpp>
 
 #include <glimac/FreeflyCamera.hpp>
+#include <glimac/ConstrainedCamera.hpp>
 #include <GL/glew.h>
 #include <iostream>
 #include <cstddef>
@@ -219,7 +220,8 @@ int main(int argc, char **argv) {
 
     projMatrix = glm::perspective(glm::radians(70.f), 1.f, 0.1f, 100.f);
 
-    FreeflyCamera camera = FreeflyCamera(glm::vec3(0.,  ((float) ptr[0][0]) + 2, 5.)); //(float)ptr[0][0]
+   //FreeflyCamera camera = FreeflyCamera(glm::vec3(0.,  ((float) ptr[0][0]) + 2, 5.)); //(float)ptr[0][0]
+    ConstrainedCamera camera = ConstrainedCamera(0.f, 0.f, heightMapPtr->getHeightData(), 2.f);
 
 
     /*
@@ -261,7 +263,8 @@ int main(int argc, char **argv) {
         glBindVertexArray(0);
 
         windowManager.swapBuffers();
-        windowManager.handleEventsForFPSview(camera);
+        //windowManager.handleEventsForFPSview(camera);
+        windowManager.handleEventsForFPSConstrainedView(camera);
 
 
     }

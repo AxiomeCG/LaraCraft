@@ -110,3 +110,39 @@ void GLFWWindowManager::handleEventsForFPSview(glimac::FreeflyCamera &camera) {
     oldX = (float) tmpxPos;
     oldY = (float) tmpyPos;
 }
+
+void GLFWWindowManager::handleEventsForFPSConstrainedView(glimac::ConstrainedCamera &camera) {
+    glfwPollEvents();
+    int stateUpKey = getKey(GLFW_KEY_W);
+    if (stateUpKey == GLFW_PRESS) {
+        camera.moveFront(0.1f);
+    }
+    int stateDownKey = getKey(GLFW_KEY_S);
+    if (stateDownKey == GLFW_PRESS) {
+        camera.moveFront(-0.1f);
+    }
+    int stateLeftKey = getKey(GLFW_KEY_A);
+    if (stateLeftKey == GLFW_PRESS) {
+        camera.moveLeft(0.1f);
+    }
+    int stateRightKey = getKey(GLFW_KEY_D);
+    if (stateRightKey == GLFW_PRESS) {
+        camera.moveLeft(-0.1f);
+    }
+
+    int stateEscapeKey = getKey(GLFW_KEY_ESCAPE);
+    if (stateEscapeKey == GLFW_PRESS) {
+        glfwSetWindowShouldClose(window,1);
+    }
+    double tmpxPos, tmpyPos;
+    getCursorPosition(&tmpxPos, &tmpyPos);
+    float xrel = oldX - (float) tmpxPos;
+    float yrel = oldY - (float) tmpyPos;
+    int stateMouseClick = getMouseButton(GLFW_MOUSE_BUTTON_LEFT);
+    if (stateMouseClick == GLFW_PRESS) {
+        camera.rotateUp(yrel);
+        camera.rotateLeft(xrel);
+    }
+    oldX = (float) tmpxPos;
+    oldY = (float) tmpyPos;
+}

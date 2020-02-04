@@ -7,21 +7,43 @@
 
 namespace glimac{
 
-    MovementChecker::MovementChecker(HeightMap heightMap) : m_heightMap(heightMap) {
-        auto heightData = heightMap.getHeightData();
-        m_currentPosition = glm::vec3(0.f, 0.f, heightData[0][0]);
-    }
-
-    bool MovementChecker::movedToAnotherCube(glm::vec3 futurePosition) {
+    bool MovementChecker::willMoveToAnotherCube(glm::vec3 currentPosition, glm::vec3 futurePosition) {
         auto futurePosFlooredX = floor(futurePosition.x);
-        auto futurePosFlooredY = floor(futurePosition.y);
-        auto currentPosFlooredX = floor(m_currentPosition.x);
-        auto currentPosFlooredY = floor(m_currentPosition.y);
-        if((futurePosFlooredX == currentPosFlooredX) && (futurePosFlooredY == currentPosFlooredY)) {
+        auto futurePosFlooredZ = floor(futurePosition.z);
+        auto currentPosFlooredX = floor(currentPosition.x);
+        auto currentPosFlooredZ = floor(currentPosition.z);
+        if((futurePosFlooredX == currentPosFlooredX) && (futurePosFlooredZ == currentPosFlooredZ)) {
             return false;
         }
-        return false;
+        return true;
     }
 
+    bool MovementChecker::canMoveToTheOtherCube(glm::vec3 currentPosition, glm::vec3 futurePosition) {
+        if(futurePosition.x < 0 || futurePosition.x > m_width) {
+            std::cout << "First false" << std::endl;
+            return false;
+        }
+        if(futurePosition.z < 0 || futurePosition.z > m_height) {
+            std::cout << "Second false" << std::endl;
+            return false;
+        }
+        auto futurePosFlooredX = floor(futurePosition.x);
+        auto futurePosFlooredZ = floor(futurePosition.z);
+        auto currentPosFlooredX = floor(currentPosition.x);
+        auto currentPosFlooredZ = floor(currentPosition.z);
+        auto heightDifference =  m_heightData[futurePosFlooredX][futurePosFlooredZ] - m_heightData[currentPosFlooredX][currentPosFlooredZ];
+        if(heightDifference > 1) {
+            std::cout << "Third false" << std::endl;
+            return false;
+        }
+        return true;
+    }
+
+    glm::vec3 MovementChecker::leveledFuturePosition(glm::vec3 futurePosition, float heightOfEntity) {
+        auto futurePosFlooredX = floor(futurePosition.x);
+        auto futurePosFlooredZ = floor(futurePosition.z);
+        auto futureY = m_heightData[futurePosFlooredX][futurePosFlooredZ];
+        return glm::vec3(futurePosition.x, futureY + heightOfEntity, futurePosition.z);
+    }
 
 }

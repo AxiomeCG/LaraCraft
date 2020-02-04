@@ -11,6 +11,7 @@
 #include "SimpleTexturedCubeProgram.hpp"
 #include "DirectionalLight.hpp"
 #include "HeightMap.hpp"
+#include "ColorMap.hpp"
 
 /**
  * Represents a 16*resv*16 bundle of cubes.
@@ -19,7 +20,7 @@
  */
 class Chunk {
 public:
-    Chunk(const glm::vec2 &position, HeightMap heightMap) : positionTranslation(
+    Chunk(const glm::vec2 &position, const HeightMap &heightMap) : positionTranslation(
             vec3(position.x, 0, position.y)) {
 
         int offsetRow = position.x;
@@ -31,13 +32,13 @@ public:
         assert(offsetColumn % 16 == 0);
 
         for (int row = offsetRow; row < WIDTH + offsetRow; row++) {
-            std::vector<float> tmpColumn;
+            std::vector<float> tmpHeightMapColumn;
             for (int column = offsetColumn; column < LENGTH + offsetColumn; column++) {
-                tmpColumn.push_back(heightMap.getHeightData()
-                                             .at(row)
-                                             .at(column));
+                tmpHeightMapColumn.push_back(heightMap.getHeightData()
+                                                      .at(row)
+                                                      .at(column));
             }
-            localHeightMap.push_back(tmpColumn);
+            localHeightMap.push_back(tmpHeightMapColumn);
         }
 
         build();

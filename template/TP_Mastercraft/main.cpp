@@ -66,14 +66,43 @@ draw(const SimpleTexturedCubeProgram &program, long vertexCount, const mat4 &pro
     glDrawArrays(GL_TRIANGLES, 0, vertexCount);
 }
 
-void generateChunkVertexFromHeightMap(const std::unique_ptr<HeightMap> &heightMapPtr, long &globalCount,
-                                      std::vector<ShapeVertex> &v) {
+void generateAllChunks(const std::unique_ptr<HeightMap> &heightMapPtr, std::vector<std::vector<Chunk>> &chunkVector) {
+    for (int i = 0; i < heightMapPtr->getWidth(); i += 16) {
+        std::vector<Chunk> columnVector;
+        for (int j = 0; j < heightMapPtr->getHeight(); j += 16) {
+            columnVector.emplace_back(vec2(i, j), *heightMapPtr);
+        }
+        chunkVector.push_back(columnVector);
+    }
+}
+
+void generateAllChunksVertexFromHeightMap(const std::unique_ptr<HeightMap> &heightMapPtr, long &globalCount,
+                                          std::vector<ShapeVertex> &v) {
     for (int i = 0; i < heightMapPtr->getWidth(); i += 16) {
         for (int j = 0; j < heightMapPtr->getHeight(); j += 16) {
             auto chunkSection = Chunk(vec2(i, j), *heightMapPtr);
             auto vector = chunkSection.getDataVector();
             globalCount += chunkSection.getVertexCount();
             v.insert(v.end(), vector.begin(), vector.end());
+        }
+    }
+}
+
+void generateSurroundingChunkVertexFromAllChunks(std::vector<std::vector<Chunk>> chunkList, long &globalCount,
+                                                 std::vector<ShapeVertex> &concatDataList, int offsetX1, int offsetX2,
+                                                 int offsetZ1,
+                                                 int offsetZ2) {
+
+    std::cout << "Generate chunk for [" << offsetX1 << " " << offsetX2 << "]" << "[" << offsetZ1 << ";" << offsetZ2
+              << "]" << std::endl;
+    for (int i = offsetX1 < 0 ? 0 : offsetX1 * 16; i < offsetX2 * 16 && i < chunkList.size() * 16; i += 16) {
+        auto chunkNumberI = i / 16;
+        for (int j = offsetZ1 < 0 ? 0 : offsetZ1 * 16;
+             j < offsetZ2 * 16 && j < chunkList[i / 16].size() * 16; j += 16) {
+            auto chunkNumberJ = j / 16;
+            auto vector = chunkList[chunkNumberI][chunkNumberJ].getDataVector();
+            globalCount += chunkList[i / 16][j / 16].getVertexCount();
+            concatDataList.insert(concatDataList.end(), vector.begin(), vector.end());
         }
     }
 }
@@ -96,12 +125,13 @@ void generateSurroundingChunkVertexFromHeightMap(const std::unique_ptr<HeightMap
 }
 
 
-void refreshChunkVBO(const std::unique_ptr<HeightMap> &heightMapPtr, std::vector<ShapeVertex> &concatDataList,
+void refreshChunkVBO(const std::vector<std::vector<Chunk>> &chunkList, std::vector<ShapeVertex> &concatDataList,
                      long &globalNumberOfVertex, GLuint &vbo, int currentChunkX, int currentChunkZ,
                      int distanceChunkLoaded) {
 
+    std::cout << "Refresh : size :" << chunkList.size() << " " << chunkList[0].size() << std::endl;
     concatDataList.clear();
-    generateSurroundingChunkVertexFromHeightMap(heightMapPtr, globalNumberOfVertex, concatDataList,
+    generateSurroundingChunkVertexFromAllChunks(chunkList, globalNumberOfVertex, concatDataList,
                                                 currentChunkX - distanceChunkLoaded,
                                                 currentChunkX + distanceChunkLoaded,
                                                 currentChunkZ - distanceChunkLoaded,
@@ -149,16 +179,6 @@ int main(int argc, char **argv) {
             "TP_Mastercraft/assets/textures/blocks/dirt.png");
     assert(dirtImagePtr != nullptr);
 
-//    std::cout << dirtImagePtr->getWidth() << std::endl;
-//    unsigned int size = dirtImagePtr->getWidth() * dirtImagePtr->getHeight();
-//    auto ptr = dirtImagePtr->getPixels();
-//    for(auto i = 0u; i < size; ++i) {
-//        std::cout << ptr->r << std::endl;
-//        std::cout << ptr->g << std::endl;
-//        std::cout << ptr->b << std::endl;
-//        std::cout << ptr->a << std::endl;
-//        ++ptr;
-//    }
     std::unique_ptr<HeightMap> heightMapPtr = loadHeightMap(
             "TP_Mastercraft/assets/map/perlin.png", 1.0f, 1.0f, 0.2f);
     assert(heightMapPtr != nullptr);
@@ -222,7 +242,9 @@ int main(int argc, char **argv) {
 
     glGenBuffers(1, &vbo);
 
-    refreshChunkVBO(heightMapPtr, concatDataList, globalCount, vbo, 0, 0, distanceChunkLoaded);
+    std::vector<std::vector<Chunk>> chunkList;
+    generateAllChunks(heightMapPtr, chunkList);
+    refreshChunkVBO(chunkList, concatDataList, globalCount, vbo, 0, 0, distanceChunkLoaded);
 
     glGenVertexArrays(1, &vao);
 
@@ -275,17 +297,16 @@ int main(int argc, char **argv) {
     int oldChunkPositionZ = 0;
     int currentChunkPositionX = 0;
     int currentChunkPositionZ = 0;
-    bool needReload = false;
     while (!windowManager.windowShouldClose()) {
 
         whereAmI(camera, currentChunkPositionX, currentChunkPositionZ);
-        if ((currentChunkPositionX < oldChunkPositionX - distanceChunkLoaded / 2 ||
-             currentChunkPositionX > oldChunkPositionX + distanceChunkLoaded / 2) ||
-            (currentChunkPositionZ < oldChunkPositionZ - distanceChunkLoaded / 2 ||
-             currentChunkPositionZ > oldChunkPositionZ + distanceChunkLoaded / 2)) {
+        if (currentChunkPositionX < oldChunkPositionX - distanceChunkLoaded/2 ||
+            currentChunkPositionX > oldChunkPositionX + distanceChunkLoaded/2 ||
+            currentChunkPositionZ < oldChunkPositionZ - distanceChunkLoaded/2 ||
+            currentChunkPositionZ > oldChunkPositionZ + distanceChunkLoaded/2) {
             std::cout << "Need reload" << "(" << currentChunkPositionX << ";" << currentChunkPositionZ << ")"
                       << std::endl;
-            refreshChunkVBO(heightMapPtr, concatDataList, globalCount, vbo, currentChunkPositionX,
+            refreshChunkVBO(chunkList, concatDataList, globalCount, vbo, currentChunkPositionX,
                             currentChunkPositionZ, distanceChunkLoaded);
             oldChunkPositionX = currentChunkPositionX;
             oldChunkPositionZ = currentChunkPositionZ;

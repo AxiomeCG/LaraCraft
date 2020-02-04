@@ -175,6 +175,10 @@ int main(int argc, char **argv) {
      * TEXTURE INIT
      ***************/
 
+    std::unique_ptr<Image> atlasImagePtr = loadImage(
+            "TP_Mastercraft/assets/textures/blocks/atlas.png");
+    assert(atlasImagePtr != nullptr);
+
     std::unique_ptr<Image> dirtImagePtr = loadImage(
             "TP_Mastercraft/assets/textures/blocks/dirt.png");
     assert(dirtImagePtr != nullptr);
@@ -191,24 +195,26 @@ int main(int argc, char **argv) {
     assert(colorMapPtr != nullptr);
     std::cout << colorMapPtr->getWidth() << std::endl;
     unsigned int colorMapWidth = colorMapPtr->getWidth();
-    unsigned int colorMapHeight = colorMapPtr->getHeight();
+    colorMapPtr->getHeight();
     auto ptrColor = colorMapPtr->getColorData();
 
-    GLuint dirtTextureLocation;
+    GLuint atlasTextureLocation;
 
-    glGenTextures(1, &dirtTextureLocation);
+    glGenTextures(1, &atlasTextureLocation);
 
 
     /**
-     * Earth texture
+     * Atlas texture
      */
-    glBindTexture(GL_TEXTURE_2D, dirtTextureLocation);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, dirtImagePtr->getWidth(), dirtImagePtr->getHeight(), 0, GL_RGBA, GL_FLOAT,
-                 dirtImagePtr->getPixels());
+    glBindTexture(GL_TEXTURE_2D, atlasTextureLocation);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, atlasImagePtr->getWidth(), atlasImagePtr->getHeight(), 0, GL_RGBA, GL_FLOAT,
+                 atlasImagePtr->getPixels());
 
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     glBindTexture(GL_TEXTURE_2D, 0);
+
+
 
 
     glEnable(GL_DEPTH_TEST);
@@ -223,20 +229,6 @@ int main(int argc, char **argv) {
     std::vector<ShapeVertex> concatDataList;
 
     int distanceChunkLoaded = 5;
-
-
-
-    /*Chunk chunkSection = Chunk(glm::vec2(0., 0.),*heightMapPtr, 0, 0);
-    Chunk chunkSection2 = Chunk(glm::vec2(32., 0.),*heightMapPtr, 16, 0);
-
-
-    globalCount = chunkSection.getVertexCount() + chunkSection2.getVertexCount();
-    auto vector = chunkSection.getDataVector();
-    auto vector2 = chunkSection2.getDataVector();
-
-    concatDataList.insert(concatDataList.end(), vector.begin(), vector.end());
-    concatDataList.insert(concatDataList.end(), vector2.begin(), vector2.end());*/
-
 
     GLuint vbo, vao;
 
@@ -279,17 +271,8 @@ int main(int argc, char **argv) {
 
     projMatrix = glm::perspective(glm::radians(70.f), 1.f, 0.1f, 100.f);
 
-    FreeflyCamera camera = FreeflyCamera(glm::vec3(0., ((float) ptr[0][5]), 5.)); //(float)ptr[0][0]
+    FreeflyCamera camera = FreeflyCamera(glm::vec3(0., ((float) ptr[0][5]), 5.));
 
-
-    /*
-    std::cout << "Height map" << std::endl;
-    for (int i = 0; i < 16; i++){
-        for (int j = 0; j < 16; j++) {
-            std::cout << heightMapPtr->getHeightData().at(i).at(j) << ", ";
-        }
-        std::cout << std::endl;
-    }*/
     // Application loop:
 
 
@@ -322,16 +305,10 @@ int main(int argc, char **argv) {
         DirectionalLight light = DirectionalLight(
                 glm::rotate(glm::mat4(), (float) glfwGetTime(), glm::vec3(1., 0., 0.)));
         glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_2D, dirtTextureLocation);
+        glBindTexture(GL_TEXTURE_2D, atlasTextureLocation);
         glUniform1i(simpleTexturedCubeProgram.uTextureId, 0);
 
-        //glDrawArrays(GL_TRIANGLES,0,globalCount);
-/*
-        for (auto x = 0u; x < heightMapWidth; ++x) {
-            for (auto z = 0u; z < heightMapHeight; ++z) {
-                drawACube(simpleTexturedCubeProgram,cube.getVertexCount(),projMatrix,viewMatrix,scale(translate(mat4(),vec3((float)x,(float)ptr[x][z],(float)z)),vec3(0.5,0.5,0.5)),light);
-            }
-        } */
+
 
         draw(simpleTexturedCubeProgram, globalCount, projMatrix, viewMatrix, mat4(), light);
 
@@ -346,7 +323,7 @@ int main(int argc, char **argv) {
 
 
     }
-    glDeleteTextures(1, &dirtTextureLocation);
+    glDeleteTextures(1, &atlasTextureLocation);
     glDeleteBuffers(1, &vbo);
     glDeleteVertexArrays(1, &vao);
 

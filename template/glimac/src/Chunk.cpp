@@ -1,3 +1,4 @@
+#include <glimac/TextureEnum.hpp>
 #include "glimac/Chunk.hpp"
 
 void Chunk::build() {
@@ -8,14 +9,12 @@ void Chunk::build() {
 }
 
 void Chunk::addVertexOfDisplayedCube() {
-    //int countSkip = 0;
     for (int x = 0; x < WIDTH; ++x) {
         for (int z = 0; z < LENGTH; ++z) {
             for (int height = 0; height < (int) localHeightMap.at(x)
                                                               .at(z); height++) {
 
-                if(!isFilled3DVector[x][z][height]) {
-                    //countSkip++;
+                if (!isFilled3DVector[x][z][height]) {
                     continue;
                 }
 
@@ -23,11 +22,12 @@ void Chunk::addVertexOfDisplayedCube() {
                     ShapeVertex shapeVertex;
                     const ShapeVertex &currentCubeVertex = cube.getDataPointer()[v];
                     float vertexX = currentCubeVertex.position
-                                                     .x; // The cube is defined from -1 to 1 so it's size 2. Divide by two to get a 1x1x1 size cube
+                                                     .x /
+                                    2.; // The cube is defined from -1 to 1 so it's size 2. Divide by two to get a 1x1x1 size cube
                     float vertexY = currentCubeVertex.position
-                                                     .y;
+                                                     .y / 2.;
                     float vertexZ = currentCubeVertex.position
-                                                     .z;
+                                                     .z / 2.;
 
                     shapeVertex.position = vec3(vertexX + (float) x + positionTranslation.x,
                                                 vertexY + (float) height + positionTranslation.y,
@@ -35,7 +35,10 @@ void Chunk::addVertexOfDisplayedCube() {
 
                     //std::cout << shapeVertex.position << std::endl;
                     shapeVertex.normal = vec3(currentCubeVertex.normal);
-                    shapeVertex.texCoords = vec2(currentCubeVertex.texCoords);
+                    shapeVertex.texCoords = vec2(TextureEnum::sandTextureOffset+ currentCubeVertex.texCoords
+                                                                  .x / TextureEnum::NUMBER_TEXTURE,
+                                                 currentCubeVertex.texCoords
+                                                                  .y);// + offset
                     m_Vertices.push_back(shapeVertex);
                 }
             }
@@ -73,7 +76,7 @@ void Chunk::computeIsFilled3DVector() {
     }
 }
 
-void Chunk::initializeIsFilled3DVector()  {
+void Chunk::initializeIsFilled3DVector() {
     for (int x = 0; x < WIDTH; x++) {
         std::vector<std::vector<bool>> isFilled2DVector;
         for (int z = 0; z < LENGTH; ++z) {
@@ -106,3 +109,5 @@ bool Chunk::isSurroundedByNeighbors(int x, int z, int height) {
 
     return isAboveFilled && isBelowFilled && isLeftFilled && isRightFilled && isFrontFilled && isBackFilled;
 }
+
+const Cube Chunk::cube;

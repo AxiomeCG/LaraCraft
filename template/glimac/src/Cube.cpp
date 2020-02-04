@@ -35,46 +35,46 @@ void Cube::generateFrontFace() {
 
     vertex.normal.x = 0.f;
     vertex.normal.y = 0.f;
-    vertex.normal.z = 0.5f;
+    vertex.normal.z = 1.f;
 
-    vertex.position = glm::vec3(-0.5f, 0.5f, 0.5f);
+    vertex.position = glm::vec3(-1.f, 1.f, 1.f);
 
     m_Vertices.push_back(vertex);
 
     //BOTTOM LEFT CORNER
     vertex.texCoords.x = 0.f;
-    vertex.texCoords.y = 0.5f;
+    vertex.texCoords.y = 1.f;
 
     vertex.normal.x = 0.f;
     vertex.normal.y = 0.f;
-    vertex.normal.z = 0.5f;
+    vertex.normal.z = 1.f;
 
-    vertex.position = vec3(-0.5f, -0.5f, 0.5f);
+    vertex.position = vec3(-1.f, -1.f, 1.f);
 
     m_Vertices.push_back(vertex);
 
     //BOTTOM RIGHT CORNER
-    vertex.texCoords.x = 0.5f;
-    vertex.texCoords.y = 0.5f;
+    vertex.texCoords.x = 1.f;
+    vertex.texCoords.y = 1.f;
 
     vertex.normal.x = 0.f;
     vertex.normal.y = 0.f;
-    vertex.normal.z = 0.5f;
+    vertex.normal.z = 1.f;
 
-    vertex.position = vec3(0.5f, -0.5f, 0.5f);
+    vertex.position = vec3(1.f, -1.f, 1.f);
 
     m_Vertices.push_back(vertex);
 
     //Triangle 2
     //TOP RIGHT CORNER
-    vertex.texCoords.x = 0.5f;
+    vertex.texCoords.x = 1.f;
     vertex.texCoords.y = 0.f;
 
     vertex.normal.x = 0.f;
     vertex.normal.y = 0.f;
-    vertex.normal.z = 0.5f;
+    vertex.normal.z = 1.f;
 
-    vertex.position = vec3(0.5f, 0.5f, 0.5f);
+    vertex.position = vec3(1.f, 1.f, 1.f);
     m_Vertices.push_back(vertex);
 
 
@@ -84,22 +84,22 @@ void Cube::generateFrontFace() {
 
     vertex.normal.x = 0.f;
     vertex.normal.y = 0.f;
-    vertex.normal.z = 0.5f;
+    vertex.normal.z = 1.f;
 
-    vertex.position = glm::vec3(-0.5f, 0.5f, 0.5f);
+    vertex.position = glm::vec3(-1.f, 1.f, 1.f);
 
     m_Vertices.push_back(vertex);
 
 
     //BOTTOM RIGHT CORNER
-    vertex.texCoords.x = 0.5f;
-    vertex.texCoords.y = 0.5f;
+    vertex.texCoords.x = 1.f;
+    vertex.texCoords.y = 1.f;
 
     vertex.normal.x = 0.f;
     vertex.normal.y = 0.f;
-    vertex.normal.z = 0.5f;
+    vertex.normal.z = 1.f;
 
-    vertex.position = vec3(0.5f, -0.5f, 0.5f);
+    vertex.position = vec3(1.f, -1.f, 1.f);
 
     m_Vertices.push_back(vertex);
 
@@ -115,72 +115,72 @@ void Cube::generateLeftFace() {
     vertex.texCoords.x = 0.f;
     vertex.texCoords.y = 0.f;
 
-    vertex.normal.x = -0.5f;
+    vertex.normal.x = -1.f;
     vertex.normal.y = 0.f;
     vertex.normal.z = 0.f;
 
-    vertex.position = glm::vec3(-0.5f, 0.5f, -0.5f);
+    vertex.position = glm::vec3(-1.f, 1.f, -1.f);
 
     m_Vertices.push_back(vertex);
 
     //BOTTOM LEFT CORNER
     vertex.texCoords.x = 0.f;
-    vertex.texCoords.y = 0.5f;
+    vertex.texCoords.y = 1.f;
 
-    vertex.normal.x = -0.5f;
+    vertex.normal.x = -1.f;
     vertex.normal.y = 0.f;
     vertex.normal.z = 0.f;
 
-    vertex.position = vec3(-0.5f, -0.5f, -0.5f);
+    vertex.position = vec3(-1.f, -1.f, -1.f);
 
     m_Vertices.push_back(vertex);
 
     //BOTTOM RIGHT CORNER
-    vertex.texCoords.x = 0.5f;
-    vertex.texCoords.y = 0.5f;
+    vertex.texCoords.x = 1.f;
+    vertex.texCoords.y = 1.f;
 
-    vertex.normal.x = -0.5f;
+    vertex.normal.x = -1.f;
     vertex.normal.y = 0.f;
     vertex.normal.z = 0.f;
 
-    vertex.position = vec3(-0.5f, -0.5f, 0.5f);
+    vertex.position = vec3(-1.f, -1.f, 1.f);
 
     m_Vertices.push_back(vertex);
 
     //Triangle 2
     //TOP RIGHT CORNER
-    vertex.texCoords.x = 0.5f;
+    vertex.texCoords.x = 1.f;
     vertex.texCoords.y = 0.f;
 
-    vertex.normal.x = -0.5f;
+    vertex.normal.x = -1.f;
     vertex.normal.y = 0.f;
     vertex.normal.z = 0.f;
 
-    vertex.position = vec3(-0.5f, 0.5f, 0.5f);
+    vertex.position = vec3(-1.f, 1.f, 1.f);
     m_Vertices.push_back(vertex);
 
     //TOP LEFT CORNER
     vertex.texCoords.x = 0.f;
     vertex.texCoords.y = 0.f;
 
-    vertex.normal.x = -0.5f;
+    vertex.normal.x = -1.f;
     vertex.normal.y = 0.f;
     vertex.normal.z = 0.f;
 
-    vertex.position = glm::vec3(-0.5f, 0.5f, -0.5f);
+    vertex.position = glm::vec3(-1.f, 1.f, -1.f);
 
     m_Vertices.push_back(vertex);
 
 
     //BOTTOM RIGHT CORNER
-    vertex.texCoords.x = 0.5f;
-    vertex.texCoords.y = 0.5f;
+    vertex.texCoords.x = 1.f;
+    vertex.texCoords.y = 1.f;
 
-    vertex.normal.x = -0.5f;
+    vertex.normal.x = -1.f;
     vertex.normal.y = 0.f;
     vertex.normal.z = 0.f;
 
-    vertex.position = vec3(-0.5f, -0.5f, 0.5f);
+    vertex.position = vec3(-1.f, -1.f, 1.f);
 
     m_Vertices.push_back(vertex);
 }
@@ -197,32 +197,32 @@ void Cube::generateBackFace() {
 
     vertex.normal.x = 0.f;
     vertex.normal.y = 0.f;
-    vertex.normal.z = -0.5f;
+    vertex.normal.z = -1.f;
 
-    vertex.position = vec3(0.5f, 0.5f, -0.5f);
+    vertex.position = vec3(1.f, 1.f, -1.f);
     m_Vertices.push_back(vertex);
 
     //BOTTOM LEFT CORNER
     vertex.texCoords.x = 0.f;
-    vertex.texCoords.y = 0.5f;
+    vertex.texCoords.y = 1.f;
 
     vertex.normal.x = 0.f;
     vertex.normal.y = 0.f;
-    vertex.normal.z = -0.5f;
+    vertex.normal.z = -1.f;
 
-    vertex.position = vec3(0.5f, -0.5f, -0.5f);
+    vertex.position = vec3(1.f, -1.f, -1.f);
 
     m_Vertices.push_back(vertex);
 
     //BOTTOM RIGHT CORNER
-    vertex.texCoords.x = 0.5f;
-    vertex.texCoords.y = 0.5f;
+    vertex.texCoords.x = 1.f;
+    vertex.texCoords.y = 1.f;
 
     vertex.normal.x = 0.f;
     vertex.normal.y = 0.f;
-    vertex.normal.z = -0.5f;
+    vertex.normal.z = -1.f;
 
-    vertex.position = vec3(-0.5f, -0.5f, -0.5f);
+    vertex.position = vec3(-1.f, -1.f, -1.f);
 
     m_Vertices.push_back(vertex);
 
@@ -231,14 +231,14 @@ void Cube::generateBackFace() {
 
     // TOP RIGHT CORNER
 
-    vertex.texCoords.x = 0.5f;
+    vertex.texCoords.x = 1.f;
     vertex.texCoords.y = 0.f;
 
     vertex.normal.x = 0.f;
     vertex.normal.y = 0.f;
-    vertex.normal.z = -0.5f;
+    vertex.normal.z = -1.f;
 
-    vertex.position = glm::vec3(-0.5f, 0.5f, -0.5f);
+    vertex.position = glm::vec3(-1.f, 1.f, -1.f);
 
     m_Vertices.push_back(vertex);
 
@@ -248,20 +248,20 @@ void Cube::generateBackFace() {
 
     vertex.normal.x = 0.f;
     vertex.normal.y = 0.f;
-    vertex.normal.z = -0.5f;
+    vertex.normal.z = -1.f;
 
-    vertex.position = vec3(0.5f, 0.5f, -0.5f);
+    vertex.position = vec3(1.f, 1.f, -1.f);
     m_Vertices.push_back(vertex);
 
     //BOTTOM RIGHT CORNER
-    vertex.texCoords.x = 0.5f;
-    vertex.texCoords.y = 0.5f;
+    vertex.texCoords.x = 1.f;
+    vertex.texCoords.y = 1.f;
 
     vertex.normal.x = 0.f;
     vertex.normal.y = 0.f;
-    vertex.normal.z = -0.5f;
+    vertex.normal.z = -1.f;
 
-    vertex.position = vec3(-0.5f, -0.5f, -0.5f);
+    vertex.position = vec3(-1.f, -1.f, -1.f);
 
     m_Vertices.push_back(vertex);
 
@@ -277,48 +277,48 @@ void Cube::generateRightFace() {
     vertex.texCoords.x = 0.f;
     vertex.texCoords.y = 0.f;
 
-    vertex.normal.x = 0.5f;
+    vertex.normal.x = 1.f;
     vertex.normal.y = 0.f;
     vertex.normal.z = 0.f;
 
-    vertex.position = vec3(0.5f, 0.5f, 0.5f);
+    vertex.position = vec3(1.f, 1.f, 1.f);
     m_Vertices.push_back(vertex);
 
     //BOTTOM LEFT CORNER
     vertex.texCoords.x = 0.f;
-    vertex.texCoords.y = 0.5f;
+    vertex.texCoords.y = 1.f;
 
-    vertex.normal.x = 0.5f;
+    vertex.normal.x = 1.f;
     vertex.normal.y = 0.f;
     vertex.normal.z = 0.f;
 
-    vertex.position = vec3(0.5f, -0.5f, 0.5f);
+    vertex.position = vec3(1.f, -1.f, 1.f);
 
     m_Vertices.push_back(vertex);
 
     //BOTTOM RIGHT CORNER
-    vertex.texCoords.x = 0.5f;
-    vertex.texCoords.y = 0.5f;
+    vertex.texCoords.x = 1.f;
+    vertex.texCoords.y = 1.f;
 
-    vertex.normal.x = 0.5f;
+    vertex.normal.x = 1.f;
     vertex.normal.y = 0.f;
     vertex.normal.z = 0.f;
 
-    vertex.position = vec3(0.5f, -0.5f, -0.5f);
+    vertex.position = vec3(1.f, -1.f, -1.f);
 
     m_Vertices.push_back(vertex);
 
     //Triangle 2
     // TOP RIGHT CORNER
 
-    vertex.texCoords.x = 0.5f;
+    vertex.texCoords.x = 1.f;
     vertex.texCoords.y = 0.f;
 
-    vertex.normal.x = 0.5f;
+    vertex.normal.x = 1.f;
     vertex.normal.y = 0.f;
     vertex.normal.z = 0.f;
 
-    vertex.position = glm::vec3(0.5f, 0.5f, -0.5f);
+    vertex.position = glm::vec3(1.f, 1.f, -1.f);
 
     m_Vertices.push_back(vertex);
 
@@ -326,23 +326,23 @@ void Cube::generateRightFace() {
     vertex.texCoords.x = 0.f;
     vertex.texCoords.y = 0.f;
 
-    vertex.normal.x = 0.5f;
+    vertex.normal.x = 1.f;
     vertex.normal.y = 0.f;
     vertex.normal.z = 0.f;
 
-    vertex.position = vec3(0.5f, 0.5f, 0.5f);
+    vertex.position = vec3(1.f, 1.f, 1.f);
     m_Vertices.push_back(vertex);
 
 
     //BOTTOM RIGHT CORNER
-    vertex.texCoords.x = 0.5f;
-    vertex.texCoords.y = 0.5f;
+    vertex.texCoords.x = 1.f;
+    vertex.texCoords.y = 1.f;
 
-    vertex.normal.x = 0.5f;
+    vertex.normal.x = 1.f;
     vertex.normal.y = 0.f;
     vertex.normal.z = 0.f;
 
-    vertex.position = vec3(0.5f, -0.5f, -0.5f);
+    vertex.position = vec3(1.f, -1.f, -1.f);
 
     m_Vertices.push_back(vertex);
 }
@@ -358,47 +358,47 @@ void Cube::generateTopFace() {
     vertex.texCoords.y = 0.f;
 
     vertex.normal.x = 0.f;
-    vertex.normal.y = 0.5f;
+    vertex.normal.y = 1.f;
     vertex.normal.z = 0.f;
 
-    vertex.position = glm::vec3(-0.5f, 0.5f, -0.5f);
+    vertex.position = glm::vec3(-1.f, 1.f, -1.f);
 
     m_Vertices.push_back(vertex);
 
     //BOTTOM LEFT CORNER
     vertex.texCoords.x = 0.f;
-    vertex.texCoords.y = 0.5f;
+    vertex.texCoords.y = 1.f;
 
     vertex.normal.x = 0.f;
-    vertex.normal.y = 0.5f;
+    vertex.normal.y = 1.f;
     vertex.normal.z = 0.f;
 
-    vertex.position = vec3(-0.5f, 0.5f, 0.5f);
+    vertex.position = vec3(-1.f, 1.f, 1.f);
 
     m_Vertices.push_back(vertex);
 
     //BOTTOM RIGHT CORNER
-    vertex.texCoords.x = 0.5f;
-    vertex.texCoords.y = 0.5f;
+    vertex.texCoords.x = 1.f;
+    vertex.texCoords.y = 1.f;
 
     vertex.normal.x = 0.f;
-    vertex.normal.y = 0.5f;
+    vertex.normal.y = 1.f;
     vertex.normal.z = 0.f;
 
-    vertex.position = vec3(0.5f, 0.5f, 0.5f);
+    vertex.position = vec3(1.f, 1.f, 1.f);
 
     m_Vertices.push_back(vertex);
 
     //Triangle 2
     //TOP RIGHT CORNER
-    vertex.texCoords.x = 0.5f;
+    vertex.texCoords.x = 1.f;
     vertex.texCoords.y = 0.f;
 
     vertex.normal.x = 0.f;
-    vertex.normal.y = 0.5f;
+    vertex.normal.y = 1.f;
     vertex.normal.z = 0.f;
 
-    vertex.position = vec3(0.5f, 0.5f, -0.5f);
+    vertex.position = vec3(1.f, 1.f, -1.f);
     m_Vertices.push_back(vertex);
 
 
@@ -407,22 +407,22 @@ void Cube::generateTopFace() {
     vertex.texCoords.y = 0.f;
 
     vertex.normal.x = 0.f;
-    vertex.normal.y = 0.5f;
+    vertex.normal.y = 1.f;
     vertex.normal.z = 0.f;
 
-    vertex.position = glm::vec3(-0.5f, 0.5f, -0.5f);
+    vertex.position = glm::vec3(-1.f, 1.f, -1.f);
     m_Vertices.push_back(vertex);
 
 
     //BOTTOM RIGHT CORNER
-    vertex.texCoords.x = 0.5f;
-    vertex.texCoords.y = 0.5f;
+    vertex.texCoords.x = 1.f;
+    vertex.texCoords.y = 1.f;
 
     vertex.normal.x = 0.f;
-    vertex.normal.y = 0.5f;
+    vertex.normal.y = 1.f;
     vertex.normal.z = 0.f;
 
-    vertex.position = vec3(0.5f, 0.5f, 0.5f);
+    vertex.position = vec3(1.f, 1.f, 1.f);
 
     m_Vertices.push_back(vertex);
 
@@ -439,33 +439,33 @@ void Cube::generateBottomFace() {
     vertex.texCoords.y = 0.f;
 
     vertex.normal.x = 0.f;
-    vertex.normal.y = -0.5f;
+    vertex.normal.y = -1.f;
     vertex.normal.z = 0.f;
 
-    vertex.position = vec3(-0.5f, -0.5f, 0.5f);
+    vertex.position = vec3(-1.f, -1.f, 1.f);
     m_Vertices.push_back(vertex);
 
     // BOTTOM LEFT CORNER
 
     vertex.texCoords.x = 0.f;
-    vertex.texCoords.y = 0.5f;
+    vertex.texCoords.y = 1.f;
 
     vertex.normal.x = 0.f;
-    vertex.normal.y = -0.5f;
+    vertex.normal.y = -1.f;
     vertex.normal.z = 0.f;
 
-    vertex.position = glm::vec3(-0.5f, -0.5f, -0.5f);
+    vertex.position = glm::vec3(-1.f, -1.f, -1.f);
     m_Vertices.push_back(vertex);
 
     //BOTTOM RIGHT CORNER
-    vertex.texCoords.x = 0.5f;
-    vertex.texCoords.y = 0.5f;
+    vertex.texCoords.x = 1.f;
+    vertex.texCoords.y = 1.f;
 
     vertex.normal.x = 0.f;
-    vertex.normal.y = -0.5f;
+    vertex.normal.y = -1.f;
     vertex.normal.z = 0.f;
 
-    vertex.position = vec3(0.5f, -0.5f, -0.5f);
+    vertex.position = vec3(1.f, -1.f, -1.f);
     m_Vertices.push_back(vertex);
 
 
@@ -473,14 +473,14 @@ void Cube::generateBottomFace() {
     //Triangle 2
 
     //TOP RIGHT CORNER
-    vertex.texCoords.x = 0.5f;
+    vertex.texCoords.x = 1.f;
     vertex.texCoords.y = 0.f;
 
     vertex.normal.x = 0.f;
-    vertex.normal.y = -0.5f;
+    vertex.normal.y = -1.f;
     vertex.normal.z = 0.f;
 
-    vertex.position = vec3(0.5f, -0.5f, 0.5f);
+    vertex.position = vec3(1.f, -1.f, 1.f);
     m_Vertices.push_back(vertex);
 
     //TOP LEFT CORNER
@@ -488,22 +488,22 @@ void Cube::generateBottomFace() {
     vertex.texCoords.y = 0.f;
 
     vertex.normal.x = 0.f;
-    vertex.normal.y = -0.5f;
+    vertex.normal.y = -1.f;
     vertex.normal.z = 0.f;
 
-    vertex.position = vec3(-0.5f, -0.5f, 0.5f);
+    vertex.position = vec3(-1.f, -1.f, 1.f);
     m_Vertices.push_back(vertex);
 
 
     //BOTTOM RIGHT CORNER
-    vertex.texCoords.x = 0.5f;
-    vertex.texCoords.y = 0.5f;
+    vertex.texCoords.x = 1.f;
+    vertex.texCoords.y = 1.f;
 
     vertex.normal.x = 0.f;
-    vertex.normal.y = -0.5f;
+    vertex.normal.y = -1.f;
     vertex.normal.z = 0.f;
 
-    vertex.position = vec3(0.5f, -0.5f, -0.5f);
+    vertex.position = vec3(1.f, -1.f, -1.f);
     m_Vertices.push_back(vertex);
 }
 

@@ -5,13 +5,16 @@
 #ifndef IMACGL_CHUNK_HPP
 #define IMACGL_CHUNK_HPP
 
-
+#include "TextureEnum.hpp"
+#include "Cube.hpp"
 #include <vector>
 #include "glm.hpp"
 #include "SimpleTexturedCubeProgram.hpp"
 #include "DirectionalLight.hpp"
 #include "HeightMap.hpp"
 #include "ColorMap.hpp"
+
+
 
 /**
  * Represents a 16*resv*16 bundle of cubes.
@@ -98,7 +101,7 @@ private:
 
     std::vector<glimac::ShapeVertex> m_Vertices;
 
-    const Cube cube;
+    static const Cube cube;
 
     glm::vec3 positionTranslation;
 
@@ -112,6 +115,8 @@ private:
 
     void addVertexOfDisplayedCube();
 };
+
+
 
 
 #endif //IMACGL_CHUNK_HPP

@@ -1384,7 +1384,7 @@ static stbi_uc stbi__get_marker(stbi__jpeg *j)
 // of the components is specified by order[]
 #define STBI__RESTART(x)     ((x) >= 0xd0 && (x) <= 0xd7)
 
-// after a restart interval, stbi__jpeg_reset the entropy decoder and
+// after a restart xInterval, stbi__jpeg_reset the entropy decoder and
 // the dc prediction
 static void stbi__jpeg_reset(stbi__jpeg *j)
 {
@@ -1422,7 +1422,7 @@ static int stbi__parse_entropy_coded_data(stbi__jpeg *z)
             #else
             stbi__idct_block(z->img_comp[n].data+z->img_comp[n].w2*j*8+i*8, z->img_comp[n].w2, data, z->dequant[z->img_comp[n].tq]);
             #endif
-            // every data block is an MCU, so countdown the restart interval
+            // every data block is an MCU, so countdown the restart xInterval
             if (--z->todo <= 0) {
                if (z->code_bits < 24) stbi__grow_buffer_unsafe(z);
                // if it's NOT a restart, then just bail, so we get corrupt data
@@ -1456,7 +1456,7 @@ static int stbi__parse_entropy_coded_data(stbi__jpeg *z)
                }
             }
             // after all interleaved components, that's an interleaved MCU,
-            // so now count down the restart interval
+            // so now count down the restart xInterval
             if (--z->todo <= 0) {
                if (z->code_bits < 24) stbi__grow_buffer_unsafe(z);
                // if it's NOT a restart, then just bail, so we get corrupt data
@@ -1480,7 +1480,7 @@ static int stbi__process_marker(stbi__jpeg *z, int m)
       case 0xC2: // stbi__SOF - progressive
          return stbi__err("progressive jpeg","JPEG format not supported (progressive)");
 
-      case 0xDD: // DRI - specify restart interval
+      case 0xDD: // DRI - specify restart xInterval
          if (stbi__get16be(z->s) != 4) return stbi__err("bad DRI len","Corrupt JPEG");
          z->restart_interval = stbi__get16be(z->s);
          return 1;

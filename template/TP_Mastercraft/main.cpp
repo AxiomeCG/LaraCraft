@@ -78,16 +78,17 @@ void generateChunkVertexFromHeightMap(const std::unique_ptr<HeightMap> &heightMa
 }
 
 void generateSurroundingChunkVertexFromHeightMap(const std::unique_ptr<HeightMap> &heightMapPtr, long &globalCount,
-                                                 std::vector<ShapeVertex> &v, int offsetX1, int offsetX2, int offsetZ1,
+                                                 std::vector<ShapeVertex> &concatDataList, int offsetX1, int offsetX2, int offsetZ1,
                                                  int offsetZ2) {
 
-    std::cout << "Generate chunk for [" << offsetX1 << " " << offsetX2 <<"]" << std::endl;
+    std::cout << "Generate chunk for [" << offsetX1 << " " << offsetX2 << "]" << "[" << offsetZ1 << ";" << offsetZ2
+              << "]" << std::endl;
     for (int i = offsetX1 < 0 ? 0 : offsetX1 * 16; i < offsetX2 * 16 && i < heightMapPtr->getWidth(); i += 16) {
         for (int j = offsetZ1 < 0 ? 0 : offsetZ1 * 16; j < offsetZ2 * 16 && j < heightMapPtr->getHeight(); j += 16) {
             auto chunkSection = Chunk(vec2(i, j), *heightMapPtr);
             auto vector = chunkSection.getDataVector();
             globalCount += chunkSection.getVertexCount();
-            v.insert(v.end(), vector.begin(), vector.end());
+            concatDataList.insert(concatDataList.end(), vector.begin(), vector.end());
         }
     }
 }
@@ -96,13 +97,14 @@ void generateSurroundingChunkVertexFromHeightMap(const std::unique_ptr<HeightMap
 void refreshChunkVBO(const std::unique_ptr<HeightMap> &heightMapPtr, std::vector<ShapeVertex> &concatDataList,
                      long &globalNumberOfVertex, GLuint &vbo, int currentChunkX, int currentChunkZ,
                      int distanceChunkLoaded) {
+
+    concatDataList.clear();
     generateSurroundingChunkVertexFromHeightMap(heightMapPtr, globalNumberOfVertex, concatDataList,
                                                 currentChunkX - distanceChunkLoaded,
                                                 currentChunkX + distanceChunkLoaded,
                                                 currentChunkZ - distanceChunkLoaded,
                                                 currentChunkZ + distanceChunkLoaded);
 
-    glGenBuffers(1, &vbo);
     glBindBuffer(GL_ARRAY_BUFFER, vbo);
     glBufferData(GL_ARRAY_BUFFER, concatDataList.size() * sizeof(ShapeVertex), &concatDataList[0], GL_STATIC_DRAW);
     // Debinding d'un VBO sur la cible GL_ARRAY_BUFFER:
@@ -208,8 +210,9 @@ int main(int argc, char **argv) {
 
     GLuint vbo, vao;
 
+    glGenBuffers(1, &vbo);
 
-    refreshChunkVBO(heightMapPtr, concatDataList, globalCount, vbo, 0, 0, 1);
+    refreshChunkVBO(heightMapPtr, concatDataList, globalCount, vbo, 0, 0, 3);
 
     glGenVertexArrays(1, &vao);
 
@@ -265,7 +268,6 @@ int main(int argc, char **argv) {
     bool needReload = false;
     while (!windowManager.windowShouldClose()) {
 
-        concatDataList.clear();
         whereAmI(camera, currentChunkPositionX, currentChunkPositionZ);
         if (currentChunkPositionX != oldChunkPositionX || currentChunkPositionZ != oldChunkPositionZ) {
             std::cout << "Need reload" << "(" << currentChunkPositionX << ";" << currentChunkPositionZ << ")"

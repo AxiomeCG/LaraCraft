@@ -5,7 +5,7 @@
 #ifndef IMACGL_CHUNK_HPP
 #define IMACGL_CHUNK_HPP
 
-#include "TextureEnum.hpp"
+#include "TextureOffsetEnum.hpp"
 #include "Cube.hpp"
 #include <vector>
 #include "glm.hpp"

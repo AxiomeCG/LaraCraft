@@ -1,4 +1,4 @@
-#include <glimac/TextureEnum.hpp>
+#include <glimac/TextureOffsetEnum.hpp>
 #include "glimac/Chunk.hpp"
 
 void Chunk::build() {
@@ -35,8 +35,8 @@ void Chunk::addVertexOfDisplayedCube() {
 
                     //std::cout << shapeVertex.position << std::endl;
                     shapeVertex.normal = vec3(currentCubeVertex.normal);
-                    shapeVertex.texCoords = vec2(TextureEnum::sandTextureOffset+ currentCubeVertex.texCoords
-                                                                  .x / TextureEnum::NUMBER_TEXTURE,
+                    shapeVertex.texCoords = vec2(TextureOffsetEnum::sandTextureOffset + currentCubeVertex.texCoords
+                                                                                                         .x / TextureOffsetEnum::NUMBER_TEXTURE,
                                                  currentCubeVertex.texCoords
                                                                   .y);// + offset
                     m_Vertices.push_back(shapeVertex);

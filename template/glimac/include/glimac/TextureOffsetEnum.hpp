@@ -5,7 +5,7 @@
 #ifndef IMACGL_TEXTUREENUM_H
 #define IMACGL_TEXTUREENUM_H
 
-class TextureEnum {
+class TextureOffsetEnum {
 public:
     static constexpr float NUMBER_TEXTURE = 5.;
     static const float dirtTextureOffset;

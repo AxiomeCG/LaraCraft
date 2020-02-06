@@ -39,8 +39,10 @@ namespace glimac{
     glm::vec3 MovementChecker::leveledFuturePosition(glm::vec3 futurePosition, float heightOfEntity) {
         auto futurePosFlooredX = floor(futurePosition.x);
         auto futurePosFlooredZ = floor(futurePosition.z);
-        auto futureY = m_heightData[futurePosFlooredX][futurePosFlooredZ];
+        auto futureY = floor((float) m_heightData[futurePosFlooredX][futurePosFlooredZ]);
+
         return glm::vec3(futurePosition.x, futureY + heightOfEntity, futurePosition.z);
+
     }
 
 }

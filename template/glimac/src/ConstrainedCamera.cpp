@@ -3,10 +3,7 @@
 //
 
 #include <cmath>
-#include <vector>
-#include <iostream>
 #include "glimac/common.hpp"
-#include "glimac/FreeflyCamera.hpp"
 #include "glimac/ConstrainedCamera.hpp"
 
 namespace glimac {
@@ -54,6 +51,10 @@ namespace glimac {
 
     glm::mat4 ConstrainedCamera::getViewMatrix() const{
         return glm::lookAt(m_Position, m_Position + m_FrontVector, m_UpVector);
+    }
+
+    glm::vec3 ConstrainedCamera::getPosition() const {
+        return m_Position;
     }
 
 }

@@ -13,7 +13,7 @@
 #include <glimac/GLFWWindowManager.hpp>
 #include <glimac/SimpleTexturedCubeProgram.hpp>
 #include <glimac/DirectionalLight.hpp>
-#include <glimac/ChunkSection.hpp>
+#include <glimac/Chunk.hpp>
 #include <glimac/Image.hpp>
 #include <glimac/HeightMap.hpp>
 #include <glimac/ColorMap.hpp>
@@ -67,17 +67,96 @@ draw(const SimpleTexturedCubeProgram &program, long vertexCount, const mat4 &pro
     glDrawArrays(GL_TRIANGLES, 0, vertexCount);
 }
 
-long concatDataVector(const std::unique_ptr<HeightMap> &heightMapPtr, long &globalCount, std::vector<ShapeVertex> &v) {
-    for(int i = 0 ; i < heightMapPtr->getWidth() ; i+=16) {
-        for( int j = 0 ; j < heightMapPtr->getHeight() ; j+=16) {
-            auto chunkSection = ChunkSection(vec2(i, j), *heightMapPtr, i, j);
+void generateAllChunks(const std::unique_ptr<HeightMap> &heightMapPtr, std::vector<std::vector<Chunk>> &chunkVector) {
+    for (int i = 0; i < heightMapPtr->getWidth(); i += 16) {
+        std::vector<Chunk> columnVector;
+        for (int j = 0; j < heightMapPtr->getHeight(); j += 16) {
+            columnVector.emplace_back(vec2(i, j), *heightMapPtr);
+        }
+        chunkVector.push_back(columnVector);
+    }
+}
+
+void generateAllChunksVertexFromHeightMap(const std::unique_ptr<HeightMap> &heightMapPtr, long &globalCount,
+                                          std::vector<ShapeVertex> &v) {
+    for (int i = 0; i < heightMapPtr->getWidth(); i += 16) {
+        for (int j = 0; j < heightMapPtr->getHeight(); j += 16) {
+            auto chunkSection = Chunk(vec2(i, j), *heightMapPtr);
             auto vector = chunkSection.getDataVector();
             globalCount += chunkSection.getVertexCount();
             v.insert(v.end(), vector.begin(), vector.end());
         }
     }
-    return globalCount;
 }
+
+void generateSurroundingChunkVertexFromAllChunks(std::vector<std::vector<Chunk>> chunkList, long &globalCount,
+                                                 std::vector<ShapeVertex> &concatDataList, int offsetX1, int offsetX2,
+                                                 int offsetZ1,
+                                                 int offsetZ2) {
+
+    std::cout << "Generate chunk for [" << offsetX1 << " " << offsetX2 << "]" << "[" << offsetZ1 << ";" << offsetZ2
+              << "]" << std::endl;
+    for (int i = offsetX1 < 0 ? 0 : offsetX1 * 16; i < offsetX2 * 16 && i < chunkList.size() * 16; i += 16) {
+        auto chunkNumberI = i / 16;
+        for (int j = offsetZ1 < 0 ? 0 : offsetZ1 * 16;
+             j < offsetZ2 * 16 && j < chunkList[i / 16].size() * 16; j += 16) {
+            auto chunkNumberJ = j / 16;
+            auto vector = chunkList[chunkNumberI][chunkNumberJ].getDataVector();
+            globalCount += chunkList[i / 16][j / 16].getVertexCount();
+            concatDataList.insert(concatDataList.end(), vector.begin(), vector.end());
+        }
+    }
+}
+
+void generateSurroundingChunkVertexFromHeightMap(const std::unique_ptr<HeightMap> &heightMapPtr, long &globalCount,
+                                                 std::vector<ShapeVertex> &concatDataList, int offsetX1, int offsetX2,
+                                                 int offsetZ1,
+                                                 int offsetZ2) {
+
+    std::cout << "Generate chunk for [" << offsetX1 << " " << offsetX2 << "]" << "[" << offsetZ1 << ";" << offsetZ2
+              << "]" << std::endl;
+    for (int i = offsetX1 < 0 ? 0 : offsetX1 * 16; i < offsetX2 * 16 && i < heightMapPtr->getWidth(); i += 16) {
+        for (int j = offsetZ1 < 0 ? 0 : offsetZ1 * 16; j < offsetZ2 * 16 && j < heightMapPtr->getHeight(); j += 16) {
+            auto chunkSection = Chunk(vec2(i, j), *heightMapPtr);
+            auto vector = chunkSection.getDataVector();
+            globalCount += chunkSection.getVertexCount();
+            concatDataList.insert(concatDataList.end(), vector.begin(), vector.end());
+        }
+    }
+}
+
+
+void refreshChunkVBO(const std::vector<std::vector<Chunk>> &chunkList, std::vector<ShapeVertex> &concatDataList,
+                     long &globalNumberOfVertex, GLuint &vbo, int currentChunkX, int currentChunkZ,
+                     int distanceChunkLoaded) {
+
+    std::cout << "Refresh : size :" << chunkList.size() << " " << chunkList[0].size() << std::endl;
+    concatDataList.clear();
+    generateSurroundingChunkVertexFromAllChunks(chunkList, globalNumberOfVertex, concatDataList,
+                                                currentChunkX - distanceChunkLoaded,
+                                                currentChunkX + distanceChunkLoaded,
+                                                currentChunkZ - distanceChunkLoaded,
+                                                currentChunkZ + distanceChunkLoaded);
+
+    glBindBuffer(GL_ARRAY_BUFFER, vbo);
+    glBufferData(GL_ARRAY_BUFFER, concatDataList.size() * sizeof(ShapeVertex), &concatDataList[0], GL_DYNAMIC_DRAW);
+    // Debinding d'un VBO sur la cible GL_ARRAY_BUFFER:
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+}
+
+void whereAmI(const FreeflyCamera &freeflyCamera, int &chunkNumberX, int &chunkNumberZ) {
+    chunkNumberX = freeflyCamera.getPosition()
+                                .x / 16;
+    chunkNumberZ = freeflyCamera.getPosition()
+                                .z / 16;
+}
+void whereAmI(const ConstrainedCamera &camera, int &chunkNumberX, int &chunkNumberZ) {
+    chunkNumberX = camera.getPosition()
+                                .x / 16;
+    chunkNumberZ = camera.getPosition()
+                                .z / 16;
+}
+
 
 int main(int argc, char **argv) {
     GLFWWindowManager windowManager = GLFWWindowManager(1920, 1920, "LaraCraft", windowModes::Windowed);
@@ -95,59 +174,57 @@ int main(int argc, char **argv) {
     FilePath applicationPath(argv[0]);
 
     SimpleTexturedCubeProgram simpleTexturedCubeProgram = SimpleTexturedCubeProgram(applicationPath);
-    simpleTexturedCubeProgram.m_Program.use();
+    simpleTexturedCubeProgram.m_Program
+                             .use();
 
 
     /***************
      * TEXTURE INIT
      ***************/
 
+    std::unique_ptr<Image> atlasImagePtr = loadImage(
+            "TP_Mastercraft/assets/textures/blocks/atlas.png");
+    assert(atlasImagePtr != nullptr);
+
     std::unique_ptr<Image> dirtImagePtr = loadImage(
             "TP_Mastercraft/assets/textures/blocks/dirt.png");
     assert(dirtImagePtr != nullptr);
 
-//    std::cout << dirtImagePtr->getWidth() << std::endl;
-//    unsigned int size = dirtImagePtr->getWidth() * dirtImagePtr->getHeight();
-//    auto ptr = dirtImagePtr->getPixels();
-//    for(auto i = 0u; i < size; ++i) {
-//        std::cout << ptr->r << std::endl;
-//        std::cout << ptr->g << std::endl;
-//        std::cout << ptr->b << std::endl;
-//        std::cout << ptr->a << std::endl;
-//        ++ptr;
-//    }
     std::unique_ptr<HeightMap> heightMapPtr = loadHeightMap(
-            "TP_Mastercraft/assets/map/perlin64_64.png", 1.0f, 1.0f, 1.0f);
+            "TP_Mastercraft/assets/map/perlin.png", 1.0f, 1.0f, 0.2f);
     assert(heightMapPtr != nullptr);
 
     std::cout << heightMapPtr->getWidth() << std::endl;
-    unsigned int heightMapWidth = heightMapPtr->getWidth();
-    unsigned int heightMapHeight = heightMapPtr->getHeight();
     auto ptr = heightMapPtr->getHeightData();
 
     std::unique_ptr<ColorMap> colorMapPtr = loadColorMap(
-            "TP_Mastercraft/assets/map/perlincolor64_64.png", 1.0f, 1.0f, 1.0f);
+            "TP_Mastercraft/assets/map/perlinColorMap.png", 1.0f, 1.0f, 1.0f);
     assert(colorMapPtr != nullptr);
-    std::cout << colorMapPtr->getWidth() << std::endl;
-    unsigned int colorMapWidth = colorMapPtr->getWidth();
-    unsigned int colorMapHeight = colorMapPtr->getHeight();
     auto ptrColor = colorMapPtr->getColorData();
 
-    GLuint dirtTextureLocation;
+    /*for (int i = 0; i < colorMapPtr->getWidth(); ++i) {
+        for (int j = 0; j < colorMapPtr->getHeight(); ++j) {
+            std::cout << colorMapPtr->getColorData()[i][j] << std::endl;
 
-    glGenTextures(1, &dirtTextureLocation);
+        }
+    }*/
+    GLuint atlasTextureLocation;
+
+    glGenTextures(1, &atlasTextureLocation);
 
 
     /**
-     * Earth texture
+     * Atlas texture
      */
-    glBindTexture(GL_TEXTURE_2D, dirtTextureLocation);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, dirtImagePtr->getWidth(), dirtImagePtr->getHeight(), 0, GL_RGBA, GL_FLOAT,
-                 dirtImagePtr->getPixels());
+    glBindTexture(GL_TEXTURE_2D, atlasTextureLocation);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, atlasImagePtr->getWidth(), atlasImagePtr->getHeight(), 0, GL_RGBA, GL_FLOAT,
+                 atlasImagePtr->getPixels());
 
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     glBindTexture(GL_TEXTURE_2D, 0);
+
+
 
 
     glEnable(GL_DEPTH_TEST);
@@ -161,31 +238,15 @@ int main(int argc, char **argv) {
     long globalCount = 0;
     std::vector<ShapeVertex> concatDataList;
 
-
-    concatDataVector(heightMapPtr, globalCount, concatDataList);
-
-
-    /*ChunkSection chunkSection = ChunkSection(glm::vec2(0., 0.),*heightMapPtr, 0, 0);
-    ChunkSection chunkSection2 = ChunkSection(glm::vec2(32., 0.),*heightMapPtr, 16, 0);
-
-
-    globalCount = chunkSection.getVertexCount() + chunkSection2.getVertexCount();
-    auto vector = chunkSection.getDataVector();
-    auto vector2 = chunkSection2.getDataVector();
-
-    concatDataList.insert(concatDataList.end(), vector.begin(), vector.end());
-    concatDataList.insert(concatDataList.end(), vector2.begin(), vector2.end());*/
-
+    int distanceChunkLoaded = 5;
 
     GLuint vbo, vao;
 
     glGenBuffers(1, &vbo);
-    glBindBuffer(GL_ARRAY_BUFFER, vbo);
-    //glBufferData(GL_ARRAY_BUFFER, cube.getVertexCount() * sizeof(ShapeVertex), cube.getDataPointer(), GL_STATIC_DRAW);
-    glBufferData(GL_ARRAY_BUFFER, concatDataList.size() * sizeof(ShapeVertex), &concatDataList[0], GL_STATIC_DRAW);
-    //glBufferData(GL_ARRAY_BUFFER, chunkSection2.getVertexCount() * sizeof(ShapeVertex), chunkSection2.getDataPointer(), GL_STATIC_DRAW);
-    // Debinding d'un VBO sur la cible GL_ARRAY_BUFFER:
-    glBindBuffer(GL_ARRAY_BUFFER, 0);
+
+    std::vector<std::vector<Chunk>> chunkList;
+    generateAllChunks(heightMapPtr, chunkList);
+    refreshChunkVBO(chunkList, concatDataList, globalCount, vbo, 0, 0, distanceChunkLoaded);
 
     glGenVertexArrays(1, &vao);
 
@@ -223,36 +284,42 @@ int main(int argc, char **argv) {
    //FreeflyCamera camera = FreeflyCamera(glm::vec3(0.,  ((float) ptr[0][0]) + 2, 5.)); //(float)ptr[0][0]
     ConstrainedCamera camera = ConstrainedCamera(0.f, 0.f, heightMapPtr->getHeightData(), 2.f);
 
-
-    /*
-    std::cout << "Height map" << std::endl;
-    for (int i = 0; i < 16; i++){
-        for (int j = 0; j < 16; j++) {
-            std::cout << heightMapPtr->getHeightData().at(i).at(j) << ", ";
-        }
-        std::cout << std::endl;
-    }*/
     // Application loop:
 
+
+    int oldChunkPositionX = 0;
+    int oldChunkPositionZ = 0;
+    int currentChunkPositionX = 0;
+    int currentChunkPositionZ = 0;
     while (!windowManager.windowShouldClose()) {
+
+        whereAmI(camera, currentChunkPositionX, currentChunkPositionZ);
+        if (currentChunkPositionX < oldChunkPositionX - distanceChunkLoaded/2 ||
+            currentChunkPositionX > oldChunkPositionX + distanceChunkLoaded/2 ||
+            currentChunkPositionZ < oldChunkPositionZ - distanceChunkLoaded/2 ||
+            currentChunkPositionZ > oldChunkPositionZ + distanceChunkLoaded/2) {
+            std::cout << "Need reload" << "(" << currentChunkPositionX << ";" << currentChunkPositionZ << ")"
+                      << std::endl;
+            refreshChunkVBO(chunkList, concatDataList, globalCount, vbo, currentChunkPositionX,
+                            currentChunkPositionZ, distanceChunkLoaded);
+            oldChunkPositionX = currentChunkPositionX;
+            oldChunkPositionZ = currentChunkPositionZ;
+        }
+
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
         glBindVertexArray(vao);
 
         viewMatrix = camera.getViewMatrix();
 
         //Light object
-        DirectionalLight light = DirectionalLight(glm::rotate(glm::mat4(), (float) glfwGetTime(), glm::vec3(1., 0., 0.)));
+        DirectionalLight light = DirectionalLight(
+                glm::rotate(glm::mat4(), (float) glfwGetTime(), glm::vec3(1., 0., 0.)));
         glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_2D, dirtTextureLocation);
+        glBindTexture(GL_TEXTURE_2D, atlasTextureLocation);
         glUniform1i(simpleTexturedCubeProgram.uTextureId, 0);
 
-        //glDrawArrays(GL_TRIANGLES,0,globalCount);
-/*
-        for (auto x = 0u; x < heightMapWidth; ++x) {
-            for (auto z = 0u; z < heightMapHeight; ++z) {
-                drawACube(simpleTexturedCubeProgram,cube.getVertexCount(),projMatrix,viewMatrix,scale(translate(mat4(),vec3((float)x,(float)ptr[x][z],(float)z)),vec3(0.5,0.5,0.5)),light);
-            }
-        } */
+
 
         draw(simpleTexturedCubeProgram, globalCount, projMatrix, viewMatrix, mat4(), light);
 
@@ -268,9 +335,10 @@ int main(int argc, char **argv) {
 
 
     }
-    glDeleteTextures(1, &dirtTextureLocation);
+    glDeleteTextures(1, &atlasTextureLocation);
     glDeleteBuffers(1, &vbo);
     glDeleteVertexArrays(1, &vao);
 
     return EXIT_SUCCESS;
 }
+

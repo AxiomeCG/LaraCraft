@@ -34,7 +34,7 @@ public:
         m_colorData[i][j] = glm::vec3(r, g, b);
     }
 
-    std::vector<std::vector<glm::vec3>> getColorData() {
+    std::vector<std::vector<glm::vec3>> getColorData() const{
         return m_colorData;
     }
 

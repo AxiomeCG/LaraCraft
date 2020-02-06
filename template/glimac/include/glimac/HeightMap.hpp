@@ -32,7 +32,7 @@ public :
         m_heightData[i][j] = value;
     }
 
-    std::vector<std::vector<float>> getHeightData() {
+    std::vector<std::vector<float>> getHeightData() const{
         return m_heightData;
     }
 

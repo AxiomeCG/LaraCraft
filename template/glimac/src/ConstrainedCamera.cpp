@@ -19,12 +19,8 @@ namespace glimac {
 
     void ConstrainedCamera::moveLeft(float t){
         auto tmpPosition = m_Position + (t * m_LeftVector);
-        std::cout << "Will Move Side" << std::endl;
-        std::cout << "X : " <<  tmpPosition.x << " Y : " << tmpPosition.y << " Z : " << tmpPosition.z << std::endl;
         if(m_movementChecker.willMoveToAnotherCube(m_Position, tmpPosition)) {
-            std::cout << "Will Move to another cube" << std::endl;
             if (m_movementChecker.canMoveToTheOtherCube(m_Position, tmpPosition)) {
-                std::cout << "Can Move to another cube" << std::endl;
                 tmpPosition = m_movementChecker.leveledFuturePosition(tmpPosition, m_heightOfEntity);
                 m_Position = tmpPosition;
             }
@@ -36,12 +32,8 @@ namespace glimac {
 
     void ConstrainedCamera::moveFront(float t){
         auto tmpPosition = m_Position + (t * m_FrontVector);
-        std::cout << "Will Move Front" << std::endl;
-        std::cout << "X : " <<  tmpPosition.x << " Y : " << tmpPosition.y << " Z : " << tmpPosition.z << std::endl;
         if(m_movementChecker.willMoveToAnotherCube(m_Position, tmpPosition)) {
-            std::cout << "Will Move to another cube" << std::endl;
             if (m_movementChecker.canMoveToTheOtherCube(m_Position, tmpPosition)) {
-                std::cout << "Can Move to another cube" << std::endl;
                 m_Position = m_movementChecker.leveledFuturePosition(tmpPosition, m_heightOfEntity);
             }
         }

@@ -20,11 +20,9 @@ namespace glimac{
 
     bool MovementChecker::canMoveToTheOtherCube(glm::vec3 currentPosition, glm::vec3 futurePosition) {
         if(futurePosition.x < 0 || futurePosition.x > m_width) {
-            std::cout << "First false" << std::endl;
             return false;
         }
         if(futurePosition.z < 0 || futurePosition.z > m_height) {
-            std::cout << "Second false" << std::endl;
             return false;
         }
         auto futurePosFlooredX = floor(futurePosition.x);
@@ -33,7 +31,6 @@ namespace glimac{
         auto currentPosFlooredZ = floor(currentPosition.z);
         auto heightDifference =  m_heightData[futurePosFlooredX][futurePosFlooredZ] - m_heightData[currentPosFlooredX][currentPosFlooredZ];
         if(heightDifference > 1) {
-            std::cout << "Third false" << std::endl;
             return false;
         }
         return true;

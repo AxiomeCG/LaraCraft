@@ -194,12 +194,13 @@ int main(int argc, char **argv) {
             "TP_Mastercraft/assets/map/perlinColorMap.png", 1.0f, 1.0f, 1.0f);
     assert(colorMapPtr != nullptr);
     auto ptrColor = colorMapPtr->getColorData();
-    for (int i = 0; i < colorMapPtr->getWidth(); ++i) {
+
+    /*for (int i = 0; i < colorMapPtr->getWidth(); ++i) {
         for (int j = 0; j < colorMapPtr->getHeight(); ++j) {
             std::cout << colorMapPtr->getColorData()[i][j] << std::endl;
 
         }
-    }
+    }*/
     GLuint atlasTextureLocation;
 
     glGenTextures(1, &atlasTextureLocation);

@@ -2,15 +2,15 @@
 // Created by adam on 01/01/2020.
 //
 
-#ifndef IMACGL_SIMPLETEXTUREDCUBEPROGRAM_HPP
-#define IMACGL_SIMPLETEXTUREDCUBEPROGRAM_HPP
+#ifndef IMACGL_GLOBALPROGRAM_HPP
+#define IMACGL_GLOBALPROGRAM_HPP
 
 
 #include "Cube.hpp"
 #include "Program.hpp"
 using namespace glimac;
 
-class SimpleTexturedCubeProgram {
+class GlobalProgram {
 
 public:
     Program m_Program;
@@ -27,7 +27,7 @@ public:
 
     GLint uTextureId;
 
-    SimpleTexturedCubeProgram(const FilePath &applicationPath) :
+    GlobalProgram(const FilePath &applicationPath) :
             m_Program(loadProgram(applicationPath.dirPath() + "shaders/3D.vs.glsl",
                                   applicationPath.dirPath() + "shaders/simpleTexture3DLight.fs.glsl")) {
         uMVPMatrixId = glGetUniformLocation(m_Program.getGLId(), "uMVPMatrix");
@@ -43,4 +43,4 @@ public:
 
 
 
-#endif //IMACGL_SIMPLETEXTUREDCUBEPROGRAM_HPP
+#endif //IMACGL_GLOBALPROGRAM_HPP

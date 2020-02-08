@@ -4,10 +4,6 @@
 
 #include "glimac/Cube.hpp"
 
-uint32_t Cube::indices[] = {
-        0, 1, 2, 0, 2, 3
-};
-
 void Cube::build() {
     generateFrontFace();
     m_nVertexCount += 6;

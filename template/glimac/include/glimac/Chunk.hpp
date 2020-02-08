@@ -9,7 +9,7 @@
 #include "Cube.hpp"
 #include <vector>
 #include "glm.hpp"
-#include "SimpleTexturedCubeProgram.hpp"
+#include "GlobalProgram.hpp"
 #include "DirectionalLight.hpp"
 #include "HeightMap.hpp"
 #include "ColorMap.hpp"

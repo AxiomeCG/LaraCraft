@@ -44,8 +44,6 @@ private:
 
     void build();
 
-    static uint32_t indices[];
-
     void generateFrontFace();
 
     void generateLeftFace();

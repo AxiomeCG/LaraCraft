@@ -279,22 +279,43 @@ int main(int argc, char **argv) {
     assert(pnjImagePtr != nullptr);
 
     std::unique_ptr<HeightMap> heightMapPtr = loadHeightMap(
-            "TP_Mastercraft/assets/terrain/224_224_perlin/map.png", 1.0f, 1.0f, 0.2f);
+            "TP_Mastercraft/assets/terrain/64_64_perlin/map.png", 1.0f, 1.0f, 0.2f);
     assert(heightMapPtr != nullptr);
 
     std::cout << heightMapPtr->getWidth() << std::endl;
     auto ptr = heightMapPtr->getHeightData();
 
     std::unique_ptr<ColorMap> colorMapPtr =
-            loadColorMap("TP_Mastercraft/assets/terrain/224_224_perlin/color.png",
+            loadColorMap("TP_Mastercraft/assets/terrain/64_64_perlin/color.png",
                          1.0f, 1.0f, 1.0f);
     assert(colorMapPtr != nullptr);
     auto ptrColor = colorMapPtr->getColorData();
 
-    /*for (int i = 0; i < colorMapPtr->getWidth(); ++i) {
+    /*
+    for (int i = 0; i < colorMapPtr->getWidth(); ++i) {
         for (int j = 0; j < colorMapPtr->getHeight(); ++j) {
-            std::string s = (vec3(colorMapPtr->getColorData()[i][j]) == vec3(255,
-    255, 0)) ? "J" : "V"; std::cout << s << ", ";
+            if (colorMapPtr->getColorData()[i][j] == glm::vec3(255, 255, 0)) {
+                std::string s = "S";
+                std::cout << s << ",";
+                continue;
+            }
+            if (colorMapPtr->getColorData()[i][j] == glm::vec3(128, 128, 128)) {
+                std::string s = "R";
+                std::cout << s << ",";
+                continue;
+            }
+            if (colorMapPtr->getColorData()[i][j] == glm::vec3(255, 0, 0)) {
+                std::string s = "M";
+                std::cout << s << ",";
+                continue;
+            }
+            if (colorMapPtr->getColorData()[i][j] == glm::vec3(255, 255, 255)) {
+                std::string s = "N";
+                std::cout << s << ",";
+                continue;
+            }
+            std::string s = "G";
+            std::cout << s << ",";
         }
         std::cout << ";" << std::endl;
 
@@ -353,7 +374,7 @@ int main(int argc, char **argv) {
     refreshChunkVBO(chunkList, concatDataList, vboMapVertexCount, vboMap, 0, 0,
                     distanceChunkLoaded);
 
-    Pnj pnj(vec3(20,heightMapPtr->getHeightData()[20][20],20), heightMapPtr->getHeightData());
+    Pnj pnj(vec3(0,heightMapPtr->getHeightData()[0][0],0), heightMapPtr->getHeightData());
 
     loadPnjInVBO(sphere, vboPnj);
 

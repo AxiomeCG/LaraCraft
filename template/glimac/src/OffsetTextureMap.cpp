@@ -16,6 +16,18 @@ OffsetTextureMap::OffsetTextureMap(const ColorMap &colorMap) : width(colorMap.ge
                 textureColumn[j] = TextureOffsetEnum::sandTextureOffset;
                 continue;
             }
+            if (data[i][j] == glm::vec3(128, 128, 128)) {
+                textureColumn[j] = TextureOffsetEnum::rockTextureOffset;
+                continue;
+            }
+            if (data[i][j] == glm::vec3(255, 0, 0)) {
+                textureColumn[j] = TextureOffsetEnum::mushTextureOffset;
+                continue;
+            }
+            if (data[i][j] == glm::vec3(255, 255, 255)) {
+                textureColumn[j] = TextureOffsetEnum::snowTextureOffset;
+                continue;
+            }
         }
         offsetData[i] = textureColumn;
     }

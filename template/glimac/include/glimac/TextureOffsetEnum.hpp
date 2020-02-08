@@ -7,14 +7,14 @@
 
 class TextureOffsetEnum {
 public:
-    static constexpr float NUMBER_TEXTURE = 5.;
+    static constexpr float NUMBER_TEXTURE = 10.f;
     static const float dirtTextureOffset;
     static const float sandTextureOffset;
     static const float rockTextureOffset;
     static const float woodTextureOffset;
     static const float leafTextureOffset;
-
-
+    static const float mushTextureOffset;
+    static const float snowTextureOffset;
 };
 
 

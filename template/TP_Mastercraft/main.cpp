@@ -3,6 +3,12 @@
 #include <glimac/ColorMap.hpp>
 #include <glimac/ConstrainedCamera.hpp>
 #include <glimac/Cube.hpp>
+
+#include <glimac/AntiCube.hpp>
+#include <glimac/GLFWWindowManager.hpp>
+
+#include <glimac/SimpleTexturedSkyboxProgram.hpp>
+
 #include <glimac/DirectionalLight.hpp>
 #include <glimac/FilePath.hpp>
 #include <glimac/FreeflyCamera.hpp>
@@ -75,8 +81,22 @@ void drawVAO(const GlobalProgram &program, long vertexCount,
     glDrawArrays(GL_TRIANGLES, 0, vertexCount);
 }
 
-void generateAllChunks(const HeightMap &heightMap,
-                       const OffsetTextureMap &offsetTextureMap,
+
+void
+drawSkybox(const SimpleTexturedSkyboxProgram &program, long vertexCount, const mat4 &projMatrix, const mat4 &viewMatrix,
+     const mat4 &modelMatrix) {
+    mat4 modelViewMatrix = viewMatrix * modelMatrix ;
+    mat4 modelViewProjectionMatrix = projMatrix * modelViewMatrix;
+    mat4 normalMatrix = transpose(glm::inverse(modelViewMatrix));
+    glUniformMatrix4fv(program.uMVPMatrixId, 1, GL_FALSE, value_ptr(modelViewProjectionMatrix));
+    glUniformMatrix4fv(program.uMVMatrixId, 1, GL_FALSE, value_ptr(modelViewMatrix));
+    glUniformMatrix4fv(program.uNormalMatrixId, 1, GL_FALSE, value_ptr(normalMatrix));
+
+    glDrawArrays(GL_TRIANGLES, 0, vertexCount);
+}
+
+void generateAllChunks(const HeightMap &heightMap, const OffsetTextureMap &offsetTextureMap ,
+
                        std::vector<std::vector<Chunk>> &chunkVector) {
     std::cout << "Generating the terrain ..." << std::endl;
     for (int i = 0; i < heightMap.getWidth(); i += 16) {
@@ -263,8 +283,11 @@ int main(int argc, char **argv) {
 
     FilePath applicationPath(argv[0]);
 
-    GlobalProgram program = GlobalProgram(applicationPath);
-    program.m_Program.use();
+
+    GlobalProgram globalProgram = GlobalProgram(applicationPath);
+
+    SimpleTexturedSkyboxProgram simpleTexturedSkyboxProgram = SimpleTexturedSkyboxProgram(applicationPath);
+
 
     /***************
      * TEXTURE INIT
@@ -278,6 +301,10 @@ int main(int argc, char **argv) {
             loadImage("TP_Mastercraft/assets/textures/blocks/baseball.jpeg");
     assert(pnjImagePtr != nullptr);
 
+    std::unique_ptr<Image> snowImagePtr =
+            loadImage("TP_Mastercraft/assets/textures/blocks/snow.png");
+    assert(pnjImagePtr != nullptr);
+
     std::unique_ptr<HeightMap> heightMapPtr = loadHeightMap(
             "TP_Mastercraft/assets/terrain/64_64_perlin/map.png", 1.0f, 1.0f, 0.2f);
     assert(heightMapPtr != nullptr);
@@ -285,9 +312,8 @@ int main(int argc, char **argv) {
     std::cout << heightMapPtr->getWidth() << std::endl;
     auto ptr = heightMapPtr->getHeightData();
 
-    std::unique_ptr<ColorMap> colorMapPtr =
-            loadColorMap("TP_Mastercraft/assets/terrain/64_64_perlin/color.png",
-                         1.0f, 1.0f, 1.0f);
+    std::unique_ptr<ColorMap> colorMapPtr = loadColorMap(
+            "TP_Mastercraft/assets/terrain/64_64_perlin/color.png", 1.0f, 1.0f, 1.0f);
     assert(colorMapPtr != nullptr);
     auto ptrColor = colorMapPtr->getColorData();
 
@@ -323,8 +349,14 @@ int main(int argc, char **argv) {
 
     GLuint atlasTextureLocation, pnjTextureLocation;
 
+    GLuint skyboxTextureLocation;
+
     glGenTextures(1, &atlasTextureLocation);
+
     glGenTextures(1, &pnjTextureLocation);
+
+    glGenTextures(1, &skyboxTextureLocation);
+
 
     /**
      * Atlas texture
@@ -335,6 +367,15 @@ int main(int argc, char **argv) {
      * PNJ texture
      */
     loadPnjTextureLocation(pnjImagePtr, pnjTextureLocation);
+
+    glBindTexture(GL_TEXTURE_2D, skyboxTextureLocation);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, snowImagePtr->getWidth(), snowImagePtr->getHeight(), 0, GL_RGBA, GL_FLOAT,
+                 snowImagePtr->getPixels());
+
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glBindTexture(GL_TEXTURE_2D, 0);
+
 
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_CULL_FACE);
@@ -401,6 +442,44 @@ int main(int argc, char **argv) {
 
     bindPnjVBOToVAO(vboPnj, vaoPnj, VERTEX_ATTR_POSITION, VERTEX_ATTR_NORMAL, VERTEX_ATTR_TEXTURE);
 
+    AntiCube skybox;
+
+    GLuint skyVbo, skyVao;
+    glGenBuffers(1, &skyVbo);
+
+    glBindBuffer(GL_ARRAY_BUFFER, skyVbo);
+
+    glBufferData(GL_ARRAY_BUFFER, skybox.getVertexCount() * sizeof(ShapeVertex), skybox.getDataPointer(), GL_STATIC_DRAW);
+
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+
+
+    glGenVertexArrays(1, &skyVao);
+
+    // Binding de l'unique VAO:
+    glBindVertexArray(skyVao);
+
+    glEnableVertexAttribArray(VERTEX_ATTR_POSITION);
+    glEnableVertexAttribArray(VERTEX_ATTR_NORMAL);
+    glEnableVertexAttribArray(VERTEX_ATTR_TEXTURE);
+
+    // Re-binding du VBO sur la cible GL_ARRAY_BUFFER pour glVertexAttribPointer:
+    glBindBuffer(GL_ARRAY_BUFFER, skyVbo);
+
+    // Specification des attributs de position :
+    glVertexAttribPointer(VERTEX_ATTR_POSITION, 3, GL_FLOAT, GL_FALSE, sizeof(ShapeVertex),
+                          (const GLvoid *) offsetof(ShapeVertex, position));
+    glVertexAttribPointer(VERTEX_ATTR_NORMAL, 3, GL_FLOAT, GL_FALSE, sizeof(ShapeVertex),
+                          (const GLvoid *) offsetof(ShapeVertex, normal));
+    glVertexAttribPointer(VERTEX_ATTR_TEXTURE, 2, GL_FLOAT, GL_FALSE, sizeof(ShapeVertex),
+                          (const GLvoid *) offsetof(ShapeVertex, texCoords));
+
+    // Debinding d'un VBO sur la cible GL_ARRAY_BUFFER:
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+
+    // Debinding de l'unique VAO:
+    glBindVertexArray(0);
+
     glm::mat4 projMatrix, viewMatrix;
 
     glm::mat4 mapModelMatrix = mat4();
@@ -437,6 +516,12 @@ int main(int argc, char **argv) {
 
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
+
+        globalProgram.m_Program
+                     .use();
+
+        glBindVertexArray(vaoMap);
+
         viewMatrix = camera.getViewMatrix();
 
         // Light object
@@ -452,9 +537,9 @@ int main(int argc, char **argv) {
 
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, atlasTextureLocation);
-        glUniform1i(program.uTextureId, 0);
+        glUniform1i(globalProgram.uTextureId, 0);
 
-        drawVAO(program, vboMapVertexCount, projMatrix, viewMatrix, mapModelMatrix,light);
+        drawVAO(globalProgram, vboMapVertexCount, projMatrix, viewMatrix, mapModelMatrix, light);
 
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, 0);
@@ -467,15 +552,32 @@ int main(int argc, char **argv) {
         glBindVertexArray(vaoPnj);
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, pnjTextureLocation);
-        glUniform1i(program.uTextureId, 0);
+        glUniform1i(globalProgram.uTextureId, 0);
 
-        drawVAO(program, sphere.getVertexCount(), projMatrix, viewMatrix, pnj.getModelMatrix(),
+        drawVAO(globalProgram, sphere.getVertexCount(), projMatrix, viewMatrix, pnj.getModelMatrix(),
                 light);
         pnj.updatePosition();
 
 
 
         // Flush texture
+        glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_2D, 0);
+
+        glBindVertexArray(0);
+
+        simpleTexturedSkyboxProgram.m_Program.use();
+
+        glBindVertexArray(skyVao);
+
+        glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_2D, skyboxTextureLocation);
+        glUniform1i(simpleTexturedSkyboxProgram.uTextureId, 0);
+
+
+        drawSkybox(simpleTexturedSkyboxProgram, skybox.getVertexCount(), projMatrix, viewMatrix,glm::scale(mat4(), glm::vec3(64.0,64.0,64.0)));
+
+        //Flush texture
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, 0);
 
@@ -491,6 +593,10 @@ int main(int argc, char **argv) {
     glDeleteBuffers(1, &vboPnj);
     glDeleteVertexArrays(1, &vaoMap);
     glDeleteVertexArrays(1, &vaoPnj);
+
+    glDeleteTextures(1, &skyboxTextureLocation);
+    glDeleteBuffers(1, &skyVbo);
+    glDeleteVertexArrays(1, &skyVao);
 
     return EXIT_SUCCESS;
 }

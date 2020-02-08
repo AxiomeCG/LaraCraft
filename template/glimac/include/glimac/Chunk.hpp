@@ -23,7 +23,7 @@
  */
 class Chunk {
 public:
-    Chunk(const glm::vec2 &position, const HeightMap &heightMap) : positionTranslation(
+    Chunk(const glm::vec2 &position, const HeightMap &heightMap, const ColorMap &colorMap) : positionTranslation(
             vec3(position.x, 0, position.y)) {
 
         int offsetRow = position.x;
@@ -36,13 +36,26 @@ public:
 
         for (int row = offsetRow; row < WIDTH + offsetRow; row++) {
             std::vector<float> tmpHeightMapColumn;
+            std::vector<vec3> tmpColorMapColumn;
             for (int column = offsetColumn; column < LENGTH + offsetColumn; column++) {
                 tmpHeightMapColumn.push_back(heightMap.getHeightData()
                                                       .at(row)
                                                       .at(column));
+
+                tmpColorMapColumn.push_back(colorMap.getColorData()
+                                                      .at(row)
+                                                      .at(column));
             }
             localHeightMap.push_back(tmpHeightMapColumn);
+            localColorMap.push_back(tmpColorMapColumn);
         }
+
+       /* for (auto c : localColorMap) {
+            for (auto i : c) {
+                std::cout << i << ", ";
+            }
+            std::cout << ";" << std::endl;
+        }*/
 
         build();
 
@@ -98,6 +111,7 @@ private:
     void build();
 
     std::vector<std::vector<float>> localHeightMap;
+    std::vector<std::vector<vec3>> localColorMap;
 
     std::vector<glimac::ShapeVertex> m_Vertices;
 
@@ -114,6 +128,8 @@ private:
     void searchForNeighborhood();
 
     void addVertexOfDisplayedCube();
+
+    static void chooseTypeCube(const vec3& colorRGB, const vec2 &cubeVertexTexCoordinates, vec2 &shapeVertexCoordinates);
 };
 
 

@@ -39,7 +39,7 @@ struct vertex_index {
   vertex_index(int vidx, int vtidx, int vnidx) : v_idx(vidx), vt_idx(vtidx), vn_idx(vnidx) {};
 
 };
-// for std::map
+// for std::terrain
 static inline bool operator<(const vertex_index& a, const vertex_index& b)
 {
   if (a.v_idx != b.v_idx) return (a.v_idx < b.v_idx);

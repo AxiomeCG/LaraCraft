@@ -35,10 +35,10 @@ void Chunk::addVertexOfDisplayedCube() {
 
                     //std::cout << shapeVertex.position << std::endl;
                     shapeVertex.normal = vec3(currentCubeVertex.normal);
-                    shapeVertex.texCoords = vec2(TextureOffsetEnum::sandTextureOffset + currentCubeVertex.texCoords
-                                                                                                         .x / TextureOffsetEnum::NUMBER_TEXTURE,
-                                                 currentCubeVertex.texCoords
-                                                                  .y);// + offset
+
+                    chooseTypeCube(localColorMap.at(x)
+                                                .at(z), currentCubeVertex.texCoords, shapeVertex.texCoords);
+
                     m_Vertices.push_back(shapeVertex);
                 }
             }
@@ -109,5 +109,25 @@ bool Chunk::isSurroundedByNeighbors(int x, int z, int height) {
 
     return isAboveFilled && isBelowFilled && isLeftFilled && isRightFilled && isFrontFilled && isBackFilled;
 }
+
+void Chunk::chooseTypeCube(const vec3& colorRGB, const vec2 &cubeVertexTexCoordinates,
+                           vec2 &shapeVertexCoordinates) {
+
+    if (colorRGB == vec3(0, 255, 0)) {
+        shapeVertexCoordinates = vec2(
+                TextureOffsetEnum::dirtTextureOffset + cubeVertexTexCoordinates.x / TextureOffsetEnum::NUMBER_TEXTURE,
+                cubeVertexTexCoordinates.y);// + offset
+    } else if (colorRGB == vec3(255, 255, 0)) {
+        shapeVertexCoordinates = vec2(
+                TextureOffsetEnum::sandTextureOffset + cubeVertexTexCoordinates.x / TextureOffsetEnum::NUMBER_TEXTURE,
+                cubeVertexTexCoordinates.y);// + offset
+    } else {
+        shapeVertexCoordinates = vec2(
+                TextureOffsetEnum::dirtTextureOffset + cubeVertexTexCoordinates.x / TextureOffsetEnum::NUMBER_TEXTURE,
+                cubeVertexTexCoordinates.y);// + offset
+    }
+
+}
+
 
 const Cube Chunk::cube;

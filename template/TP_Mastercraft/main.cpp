@@ -1,14 +1,8 @@
 
-#include <glimac/Program.hpp>
 #include <glimac/FilePath.hpp>
-
 #include <glimac/common.hpp>
-
 #include <glimac/FreeflyCamera.hpp>
 #include <glimac/ConstrainedCamera.hpp>
-#include <GL/glew.h>
-#include <iostream>
-#include <cstddef>
 #include <glimac/Cube.hpp>
 #include <glimac/GLFWWindowManager.hpp>
 #include <glimac/SimpleTexturedCubeProgram.hpp>
@@ -18,8 +12,14 @@
 #include <glimac/HeightMap.hpp>
 #include <glimac/ColorMap.hpp>
 
-using namespace glimac;
+#include <GL/glut.h>
 
+#include <GL/glew.h>
+
+#include <iostream>
+#include <cstddef>
+
+using namespace glimac;
 
 void
 drawACube(const SimpleTexturedCubeProgram &program, int vertexCount, const mat4 &projMatrix, const mat4 &viewMatrix,
@@ -105,6 +105,7 @@ void refreshChunkVBO(const std::vector<std::vector<Chunk>> &chunkList, std::vect
                      int distanceChunkLoaded) {
 
     std::cout << "Refresh : size :" << chunkList.size() << " " << chunkList[0].size() << std::endl;
+
     concatDataList.clear();
     generateSurroundingChunkVertexFromAllChunks(chunkList, globalNumberOfVertex, concatDataList,
                                                 currentChunkX - distanceChunkLoaded,
@@ -130,6 +131,7 @@ void whereAmI(const ConstrainedCamera &camera, int &chunkNumberX, int &chunkNumb
     chunkNumberZ = camera.getPosition()
                                 .z / 16;
 }
+
 
 
 int main(int argc, char **argv) {

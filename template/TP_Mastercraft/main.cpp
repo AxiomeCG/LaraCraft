@@ -66,13 +66,13 @@ draw(const SimpleTexturedCubeProgram &program, long vertexCount, const mat4 &pro
     glDrawArrays(GL_TRIANGLES, 0, vertexCount);
 }
 
-void generateAllChunks(const std::unique_ptr<HeightMap> &heightMapPtr, const std::unique_ptr<ColorMap> &colorMapPtr,
+void generateAllChunks(const HeightMap &heightMap, const OffsetTextureMap &offsetTextureMap ,
                        std::vector<std::vector<Chunk>> &chunkVector) {
-    std::cout << "Generating the terrain ...";
-    for (int i = 0; i < heightMapPtr->getWidth(); i += 16) {
+    std::cout << "Generating the terrain ..." << std::endl;
+    for (int i = 0; i < heightMap.getWidth(); i += 16) {
         std::vector<Chunk> columnVector;
-        for (int j = 0; j < heightMapPtr->getHeight(); j += 16) {
-            columnVector.emplace_back(vec2(i, j), *heightMapPtr, *colorMapPtr);
+        for (int j = 0; j < heightMap.getHeight(); j += 16) {
+            columnVector.emplace_back(vec2(i, j), heightMap, offsetTextureMap);
         }
         chunkVector.push_back(columnVector);
     }
@@ -118,9 +118,9 @@ void refreshChunkVBO(const std::vector<std::vector<Chunk>> &chunkList, std::vect
 }
 
 void whereAmI(const FreeflyCamera &freeflyCamera, int &chunkNumberX, int &chunkNumberZ) {
-    chunkNumberX = freeflyCamera.getPosition()
-                                .x / 16;²
-    chunkNumberZ = freeflyCamera.getPosition()
+    chunkNumberX = (int) freeflyCamera.getPosition()
+                                .x / 16;
+    chunkNumberZ = (int) freeflyCamera.getPosition()
                                 .z / 16;
 }
 
@@ -213,7 +213,10 @@ int main(int argc, char **argv) {
     glGenBuffers(1, &vbo);
 
     std::vector<std::vector<Chunk>> chunkList;
-    generateAllChunks(heightMapPtr, colorMapPtr, chunkList);
+
+    auto offsetTextureMap = OffsetTextureMap(*colorMapPtr);
+
+    generateAllChunks(*heightMapPtr, offsetTextureMap, chunkList);
     refreshChunkVBO(chunkList, concatDataList, globalCount, vbo, 0, 0, distanceChunkLoaded);
 
     glGenVertexArrays(1, &vao);

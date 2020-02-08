@@ -21,13 +21,13 @@ void Chunk::addVertexOfDisplayedCube() {
                 for (int v = 0; v < cube.getVertexCount(); ++v) {
                     ShapeVertex shapeVertex;
                     const ShapeVertex &currentCubeVertex = cube.getDataPointer()[v];
-                    float vertexX = currentCubeVertex.position
-                                                     .x /
-                                    2.; // The cube is defined from -1 to 1 so it's size 2. Divide by two to get a 1x1x1 size cube
-                    float vertexY = currentCubeVertex.position
-                                                     .y / 2.;
-                    float vertexZ = currentCubeVertex.position
-                                                     .z / 2.;
+                    double vertexX = currentCubeVertex.position
+                                                      .x /
+                                     2.; // The cube is defined from -1 to 1 so it's size 2. Divide by two to get a 1x1x1 size cube
+                    double vertexY = currentCubeVertex.position
+                                                      .y / 2.;
+                    double vertexZ = currentCubeVertex.position
+                                                      .z / 2.;
 
                     shapeVertex.position = vec3(vertexX + (float) x + positionTranslation.x,
                                                 vertexY + (float) height + positionTranslation.y,
@@ -36,9 +36,12 @@ void Chunk::addVertexOfDisplayedCube() {
                     //std::cout << shapeVertex.position << std::endl;
                     shapeVertex.normal = vec3(currentCubeVertex.normal);
 
-                    chooseTypeCube(localColorMap.at(x)
-                                                .at(z), currentCubeVertex.texCoords, shapeVertex.texCoords);
-
+                    shapeVertex.texCoords = vec2(
+                            localOffsetTextureMap.at(x)
+                                                 .at(z) + currentCubeVertex.texCoords
+                                                                     .x / TextureOffsetEnum::NUMBER_TEXTURE,
+                            currentCubeVertex.texCoords
+                                             .y);// + offset
                     m_Vertices.push_back(shapeVertex);
                 }
             }
@@ -109,25 +112,5 @@ bool Chunk::isSurroundedByNeighbors(int x, int z, int height) {
 
     return isAboveFilled && isBelowFilled && isLeftFilled && isRightFilled && isFrontFilled && isBackFilled;
 }
-
-void Chunk::chooseTypeCube(const vec3& colorRGB, const vec2 &cubeVertexTexCoordinates,
-                           vec2 &shapeVertexCoordinates) {
-
-    if (colorRGB == vec3(0, 255, 0)) {
-        shapeVertexCoordinates = vec2(
-                TextureOffsetEnum::dirtTextureOffset + cubeVertexTexCoordinates.x / TextureOffsetEnum::NUMBER_TEXTURE,
-                cubeVertexTexCoordinates.y);// + offset
-    } else if (colorRGB == vec3(255, 255, 0)) {
-        shapeVertexCoordinates = vec2(
-                TextureOffsetEnum::sandTextureOffset + cubeVertexTexCoordinates.x / TextureOffsetEnum::NUMBER_TEXTURE,
-                cubeVertexTexCoordinates.y);// + offset
-    } else {
-        shapeVertexCoordinates = vec2(
-                TextureOffsetEnum::dirtTextureOffset + cubeVertexTexCoordinates.x / TextureOffsetEnum::NUMBER_TEXTURE,
-                cubeVertexTexCoordinates.y);// + offset
-    }
-
-}
-
 
 const Cube Chunk::cube;

@@ -13,17 +13,17 @@
 #include "DirectionalLight.hpp"
 #include "HeightMap.hpp"
 #include "ColorMap.hpp"
-
+#include "OffsetTextureMap.hpp"
 
 
 /**
- * Represents a 16*resv*16 bundle of cubes.
+ * Represents a 16*256*16 bundle of cubes.
  * In first approximation, a chunk section is made of only one texture.
  * A coordinate (x,y,z) coordinate in the matrix can be either empty (no cube) or filled with a cube of the material.
  */
 class Chunk {
 public:
-    Chunk(const glm::vec2 &position, const HeightMap &heightMap) : positionTranslation(
+    Chunk(const glm::vec2 &position, const HeightMap &heightMap, const OffsetTextureMap &textureMap) : positionTranslation(
             vec3(position.x, 0, position.y)) {
 
         int offsetRow = position.x;
@@ -36,13 +36,26 @@ public:
 
         for (int row = offsetRow; row < WIDTH + offsetRow; row++) {
             std::vector<float> tmpHeightMapColumn;
+            std::vector<float> tmpTextureMapColumn;
             for (int column = offsetColumn; column < LENGTH + offsetColumn; column++) {
                 tmpHeightMapColumn.push_back(heightMap.getHeightData()
                                                       .at(row)
                                                       .at(column));
+
+                tmpTextureMapColumn.push_back(textureMap.getTextureData()
+                                                        .at(row)
+                                                        .at(column));
             }
             localHeightMap.push_back(tmpHeightMapColumn);
+            localOffsetTextureMap.push_back(tmpTextureMapColumn);
         }
+
+       /* for (auto c : localOffsetTextureMap) {
+            for (auto i : c) {
+                std::cout << i << ", ";
+            }
+            std::cout << ";" << std::endl;
+        }*/
 
         build();
 
@@ -84,20 +97,21 @@ private:
     /**
      * Number of cube on the x axis
      */
-    static const int WIDTH = 16;
+    static constexpr int WIDTH = 16;
     /**
      * Number of cube on the z axis
      */
-    static const int LENGTH = 16;
+    static constexpr int LENGTH = 16;
 
     /**
      * Number of cube on the y axis
      */
-    static const int HEIGHT = 256;
+    static constexpr int HEIGHT = 256;
 
     void build();
 
     std::vector<std::vector<float>> localHeightMap;
+    std::vector<std::vector<float>> localOffsetTextureMap;
 
     std::vector<glimac::ShapeVertex> m_Vertices;
 
@@ -114,6 +128,7 @@ private:
     void searchForNeighborhood();
 
     void addVertexOfDisplayedCube();
+
 };
 
 

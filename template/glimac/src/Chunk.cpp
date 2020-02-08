@@ -21,13 +21,13 @@ void Chunk::addVertexOfDisplayedCube() {
                 for (int v = 0; v < cube.getVertexCount(); ++v) {
                     ShapeVertex shapeVertex;
                     const ShapeVertex &currentCubeVertex = cube.getDataPointer()[v];
-                    float vertexX = currentCubeVertex.position
-                                                     .x /
-                                    2.; // The cube is defined from -1 to 1 so it's size 2. Divide by two to get a 1x1x1 size cube
-                    float vertexY = currentCubeVertex.position
-                                                     .y / 2.;
-                    float vertexZ = currentCubeVertex.position
-                                                     .z / 2.;
+                    double vertexX = currentCubeVertex.position
+                                                      .x /
+                                     2.; // The cube is defined from -1 to 1 so it's size 2. Divide by two to get a 1x1x1 size cube
+                    double vertexY = currentCubeVertex.position
+                                                      .y / 2.;
+                    double vertexZ = currentCubeVertex.position
+                                                      .z / 2.;
 
                     shapeVertex.position = vec3(vertexX + (float) x + positionTranslation.x,
                                                 vertexY + floor((float) height) + positionTranslation.y,
@@ -35,10 +35,13 @@ void Chunk::addVertexOfDisplayedCube() {
 
                     //std::cout << shapeVertex.position << std::endl;
                     shapeVertex.normal = vec3(currentCubeVertex.normal);
-                    shapeVertex.texCoords = vec2(TextureOffsetEnum::sandTextureOffset + currentCubeVertex.texCoords
-                                                                                                         .x / TextureOffsetEnum::NUMBER_TEXTURE,
-                                                 currentCubeVertex.texCoords
-                                                                  .y);// + offset
+
+                    shapeVertex.texCoords = vec2(
+                            localOffsetTextureMap.at(x)
+                                                 .at(z) + currentCubeVertex.texCoords
+                                                                     .x / TextureOffsetEnum::NUMBER_TEXTURE,
+                            currentCubeVertex.texCoords
+                                             .y);// + offset
                     m_Vertices.push_back(shapeVertex);
                 }
             }

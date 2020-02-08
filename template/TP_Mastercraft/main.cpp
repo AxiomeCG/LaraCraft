@@ -12,8 +12,6 @@
 #include <glimac/HeightMap.hpp>
 #include <glimac/ColorMap.hpp>
 
-#include <GL/glut.h>
-
 #include <GL/glew.h>
 
 #include <iostream>

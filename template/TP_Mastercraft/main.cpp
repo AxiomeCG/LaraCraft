@@ -267,6 +267,17 @@ void loadAtlasTextureLocation(std::unique_ptr<Image> &atlasImagePtr, GLuint atla
     glBindTexture(GL_TEXTURE_2D, 0);
 }
 
+void loadSkyboxTextureLocation(std::unique_ptr<Image> &skyboxImagePtr, GLuint skyboxTextureLocation) {
+    glBindTexture(GL_TEXTURE_2D, skyboxTextureLocation);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, skyboxImagePtr->getWidth(), skyboxImagePtr->getHeight(), 0, GL_RGBA, GL_FLOAT,
+                 skyboxImagePtr->getPixels());
+
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glBindTexture(GL_TEXTURE_2D, 0);
+}
+
+
 int main(int argc, char **argv) {
     GLFWWindowManager windowManager =
             GLFWWindowManager(1920, 1920, "LaraCraft", windowModes::Windowed);
@@ -303,6 +314,10 @@ int main(int argc, char **argv) {
 
     std::unique_ptr<Image> snowImagePtr =
             loadImage("TP_Mastercraft/assets/textures/blocks/snow.png");
+    assert(pnjImagePtr != nullptr);
+
+    std::unique_ptr<Image> stoneImagePtr =
+            loadImage("TP_Mastercraft/assets/textures/blocks/stone.png");
     assert(pnjImagePtr != nullptr);
 
     std::unique_ptr<HeightMap> heightMapPtr = loadHeightMap(
@@ -350,15 +365,15 @@ int main(int argc, char **argv) {
 
     }*/
 
-    GLuint atlasTextureLocation, pnjTextureLocation;
-
-    GLuint skyboxTextureLocation;
+    GLuint atlasTextureLocation, pnjTextureLocation, skyboxDayTextureLocation, skyboxNightTextureLocation;
 
     glGenTextures(1, &atlasTextureLocation);
 
     glGenTextures(1, &pnjTextureLocation);
 
-    glGenTextures(1, &skyboxTextureLocation);
+    glGenTextures(1, &skyboxDayTextureLocation);
+
+    glGenTextures(1, &skyboxNightTextureLocation);
 
 
     /**
@@ -371,13 +386,16 @@ int main(int argc, char **argv) {
      */
     loadPnjTextureLocation(pnjImagePtr, pnjTextureLocation);
 
-    glBindTexture(GL_TEXTURE_2D, skyboxTextureLocation);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, snowImagePtr->getWidth(), snowImagePtr->getHeight(), 0, GL_RGBA, GL_FLOAT,
-                 snowImagePtr->getPixels());
 
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-    glBindTexture(GL_TEXTURE_2D, 0);
+    /**
+     * Skybox day texture
+     */
+    loadSkyboxTextureLocation(snowImagePtr, skyboxDayTextureLocation);
+
+    /**
+     * Skybox night texture
+     */
+    loadSkyboxTextureLocation(stoneImagePtr, skyboxNightTextureLocation);
 
 
     glEnable(GL_DEPTH_TEST);
@@ -500,6 +518,11 @@ int main(int argc, char **argv) {
     int oldChunkPositionZ = 0;
     int currentChunkPositionX = 0;
     int currentChunkPositionZ = 0;
+
+    glfwSetTime(0);
+
+    bool isDay = true;
+
     while (!windowManager.windowShouldClose()) {
 
         whereAmI(camera, currentChunkPositionX, currentChunkPositionZ);
@@ -521,12 +544,31 @@ int main(int argc, char **argv) {
 
         glDepthMask(GL_FALSE);
 
+        float angle = (float) glfwGetTime() * 0.1f;
+
+        if(angle > 6.28319) {
+            glfwSetTime(0);
+            angle = (float) glfwGetTime() * 0.1f;
+            isDay = true;
+        }
+
+        if(angle > 3.14159) {
+            isDay = false;
+        }
+
         simpleTexturedSkyboxProgram.m_Program.use();
 
         glBindVertexArray(skyVao);
 
         glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_2D, skyboxTextureLocation);
+
+        if(isDay) {
+            glBindTexture(GL_TEXTURE_2D, skyboxDayTextureLocation);
+        }
+        else {
+            glBindTexture(GL_TEXTURE_2D, skyboxNightTextureLocation);
+        }
+
         glUniform1i(simpleTexturedSkyboxProgram.uTextureId, 0);
 
 
@@ -548,11 +590,12 @@ int main(int argc, char **argv) {
 
         viewMatrix = camera.getViewMatrix();
 
+        std::cout << angle << std::endl;
         // Light object
         DirectionalLight light = DirectionalLight(glm::rotate(
                 glm::translate(glm::mat4(), vec3(camera.getPosition().x, 256.f,
                                                  camera.getPosition().z)),
-                (float) glfwGetTime() * 0.1f, glm::vec3(0., 0., 1.)));
+                angle, glm::vec3(0., 0., 1.)));
 
         /**
          * DRAW MAP
@@ -601,7 +644,7 @@ int main(int argc, char **argv) {
     glDeleteVertexArrays(1, &vaoMap);
     glDeleteVertexArrays(1, &vaoPnj);
 
-    glDeleteTextures(1, &skyboxTextureLocation);
+    glDeleteTextures(1, &skyboxDayTextureLocation);
     glDeleteBuffers(1, &skyVbo);
     glDeleteVertexArrays(1, &skyVao);
 

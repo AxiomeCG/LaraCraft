@@ -130,7 +130,7 @@ void GLFWWindowManager::handleEventsForFPSConstrainedView(glimac::ConstrainedCam
         camera.moveLeft(-0.1f);
     }
 
-    int stateFlyingKeyPress = getKey(GLFW_KEY_F);
+    int stateFlyingKey = getKey(GLFW_KEY_F);
     if(stateFlyingKey == GLFW_PRESS) {
         if (camera.iAmFlying()) {
             camera.stopFlying();

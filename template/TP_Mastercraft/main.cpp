@@ -519,6 +519,27 @@ int main(int argc, char **argv) {
 
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
+        glDepthMask(GL_FALSE);
+
+        simpleTexturedSkyboxProgram.m_Program.use();
+
+        glBindVertexArray(skyVao);
+
+        glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_2D, skyboxTextureLocation);
+        glUniform1i(simpleTexturedSkyboxProgram.uTextureId, 0);
+
+
+        mat4 modelMatrix = glm::translate(mat4(), camera.getPosition());
+        drawSkybox(simpleTexturedSkyboxProgram, skybox.getVertexCount(), projMatrix, viewMatrix, scale(modelMatrix, glm::vec3(30.0,30.0,30.0)));
+
+        //Flush texture
+        glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_2D, 0);
+
+        glBindVertexArray(0);
+
+        glDepthMask(GL_TRUE);
 
         globalProgram.m_Program
                      .use();
@@ -564,23 +585,6 @@ int main(int argc, char **argv) {
 
 
         // Flush texture
-        glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_2D, 0);
-
-        glBindVertexArray(0);
-
-        simpleTexturedSkyboxProgram.m_Program.use();
-
-        glBindVertexArray(skyVao);
-
-        glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_2D, skyboxTextureLocation);
-        glUniform1i(simpleTexturedSkyboxProgram.uTextureId, 0);
-
-
-        drawSkybox(simpleTexturedSkyboxProgram, skybox.getVertexCount(), projMatrix, viewMatrix,glm::scale(mat4(), glm::vec3(width,200.0,height)));
-
-        //Flush texture
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, 0);
 

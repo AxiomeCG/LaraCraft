@@ -635,7 +635,7 @@ int main(int argc, char **argv) {
 
         windowManager.swapBuffers();
         //windowManager.handleEventsForFPSview(camera);
-        windowManager.handleEventsForFPSConstrainedView(camera);
+        windowManager.handleEventsForFPSConstrainedView(camera, &isDay);
     }
     glDeleteTextures(1, &atlasTextureLocation);
     glDeleteTextures(1, &pnjTextureLocation);

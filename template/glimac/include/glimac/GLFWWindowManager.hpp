@@ -95,7 +95,7 @@ public :
      * @see ConstrainedCamera
      * @param camera
      */
-    void handleEventsForFPSConstrainedView(glimac::ConstrainedCamera &camera);
+    void handleEventsForFPSConstrainedView(glimac::ConstrainedCamera &camera, bool *isDay);
 
 private :
     /**

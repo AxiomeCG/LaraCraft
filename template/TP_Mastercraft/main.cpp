@@ -317,6 +317,9 @@ int main(int argc, char **argv) {
     assert(colorMapPtr != nullptr);
     auto ptrColor = colorMapPtr->getColorData();
 
+    float width = heightMapPtr->getWidth();
+    float height = heightMapPtr->getHeight();
+
     /*
     for (int i = 0; i < colorMapPtr->getWidth(); ++i) {
         for (int j = 0; j < colorMapPtr->getHeight(); ++j) {
@@ -575,7 +578,7 @@ int main(int argc, char **argv) {
         glUniform1i(simpleTexturedSkyboxProgram.uTextureId, 0);
 
 
-        drawSkybox(simpleTexturedSkyboxProgram, skybox.getVertexCount(), projMatrix, viewMatrix,glm::scale(mat4(), glm::vec3(64.0,64.0,64.0)));
+        drawSkybox(simpleTexturedSkyboxProgram, skybox.getVertexCount(), projMatrix, viewMatrix,glm::scale(mat4(), glm::vec3(width,200.0,height)));
 
         //Flush texture
         glActiveTexture(GL_TEXTURE0);

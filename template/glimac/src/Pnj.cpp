@@ -19,7 +19,7 @@ void Pnj::updatePosition() {
 
 
     auto tmpPosition = position + direction;
-    bool willMove = movementChecker.willMoveToAnotherCube(position, tmpPosition);
+    //bool willMove = movementChecker.willMoveToAnotherCube(position, tmpPosition);
     bool canMove = movementChecker.canMoveToTheOtherCube(position, tmpPosition);
 
     timeout -= glfwGetTime();
@@ -28,20 +28,11 @@ void Pnj::updatePosition() {
         generateNewRandomDirection();
         timeout = 5000.0f;
         tmpPosition = position + direction;
-        willMove = movementChecker.willMoveToAnotherCube(position, tmpPosition);
-        canMove = movementChecker.canMoveToTheOtherCube(position, tmpPosition);
     }
     /*std::cout << "P:" << std::endl;
     std::cout << position << std::endl;
     std::cout << position + direction << std::endl;*/
-    if(willMove) {
-        if (canMove) {
-            position = movementChecker.leveledFuturePosition(tmpPosition, 1.);
-        }
-    }
-    else {
-        position = movementChecker.leveledFuturePosition(tmpPosition, 1.);
-    }
+    position = movementChecker.leveledFuturePosition(position, tmpPosition, 1.);
 }
 
 void Pnj::generateNewRandomDirection() {

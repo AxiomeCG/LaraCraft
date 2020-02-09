@@ -19,16 +19,18 @@ public:
 
     }
 
-    bool willMoveToAnotherCube(glm::vec3 currentPosition, glm::vec3 futurePosition);
+    bool isWithinBoundaries(glm::vec3 futurePosition);
 
     bool canMoveToTheOtherCube(glm::vec3 currentPosition, glm::vec3 futurePosition);
 
-    glm::vec3 leveledFuturePosition(glm::vec3 futurePosition, float heightOfEntity);
+    glm::vec3 leveledFuturePosition(glm::vec3 currentPosition, glm::vec3 futurePosition, float heightOfEntity);
 
 private:
     unsigned int m_width;
     unsigned int m_height;
     std::vector<std::vector<float>> m_heightData;
+
+    bool willMoveToAnotherCube(glm::vec3 currentPosition, glm::vec3 futurePosition);
 };
 
 }

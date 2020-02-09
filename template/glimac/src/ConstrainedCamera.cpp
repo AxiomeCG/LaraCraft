@@ -16,26 +16,25 @@ namespace glimac {
 
     void ConstrainedCamera::moveLeft(float t){
         auto tmpPosition = m_Position + (t * m_LeftVector);
-        if(m_movementChecker.willMoveToAnotherCube(m_Position, tmpPosition)) {
-            if (m_movementChecker.canMoveToTheOtherCube(m_Position, tmpPosition)) {
-                tmpPosition = m_movementChecker.leveledFuturePosition(tmpPosition, m_heightOfEntity);
+        if(m_isFlying) {
+            if(m_movementChecker.isWithinBoundaries(tmpPosition)) {
                 m_Position = tmpPosition;
             }
         }
         else {
-            m_Position = m_movementChecker.leveledFuturePosition(tmpPosition, m_heightOfEntity);
+            m_Position = m_movementChecker.leveledFuturePosition(m_Position, tmpPosition, m_heightOfEntity);
         }
     }
 
     void ConstrainedCamera::moveFront(float t){
         auto tmpPosition = m_Position + (t * m_FrontVector);
-        if(m_movementChecker.willMoveToAnotherCube(m_Position, tmpPosition)) {
-            if (m_movementChecker.canMoveToTheOtherCube(m_Position, tmpPosition)) {
-                m_Position = m_movementChecker.leveledFuturePosition(tmpPosition, m_heightOfEntity);
+        if(m_isFlying) {
+            if(m_movementChecker.isWithinBoundaries(tmpPosition)) {
+                m_Position = tmpPosition;
             }
         }
         else {
-            m_Position = m_movementChecker.leveledFuturePosition(tmpPosition, m_heightOfEntity);
+            m_Position = m_movementChecker.leveledFuturePosition(m_Position, tmpPosition, m_heightOfEntity);
         }
     }
 

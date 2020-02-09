@@ -17,7 +17,8 @@ public :
             m_fPhi(M_PI),
             m_fTheta(0),
             m_heightOfEntity(heigthOfEntity),
-            m_movementChecker(heightData){
+            m_movementChecker(heightData),
+            m_isFlying(false){
         float y = heightData[0.f][0.f] + 2.f;
         m_Position = glm::vec3(0.f, y + m_heightOfEntity, 0.f);
         computeDirectionVectors();
@@ -27,7 +28,8 @@ public :
             m_fPhi(M_PI),
             m_fTheta(0),
             m_heightOfEntity(heightOfEntity),
-            m_movementChecker(heightData){
+            m_movementChecker(heightData),
+            m_isFlying(false){
         float y = heightData[x][z];
         m_Position = glm::vec3(x, y + m_heightOfEntity, z);
         computeDirectionVectors();
@@ -44,6 +46,19 @@ public :
 
     glm::vec3 getPosition() const ;
 
+    bool iAmFlying() {
+        return m_isFlying;
+    }
+
+    void startFlying(){
+        m_isFlying = true;
+    }
+
+    void stopFlying() {
+        m_isFlying = false;
+        m_Position = m_movementChecker.leveledFuturePosition(m_Position, m_Position, m_heightOfEntity);
+    }
+
 private :
 
     void computeDirectionVectors();
@@ -56,6 +71,8 @@ private :
     glm::vec3 m_UpVector;
 
     float m_heightOfEntity;
+
+    bool m_isFlying;
 
     MovementChecker m_movementChecker;
 };

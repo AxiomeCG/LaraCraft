@@ -111,7 +111,7 @@ void GLFWWindowManager::handleEventsForFPSview(glimac::FreeflyCamera &camera) {
     oldY = (float) tmpyPos;
 }
 
-void GLFWWindowManager::handleEventsForFPSConstrainedView(glimac::ConstrainedCamera &camera, bool &isDay) {
+void GLFWWindowManager::handleEventsForFPSConstrainedView(glimac::ConstrainedCamera &camera, float angle) {
     glfwPollEvents();
     int stateUpKey = getKey(GLFW_KEY_W);
     if (stateUpKey == GLFW_PRESS) {
@@ -146,7 +146,12 @@ void GLFWWindowManager::handleEventsForFPSConstrainedView(glimac::ConstrainedCam
 
     if(wasPressedBefore && stateDayKey == GLFW_RELEASE){
         wasPressedBefore = false;
-        isDay = !isDay;
+        if(angle >= M_PI) {
+            glfwSetTime(0);
+        }
+        else {
+            glfwSetTime(M_PI * 10);
+        }
     }
 
     int stateEscapeKey = getKey(GLFW_KEY_ESCAPE);

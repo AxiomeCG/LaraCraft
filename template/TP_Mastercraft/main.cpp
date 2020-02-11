@@ -499,8 +499,6 @@ int main(int argc, char **argv) {
 
     glfwSetTime(0);
 
-    bool isDay = true;
-
     while (!windowManager.windowShouldClose()) {
 
         whereAmI(camera, currentChunkPositionX, currentChunkPositionZ);
@@ -526,12 +524,6 @@ int main(int argc, char **argv) {
 
         if (angle > 2*M_PI) {
             glfwSetTime(0);
-            angle = (float) glfwGetTime() * 0.1f;
-            isDay = true;
-        }
-
-        if (angle > M_PI) {
-            isDay = false;
         }
 
         simpleTexturedSkyboxProgram.m_Program.use();
@@ -540,10 +532,11 @@ int main(int argc, char **argv) {
 
         glActiveTexture(GL_TEXTURE0);
 
-        if (isDay) {
-            glBindTexture(GL_TEXTURE_2D, skyboxDayTextureLocation);
-        } else {
+        if (angle >= M_PI) {
             glBindTexture(GL_TEXTURE_2D, skyboxNightTextureLocation);
+        }
+        else {
+            glBindTexture(GL_TEXTURE_2D, skyboxDayTextureLocation);
         }
 
         glUniform1i(simpleTexturedSkyboxProgram.uTextureId, 0);
@@ -612,7 +605,7 @@ int main(int argc, char **argv) {
 
         windowManager.swapBuffers();
         //windowManager.handleEventsForFPSview(camera);
-        windowManager.handleEventsForFPSConstrainedView(camera, isDay);
+        windowManager.handleEventsForFPSConstrainedView(camera, angle);
     }
     glDeleteTextures(1, &atlasTextureLocation);
     glDeleteTextures(1, &pnjTextureLocation);

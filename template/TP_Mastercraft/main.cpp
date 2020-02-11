@@ -24,6 +24,7 @@
 #include <iostream>
 #include <glimac/Pnj.hpp>
 #include <glimac/Sphere.hpp>
+#include <glimac/Tree.hpp>
 
 using namespace glimac;
 
@@ -289,15 +290,20 @@ int main(int argc, char **argv) {
             loadImage("TP_Mastercraft/assets/textures/blocks/stone.png");
     assert(pnjImagePtr != nullptr);
 
+    std::unique_ptr<Image> nightImagePtr =
+            loadImage("TP_Mastercraft/assets/textures/blocks/night.png");
+    assert(pnjImagePtr != nullptr);
+
+
     std::unique_ptr<HeightMap> heightMapPtr = loadHeightMap(
-            "TP_Mastercraft/assets/terrain/64_64_perlin/map.png", 1.0f, 1.0f, 0.2f);
+            "TP_Mastercraft/assets/terrain/16_16_perlin/map.png", 1.0f, 1.0f, 0.2f);
     assert(heightMapPtr != nullptr);
 
     std::cout << heightMapPtr->getWidth() << std::endl;
     auto ptr = heightMapPtr->getHeightData();
 
     std::unique_ptr<ColorMap> colorMapPtr = loadColorMap(
-            "TP_Mastercraft/assets/terrain/64_64_perlin/color.png", 1.0f, 1.0f, 1.0f);
+            "TP_Mastercraft/assets/terrain/16_16_perlin/color.png", 1.0f, 1.0f, 1.0f);
     assert(colorMapPtr != nullptr);
     auto ptrColor = colorMapPtr->getColorData();
 
@@ -364,7 +370,7 @@ int main(int argc, char **argv) {
     /**
      * Skybox night texture
      */
-    loadSkyboxTextureLocation(stoneImagePtr, skyboxNightTextureLocation);
+    loadSkyboxTextureLocation(nightImagePtr, skyboxNightTextureLocation);
 
 
     glEnable(GL_DEPTH_TEST);
@@ -437,8 +443,8 @@ int main(int argc, char **argv) {
     /**
      * TREEs
      */
-/*
-    Tree tree;
+
+    Tree tree(vec3(0,floor(ptr[0][0]),0));
 
     glBindBuffer(GL_ARRAY_BUFFER, treeVbo);
 
@@ -446,7 +452,7 @@ int main(int argc, char **argv) {
                  GL_STATIC_DRAW);
 
     glBindBuffer(GL_ARRAY_BUFFER, 0);
-    */
+
     /**
      * VAOs GENERATION
      */
@@ -564,8 +570,6 @@ int main(int argc, char **argv) {
         globalProgram.m_Program
                      .use();
 
-        glBindVertexArray(mapVao);
-
         viewMatrix = camera.getViewMatrix();
 
         // Light object
@@ -585,6 +589,16 @@ int main(int argc, char **argv) {
 
         drawVAO(globalProgram, vboMapVertexCount, projMatrix, viewMatrix, mapModelMatrix, light);
 
+
+        /**
+        * DRAW TREE
+        */
+        glBindVertexArray(treeVao);
+        glUniform1i(globalProgram.uTextureId, 0);
+
+        drawVAO(globalProgram, tree.getVertexCount(), projMatrix, viewMatrix, mat4(),
+                light);
+
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, 0);
 
@@ -602,13 +616,11 @@ int main(int argc, char **argv) {
                 light);
         pnj.updatePosition();
 
-
-
-        // Flush texture
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, 0);
 
         glBindVertexArray(0);
+
 
         windowManager.swapBuffers();
         //windowManager.handleEventsForFPSview(camera);

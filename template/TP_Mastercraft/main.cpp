@@ -425,11 +425,11 @@ int main(int argc, char **argv) {
      * SKYBOX
      */
 
-    AntiCube skybox;
+    AntiCube antiCube;
 
     glBindBuffer(GL_ARRAY_BUFFER, skyVbo);
 
-    glBufferData(GL_ARRAY_BUFFER, skybox.getVertexCount() * sizeof(ShapeVertex), skybox.getDataPointer(),
+    glBufferData(GL_ARRAY_BUFFER, antiCube.getVertexCount() * sizeof(ShapeVertex), antiCube.getDataPointer(),
                  GL_STATIC_DRAW);
 
     glBindBuffer(GL_ARRAY_BUFFER, 0);
@@ -481,7 +481,6 @@ int main(int argc, char **argv) {
 
 
     glm::mat4 projMatrix, viewMatrix;
-
     glm::mat4 mapModelMatrix = mat4();
 
     projMatrix = glm::perspective(glm::radians(70.f), 1.f, 0.1f, 100.f);
@@ -525,13 +524,13 @@ int main(int argc, char **argv) {
 
         float angle = (float) glfwGetTime() * 0.1f;
 
-        if (angle > 6.28319) {
+        if (angle > 2*M_PI) {
             glfwSetTime(0);
             angle = (float) glfwGetTime() * 0.1f;
             isDay = true;
         }
 
-        if (angle > 3.14159) {
+        if (angle > M_PI) {
             isDay = false;
         }
 
@@ -551,7 +550,7 @@ int main(int argc, char **argv) {
 
 
         mat4 modelMatrix = glm::translate(mat4(), camera.getPosition());
-        drawSkybox(simpleTexturedSkyboxProgram, skybox.getVertexCount(), projMatrix, viewMatrix,
+        drawSkybox(simpleTexturedSkyboxProgram, antiCube.getVertexCount(), projMatrix, viewMatrix,
                    scale(modelMatrix, glm::vec3(30.0, 30.0, 30.0)));
 
         //Flush texture

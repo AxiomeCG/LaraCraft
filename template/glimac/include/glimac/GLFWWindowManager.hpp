@@ -129,6 +129,8 @@ private :
      * Old y position for managing the FPS view and relative Y position of the mouse
      */
     float oldY;
+
+    bool wasPressedBefore = false;
 };
 
 #endif //LARACRAFT_WINDOWMANAGER_HPP

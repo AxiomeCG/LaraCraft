@@ -141,6 +141,11 @@ void GLFWWindowManager::handleEventsForFPSConstrainedView(glimac::ConstrainedCam
 
     int stateDayKey = getKey(GLFW_KEY_E);
     if(stateDayKey == GLFW_PRESS) {
+        wasPressedBefore = true;
+    }
+
+    if(wasPressedBefore && stateDayKey == GLFW_RELEASE){
+        wasPressedBefore = false;
         isDay = !isDay;
     }
 

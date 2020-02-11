@@ -617,13 +617,14 @@ int main(int argc, char **argv) {
     }
     glDeleteTextures(1, &atlasTextureLocation);
     glDeleteTextures(1, &pnjTextureLocation);
+    glDeleteTextures(1, &skyboxDayTextureLocation);
+
     glDeleteBuffers(1, &mapVbo);
     glDeleteBuffers(1, &pnjVbo);
+    glDeleteBuffers(1, &skyVbo);
+
     glDeleteVertexArrays(1, &mapVao);
     glDeleteVertexArrays(1, &pnjVao);
-
-    glDeleteTextures(1, &skyboxDayTextureLocation);
-    glDeleteBuffers(1, &skyVbo);
     glDeleteVertexArrays(1, &skyVao);
 
     return EXIT_SUCCESS;

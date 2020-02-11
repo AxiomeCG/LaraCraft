@@ -84,8 +84,8 @@ void drawVAO(const GlobalProgram &program, long vertexCount,
 
 void
 drawSkybox(const SimpleTexturedSkyboxProgram &program, long vertexCount, const mat4 &projMatrix, const mat4 &viewMatrix,
-     const mat4 &modelMatrix) {
-    mat4 modelViewMatrix = viewMatrix * modelMatrix ;
+           const mat4 &modelMatrix) {
+    mat4 modelViewMatrix = viewMatrix * modelMatrix;
     mat4 modelViewProjectionMatrix = projMatrix * modelViewMatrix;
     mat4 normalMatrix = transpose(glm::inverse(modelViewMatrix));
     glUniformMatrix4fv(program.uMVPMatrixId, 1, GL_FALSE, value_ptr(modelViewProjectionMatrix));
@@ -95,7 +95,7 @@ drawSkybox(const SimpleTexturedSkyboxProgram &program, long vertexCount, const m
     glDrawArrays(GL_TRIANGLES, 0, vertexCount);
 }
 
-void generateAllChunks(const HeightMap &heightMap, const OffsetTextureMap &offsetTextureMap ,
+void generateAllChunks(const HeightMap &heightMap, const OffsetTextureMap &offsetTextureMap,
 
                        std::vector<std::vector<Chunk>> &chunkVector) {
     std::cout << "Generating the terrain ..." << std::endl;
@@ -162,35 +162,13 @@ void whereAmI(const ConstrainedCamera &camera, int &chunkNumberX,
     chunkNumberZ = camera.getPosition().z / 16;
 }
 
-void bindPnjVBOToVAO(GLuint vboPnj, GLuint vaoPnj, const GLuint VERTEX_ATTR_POSITION, const GLuint VERTEX_ATTR_NORMAL,
-                     const GLuint VERTEX_ATTR_TEXTURE) {
-    glBindVertexArray(vaoPnj);
-    glBindBuffer(GL_ARRAY_BUFFER, vboPnj);
 
-    // Specification des attributs de position :
-    glVertexAttribPointer(VERTEX_ATTR_POSITION, 3, GL_FLOAT, GL_FALSE,
-                          sizeof(ShapeVertex),
-                          (const GLvoid *) offsetof(ShapeVertex, position));
-    glVertexAttribPointer(VERTEX_ATTR_NORMAL, 3, GL_FLOAT, GL_FALSE,
-                          sizeof(ShapeVertex),
-                          (const GLvoid *) offsetof(ShapeVertex, normal));
-    glVertexAttribPointer(VERTEX_ATTR_TEXTURE, 2, GL_FLOAT, GL_FALSE,
-                          sizeof(ShapeVertex),
-                          (const GLvoid *) offsetof(ShapeVertex, texCoords));
-
-    // Debinding d'un VBO sur la cible GL_ARRAY_BUFFER:
-    glBindBuffer(GL_ARRAY_BUFFER, 0);
-
-    // Debinding de l'unique VAO:
-    glBindVertexArray(0);
-}
-
-void bindMapVBOToVAO(GLuint vboMap, GLuint vaoMap, const GLuint VERTEX_ATTR_POSITION, const GLuint VERTEX_ATTR_NORMAL,
-                     const GLuint VERTEX_ATTR_TEXTURE) {
-    glBindVertexArray(vaoMap);
+void bindVBOToVAO(GLuint vbo, GLuint vao, const GLuint VERTEX_ATTR_POSITION, const GLuint VERTEX_ATTR_NORMAL,
+                  const GLuint VERTEX_ATTR_TEXTURE) {
+    glBindVertexArray(vao);
 
     // Re-binding du VBO sur la cible GL_ARRAY_BUFFER pour glVertexAttribPointer:
-    glBindBuffer(GL_ARRAY_BUFFER, vboMap);
+    glBindBuffer(GL_ARRAY_BUFFER, vbo);
 
     // Specification des attributs de position :
     glVertexAttribPointer(VERTEX_ATTR_POSITION, 3, GL_FLOAT, GL_FALSE,
@@ -207,20 +185,10 @@ void bindMapVBOToVAO(GLuint vboMap, GLuint vaoMap, const GLuint VERTEX_ATTR_POSI
     glBindVertexArray(0);
 }
 
-void configureVAOs(GLuint vaoMap, GLuint vaoPnj, GLuint &VERTEX_ATTR_POSITION,  GLuint &VERTEX_ATTR_NORMAL,
-                   GLuint &VERTEX_ATTR_TEXTURE) {
-    VERTEX_ATTR_POSITION= 0;
-    VERTEX_ATTR_NORMAL= 1;
-    VERTEX_ATTR_TEXTURE= 2;
-    glBindVertexArray(vaoMap);
-    glEnableVertexAttribArray(VERTEX_ATTR_POSITION);
-    glEnableVertexAttribArray(VERTEX_ATTR_NORMAL);
-    glEnableVertexAttribArray(VERTEX_ATTR_TEXTURE);
+void configureVAO(GLuint vao, GLuint &VERTEX_ATTR_POSITION, GLuint &VERTEX_ATTR_NORMAL,
+                  GLuint &VERTEX_ATTR_TEXTURE) {
 
-    glBindVertexArray(0);
-
-    glBindVertexArray(vaoPnj);
-
+    glBindVertexArray(vao);
     glEnableVertexAttribArray(VERTEX_ATTR_POSITION);
     glEnableVertexAttribArray(VERTEX_ATTR_NORMAL);
     glEnableVertexAttribArray(VERTEX_ATTR_TEXTURE);
@@ -269,7 +237,8 @@ void loadAtlasTextureLocation(std::unique_ptr<Image> &atlasImagePtr, GLuint atla
 
 void loadSkyboxTextureLocation(std::unique_ptr<Image> &skyboxImagePtr, GLuint skyboxTextureLocation) {
     glBindTexture(GL_TEXTURE_2D, skyboxTextureLocation);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, skyboxImagePtr->getWidth(), skyboxImagePtr->getHeight(), 0, GL_RGBA, GL_FLOAT,
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, skyboxImagePtr->getWidth(), skyboxImagePtr->getHeight(), 0, GL_RGBA,
+                 GL_FLOAT,
                  skyboxImagePtr->getPixels());
 
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
@@ -406,7 +375,7 @@ int main(int argc, char **argv) {
      *********************************/
 
     Cube cube;
-    Sphere sphere(1, 32 , 16);
+    Sphere sphere(1, 32, 16);
 
 
     /**
@@ -417,89 +386,99 @@ int main(int argc, char **argv) {
     int distanceChunkLoaded = 5;
 
 
-
-    GLuint vboMap, vboPnj;
-    GLuint vaoMap, vaoPnj;
+    GLuint mapVbo, mapVao;
+    GLuint pnjVbo, pnjVao;
+    GLuint skyVbo, skyVao;
+    GLuint treeVbo, treeVao;
 
 
     /**
      * GENERATION OF THE VBOs
      */
-    glGenBuffers(1, &vboMap);
-    glGenBuffers(1, &vboPnj);
+    glGenBuffers(1, &mapVbo);
+    glGenBuffers(1, &pnjVbo);
+    glGenBuffers(1, &skyVbo);
+    glGenBuffers(1, &treeVbo);
 
-    std::vector<std::vector<Chunk>> chunkList;
 
+
+    /**
+     * LOADING VBOs
+     */
+
+    /**
+     * MAP
+     */
     auto offsetTextureMap = OffsetTextureMap(*colorMapPtr);
-
+    std::vector<std::vector<Chunk>> chunkList;
     generateAllChunks(*heightMapPtr, offsetTextureMap, chunkList);
-    refreshChunkVBO(chunkList, concatDataList, vboMapVertexCount, vboMap, 0, 0,
+    refreshChunkVBO(chunkList, concatDataList, vboMapVertexCount, mapVbo, 0, 0,
                     distanceChunkLoaded);
 
-    Pnj pnj(vec3(0,heightMapPtr->getHeightData()[0][0],0), heightMapPtr->getHeightData());
+    /**
+     * PNJ
+     */
+    Pnj pnj(vec3(0, heightMapPtr->getHeightData()[0][0], 0), heightMapPtr->getHeightData());
+    loadPnjInVBO(sphere, pnjVbo);
 
-    loadPnjInVBO(sphere, vboPnj);
+    /**
+     * SKYBOX
+     */
 
-    glGenVertexArrays(1, &vaoMap);
-    glGenVertexArrays(1, &vaoPnj);
+    AntiCube skybox;
+
+    glBindBuffer(GL_ARRAY_BUFFER, skyVbo);
+
+    glBufferData(GL_ARRAY_BUFFER, skybox.getVertexCount() * sizeof(ShapeVertex), skybox.getDataPointer(),
+                 GL_STATIC_DRAW);
+
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+
+    /**
+     * TREEs
+     */
+/*
+    Tree tree;
+
+    glBindBuffer(GL_ARRAY_BUFFER, treeVbo);
+
+    glBufferData(GL_ARRAY_BUFFER, tree.getVertexCount() * sizeof(ShapeVertex), tree.getDataPointer(),
+                 GL_STATIC_DRAW);
+
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    */
+    /**
+     * VAOs GENERATION
+     */
+
+
+    glGenVertexArrays(1, &mapVao);
+    glGenVertexArrays(1, &pnjVao);
+    glGenVertexArrays(1, &skyVao);
+    glGenVertexArrays(1, &treeVao);
 
     /**
      * BINDING OF VAOs
      */
-    GLuint VERTEX_ATTR_POSITION;
-    GLuint VERTEX_ATTR_NORMAL;
-    GLuint VERTEX_ATTR_TEXTURE;
-    configureVAOs(vaoMap, vaoPnj, VERTEX_ATTR_POSITION, VERTEX_ATTR_NORMAL, VERTEX_ATTR_TEXTURE);
+    GLuint VERTEX_ATTR_POSITION = 0;
+    GLuint VERTEX_ATTR_NORMAL = 1;
+    GLuint VERTEX_ATTR_TEXTURE = 2;
 
+
+    configureVAO(mapVao, VERTEX_ATTR_POSITION, VERTEX_ATTR_NORMAL, VERTEX_ATTR_TEXTURE);
+    configureVAO(pnjVao, VERTEX_ATTR_POSITION, VERTEX_ATTR_NORMAL, VERTEX_ATTR_TEXTURE);
+    configureVAO(skyVao, VERTEX_ATTR_POSITION,VERTEX_ATTR_NORMAL,VERTEX_ATTR_TEXTURE);
+    configureVAO(treeVao, VERTEX_ATTR_POSITION, VERTEX_ATTR_NORMAL,VERTEX_ATTR_TEXTURE);
 
     /**
-     * BINDING OF THE VBOMAP ON THE VAOMAP
+     * BINDING OF THE VBO ON THE VAO
      */
-    bindMapVBOToVAO(vboMap, vaoMap, VERTEX_ATTR_POSITION, VERTEX_ATTR_NORMAL, VERTEX_ATTR_TEXTURE);
-
-    /**
-     * BINDING OF THE VBOPNJ ON THE PNJ
-     */
-
-    bindPnjVBOToVAO(vboPnj, vaoPnj, VERTEX_ATTR_POSITION, VERTEX_ATTR_NORMAL, VERTEX_ATTR_TEXTURE);
-
-    AntiCube skybox;
-
-    GLuint skyVbo, skyVao;
-    glGenBuffers(1, &skyVbo);
-
-    glBindBuffer(GL_ARRAY_BUFFER, skyVbo);
-
-    glBufferData(GL_ARRAY_BUFFER, skybox.getVertexCount() * sizeof(ShapeVertex), skybox.getDataPointer(), GL_STATIC_DRAW);
-
-    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    bindVBOToVAO(mapVbo, mapVao, VERTEX_ATTR_POSITION, VERTEX_ATTR_NORMAL, VERTEX_ATTR_TEXTURE);
+    bindVBOToVAO(pnjVbo, pnjVao, VERTEX_ATTR_POSITION, VERTEX_ATTR_NORMAL, VERTEX_ATTR_TEXTURE);
+    bindVBOToVAO(skyVbo, skyVao, VERTEX_ATTR_POSITION, VERTEX_ATTR_NORMAL, VERTEX_ATTR_TEXTURE);
+    bindVBOToVAO(treeVbo, treeVao, VERTEX_ATTR_POSITION, VERTEX_ATTR_NORMAL, VERTEX_ATTR_TEXTURE);
 
 
-    glGenVertexArrays(1, &skyVao);
-
-    // Binding de l'unique VAO:
-    glBindVertexArray(skyVao);
-
-    glEnableVertexAttribArray(VERTEX_ATTR_POSITION);
-    glEnableVertexAttribArray(VERTEX_ATTR_NORMAL);
-    glEnableVertexAttribArray(VERTEX_ATTR_TEXTURE);
-
-    // Re-binding du VBO sur la cible GL_ARRAY_BUFFER pour glVertexAttribPointer:
-    glBindBuffer(GL_ARRAY_BUFFER, skyVbo);
-
-    // Specification des attributs de position :
-    glVertexAttribPointer(VERTEX_ATTR_POSITION, 3, GL_FLOAT, GL_FALSE, sizeof(ShapeVertex),
-                          (const GLvoid *) offsetof(ShapeVertex, position));
-    glVertexAttribPointer(VERTEX_ATTR_NORMAL, 3, GL_FLOAT, GL_FALSE, sizeof(ShapeVertex),
-                          (const GLvoid *) offsetof(ShapeVertex, normal));
-    glVertexAttribPointer(VERTEX_ATTR_TEXTURE, 2, GL_FLOAT, GL_FALSE, sizeof(ShapeVertex),
-                          (const GLvoid *) offsetof(ShapeVertex, texCoords));
-
-    // Debinding d'un VBO sur la cible GL_ARRAY_BUFFER:
-    glBindBuffer(GL_ARRAY_BUFFER, 0);
-
-    // Debinding de l'unique VAO:
-    glBindVertexArray(0);
 
     glm::mat4 projMatrix, viewMatrix;
 
@@ -533,7 +512,7 @@ int main(int argc, char **argv) {
             std::cout << "Need reload"
                       << "(" << currentChunkPositionX << ";" << currentChunkPositionZ
                       << ")" << std::endl;
-            refreshChunkVBO(chunkList, concatDataList, vboMapVertexCount, vboMap,
+            refreshChunkVBO(chunkList, concatDataList, vboMapVertexCount, mapVbo,
                             currentChunkPositionX, currentChunkPositionZ,
                             distanceChunkLoaded);
             oldChunkPositionX = currentChunkPositionX;
@@ -546,13 +525,13 @@ int main(int argc, char **argv) {
 
         float angle = (float) glfwGetTime() * 0.1f;
 
-        if(angle > 6.28319) {
+        if (angle > 6.28319) {
             glfwSetTime(0);
             angle = (float) glfwGetTime() * 0.1f;
             isDay = true;
         }
 
-        if(angle > 3.14159) {
+        if (angle > 3.14159) {
             isDay = false;
         }
 
@@ -562,10 +541,9 @@ int main(int argc, char **argv) {
 
         glActiveTexture(GL_TEXTURE0);
 
-        if(isDay) {
+        if (isDay) {
             glBindTexture(GL_TEXTURE_2D, skyboxDayTextureLocation);
-        }
-        else {
+        } else {
             glBindTexture(GL_TEXTURE_2D, skyboxNightTextureLocation);
         }
 
@@ -573,7 +551,8 @@ int main(int argc, char **argv) {
 
 
         mat4 modelMatrix = glm::translate(mat4(), camera.getPosition());
-        drawSkybox(simpleTexturedSkyboxProgram, skybox.getVertexCount(), projMatrix, viewMatrix, scale(modelMatrix, glm::vec3(30.0,30.0,30.0)));
+        drawSkybox(simpleTexturedSkyboxProgram, skybox.getVertexCount(), projMatrix, viewMatrix,
+                   scale(modelMatrix, glm::vec3(30.0, 30.0, 30.0)));
 
         //Flush texture
         glActiveTexture(GL_TEXTURE0);
@@ -586,11 +565,10 @@ int main(int argc, char **argv) {
         globalProgram.m_Program
                      .use();
 
-        glBindVertexArray(vaoMap);
+        glBindVertexArray(mapVao);
 
         viewMatrix = camera.getViewMatrix();
 
-        std::cout << angle << std::endl;
         // Light object
         DirectionalLight light = DirectionalLight(glm::rotate(
                 glm::translate(glm::mat4(), vec3(camera.getPosition().x, 256.f,
@@ -600,7 +578,7 @@ int main(int argc, char **argv) {
         /**
          * DRAW MAP
          */
-        glBindVertexArray(vaoMap);
+        glBindVertexArray(mapVao);
 
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, atlasTextureLocation);
@@ -616,7 +594,7 @@ int main(int argc, char **argv) {
         /**
         * DRAW PNJ
         */
-        glBindVertexArray(vaoPnj);
+        glBindVertexArray(pnjVao);
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, pnjTextureLocation);
         glUniform1i(globalProgram.uTextureId, 0);
@@ -635,14 +613,14 @@ int main(int argc, char **argv) {
 
         windowManager.swapBuffers();
         //windowManager.handleEventsForFPSview(camera);
-        windowManager.handleEventsForFPSConstrainedView(camera, &isDay);
+        windowManager.handleEventsForFPSConstrainedView(camera, isDay);
     }
     glDeleteTextures(1, &atlasTextureLocation);
     glDeleteTextures(1, &pnjTextureLocation);
-    glDeleteBuffers(1, &vboMap);
-    glDeleteBuffers(1, &vboPnj);
-    glDeleteVertexArrays(1, &vaoMap);
-    glDeleteVertexArrays(1, &vaoPnj);
+    glDeleteBuffers(1, &mapVbo);
+    glDeleteBuffers(1, &pnjVbo);
+    glDeleteVertexArrays(1, &mapVao);
+    glDeleteVertexArrays(1, &pnjVao);
 
     glDeleteTextures(1, &skyboxDayTextureLocation);
     glDeleteBuffers(1, &skyVbo);

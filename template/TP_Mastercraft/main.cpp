@@ -290,6 +290,10 @@ int main(int argc, char **argv) {
             loadImage("TP_Mastercraft/assets/textures/blocks/stone.png");
     assert(pnjImagePtr != nullptr);
 
+    std::unique_ptr<Image> dayImagePtr =
+            loadImage("TP_Mastercraft/assets/textures/blocks/day.jpg");
+    assert(pnjImagePtr != nullptr);
+
     std::unique_ptr<Image> nightImagePtr =
             loadImage("TP_Mastercraft/assets/textures/blocks/night.png");
     assert(pnjImagePtr != nullptr);
@@ -365,7 +369,7 @@ int main(int argc, char **argv) {
     /**
      * Skybox day texture
      */
-    loadSkyboxTextureLocation(snowImagePtr, skyboxDayTextureLocation);
+    loadSkyboxTextureLocation(dayImagePtr, skyboxDayTextureLocation);
 
     /**
      * Skybox night texture

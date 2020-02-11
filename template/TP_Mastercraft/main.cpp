@@ -17,7 +17,7 @@
 #include <glimac/HeightMap.hpp>
 #include <glimac/Image.hpp>
 #include <glimac/common.hpp>
-
+#include <glimac/VegetationMap.hpp>
 #include <GL/glew.h>
 
 #include <cstddef>
@@ -26,34 +26,9 @@
 #include <glimac/Sphere.hpp>
 #include <glimac/Tree.hpp>
 
+
 using namespace glimac;
 
-void drawACube(const GlobalProgram &program, int vertexCount,
-               const mat4 &projMatrix, const mat4 &viewMatrix,
-               const mat4 &modelMatrix, const DirectionalLight &light) {
-    mat4 ModelViewMatrix2 = viewMatrix * modelMatrix;
-    mat4 ModelViewProjectionMatrix2 = projMatrix * ModelViewMatrix2;
-    mat4 NormalMatrix2 = transpose(glm::inverse(ModelViewMatrix2));
-    glUniformMatrix4fv(program.uMVPMatrixId, 1, GL_FALSE,
-                       value_ptr(ModelViewProjectionMatrix2));
-    glUniformMatrix4fv(program.uMVMatrixId, 1, GL_FALSE,
-                       value_ptr(ModelViewMatrix2));
-    glUniformMatrix4fv(program.uNormalMatrixId, 1, GL_FALSE,
-                       value_ptr(NormalMatrix2));
-
-    const vec3 &kd2 = vec3(1., 1., 1.);
-    const vec3 &ks2 = vec3(1., 1., 1.);
-    const float shininess2 = 10.;
-    glUniform3fv(program.uKdId, 1, value_ptr(kd2));
-    glUniform3fv(program.uKsId, 1, value_ptr(ks2));
-    glUniform1f(program.uShininessId, shininess2);
-
-    glUniform3fv(program.uLightDir_vsId, 1,
-                 value_ptr(light.getLightDirection(
-                         viewMatrix))); // TODO Check if it's natural
-    glUniform3fv(program.uLightIntensityId, 1, value_ptr(light.lightIntensity));
-    glDrawArrays(GL_TRIANGLES, 0, vertexCount);
-}
 
 void drawVAO(const GlobalProgram &program, long vertexCount,
              const mat4 &projMatrix, const mat4 &viewMatrix,
@@ -106,6 +81,20 @@ void generateAllChunks(const HeightMap &heightMap, const OffsetTextureMap &offse
             columnVector.emplace_back(vec2(i, j), heightMap, offsetTextureMap);
         }
         chunkVector.push_back(columnVector);
+    }
+}
+
+void generateTreeList(const HeightMap &heightMap, const VegetationMap &vegetationMap, std::vector<std::vector<Tree>> &treeList) {
+    auto dataList = vegetationMap.getColorData();
+
+    for (int x = 0; x < vegetationMap.getWidth(); ++x) {
+        std::vector<Tree> columnList;
+        for (int z = 0; z < vegetationMap.getHeight(); ++z) {
+            if(dataList.at(x).at(z) == vec3(255, 255, 255)) {
+                columnList.emplace_back(vec3(x,floor(heightMap.getHeightData().at(x).at(z)),z));
+            }
+        }
+        treeList.push_back(columnList);
     }
 }
 
@@ -247,7 +236,6 @@ void loadSkyboxTextureLocation(std::unique_ptr<Image> &skyboxImagePtr, GLuint sk
     glBindTexture(GL_TEXTURE_2D, 0);
 }
 
-
 int main(int argc, char **argv) {
     GLFWWindowManager windowManager =
             GLFWWindowManager(1920, 1920, "LaraCraft", windowModes::Windowed);
@@ -299,6 +287,8 @@ int main(int argc, char **argv) {
     assert(pnjImagePtr != nullptr);
 
 
+
+
     std::unique_ptr<HeightMap> heightMapPtr = loadHeightMap(
             "TP_Mastercraft/assets/terrain/16_16_perlin/map.png", 1.0f, 1.0f, 0.2f);
     assert(heightMapPtr != nullptr);
@@ -309,10 +299,12 @@ int main(int argc, char **argv) {
     std::unique_ptr<ColorMap> colorMapPtr = loadColorMap(
             "TP_Mastercraft/assets/terrain/16_16_perlin/color.png", 1.0f, 1.0f, 1.0f);
     assert(colorMapPtr != nullptr);
+
+    std::unique_ptr<VegetationMap> vegetationMapPtr = loadVegetationMap(
+            "TP_Mastercraft/assets/terrain/16_16_perlin/vege.png", 1.0f, 1.0f, 1.0f);
+    assert(vegetationMapPtr != nullptr);
     auto ptrColor = colorMapPtr->getColorData();
 
-    float width = heightMapPtr->getWidth();
-    float height = heightMapPtr->getHeight();
 
     /*
     for (int i = 0; i < colorMapPtr->getWidth(); ++i) {
@@ -392,6 +384,7 @@ int main(int argc, char **argv) {
      * MAP INFOS
      */
     long vboMapVertexCount = 0;
+    long vboTreeVertexCount = 0;
     std::vector<ShapeVertex> concatDataList;
     int distanceChunkLoaded = 5;
 
@@ -448,11 +441,20 @@ int main(int argc, char **argv) {
      * TREEs
      */
 
-    Tree tree(vec3(0,floor(ptr[0][0]),0));
+    std::vector<std::vector<Tree>> treeList;
+    generateTreeList(*heightMapPtr, *vegetationMapPtr,treeList);
 
+
+    std::vector<ShapeVertex> shapeVertexList;
+    for (const auto& column : treeList){
+        for (auto tree: column){
+            vboTreeVertexCount += tree.getVertexCount();
+            shapeVertexList.insert(shapeVertexList.end(), tree.getDataPointer(), tree.getDataPointer() + tree.getVertexCount());
+        }
+    }
     glBindBuffer(GL_ARRAY_BUFFER, treeVbo);
 
-    glBufferData(GL_ARRAY_BUFFER, tree.getVertexCount() * sizeof(ShapeVertex), tree.getDataPointer(),
+    glBufferData(GL_ARRAY_BUFFER, vboTreeVertexCount * sizeof(ShapeVertex), &shapeVertexList[0],
                  GL_STATIC_DRAW);
 
     glBindBuffer(GL_ARRAY_BUFFER, 0);
@@ -593,7 +595,7 @@ int main(int argc, char **argv) {
         glBindVertexArray(treeVao);
         glUniform1i(globalProgram.uTextureId, 0);
 
-        drawVAO(globalProgram, tree.getVertexCount(), projMatrix, viewMatrix, mat4(),
+        drawVAO(globalProgram, vboTreeVertexCount, projMatrix, viewMatrix, mat4(),
                 light);
 
         glActiveTexture(GL_TEXTURE0);
@@ -637,3 +639,5 @@ int main(int argc, char **argv) {
 
     return EXIT_SUCCESS;
 }
+
+

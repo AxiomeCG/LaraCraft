@@ -33,6 +33,9 @@ namespace glimac{
             if (heightDifference > 1) {
                 return false;
             }
+            if(m_vegetationData[futurePosFlooredX][futurePosFlooredZ].x) {
+                return false;
+            }
             return true;
         }
         return false;

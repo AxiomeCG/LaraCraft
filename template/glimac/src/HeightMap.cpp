@@ -3,6 +3,7 @@
 //
 
 #include "glimac/HeightMap.hpp"
+#include <cmath>
 #include "stb_image.h"
 
 namespace glimac {
@@ -20,7 +21,7 @@ namespace glimac {
         for (auto i = 0u; i < x; ++i) {
             for (auto j = 0u; j < y; ++j) {
                 //std::cout << (float)data[k] * resv << std::endl;
-                pHeightMap->insert(i, j, ((float)data[k]) * resv);
+                pHeightMap->insert(i, j, floor(((float)data[k]) * resv));
                 ++k;
             }
         }

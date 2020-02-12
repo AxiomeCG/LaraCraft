@@ -17,7 +17,7 @@ namespace glimac {
         std::unique_ptr<ColorMap> pColorMap(new ColorMap(x, y, resw, resh, resv));
         for (auto i = 0u; i < x; ++i) {
             for (auto j = 0u; j < y; ++j) {
-                auto offset = 3*(i + (j * x));
+                auto offset = 3*(j + (i * x));
                 auto r = data[offset] * resv;
                 auto g = data[offset + 1] * resv;
                 auto b = data[offset + 2] * resv;

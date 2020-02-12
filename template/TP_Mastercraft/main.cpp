@@ -85,7 +85,7 @@ void generateAllChunks(const HeightMap &heightMap, const OffsetTextureMap &offse
 }
 
 void generateTreeList(const HeightMap &heightMap, const VegetationMap &vegetationMap, std::vector<std::vector<Tree>> &treeList) {
-    auto dataList = vegetationMap.getColorData();
+    auto dataList = vegetationMap.getVegetationData();
 
     for (int x = 0; x < vegetationMap.getWidth(); ++x) {
         std::vector<Tree> columnList;
@@ -421,7 +421,7 @@ int main(int argc, char **argv) {
     /**
      * PNJ
      */
-    Pnj pnj(vec3(0, heightMapPtr->getHeightData()[0][0], 0), heightMapPtr->getHeightData());
+    Pnj pnj(vec3(0, heightMapPtr->getHeightData()[0][0], 0), heightMapPtr->getHeightData(), vegetationMapPtr->getVegetationData());
     loadPnjInVBO(sphere, pnjVbo);
 
     /**
@@ -500,7 +500,7 @@ int main(int argc, char **argv) {
     //FreeflyCamera camera;
     // FreeflyCamera camera = FreeflyCamera(glm::vec3(0.f,  0.f, 5.f)); //(float)ptr[0][0]
     ConstrainedCamera camera =
-            ConstrainedCamera(0.f, 0.f, heightMapPtr->getHeightData(), 2.f);
+            ConstrainedCamera(0.f, 0.f, heightMapPtr->getHeightData(), vegetationMapPtr->getVegetationData(), 2.f);
 
     // Application loop:
 

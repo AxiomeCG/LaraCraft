@@ -17,11 +17,16 @@ private:
     MovementChecker movementChecker;
 
     void generateNewRandomDirection();
+
 public:
     glm::mat4 getModelMatrix() const;
+
     void updatePosition();
 
-    explicit Pnj(const vec3& position, const std::vector<std::vector<float>>& heightData) : position(position), movementChecker(heightData){
+    explicit Pnj(const vec3 &position, const std::vector<std::vector<float>> &heightData,
+                 const std::vector<std::vector<glm::vec3>> &vegetationData) :
+            position(position),
+            movementChecker(heightData, vegetationData) {
         generateNewRandomDirection();
     }
 

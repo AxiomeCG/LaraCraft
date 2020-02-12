@@ -5,17 +5,18 @@
 #ifndef TEMPLATE_MOVEMENTCHECKER_HPP
 #define TEMPLATE_MOVEMENTCHECKER_HPP
 
-#include "HeightMap.hpp"
+#include <vector>
 #include "glm.hpp"
 
 namespace glimac {
 
 class MovementChecker {
 public:
-    MovementChecker(std::vector<std::vector<float>> heightData):
+    MovementChecker(std::vector<std::vector<float>> heightData, std::vector<std::vector<glm::vec3>> vegetationData):
         m_width(heightData.size()),
         m_height(heightData[0].size()),
-        m_heightData(heightData){
+        m_heightData(heightData),
+        m_vegetationData(vegetationData){
 
     }
 
@@ -29,6 +30,7 @@ private:
     unsigned int m_width;
     unsigned int m_height;
     std::vector<std::vector<float>> m_heightData;
+    std::vector<std::vector<glm::vec3>> m_vegetationData;
 
     bool willMoveToAnotherCube(glm::vec3 currentPosition, glm::vec3 futurePosition);
 };

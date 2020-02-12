@@ -33,7 +33,7 @@ public:
         m_vegetationData[i][j] = glm::vec3(r, g, b);
     }
 
-    std::vector<std::vector<glm::vec3>> getColorData() const{
+    std::vector<std::vector<glm::vec3>> getVegetationData() const{
         return m_vegetationData;
     }
 

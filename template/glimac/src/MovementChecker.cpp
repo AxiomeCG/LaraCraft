@@ -3,6 +3,7 @@
 //
 
 #include "glimac/MovementChecker.hpp"
+#include <iostream>
 #include <cmath>
 
 namespace glimac{

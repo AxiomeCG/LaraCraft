@@ -45,7 +45,6 @@ namespace glimac {
 
     void ConstrainedCamera::rotateUp(float degrees){
         float tmpTheta = m_fTheta + glm::radians(degrees);
-        std::cout << tmpTheta << std::endl;
         if(tmpTheta < (M_PI/2) && tmpTheta > (-(M_PI/2))) {
             m_fTheta = tmpTheta;
             computeDirectionVectors();

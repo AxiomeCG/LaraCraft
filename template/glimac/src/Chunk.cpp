@@ -12,7 +12,7 @@ void Chunk::addVertexOfDisplayedCube() {
     for (int x = 0; x < WIDTH; ++x) {
         for (int z = 0; z < LENGTH; ++z) {
             for (int height = 0; height < (int) localHeightMap.at(x)
-                                                              .at(z); height++) {
+                    .at(z); height++) {
 
                 if (!isFilled3DVector[x][z][height]) {
                     continue;
@@ -22,26 +22,25 @@ void Chunk::addVertexOfDisplayedCube() {
                     ShapeVertex shapeVertex;
                     const ShapeVertex &currentCubeVertex = cube.getDataPointer()[v];
                     double vertexX = currentCubeVertex.position
-                                                      .x /
+                                             .x /
                                      2.; // The cube is defined from -1 to 1 so it's size 2. Divide by two to get a 1x1x1 size cube
                     double vertexY = currentCubeVertex.position
-                                                      .y / 2.;
+                                             .y / 2.;
                     double vertexZ = currentCubeVertex.position
-                                                      .z / 2.;
+                                             .z / 2.;
 
                     shapeVertex.position = vec3(vertexX + (float) x + positionTranslation.x,
                                                 vertexY + floor((float) height) + positionTranslation.y,
                                                 vertexZ + (float) z + positionTranslation.z);
 
-                    //std::cout << shapeVertex.position << std::endl;
                     shapeVertex.normal = vec3(currentCubeVertex.normal);
 
                     shapeVertex.texCoords = vec2(
                             localOffsetTextureMap.at(x)
-                                                 .at(z) + currentCubeVertex.texCoords
-                                                                     .x / TextureOffsetEnum::NUMBER_TEXTURE,
+                                    .at(z) + currentCubeVertex.texCoords
+                                                     .x / TextureOffsetEnum::NUMBER_TEXTURE,
                             currentCubeVertex.texCoords
-                                             .y);// + offset
+                                    .y);// + offset
                     m_Vertices.push_back(shapeVertex);
                 }
             }
@@ -49,17 +48,15 @@ void Chunk::addVertexOfDisplayedCube() {
         }
     }
 
-    // std::cout << "Skipped : " << countSkip <<std::endl;
-
 
 }
 
 void Chunk::searchForNeighborhood() {
-    std::vector<std::vector<std::vector<bool>>> clone(isFilled3DVector);
+    std::vector < std::vector < std::vector < bool >> > clone(isFilled3DVector);
     for (int x = 0; x < WIDTH; ++x) {
         for (int z = 0; z < LENGTH; ++z) {
             for (int height = 0; height < (int) localHeightMap.at(x)
-                                                              .at(z); height++) {
+                    .at(z); height++) {
                 if (isSurroundedByNeighbors(x, z, height)) clone[x][z][height] = false;
             }
         }
@@ -72,7 +69,7 @@ void Chunk::computeIsFilled3DVector() {
     for (int x = 0; x < WIDTH; ++x) {
         for (int z = 0; z < LENGTH; ++z) {
             for (int height = 0; height < (int) localHeightMap.at(x)
-                                                              .at(z); height++) {
+                    .at(z); height++) {
                 isFilled3DVector[x][z][height] = true;
             }
         }
@@ -81,7 +78,7 @@ void Chunk::computeIsFilled3DVector() {
 
 void Chunk::initializeIsFilled3DVector() {
     for (int x = 0; x < WIDTH; x++) {
-        std::vector<std::vector<bool>> isFilled2DVector;
+        std::vector <std::vector<bool>> isFilled2DVector;
         for (int z = 0; z < LENGTH; ++z) {
             std::vector<bool> isFilled1DVector(HEIGHT, false);
             isFilled2DVector.push_back(isFilled1DVector);
@@ -94,7 +91,7 @@ GLsizei Chunk::getVertexCount() const {
     return m_Vertices.size();
 }
 
-std::vector<glimac::ShapeVertex> Chunk::getDataVector() const {
+std::vector <glimac::ShapeVertex> Chunk::getDataVector() const {
     return m_Vertices;
 }
 

@@ -108,12 +108,12 @@ void Tree::generateACube(const glm::vec3 &localPosition, float texture) {
         ShapeVertex shapeVertex;
         const ShapeVertex &currentCubeVertex = cube.getDataPointer()[v];
         double vertexX = currentCubeVertex.position
-                                          .x / 2.;
+                                 .x / 2.;
         // The cube is defined from -1 to 1 so it's size 2. Divide by two to get a 1x1x1 size cube
         double vertexY = currentCubeVertex.position
-                                          .y / 2.;
+                                 .y / 2.;
         double vertexZ = currentCubeVertex.position
-                                          .z / 2.;
+                                 .z / 2.;
 
         shapeVertex.position = vec3(vertexX + positionTranslation.x + localPosition.x,
                                     vertexY + positionTranslation.y + localPosition.y,
@@ -124,9 +124,9 @@ void Tree::generateACube(const glm::vec3 &localPosition, float texture) {
 
         shapeVertex.texCoords = vec2(
                 texture + currentCubeVertex.texCoords
-                                           .x / TextureOffsetEnum::NUMBER_TEXTURE,
+                                  .x / TextureOffsetEnum::NUMBER_TEXTURE,
                 currentCubeVertex.texCoords
-                                 .y);// + offset
+                        .y);// + offset
         vertexList.push_back(shapeVertex);
     }
 }

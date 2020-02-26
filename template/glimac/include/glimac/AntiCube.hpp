@@ -12,14 +12,14 @@ using namespace glimac;
 using namespace glm;
 
 /**
- * Represents an elementary cube forged from triangles.
+ * Represents an elementary anticube forged from triangles.
  *
  */
 class AntiCube {
 
 public:
     /**
-     * Constructor of the cube
+     * Constructor of the anticube
      */
     AntiCube() : m_nVertexCount(0) {
         build();
@@ -27,34 +27,60 @@ public:
 
     /**
      * Getter on the pointer data on vertices.
-     * @return
+     * @return Pointer of ShapeVertex
      */
     const ShapeVertex *getDataPointer() const;
 
     /**
-     * Getter on the number of vertices in the cube
-     * @return the number of vertices in the cube
+     * Getter on the number of vertices in the anticube
+     * @return the number of vertices in the anticube
      */
     GLsizei getVertexCount() const;
 
 private:
-    std::vector<glimac::ShapeVertex> m_Vertices;
+    /**
+     * A vector of ShapeVertex
+     */
+    std::vector <glimac::ShapeVertex> m_Vertices;
+
+    /**
+     * The number of vertex
+     */
     GLsizei m_nVertexCount;
 
+    /**
+     * Function building the anticube (the face are created clockwise)
+     */
     void build();
 
-    static uint32_t indices[];
-
+    /**
+     * Generate the front face of the anticube
+     */
     void generateFrontFace();
 
+    /**
+     * Generate the left face of the anticube
+     */
     void generateLeftFace();
 
+    /**
+     * Generate the back face of the anticube
+     */
     void generateBackFace();
 
+    /**
+     * Generate the right face of the anticube
+     */
     void generateRightFace();
 
+    /**
+     * Generate the top face of the anticube
+     */
     void generateTopFace();
 
+    /**
+     * Generate the bottom face of the anticube
+     */
     void generateBottomFace();
 };
 

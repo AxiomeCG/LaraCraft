@@ -39,21 +39,49 @@ public:
     GLsizei getVertexCount() const;
 
 private:
+    /**
+     * A vector of ShapeVertex
+     */
     std::vector<glimac::ShapeVertex> m_Vertices;
+
+    /**
+     * The number of vertex
+     */
     GLsizei m_nVertexCount;
 
+    /**
+     * Function building the cube (the face are created clockwise)
+     */
     void build();
 
+    /**
+     * Generate the front face of the cube
+     */
     void generateFrontFace();
 
+    /**
+     * Generate the left face of the cube
+     */
     void generateLeftFace();
 
+    /**
+     * Generate the back face of the cube
+     */
     void generateBackFace();
 
+    /**
+     * Generate the right face of the cube
+     */
     void generateRightFace();
 
+    /**
+     * Generate the top face of the cube
+     */
     void generateTopFace();
 
+    /**
+     * Generate the bottom face of the cube
+     */
     void generateBottomFace();
 };
 

@@ -4,10 +4,6 @@
 
 #include "glimac/AntiCube.hpp"
 
-uint32_t AntiCube::indices[] = {
-        0, 1, 2, 0, 2, 3
-};
-
 void AntiCube::build() {
     generateFrontFace();
     m_nVertexCount += 6;

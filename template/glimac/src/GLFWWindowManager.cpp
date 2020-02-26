@@ -96,7 +96,7 @@ void GLFWWindowManager::handleEventsForFPSview(glimac::FreeflyCamera &camera) {
 
     int stateEscapeKey = getKey(GLFW_KEY_ESCAPE);
     if (stateEscapeKey == GLFW_PRESS) {
-        glfwSetWindowShouldClose(window,1);
+        glfwSetWindowShouldClose(window, 1);
     }
     double tmpxPos, tmpyPos;
     getCursorPosition(&tmpxPos, &tmpyPos);
@@ -131,7 +131,7 @@ void GLFWWindowManager::handleEventsForFPSConstrainedView(glimac::ConstrainedCam
     }
 
     int stateFlyingKey = getKey(GLFW_KEY_F);
-    if(stateFlyingKey == GLFW_PRESS) {
+    if (stateFlyingKey == GLFW_PRESS) {
         if (camera.iAmFlying()) {
             camera.stopFlying();
         } else {
@@ -140,23 +140,22 @@ void GLFWWindowManager::handleEventsForFPSConstrainedView(glimac::ConstrainedCam
     }
 
     int stateDayKey = getKey(GLFW_KEY_E);
-    if(stateDayKey == GLFW_PRESS) {
+    if (stateDayKey == GLFW_PRESS) {
         wasPressedBefore = true;
     }
 
-    if(wasPressedBefore && stateDayKey == GLFW_RELEASE){
+    if (wasPressedBefore && stateDayKey == GLFW_RELEASE) {
         wasPressedBefore = false;
-        if(angle >= M_PI) {
+        if (angle >= M_PI) {
             glfwSetTime(0);
-        }
-        else {
+        } else {
             glfwSetTime(M_PI * 10);
         }
     }
 
     int stateEscapeKey = getKey(GLFW_KEY_ESCAPE);
     if (stateEscapeKey == GLFW_PRESS) {
-        glfwSetWindowShouldClose(window,1);
+        glfwSetWindowShouldClose(window, 1);
     }
     double tmpxPos, tmpyPos;
     getCursorPosition(&tmpxPos, &tmpyPos);

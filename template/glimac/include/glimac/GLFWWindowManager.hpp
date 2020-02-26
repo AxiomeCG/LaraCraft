@@ -130,6 +130,9 @@ private :
      */
     float oldY;
 
+    /**
+     * Boolean used for the day/night event
+     */
     bool wasPressedBefore = false;
 };
 

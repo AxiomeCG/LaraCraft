@@ -102,10 +102,6 @@ void generateSurroundingChunkVertexFromAllChunks(
         std::vector<std::vector<Chunk>> chunkList, long &globalCount,
         std::vector<ShapeVertex> &concatDataList, int offsetX1, int offsetX2,
         int offsetZ1, int offsetZ2) {
-
-    /*std::cout << "Generate chunk for [" << offsetX1 << " " << offsetX2 << "]" <<
-       "[" << offsetZ1 << ";" << offsetZ2
-              << "]" << std::endl;*/
     for (int i = offsetX1 < 0 ? 0 : offsetX1 * 16;
          i < offsetX2 * 16 && i < chunkList.size() * 16; i += 16) {
         auto chunkNumberI = i / 16;
@@ -123,10 +119,6 @@ void refreshChunkVBO(const std::vector<std::vector<Chunk>> &chunkList,
                      std::vector<ShapeVertex> &concatDataList,
                      long &globalNumberOfVertex, GLuint &vbo, int currentChunkX,
                      int currentChunkZ, int distanceChunkLoaded) {
-
-    std::cout << "Refresh : size :" << chunkList.size() << " "
-              << chunkList[0].size() << std::endl;
-
     concatDataList.clear();
     generateSurroundingChunkVertexFromAllChunks(
             chunkList, globalNumberOfVertex, concatDataList,
@@ -247,9 +239,6 @@ int main(int argc, char **argv) {
         return EXIT_FAILURE;
     }
 
-    std::cout << "OpenGL Version : " << glGetString(GL_VERSION) << std::endl;
-    std::cout << "GLEW Version : " << glewGetString(GLEW_VERSION) << std::endl;
-
     FilePath applicationPath(argv[0]);
 
 
@@ -292,8 +281,6 @@ int main(int argc, char **argv) {
     std::unique_ptr<HeightMap> heightMapPtr = loadHeightMap(
             "TP_Mastercraft/assets/terrain/16_16_perlin/map.png", 1.0f, 1.0f, 0.2f);
     assert(heightMapPtr != nullptr);
-
-    std::cout << heightMapPtr->getWidth() << std::endl;
     auto ptr = heightMapPtr->getHeightData();
 
     std::unique_ptr<ColorMap> colorMapPtr = loadColorMap(
@@ -304,37 +291,6 @@ int main(int argc, char **argv) {
             "TP_Mastercraft/assets/terrain/16_16_perlin/vege.png", 1.0f, 1.0f, 1.0f);
     assert(vegetationMapPtr != nullptr);
     auto ptrColor = colorMapPtr->getColorData();
-
-
-    /*
-    for (int i = 0; i < colorMapPtr->getWidth(); ++i) {
-        for (int j = 0; j < colorMapPtr->getHeight(); ++j) {
-            if (colorMapPtr->getColorData()[i][j] == glm::vec3(255, 255, 0)) {
-                std::string s = "S";
-                std::cout << s << ",";
-                continue;
-            }
-            if (colorMapPtr->getColorData()[i][j] == glm::vec3(128, 128, 128)) {
-                std::string s = "R";
-                std::cout << s << ",";
-                continue;
-            }
-            if (colorMapPtr->getColorData()[i][j] == glm::vec3(255, 0, 0)) {
-                std::string s = "M";
-                std::cout << s << ",";
-                continue;
-            }
-            if (colorMapPtr->getColorData()[i][j] == glm::vec3(255, 255, 255)) {
-                std::string s = "N";
-                std::cout << s << ",";
-                continue;
-            }
-            std::string s = "G";
-            std::cout << s << ",";
-        }
-        std::cout << ";" << std::endl;
-
-    }*/
 
     GLuint atlasTextureLocation, pnjTextureLocation, skyboxDayTextureLocation, skyboxNightTextureLocation;
 
@@ -518,9 +474,6 @@ int main(int argc, char **argv) {
             currentChunkPositionX > oldChunkPositionX + distanceChunkLoaded / 2 ||
             currentChunkPositionZ < oldChunkPositionZ - distanceChunkLoaded / 2 ||
             currentChunkPositionZ > oldChunkPositionZ + distanceChunkLoaded / 2) {
-            std::cout << "Need reload"
-                      << "(" << currentChunkPositionX << ";" << currentChunkPositionZ
-                      << ")" << std::endl;
             refreshChunkVBO(chunkList, concatDataList, vboMapVertexCount, mapVbo,
                             currentChunkPositionX, currentChunkPositionZ,
                             distanceChunkLoaded);

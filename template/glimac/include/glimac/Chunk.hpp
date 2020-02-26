@@ -23,7 +23,15 @@
  */
 class Chunk {
 public:
-    Chunk(const glm::vec2 &position, const HeightMap &heightMap, const OffsetTextureMap &textureMap) : positionTranslation(
+
+    /**
+     * Constructor for the Chunk
+     * @param position Coordinates x and z on the map
+     * @param heightMap The HeightMap used
+     * @param textureMap  OffsetTextureMap used
+     */
+    Chunk(const glm::vec2 &position, const HeightMap &heightMap, const OffsetTextureMap &textureMap)
+            : positionTranslation(
             vec3(position.x, 0, position.y)) {
 
         int offsetRow = position.x;
@@ -39,33 +47,18 @@ public:
             std::vector<float> tmpTextureMapColumn;
             for (int column = offsetColumn; column < LENGTH + offsetColumn; column++) {
                 tmpHeightMapColumn.push_back(heightMap.getHeightData()
-                                                      .at(row)
-                                                      .at(column));
+                                                     .at(row)
+                                                     .at(column));
 
                 tmpTextureMapColumn.push_back(textureMap.getTextureData()
-                                                        .at(row)
-                                                        .at(column));
+                                                      .at(row)
+                                                      .at(column));
             }
             localHeightMap.push_back(tmpHeightMapColumn);
             localOffsetTextureMap.push_back(tmpTextureMapColumn);
         }
 
-       /* for (auto c : localOffsetTextureMap) {
-            for (auto i : c) {
-                std::cout << i << ", ";
-            }
-            std::cout << ";" << std::endl;
-        }*/
-
         build();
-
-        /*
-        for (auto & localRow : localHeightMap){
-            for (auto & value: localRow) {
-                std::cout << value << ", ";
-            }
-            std::cout << std::endl;
-        }*/
     }
 
 
@@ -108,30 +101,66 @@ private:
      */
     static constexpr int HEIGHT = 256;
 
+    /**
+     * Function building a chunk (call other functions inside)
+     */
     void build();
 
+    /**
+     * Data of the HeightMap used
+     */
     std::vector<std::vector<float>> localHeightMap;
+
+    /**
+     * Data of the OffsetTextureMap used
+     */
     std::vector<std::vector<float>> localOffsetTextureMap;
 
+    /**
+     * Vector of ShapeVertex
+     */
     std::vector<glimac::ShapeVertex> m_Vertices;
 
+    /**
+     * A cube
+     */
     static const Cube cube;
 
+    /**
+     * Vector used to translate the cube when building the Chunk
+     */
     glm::vec3 positionTranslation;
 
+    /**
+     * Function testing if a cube is surrounded by neighbors
+     * @param x Position of the cube on the x axis
+     * @param z Position of the cube on the z axis
+     * @param height Position of the cube on the y axis
+     * @return true if the cube is surrounded by neighbors, false otherwise
+     */
     bool isSurroundedByNeighbors(int x, int z, int height);
 
+    /**
+     * Initialise the IsFilled3DVector
+     */
     void initializeIsFilled3DVector();
 
+    /**
+     * Compute the IsFilled3DVector
+     */
     void computeIsFilled3DVector();
 
+    /**
+     * Search the neighbors
+     */
     void searchForNeighborhood();
 
+    /**
+     * Add the vertex of the cube to be displayed
+     */
     void addVertexOfDisplayedCube();
 
 };
-
-
 
 
 #endif //IMACGL_CHUNK_HPP

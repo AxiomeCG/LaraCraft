@@ -6,10 +6,11 @@
 #include <iostream>
 #include <cmath>
 
-namespace glimac{
+namespace glimac {
 
     bool MovementChecker::isWithinBoundaries(glm::vec3 futurePosition) {
-        return (futurePosition.x >= 0 && futurePosition.x <= m_width) && (futurePosition.z >= 0 && futurePosition.z <= m_height);
+        return (futurePosition.x >= 0 && futurePosition.x <= m_width) &&
+               (futurePosition.z >= 0 && futurePosition.z <= m_height);
     }
 
     bool MovementChecker::willMoveToAnotherCube(glm::vec3 currentPosition, glm::vec3 futurePosition) {
@@ -17,14 +18,14 @@ namespace glimac{
         auto futurePosFlooredZ = floor(futurePosition.z);
         auto currentPosFlooredX = floor(currentPosition.x);
         auto currentPosFlooredZ = floor(currentPosition.z);
-        if((futurePosFlooredX == currentPosFlooredX) && (futurePosFlooredZ == currentPosFlooredZ)) {
+        if ((futurePosFlooredX == currentPosFlooredX) && (futurePosFlooredZ == currentPosFlooredZ)) {
             return false;
         }
         return true;
     }
 
     bool MovementChecker::canMoveToTheOtherCube(glm::vec3 currentPosition, glm::vec3 futurePosition) {
-        if(isWithinBoundaries(futurePosition)) {
+        if (isWithinBoundaries(futurePosition)) {
             auto futurePosFlooredX = floor(futurePosition.x);
             auto futurePosFlooredZ = floor(futurePosition.z);
             auto currentPosFlooredX = floor(currentPosition.x);
@@ -34,7 +35,7 @@ namespace glimac{
             if (heightDifference > 1) {
                 return false;
             }
-            if(m_vegetationData[futurePosFlooredX][futurePosFlooredZ].x) {
+            if (m_vegetationData[futurePosFlooredX][futurePosFlooredZ].x) {
                 return false;
             }
             return true;
@@ -42,11 +43,12 @@ namespace glimac{
         return false;
     }
 
-    glm::vec3 MovementChecker::leveledFuturePosition(glm::vec3 currentPosition, glm::vec3 futurePosition, float heightOfEntity) {
+    glm::vec3
+    MovementChecker::leveledFuturePosition(glm::vec3 currentPosition, glm::vec3 futurePosition, float heightOfEntity) {
         auto futurePosFlooredX = floor(futurePosition.x);
         auto futurePosFlooredZ = floor(futurePosition.z);
-        if(willMoveToAnotherCube(currentPosition, futurePosition)) {
-            if(canMoveToTheOtherCube(currentPosition, futurePosition)) {
+        if (willMoveToAnotherCube(currentPosition, futurePosition)) {
+            if (canMoveToTheOtherCube(currentPosition, futurePosition)) {
                 auto futureY = floor((float) m_heightData[futurePosFlooredX][futurePosFlooredZ]);
                 return glm::vec3(futurePosition.x, futureY + heightOfEntity, futurePosition.z);
             }

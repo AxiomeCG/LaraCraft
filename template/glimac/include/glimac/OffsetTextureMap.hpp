@@ -20,16 +20,44 @@ using namespace glimac;
  */
 class OffsetTextureMap {
 private:
+    /**
+     * Width of the OffsetTextureMap
+     */
     unsigned int width;
+
+    /**
+     * Height of the OffsetTextureMap
+     */
     unsigned int height;
+
+    /**
+     * Data of the OffsetTextureMap
+     */
     std::vector<std::vector<float>> offsetData;
 public:
+
+    /**
+     * Constructor for the OffsetTextureMap
+     * @param colorMap ColorMap to reformat for the OffsetTextureMap
+     */
     explicit OffsetTextureMap(const ColorMap &colorMap);
 
+    /**
+     * Getter for the data of the OffsetTextureMap
+     * @return Data of the OffsetTextureMap
+     */
     std::vector<std::vector<float>> getTextureData() const;
 
+    /**
+     * Getter for the width of the OffsetTextureMap
+     * @return Width of the OffsetTextureMap
+     */
     unsigned int getWidth() const;
 
+    /**
+     * Getter for the height of the OffsetTextureMap
+     * @return Height of the OffsetTextureMap
+     */
     unsigned int getHeight() const;
 
 };

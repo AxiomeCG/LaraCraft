@@ -9,6 +9,13 @@
 Now you have a bunch of `TP_...` folder containing the different compiled examples/projects.
 For the moment the CMake file is configured to compile only sources that are contained in a folder prefixed by `TP`.
 
+To execute MasterCraft :
+`./TP_MasterCraft/TP_MasterCraft_main <typeOfWindow>`
+
+typeOfWindow :
+- w for Windowed mode
+- f for Fullscreen mode
+
 # Extra libraries used
 
 - GLFW (Tested with OSX with the version 3.3 and Ubuntu with the 3.2.1)

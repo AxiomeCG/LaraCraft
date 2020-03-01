@@ -258,7 +258,9 @@ int main(int argc, char **argv) {
     return EXIT_FAILURE;
   }
 
-  FilePath applicationPath(argv[0]);
+  std::cout << "GLFW version : " << glfwGetVersionString() << std::endl;
+
+    FilePath applicationPath(argv[0]);
 
   GlobalProgram globalProgram = GlobalProgram(applicationPath);
 

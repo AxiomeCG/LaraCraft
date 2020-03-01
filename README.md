@@ -11,18 +11,22 @@ For the moment the CMake file is configured to compile only sources that are con
 
 # Extra libraries used
 
-- GLFW (Tested with OSX and Ubuntu)
+- GLFW (Tested with OSX with the version 3.3 and Ubuntu with the 3.2.1)
 
 
 # Trivia
 
-- Shaders are copied by the cmake command, you need to `cmake` everytime you modify a shader.
+- Shaders and assets are copied by the cmake command, you need to `cmake` everytime you modify a shader or an asset.
 - glimac has been modified with our classes to perform this MasterCraft.
 
 # Known issues
 
+- The trees are not clipping when distant. 
+- Trees are not biome based. You can have very green trees in desert.
+- The map loading is made in the main thread, so, the game freezes for few seconds when loading new chunks.
+- The atlas have 3 slots of textures free. It has not be done from lack of imagination about biomes.
+
 
 # LaraCraft
-Minecraft clone in OpenGL (C++)
 
 <img src="https://i.imgur.com/fNwcfH3.png" height="400">

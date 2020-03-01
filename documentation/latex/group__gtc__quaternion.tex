@@ -1,0 +1,583 @@
+\hypertarget{group__gtc__quaternion}{}\section{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}
+\label{group__gtc__quaternion}\index{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}}
+
+
+Defines a templated quaternion type and several quaternion operations.  
+
+
+Collaboration diagram for G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__gtc__quaternion}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} T \hyperlink{group__gtc__quaternion_ga3406ab83e2cafd4034f359957e942410}{glm\+::length} (\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&q)
+\item 
+{\footnotesize template$<$typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} \hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ \hyperlink{group__gtc__quaternion_ga34ee289ca53a08207904e935104715d8}{glm\+::normalize} (\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&q)
+\item 
+{\footnotesize template$<$typename T , precision P, template$<$ typename, precision $>$ class quat\+Type$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} T \hyperlink{group__gtc__quaternion_gac54dfc83de465a2d03e90d342242ab3d}{glm\+::dot} (quat\+Type$<$ T, P $>$ const \&x, quat\+Type$<$ T, P $>$ const \&y)
+\item 
+{\footnotesize template$<$typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} \hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ \hyperlink{group__gtc__quaternion_gafabf175ae3e2cd30bf58dc313321955a}{glm\+::mix} (\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&x, \hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&y, T const \&a)
+\item 
+{\footnotesize template$<$typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} \hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ \hyperlink{group__gtc__quaternion_gafc1c989eaa2c786d34218b176f680fe0}{glm\+::lerp} (\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&x, \hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&y, T const \&a)
+\item 
+{\footnotesize template$<$typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} \hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ \hyperlink{group__gtc__quaternion_ga7468a211a20ea56ea5cfb0625226868a}{glm\+::slerp} (\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&x, \hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&y, T const \&a)
+\begin{DoxyCompactList}\small\item\em Returns the slurp interpolation between two quaternions. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} \hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ \hyperlink{group__gtc__quaternion_gaf78006c47276b151777fc194cf11a688}{glm\+::conjugate} (\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&q)
+\item 
+{\footnotesize template$<$typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} \hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ \hyperlink{group__gtc__quaternion_ga6613ef61cb980a18f19ece5f421564da}{glm\+::inverse} (\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&q)
+\item 
+{\footnotesize template$<$typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} \hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ \hyperlink{group__gtc__quaternion_gaa9a8891f03d8f5373525c4b3159c1c73}{glm\+::rotate} (\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&q, T const \&\hyperlink{group__gtc__quaternion_ga23a3fc7ada5bbb665ff84c92c6e0542c}{angle}, \hyperlink{structglm_1_1detail_1_1tvec3}{detail\+::tvec3}$<$ T, P $>$ const \&\hyperlink{group__gtc__quaternion_ga8eef9f8c3f2e4836dccf09df975b20fb}{axis})
+\item 
+{\footnotesize template$<$typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} \hyperlink{structglm_1_1detail_1_1tvec3}{detail\+::tvec3}$<$ T, P $>$ \hyperlink{group__gtc__quaternion_gade4034f49ccadf63cb31a7fb5fa3c8aa}{glm\+::euler\+Angles} (\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&x)
+\item 
+{\footnotesize template$<$typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} T \hyperlink{group__gtc__quaternion_ga6d883e423bc425f4334fcce202131f7e}{glm\+::roll} (\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&x)
+\item 
+{\footnotesize template$<$typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} T \hyperlink{group__gtc__quaternion_ga4d345dc369a54f53f5ebc375bac56d11}{glm\+::pitch} (\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&x)
+\item 
+{\footnotesize template$<$typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} T \hyperlink{group__gtc__quaternion_ga1de7653ddf380ff06d2300eea831664c}{glm\+::yaw} (\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&x)
+\item 
+{\footnotesize template$<$typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} \hyperlink{structglm_1_1detail_1_1tmat3x3}{detail\+::tmat3x3}$<$ T, P $>$ \hyperlink{group__gtc__quaternion_ga65257c3494022ad80a50ce11da95049d}{glm\+::mat3\+\_\+cast} (\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&x)
+\item 
+{\footnotesize template$<$typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} \hyperlink{structglm_1_1detail_1_1tmat4x4}{detail\+::tmat4x4}$<$ T, P $>$ \hyperlink{group__gtc__quaternion_gafc4e34c836f7ccb5f3bb2a0373c831e0}{glm\+::mat4\+\_\+cast} (\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&x)
+\item 
+{\footnotesize template$<$typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} \hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ \hyperlink{group__gtc__quaternion_gafb826745dedb1760100bbd25d0f63fde}{glm\+::quat\+\_\+cast} (\hyperlink{structglm_1_1detail_1_1tmat3x3}{detail\+::tmat3x3}$<$ T, P $>$ const \&x)
+\item 
+{\footnotesize template$<$typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} \hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ \hyperlink{group__gtc__quaternion_ga385af22ef1a45c4464ddd28b80d5ce18}{glm\+::quat\+\_\+cast} (\hyperlink{structglm_1_1detail_1_1tmat4x4}{detail\+::tmat4x4}$<$ T, P $>$ const \&x)
+\item 
+{\footnotesize template$<$typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} T \hyperlink{group__gtc__quaternion_ga23a3fc7ada5bbb665ff84c92c6e0542c}{glm\+::angle} (\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&x)
+\item 
+{\footnotesize template$<$typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} \hyperlink{structglm_1_1detail_1_1tvec3}{detail\+::tvec3}$<$ T, P $>$ \hyperlink{group__gtc__quaternion_ga8eef9f8c3f2e4836dccf09df975b20fb}{glm\+::axis} (\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&x)
+\item 
+{\footnotesize template$<$typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} \hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ \hyperlink{group__gtc__quaternion_ga771b3e16cca8324e7111b923476be666}{glm\+::angle\+Axis} (T const \&\hyperlink{group__gtc__quaternion_ga23a3fc7ada5bbb665ff84c92c6e0542c}{angle}, \hyperlink{structglm_1_1detail_1_1tvec3}{detail\+::tvec3}$<$ T, P $>$ const \&\hyperlink{group__gtc__quaternion_ga8eef9f8c3f2e4836dccf09df975b20fb}{axis})
+\item 
+{\footnotesize template$<$typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} \hyperlink{structglm_1_1detail_1_1tvec4}{detail\+::tvec4}$<$ bool, P $>$ \hyperlink{group__gtc__quaternion_ga4e4c37b86cecde7e1076c5b5fdb920b9}{glm\+::less\+Than} (\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&x, \hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&y)
+\item 
+{\footnotesize template$<$typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} \hyperlink{structglm_1_1detail_1_1tvec4}{detail\+::tvec4}$<$ bool, P $>$ \hyperlink{group__gtc__quaternion_ga313fe20896a8cd43c6d08cc88fa18faa}{glm\+::less\+Than\+Equal} (\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&x, \hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&y)
+\item 
+{\footnotesize template$<$typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} \hyperlink{structglm_1_1detail_1_1tvec4}{detail\+::tvec4}$<$ bool, P $>$ \hyperlink{group__gtc__quaternion_ga63be67bccef0b0ad4e60656223ab3761}{glm\+::greater\+Than} (\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&x, \hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&y)
+\item 
+{\footnotesize template$<$typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} \hyperlink{structglm_1_1detail_1_1tvec4}{detail\+::tvec4}$<$ bool, P $>$ \hyperlink{group__gtc__quaternion_gac90d5af34a03cd665a349ac30e4cc44c}{glm\+::greater\+Than\+Equal} (\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&x, \hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&y)
+\item 
+{\footnotesize template$<$typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} \hyperlink{structglm_1_1detail_1_1tvec4}{detail\+::tvec4}$<$ bool, P $>$ \hyperlink{group__gtc__quaternion_ga32ff2cc6fb576639a6237d8d8ed5818b}{glm\+::equal} (\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&x, \hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&y)
+\item 
+{\footnotesize template$<$typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} \hyperlink{structglm_1_1detail_1_1tvec4}{detail\+::tvec4}$<$ bool, P $>$ \hyperlink{group__gtc__quaternion_gaa3a8cf1aa580e435ca96acafbd7870a5}{glm\+::not\+Equal} (\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&x, \hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&y)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defines a templated quaternion type and several quaternion operations. 
+
+$<$\hyperlink{gtc_2quaternion_8hpp}{glm/gtc/quaternion.\+hpp}$>$ need to be included to use these functionalities. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__gtc__quaternion_ga23a3fc7ada5bbb665ff84c92c6e0542c}\label{group__gtc__quaternion_ga23a3fc7ada5bbb665ff84c92c6e0542c}} 
+\index{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}!angle@{angle}}
+\index{angle@{angle}!G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}}
+\subsubsection{\texorpdfstring{angle()}{angle()}}
+{\footnotesize\ttfamily template$<$typename T , precision P$>$ \\
+\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} T glm\+::angle (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&}]{x }\end{DoxyParamCaption})}
+
+Returns the quaternion rotation angle.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtc__quaternion}{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion} 
+\end{DoxySeeAlso}
+
+
+Definition at line 799 of file quaternion.\+inl.
+
+\mbox{\Hypertarget{group__gtc__quaternion_ga771b3e16cca8324e7111b923476be666}\label{group__gtc__quaternion_ga771b3e16cca8324e7111b923476be666}} 
+\index{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}!angle\+Axis@{angle\+Axis}}
+\index{angle\+Axis@{angle\+Axis}!G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}}
+\subsubsection{\texorpdfstring{angle\+Axis()}{angleAxis()}}
+{\footnotesize\ttfamily template$<$typename T , precision P$>$ \\
+\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} \hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$T, P$>$ glm\+::angle\+Axis (\begin{DoxyParamCaption}\item[{T const \&}]{angle,  }\item[{\hyperlink{structglm_1_1detail_1_1tvec3}{detail\+::tvec3}$<$ T, P $>$ const \&}]{axis }\end{DoxyParamCaption})}
+
+Build a quaternion from an angle and a normalized axis.
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & Angle expressed in radians if G\+L\+M\+\_\+\+F\+O\+R\+C\+E\+\_\+\+R\+A\+D\+I\+A\+NS is define or degrees otherwise. \\
+\hline
+{\em axis} & Axis of the quaternion, must be normalized.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtc__quaternion}{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion} 
+\end{DoxySeeAlso}
+
+
+Definition at line 826 of file quaternion.\+inl.
+
+\mbox{\Hypertarget{group__gtc__quaternion_ga8eef9f8c3f2e4836dccf09df975b20fb}\label{group__gtc__quaternion_ga8eef9f8c3f2e4836dccf09df975b20fb}} 
+\index{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}!axis@{axis}}
+\index{axis@{axis}!G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}}
+\subsubsection{\texorpdfstring{axis()}{axis()}}
+{\footnotesize\ttfamily template$<$typename T , precision P$>$ \\
+\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} \hyperlink{structglm_1_1detail_1_1tvec3}{detail\+::tvec3}$<$T, P$>$ glm\+::axis (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&}]{x }\end{DoxyParamCaption})}
+
+Returns the q rotation axis.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtc__quaternion}{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion} 
+\end{DoxySeeAlso}
+
+
+Definition at line 813 of file quaternion.\+inl.
+
+\mbox{\Hypertarget{group__gtc__quaternion_gaf78006c47276b151777fc194cf11a688}\label{group__gtc__quaternion_gaf78006c47276b151777fc194cf11a688}} 
+\index{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}!conjugate@{conjugate}}
+\index{conjugate@{conjugate}!G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}}
+\subsubsection{\texorpdfstring{conjugate()}{conjugate()}}
+{\footnotesize\ttfamily template$<$typename T , precision P$>$ \\
+\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} \hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$T, P$>$ glm\+::conjugate (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&}]{q }\end{DoxyParamCaption})}
+
+Returns the q conjugate.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtc__quaternion}{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion} 
+\end{DoxySeeAlso}
+
+
+Definition at line 177 of file quaternion.\+inl.
+
+\mbox{\Hypertarget{group__gtc__quaternion_gac54dfc83de465a2d03e90d342242ab3d}\label{group__gtc__quaternion_gac54dfc83de465a2d03e90d342242ab3d}} 
+\index{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}!dot@{dot}}
+\index{dot@{dot}!G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}}
+\subsubsection{\texorpdfstring{dot()}{dot()}}
+{\footnotesize\ttfamily template$<$typename T , precision P, template$<$ typename, precision $>$ class quat\+Type$>$ \\
+\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} T glm\+::dot (\begin{DoxyParamCaption}\item[{quat\+Type$<$ T, P $>$ const \&}]{x,  }\item[{quat\+Type$<$ T, P $>$ const \&}]{y }\end{DoxyParamCaption})}
+
+Returns dot product of q1 and q2, i.\+e., q1\mbox{[}0\mbox{]} $\ast$ q2\mbox{[}0\mbox{]} + q1\mbox{[}1\mbox{]} $\ast$ q2\mbox{[}1\mbox{]} + ...
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtc__quaternion}{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__gtc__quaternion_ga32ff2cc6fb576639a6237d8d8ed5818b}\label{group__gtc__quaternion_ga32ff2cc6fb576639a6237d8d8ed5818b}} 
+\index{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}!equal@{equal}}
+\index{equal@{equal}!G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}}
+\subsubsection{\texorpdfstring{equal()}{equal()}}
+{\footnotesize\ttfamily template$<$typename T , precision P$>$ \\
+\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} \hyperlink{structglm_1_1detail_1_1tvec4}{detail\+::tvec4}$<$bool, P$>$ glm\+::equal (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&}]{x,  }\item[{\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&}]{y }\end{DoxyParamCaption})}
+
+Returns the component-\/wise comparison of result x == y.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em quat\+Type} & Floating-\/point quaternion types.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtc__quaternion}{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion} 
+\end{DoxySeeAlso}
+
+
+Definition at line 902 of file quaternion.\+inl.
+
+\mbox{\Hypertarget{group__gtc__quaternion_gade4034f49ccadf63cb31a7fb5fa3c8aa}\label{group__gtc__quaternion_gade4034f49ccadf63cb31a7fb5fa3c8aa}} 
+\index{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}!euler\+Angles@{euler\+Angles}}
+\index{euler\+Angles@{euler\+Angles}!G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}}
+\subsubsection{\texorpdfstring{euler\+Angles()}{eulerAngles()}}
+{\footnotesize\ttfamily template$<$typename T , precision P$>$ \\
+\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} \hyperlink{structglm_1_1detail_1_1tvec3}{detail\+::tvec3}$<$T, P$>$ glm\+::euler\+Angles (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&}]{x }\end{DoxyParamCaption})}
+
+Returns euler angles, yitch as x, yaw as y, roll as z. The result is expressed in radians if G\+L\+M\+\_\+\+F\+O\+R\+C\+E\+\_\+\+R\+A\+D\+I\+A\+NS is defined or degrees otherwise.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtc__quaternion}{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion} 
+\end{DoxySeeAlso}
+
+
+Definition at line 632 of file quaternion.\+inl.
+
+\mbox{\Hypertarget{group__gtc__quaternion_ga63be67bccef0b0ad4e60656223ab3761}\label{group__gtc__quaternion_ga63be67bccef0b0ad4e60656223ab3761}} 
+\index{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}!greater\+Than@{greater\+Than}}
+\index{greater\+Than@{greater\+Than}!G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}}
+\subsubsection{\texorpdfstring{greater\+Than()}{greaterThan()}}
+{\footnotesize\ttfamily template$<$typename T , precision P$>$ \\
+\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} \hyperlink{structglm_1_1detail_1_1tvec4}{detail\+::tvec4}$<$bool, P$>$ glm\+::greater\+Than (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&}]{x,  }\item[{\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&}]{y }\end{DoxyParamCaption})}
+
+Returns the component-\/wise comparison of result x $>$ y.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em quat\+Type} & Floating-\/point quaternion types.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtc__quaternion}{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion} 
+\end{DoxySeeAlso}
+
+
+Definition at line 876 of file quaternion.\+inl.
+
+\mbox{\Hypertarget{group__gtc__quaternion_gac90d5af34a03cd665a349ac30e4cc44c}\label{group__gtc__quaternion_gac90d5af34a03cd665a349ac30e4cc44c}} 
+\index{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}!greater\+Than\+Equal@{greater\+Than\+Equal}}
+\index{greater\+Than\+Equal@{greater\+Than\+Equal}!G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}}
+\subsubsection{\texorpdfstring{greater\+Than\+Equal()}{greaterThanEqual()}}
+{\footnotesize\ttfamily template$<$typename T , precision P$>$ \\
+\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} \hyperlink{structglm_1_1detail_1_1tvec4}{detail\+::tvec4}$<$bool, P$>$ glm\+::greater\+Than\+Equal (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&}]{x,  }\item[{\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&}]{y }\end{DoxyParamCaption})}
+
+Returns the component-\/wise comparison of result x $>$= y.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em quat\+Type} & Floating-\/point quaternion types.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtc__quaternion}{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion} 
+\end{DoxySeeAlso}
+
+
+Definition at line 889 of file quaternion.\+inl.
+
+\mbox{\Hypertarget{group__gtc__quaternion_ga6613ef61cb980a18f19ece5f421564da}\label{group__gtc__quaternion_ga6613ef61cb980a18f19ece5f421564da}} 
+\index{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}!inverse@{inverse}}
+\index{inverse@{inverse}!G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}}
+\subsubsection{\texorpdfstring{inverse()}{inverse()}}
+{\footnotesize\ttfamily template$<$typename T , precision P$>$ \\
+\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} \hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$T, P$>$ glm\+::inverse (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&}]{q }\end{DoxyParamCaption})}
+
+Returns the q inverse.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtc__quaternion}{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion} 
+\end{DoxySeeAlso}
+
+
+Definition at line 186 of file quaternion.\+inl.
+
+\mbox{\Hypertarget{group__gtc__quaternion_ga3406ab83e2cafd4034f359957e942410}\label{group__gtc__quaternion_ga3406ab83e2cafd4034f359957e942410}} 
+\index{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}!length@{length}}
+\index{length@{length}!G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}}
+\subsubsection{\texorpdfstring{length()}{length()}}
+{\footnotesize\ttfamily template$<$typename T , precision P$>$ \\
+\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} T glm\+::length (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&}]{q }\end{DoxyParamCaption})}
+
+Returns the length of the quaternion.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtc__quaternion}{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion} 
+\end{DoxySeeAlso}
+
+
+Definition at line 402 of file quaternion.\+inl.
+
+\mbox{\Hypertarget{group__gtc__quaternion_gafc1c989eaa2c786d34218b176f680fe0}\label{group__gtc__quaternion_gafc1c989eaa2c786d34218b176f680fe0}} 
+\index{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}!lerp@{lerp}}
+\index{lerp@{lerp}!G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}}
+\subsubsection{\texorpdfstring{lerp()}{lerp()}}
+{\footnotesize\ttfamily template$<$typename T , precision P$>$ \\
+\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} \hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$T, P$>$ glm\+::lerp (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&}]{x,  }\item[{\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&}]{y,  }\item[{T const \&}]{a }\end{DoxyParamCaption})}
+
+Linear interpolation of two quaternions. The interpolation is oriented.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & A quaternion \\
+\hline
+{\em y} & A quaternion \\
+\hline
+{\em a} & Interpolation factor. The interpolation is defined in the range \mbox{[}0, 1\mbox{]}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Value type used to build the quaternion. Supported\+: half, float or double. \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtc__quaternion}{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion} 
+\end{DoxySeeAlso}
+
+
+Definition at line 547 of file quaternion.\+inl.
+
+\mbox{\Hypertarget{group__gtc__quaternion_ga4e4c37b86cecde7e1076c5b5fdb920b9}\label{group__gtc__quaternion_ga4e4c37b86cecde7e1076c5b5fdb920b9}} 
+\index{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}!less\+Than@{less\+Than}}
+\index{less\+Than@{less\+Than}!G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}}
+\subsubsection{\texorpdfstring{less\+Than()}{lessThan()}}
+{\footnotesize\ttfamily template$<$typename T , precision P$>$ \\
+\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} \hyperlink{structglm_1_1detail_1_1tvec4}{detail\+::tvec4}$<$bool, P$>$ glm\+::less\+Than (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&}]{x,  }\item[{\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&}]{y }\end{DoxyParamCaption})}
+
+Returns the component-\/wise comparison result of x $<$ y.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em quat\+Type} & Floating-\/point quaternion types.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtc__quaternion}{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion} 
+\end{DoxySeeAlso}
+
+
+Definition at line 850 of file quaternion.\+inl.
+
+\mbox{\Hypertarget{group__gtc__quaternion_ga313fe20896a8cd43c6d08cc88fa18faa}\label{group__gtc__quaternion_ga313fe20896a8cd43c6d08cc88fa18faa}} 
+\index{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}!less\+Than\+Equal@{less\+Than\+Equal}}
+\index{less\+Than\+Equal@{less\+Than\+Equal}!G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}}
+\subsubsection{\texorpdfstring{less\+Than\+Equal()}{lessThanEqual()}}
+{\footnotesize\ttfamily template$<$typename T , precision P$>$ \\
+\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} \hyperlink{structglm_1_1detail_1_1tvec4}{detail\+::tvec4}$<$bool, P$>$ glm\+::less\+Than\+Equal (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&}]{x,  }\item[{\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&}]{y }\end{DoxyParamCaption})}
+
+Returns the component-\/wise comparison of result x $<$= y.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em quat\+Type} & Floating-\/point quaternion types.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtc__quaternion}{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion} 
+\end{DoxySeeAlso}
+
+
+Definition at line 863 of file quaternion.\+inl.
+
+\mbox{\Hypertarget{group__gtc__quaternion_ga65257c3494022ad80a50ce11da95049d}\label{group__gtc__quaternion_ga65257c3494022ad80a50ce11da95049d}} 
+\index{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}!mat3\+\_\+cast@{mat3\+\_\+cast}}
+\index{mat3\+\_\+cast@{mat3\+\_\+cast}!G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}}
+\subsubsection{\texorpdfstring{mat3\+\_\+cast()}{mat3\_cast()}}
+{\footnotesize\ttfamily template$<$typename T , precision P$>$ \\
+\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} \hyperlink{structglm_1_1detail_1_1tmat3x3}{detail\+::tmat3x3}$<$T, P$>$ glm\+::mat3\+\_\+cast (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&}]{x }\end{DoxyParamCaption})}
+
+Converts a quaternion to a 3 $\ast$ 3 matrix.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtc__quaternion}{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion} 
+\end{DoxySeeAlso}
+
+
+Definition at line 683 of file quaternion.\+inl.
+
+\mbox{\Hypertarget{group__gtc__quaternion_gafc4e34c836f7ccb5f3bb2a0373c831e0}\label{group__gtc__quaternion_gafc4e34c836f7ccb5f3bb2a0373c831e0}} 
+\index{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}!mat4\+\_\+cast@{mat4\+\_\+cast}}
+\index{mat4\+\_\+cast@{mat4\+\_\+cast}!G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}}
+\subsubsection{\texorpdfstring{mat4\+\_\+cast()}{mat4\_cast()}}
+{\footnotesize\ttfamily template$<$typename T , precision P$>$ \\
+\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} \hyperlink{structglm_1_1detail_1_1tmat4x4}{detail\+::tmat4x4}$<$T, P$>$ glm\+::mat4\+\_\+cast (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&}]{x }\end{DoxyParamCaption})}
+
+Converts a quaternion to a 4 $\ast$ 4 matrix.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtc__quaternion}{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion} 
+\end{DoxySeeAlso}
+
+
+Definition at line 714 of file quaternion.\+inl.
+
+\mbox{\Hypertarget{group__gtc__quaternion_gafabf175ae3e2cd30bf58dc313321955a}\label{group__gtc__quaternion_gafabf175ae3e2cd30bf58dc313321955a}} 
+\index{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}!mix@{mix}}
+\index{mix@{mix}!G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}}
+\subsubsection{\texorpdfstring{mix()}{mix()}}
+{\footnotesize\ttfamily template$<$typename T , precision P$>$ \\
+\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} \hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$T, P$>$ glm\+::mix (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&}]{x,  }\item[{\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&}]{y,  }\item[{T const \&}]{a }\end{DoxyParamCaption})}
+
+Spherical linear interpolation of two quaternions. The interpolation is oriented and the rotation is performed at constant speed. For short path spherical linear interpolation, use the slerp function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & A quaternion \\
+\hline
+{\em y} & A quaternion \\
+\hline
+{\em a} & Interpolation factor. The interpolation is defined beyond the range \mbox{[}0, 1\mbox{]}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Value type used to build the quaternion. Supported\+: half, float or double. \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtc__quaternion}{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion} 
+
+-\/ \hyperlink{group__gtc__quaternion_ga7468a211a20ea56ea5cfb0625226868a}{slerp(detail\+::tquat$<$\+T, P$>$ const \& x, detail\+::tquat$<$\+T, P$>$ const \& y, T const \& a)} 
+\end{DoxySeeAlso}
+
+
+Definition at line 519 of file quaternion.\+inl.
+
+\mbox{\Hypertarget{group__gtc__quaternion_ga34ee289ca53a08207904e935104715d8}\label{group__gtc__quaternion_ga34ee289ca53a08207904e935104715d8}} 
+\index{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}!normalize@{normalize}}
+\index{normalize@{normalize}!G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}}
+\subsubsection{\texorpdfstring{normalize()}{normalize()}}
+{\footnotesize\ttfamily template$<$typename T , precision P$>$ \\
+\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} \hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$T, P$>$ glm\+::normalize (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&}]{q }\end{DoxyParamCaption})}
+
+Returns the normalized quaternion.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtc__quaternion}{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion} 
+\end{DoxySeeAlso}
+
+
+Definition at line 411 of file quaternion.\+inl.
+
+\mbox{\Hypertarget{group__gtc__quaternion_gaa3a8cf1aa580e435ca96acafbd7870a5}\label{group__gtc__quaternion_gaa3a8cf1aa580e435ca96acafbd7870a5}} 
+\index{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}!not\+Equal@{not\+Equal}}
+\index{not\+Equal@{not\+Equal}!G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}}
+\subsubsection{\texorpdfstring{not\+Equal()}{notEqual()}}
+{\footnotesize\ttfamily template$<$typename T , precision P$>$ \\
+\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} \hyperlink{structglm_1_1detail_1_1tvec4}{detail\+::tvec4}$<$bool, P$>$ glm\+::not\+Equal (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&}]{x,  }\item[{\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&}]{y }\end{DoxyParamCaption})}
+
+Returns the component-\/wise comparison of result x != y.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em quat\+Type} & Floating-\/point quaternion types.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtc__quaternion}{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion} 
+\end{DoxySeeAlso}
+
+
+Definition at line 915 of file quaternion.\+inl.
+
+\mbox{\Hypertarget{group__gtc__quaternion_ga4d345dc369a54f53f5ebc375bac56d11}\label{group__gtc__quaternion_ga4d345dc369a54f53f5ebc375bac56d11}} 
+\index{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}!pitch@{pitch}}
+\index{pitch@{pitch}!G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}}
+\subsubsection{\texorpdfstring{pitch()}{pitch()}}
+{\footnotesize\ttfamily template$<$typename T , precision P$>$ \\
+\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} T glm\+::pitch (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&}]{x }\end{DoxyParamCaption})}
+
+Returns pitch value of euler angles expressed in radians if G\+L\+M\+\_\+\+F\+O\+R\+C\+E\+\_\+\+R\+A\+D\+I\+A\+NS is defined or degrees otherwise.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtx__quaternion}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion} 
+\end{DoxySeeAlso}
+
+
+Definition at line 655 of file quaternion.\+inl.
+
+\mbox{\Hypertarget{group__gtc__quaternion_gafb826745dedb1760100bbd25d0f63fde}\label{group__gtc__quaternion_gafb826745dedb1760100bbd25d0f63fde}} 
+\index{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}!quat\+\_\+cast@{quat\+\_\+cast}}
+\index{quat\+\_\+cast@{quat\+\_\+cast}!G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}}
+\subsubsection{\texorpdfstring{quat\+\_\+cast()}{quat\_cast()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , precision P$>$ \\
+\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} \hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$T, P$>$ glm\+::quat\+\_\+cast (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1detail_1_1tmat3x3}{detail\+::tmat3x3}$<$ T, P $>$ const \&}]{x }\end{DoxyParamCaption})}
+
+Converts a 3 $\ast$ 3 matrix to a quaternion.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtc__quaternion}{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion} 
+\end{DoxySeeAlso}
+
+
+Definition at line 723 of file quaternion.\+inl.
+
+\mbox{\Hypertarget{group__gtc__quaternion_ga385af22ef1a45c4464ddd28b80d5ce18}\label{group__gtc__quaternion_ga385af22ef1a45c4464ddd28b80d5ce18}} 
+\index{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}!quat\+\_\+cast@{quat\+\_\+cast}}
+\index{quat\+\_\+cast@{quat\+\_\+cast}!G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}}
+\subsubsection{\texorpdfstring{quat\+\_\+cast()}{quat\_cast()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , precision P$>$ \\
+\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} \hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$T, P$>$ glm\+::quat\+\_\+cast (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1detail_1_1tmat4x4}{detail\+::tmat4x4}$<$ T, P $>$ const \&}]{x }\end{DoxyParamCaption})}
+
+Converts a 4 $\ast$ 4 matrix to a quaternion.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtc__quaternion}{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion} 
+\end{DoxySeeAlso}
+
+
+Definition at line 790 of file quaternion.\+inl.
+
+\mbox{\Hypertarget{group__gtc__quaternion_ga6d883e423bc425f4334fcce202131f7e}\label{group__gtc__quaternion_ga6d883e423bc425f4334fcce202131f7e}} 
+\index{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}!roll@{roll}}
+\index{roll@{roll}!G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}}
+\subsubsection{\texorpdfstring{roll()}{roll()}}
+{\footnotesize\ttfamily template$<$typename T , precision P$>$ \\
+\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} T glm\+::roll (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&}]{x }\end{DoxyParamCaption})}
+
+Returns roll value of euler angles expressed in radians if G\+L\+M\+\_\+\+F\+O\+R\+C\+E\+\_\+\+R\+A\+D\+I\+A\+NS is defined or degrees otherwise.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtx__quaternion}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion} 
+\end{DoxySeeAlso}
+
+
+Definition at line 641 of file quaternion.\+inl.
+
+\mbox{\Hypertarget{group__gtc__quaternion_gaa9a8891f03d8f5373525c4b3159c1c73}\label{group__gtc__quaternion_gaa9a8891f03d8f5373525c4b3159c1c73}} 
+\index{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}!rotate@{rotate}}
+\index{rotate@{rotate}!G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}}
+\subsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily template$<$typename T , precision P$>$ \\
+\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} \hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$T, P$>$ glm\+::rotate (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&}]{q,  }\item[{T const \&}]{angle,  }\item[{\hyperlink{structglm_1_1detail_1_1tvec3}{detail\+::tvec3}$<$ T, P $>$ const \&}]{axis }\end{DoxyParamCaption})}
+
+Rotates a quaternion from a vector of 3 components axis and an angle.
+
+
+\begin{DoxyParams}{Parameters}
+{\em q} & Source orientation \\
+\hline
+{\em angle} & Angle expressed in radians if G\+L\+M\+\_\+\+F\+O\+R\+C\+E\+\_\+\+R\+A\+D\+I\+A\+NS is define or degrees otherwise. \\
+\hline
+{\em axis} & Axis of the rotation\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtc__quaternion}{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion} 
+\end{DoxySeeAlso}
+
+
+Definition at line 600 of file quaternion.\+inl.
+
+\mbox{\Hypertarget{group__gtc__quaternion_ga7468a211a20ea56ea5cfb0625226868a}\label{group__gtc__quaternion_ga7468a211a20ea56ea5cfb0625226868a}} 
+\index{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}!slerp@{slerp}}
+\index{slerp@{slerp}!G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}}
+\subsubsection{\texorpdfstring{slerp()}{slerp()}}
+{\footnotesize\ttfamily template$<$typename T , precision P$>$ \\
+\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} \hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$T, P$>$ glm\+::slerp (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&}]{x,  }\item[{\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&}]{y,  }\item[{T const \&}]{a }\end{DoxyParamCaption})}
+
+
+
+Returns the slurp interpolation between two quaternions. 
+
+Spherical linear interpolation of two quaternions. The interpolation always take the short path and the rotation is performed at constant speed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & A quaternion \\
+\hline
+{\em y} & A quaternion \\
+\hline
+{\em a} & Interpolation factor. The interpolation is defined beyond the range \mbox{[}0, 1\mbox{]}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Value type used to build the quaternion. Supported\+: half, float or double. \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtc__quaternion}{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion} 
+\end{DoxySeeAlso}
+
+
+Definition at line 562 of file quaternion.\+inl.
+
+\mbox{\Hypertarget{group__gtc__quaternion_ga1de7653ddf380ff06d2300eea831664c}\label{group__gtc__quaternion_ga1de7653ddf380ff06d2300eea831664c}} 
+\index{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}!yaw@{yaw}}
+\index{yaw@{yaw}!G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion}}
+\subsubsection{\texorpdfstring{yaw()}{yaw()}}
+{\footnotesize\ttfamily template$<$typename T , precision P$>$ \\
+\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} T glm\+::yaw (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1detail_1_1tquat}{detail\+::tquat}$<$ T, P $>$ const \&}]{x }\end{DoxyParamCaption})}
+
+Returns yaw value of euler angles expressed in radians if G\+L\+M\+\_\+\+F\+O\+R\+C\+E\+\_\+\+R\+A\+D\+I\+A\+NS is defined or degrees otherwise.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtx__quaternion}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion} 
+\end{DoxySeeAlso}
+
+
+Definition at line 669 of file quaternion.\+inl.
+

@@ -1,0 +1,48 @@
+\hypertarget{tiny__obj__loader_8h}{}\section{glimac/src/tiny\+\_\+obj\+\_\+loader.h File Reference}
+\label{tiny__obj__loader_8h}\index{glimac/src/tiny\+\_\+obj\+\_\+loader.\+h@{glimac/src/tiny\+\_\+obj\+\_\+loader.\+h}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+Include dependency graph for tiny\+\_\+obj\+\_\+loader.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{tiny__obj__loader_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{tiny__obj__loader_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structtinyobj_1_1material__t}{tinyobj\+::material\+\_\+t}
+\item 
+struct \hyperlink{structtinyobj_1_1mesh__t}{tinyobj\+::mesh\+\_\+t}
+\item 
+struct \hyperlink{structtinyobj_1_1shape__t}{tinyobj\+::shape\+\_\+t}
+\item 
+class \hyperlink{classtinyobj_1_1_material_reader}{tinyobj\+::\+Material\+Reader}
+\item 
+class \hyperlink{classtinyobj_1_1_material_file_reader}{tinyobj\+::\+Material\+File\+Reader}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacetinyobj}{tinyobj}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{namespacetinyobj_a8a1b09e98bbe6ad056bf30fdce87b3c5}{tinyobj\+::\+Load\+Obj} (std\+::vector$<$ shape\+\_\+t $>$ \&shapes, std\+::vector$<$ material\+\_\+t $>$ \&materials, const char $\ast$filename, const char $\ast$mtl\+\_\+basepath)
+\item 
+std\+::string \hyperlink{namespacetinyobj_acb20cdb095743e069eac27c0b95d32b8}{tinyobj\+::\+Load\+Obj} (std\+::vector$<$ shape\+\_\+t $>$ \&shapes, std\+::vector$<$ material\+\_\+t $>$ \&materials, std\+::istream \&in\+Stream, Material\+Reader \&read\+Mat\+Fn)
+\item 
+std\+::string \hyperlink{namespacetinyobj_aff17f9085eec34bcc7ba97025122e732}{tinyobj\+::\+Load\+Mtl} (std\+::map$<$ std\+::string, int $>$ \&material\+\_\+map, std\+::vector$<$ material\+\_\+t $>$ \&materials, std\+::istream \&in\+Stream)
+\end{DoxyCompactItemize}

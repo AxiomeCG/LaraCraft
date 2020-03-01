@@ -1,0 +1,94 @@
+\hypertarget{class_directional_light}{}\section{Directional\+Light Class Reference}
+\label{class_directional_light}\index{Directional\+Light@{Directional\+Light}}
+
+
+{\ttfamily \#include $<$Directional\+Light.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_directional_light_ac57db47063c4b8174758ef8d305351c0}{Directional\+Light} (const \hyperlink{group__core__types_ga7dcd2365c2e368e6af5b7adeb6a9c8df}{glm\+::mat4} \&model\+Matrix)
+\item 
+\hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3} \hyperlink{class_directional_light_a5e535357b3efa03980be8118b88ad031}{get\+Light\+Direction} (const \hyperlink{group__core__types_ga7dcd2365c2e368e6af5b7adeb6a9c8df}{glm\+::mat4} \&view\+Matrix) const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__core__types_ga7dcd2365c2e368e6af5b7adeb6a9c8df}{glm\+::mat4} \hyperlink{class_directional_light_a7c01eb7c4d273af7e8b683e0f909e334}{light\+Model\+Matrix}
+\item 
+\hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3} \hyperlink{class_directional_light_a0775cb1480596c0f38f09b996a4808ee}{light\+Intensity} = \hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3}(1., 1., 1.)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represent a light object 
+
+Definition at line 14 of file Directional\+Light.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_directional_light_ac57db47063c4b8174758ef8d305351c0}\label{class_directional_light_ac57db47063c4b8174758ef8d305351c0}} 
+\index{Directional\+Light@{Directional\+Light}!Directional\+Light@{Directional\+Light}}
+\index{Directional\+Light@{Directional\+Light}!Directional\+Light@{Directional\+Light}}
+\subsubsection{\texorpdfstring{Directional\+Light()}{DirectionalLight()}}
+{\footnotesize\ttfamily Directional\+Light\+::\+Directional\+Light (\begin{DoxyParamCaption}\item[{const \hyperlink{group__core__types_ga7dcd2365c2e368e6af5b7adeb6a9c8df}{glm\+::mat4} \&}]{model\+Matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+Constructor for \hyperlink{class_directional_light}{Directional\+Light} 
+\begin{DoxyParams}{Parameters}
+{\em model\+Matrix} & Model\+Matrix of the light object \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 20 of file Directional\+Light.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_directional_light_a5e535357b3efa03980be8118b88ad031}\label{class_directional_light_a5e535357b3efa03980be8118b88ad031}} 
+\index{Directional\+Light@{Directional\+Light}!get\+Light\+Direction@{get\+Light\+Direction}}
+\index{get\+Light\+Direction@{get\+Light\+Direction}!Directional\+Light@{Directional\+Light}}
+\subsubsection{\texorpdfstring{get\+Light\+Direction()}{getLightDirection()}}
+{\footnotesize\ttfamily \hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3} Directional\+Light\+::get\+Light\+Direction (\begin{DoxyParamCaption}\item[{const \hyperlink{group__core__types_ga7dcd2365c2e368e6af5b7adeb6a9c8df}{glm\+::mat4} \&}]{view\+Matrix }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Getter for the light direction of the light object 
+\begin{DoxyParams}{Parameters}
+{\em view\+Matrix} & View\+Matrix used to compute the light direction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector of the light direction 
+\end{DoxyReturn}
+
+
+Definition at line 39 of file Directional\+Light.\+hpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_directional_light_a0775cb1480596c0f38f09b996a4808ee}\label{class_directional_light_a0775cb1480596c0f38f09b996a4808ee}} 
+\index{Directional\+Light@{Directional\+Light}!light\+Intensity@{light\+Intensity}}
+\index{light\+Intensity@{light\+Intensity}!Directional\+Light@{Directional\+Light}}
+\subsubsection{\texorpdfstring{light\+Intensity}{lightIntensity}}
+{\footnotesize\ttfamily \hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3} Directional\+Light\+::light\+Intensity = \hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3}(1., 1., 1.)}
+
+Vector for the intensity of the light object 
+
+Definition at line 32 of file Directional\+Light.\+hpp.
+
+\mbox{\Hypertarget{class_directional_light_a7c01eb7c4d273af7e8b683e0f909e334}\label{class_directional_light_a7c01eb7c4d273af7e8b683e0f909e334}} 
+\index{Directional\+Light@{Directional\+Light}!light\+Model\+Matrix@{light\+Model\+Matrix}}
+\index{light\+Model\+Matrix@{light\+Model\+Matrix}!Directional\+Light@{Directional\+Light}}
+\subsubsection{\texorpdfstring{light\+Model\+Matrix}{lightModelMatrix}}
+{\footnotesize\ttfamily \hyperlink{group__core__types_ga7dcd2365c2e368e6af5b7adeb6a9c8df}{glm\+::mat4} Directional\+Light\+::light\+Model\+Matrix}
+
+Model\+Matrix of the light object 
+
+Definition at line 27 of file Directional\+Light.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+glimac/include/glimac/\hyperlink{_directional_light_8hpp}{Directional\+Light.\+hpp}\end{DoxyCompactItemize}

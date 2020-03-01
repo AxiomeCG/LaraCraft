@@ -1,0 +1,299 @@
+\hypertarget{dummy_8cpp}{}\section{third-\/party/include/glm/detail/dummy.cpp File Reference}
+\label{dummy_8cpp}\index{third-\/party/include/glm/detail/dummy.\+cpp@{third-\/party/include/glm/detail/dummy.\+cpp}}
+{\ttfamily \#include \char`\"{}../glm.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$glm/vec3.\+hpp$>$}\newline
+{\ttfamily \#include $<$glm/geometric.\+hpp$>$}\newline
+{\ttfamily \#include $<$glm/vec4.\+hpp$>$}\newline
+{\ttfamily \#include $<$glm/mat4x4.\+hpp$>$}\newline
+{\ttfamily \#include $<$glm/gtc/matrix\+\_\+transform.\+hpp$>$}\newline
+{\ttfamily \#include $<$glm/gtc/type\+\_\+ptr.\+hpp$>$}\newline
+{\ttfamily \#include $<$glm/vec2.\+hpp$>$}\newline
+{\ttfamily \#include $<$glm/packing.\+hpp$>$}\newline
+{\ttfamily \#include $<$glm/integer.\+hpp$>$}\newline
+{\ttfamily \#include $<$glm/gtc/type\+\_\+precision.\+hpp$>$}\newline
+Include dependency graph for dummy.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dummy_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structmaterial}{material}
+\item 
+struct \hyperlink{structlight}{light}
+\item 
+struct \hyperlink{structintersection}{intersection}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{dummy_8cpp_a816ab7d5c2ce1f0a01216042837beb93}{G\+L\+M\+\_\+\+F\+O\+R\+C\+E\+\_\+\+R\+A\+D\+I\+A\+NS}
+\item 
+\#define \hyperlink{dummy_8cpp_abb6cbd1d1eb90a7e496e1e5606b7b635}{G\+L\+M\+\_\+\+M\+E\+S\+S\+A\+G\+ES}
+\item 
+\#define \hyperlink{dummy_8cpp_abca6d43f43fae31f49dcb883b2f301f6}{G\+L\+\_\+\+F\+A\+L\+SE}~0
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned int \hyperlink{dummy_8cpp_aa311c7f0d6ec4f1a33f9235c3651b86b}{G\+Luint}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3} \hyperlink{dummy_8cpp_aaf4822f1b21047e9476fdbe5930e8044}{compute\+Normal} (\hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3} const \&a, \hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3} const \&b, \hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3} const \&c)
+\item 
+void \hyperlink{dummy_8cpp_a0294e2a1faa1a1ff720a35ac06b4282a}{gl\+Uniform\+Matrix4fv} (\hyperlink{dummy_8cpp_aa311c7f0d6ec4f1a33f9235c3651b86b}{G\+Luint}, int, int, float $\ast$)
+\item 
+void \hyperlink{dummy_8cpp_a160febb2159b128be9c93af4db9b0c82}{func} (\hyperlink{dummy_8cpp_aa311c7f0d6ec4f1a33f9235c3651b86b}{G\+Luint} Location\+M\+VP, float Translate, \hyperlink{group__core__types_gaa1618f51db67eaa145db101d8c8431d8}{glm\+::vec2} const \&Rotate)
+\item 
+int \hyperlink{dummy_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+std\+::size\+\_\+t const \hyperlink{dummy_8cpp_ae3c003d05267c25d4a98289af6f53150}{Vertex\+Count} = 4
+\item 
+std\+::size\+\_\+t const \hyperlink{dummy_8cpp_ad54c4871c16725244165bbe5c44c427e}{Position\+Size\+F32} = \hyperlink{dummy_8cpp_ae3c003d05267c25d4a98289af6f53150}{Vertex\+Count} $\ast$ sizeof(\hyperlink{group__core__types_gaa1618f51db67eaa145db101d8c8431d8}{glm\+::vec2})
+\item 
+\hyperlink{group__core__types_gaa1618f51db67eaa145db101d8c8431d8}{glm\+::vec2} const \hyperlink{dummy_8cpp_a92b2eec5a6c4ffb6f29c6d8e13e0080b}{Position\+Data\+F32} \mbox{[}\hyperlink{dummy_8cpp_ae3c003d05267c25d4a98289af6f53150}{Vertex\+Count}\mbox{]}
+\item 
+std\+::size\+\_\+t const \hyperlink{dummy_8cpp_a4ca71799a1c0df3fa171deddbb111f24}{Position\+Size\+F16} = \hyperlink{dummy_8cpp_ae3c003d05267c25d4a98289af6f53150}{Vertex\+Count} $\ast$ sizeof(\hyperlink{group__core__precision_ga4fd29415871152bfb5abd588334147c8}{glm\+::uint})
+\item 
+\hyperlink{group__core__precision_ga4fd29415871152bfb5abd588334147c8}{glm\+::uint} const \hyperlink{dummy_8cpp_a623331c07fc0f8a0702ce22d5911cdce}{Position\+Data\+F16} \mbox{[}\hyperlink{dummy_8cpp_ae3c003d05267c25d4a98289af6f53150}{Vertex\+Count}\mbox{]}
+\item 
+std\+::size\+\_\+t const \hyperlink{dummy_8cpp_a7ef7f55c6d10fe75b077f6db69fbd7a6}{Position\+Size\+I8} = \hyperlink{dummy_8cpp_ae3c003d05267c25d4a98289af6f53150}{Vertex\+Count} $\ast$ sizeof(\hyperlink{group__gtc__type__precision_gafd7bbd3878c298014276975f999a8677}{glm\+::i8vec2})
+\item 
+\hyperlink{group__gtc__type__precision_gafd7bbd3878c298014276975f999a8677}{glm\+::i8vec2} const \hyperlink{dummy_8cpp_acff1a2e6796e89c896c36a0c931a5434}{Position\+Data\+I8} \mbox{[}\hyperlink{dummy_8cpp_ae3c003d05267c25d4a98289af6f53150}{Vertex\+Count}\mbox{]}
+\item 
+std\+::size\+\_\+t const \hyperlink{dummy_8cpp_ae2d5a61ddba681d3d31b4461c771c085}{Position\+Size\+I32} = \hyperlink{dummy_8cpp_ae3c003d05267c25d4a98289af6f53150}{Vertex\+Count} $\ast$ sizeof(\hyperlink{group__gtc__type__precision_gabb9ac4a278f8a8e3a3928dc9bef81089}{glm\+::i32vec2})
+\item 
+\hyperlink{group__gtc__type__precision_gabb9ac4a278f8a8e3a3928dc9bef81089}{glm\+::i32vec2} const \hyperlink{dummy_8cpp_ab2a2ed827c18e8e6575f93d202375655}{Position\+Data\+I32} \mbox{[}\hyperlink{dummy_8cpp_ae3c003d05267c25d4a98289af6f53150}{Vertex\+Count}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{dummy_8cpp_abca6d43f43fae31f49dcb883b2f301f6}\label{dummy_8cpp_abca6d43f43fae31f49dcb883b2f301f6}} 
+\index{dummy.\+cpp@{dummy.\+cpp}!G\+L\+\_\+\+F\+A\+L\+SE@{G\+L\+\_\+\+F\+A\+L\+SE}}
+\index{G\+L\+\_\+\+F\+A\+L\+SE@{G\+L\+\_\+\+F\+A\+L\+SE}!dummy.\+cpp@{dummy.\+cpp}}
+\subsubsection{\texorpdfstring{G\+L\+\_\+\+F\+A\+L\+SE}{GL\_FALSE}}
+{\footnotesize\ttfamily \#define G\+L\+\_\+\+F\+A\+L\+SE~0}
+
+
+
+Definition at line 80 of file dummy.\+cpp.
+
+\mbox{\Hypertarget{dummy_8cpp_a816ab7d5c2ce1f0a01216042837beb93}\label{dummy_8cpp_a816ab7d5c2ce1f0a01216042837beb93}} 
+\index{dummy.\+cpp@{dummy.\+cpp}!G\+L\+M\+\_\+\+F\+O\+R\+C\+E\+\_\+\+R\+A\+D\+I\+A\+NS@{G\+L\+M\+\_\+\+F\+O\+R\+C\+E\+\_\+\+R\+A\+D\+I\+A\+NS}}
+\index{G\+L\+M\+\_\+\+F\+O\+R\+C\+E\+\_\+\+R\+A\+D\+I\+A\+NS@{G\+L\+M\+\_\+\+F\+O\+R\+C\+E\+\_\+\+R\+A\+D\+I\+A\+NS}!dummy.\+cpp@{dummy.\+cpp}}
+\subsubsection{\texorpdfstring{G\+L\+M\+\_\+\+F\+O\+R\+C\+E\+\_\+\+R\+A\+D\+I\+A\+NS}{GLM\_FORCE\_RADIANS}}
+{\footnotesize\ttfamily \#define G\+L\+M\+\_\+\+F\+O\+R\+C\+E\+\_\+\+R\+A\+D\+I\+A\+NS}
+
+
+
+Definition at line 32 of file dummy.\+cpp.
+
+\mbox{\Hypertarget{dummy_8cpp_abb6cbd1d1eb90a7e496e1e5606b7b635}\label{dummy_8cpp_abb6cbd1d1eb90a7e496e1e5606b7b635}} 
+\index{dummy.\+cpp@{dummy.\+cpp}!G\+L\+M\+\_\+\+M\+E\+S\+S\+A\+G\+ES@{G\+L\+M\+\_\+\+M\+E\+S\+S\+A\+G\+ES}}
+\index{G\+L\+M\+\_\+\+M\+E\+S\+S\+A\+G\+ES@{G\+L\+M\+\_\+\+M\+E\+S\+S\+A\+G\+ES}!dummy.\+cpp@{dummy.\+cpp}}
+\subsubsection{\texorpdfstring{G\+L\+M\+\_\+\+M\+E\+S\+S\+A\+G\+ES}{GLM\_MESSAGES}}
+{\footnotesize\ttfamily \#define G\+L\+M\+\_\+\+M\+E\+S\+S\+A\+G\+ES}
+
+
+
+Definition at line 33 of file dummy.\+cpp.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{dummy_8cpp_aa311c7f0d6ec4f1a33f9235c3651b86b}\label{dummy_8cpp_aa311c7f0d6ec4f1a33f9235c3651b86b}} 
+\index{dummy.\+cpp@{dummy.\+cpp}!G\+Luint@{G\+Luint}}
+\index{G\+Luint@{G\+Luint}!dummy.\+cpp@{dummy.\+cpp}}
+\subsubsection{\texorpdfstring{G\+Luint}{GLuint}}
+{\footnotesize\ttfamily typedef unsigned int \hyperlink{dummy_8cpp_aa311c7f0d6ec4f1a33f9235c3651b86b}{G\+Luint}}
+
+
+
+Definition at line 79 of file dummy.\+cpp.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{dummy_8cpp_aaf4822f1b21047e9476fdbe5930e8044}\label{dummy_8cpp_aaf4822f1b21047e9476fdbe5930e8044}} 
+\index{dummy.\+cpp@{dummy.\+cpp}!compute\+Normal@{compute\+Normal}}
+\index{compute\+Normal@{compute\+Normal}!dummy.\+cpp@{dummy.\+cpp}}
+\subsubsection{\texorpdfstring{compute\+Normal()}{computeNormal()}}
+{\footnotesize\ttfamily \hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3} compute\+Normal (\begin{DoxyParamCaption}\item[{\hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3} const \&}]{a,  }\item[{\hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3} const \&}]{b,  }\item[{\hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3} const \&}]{c }\end{DoxyParamCaption})}
+
+
+
+Definition at line 70 of file dummy.\+cpp.
+
+\mbox{\Hypertarget{dummy_8cpp_a160febb2159b128be9c93af4db9b0c82}\label{dummy_8cpp_a160febb2159b128be9c93af4db9b0c82}} 
+\index{dummy.\+cpp@{dummy.\+cpp}!func@{func}}
+\index{func@{func}!dummy.\+cpp@{dummy.\+cpp}}
+\subsubsection{\texorpdfstring{func()}{func()}}
+{\footnotesize\ttfamily void func (\begin{DoxyParamCaption}\item[{\hyperlink{dummy_8cpp_aa311c7f0d6ec4f1a33f9235c3651b86b}{G\+Luint}}]{Location\+M\+VP,  }\item[{float}]{Translate,  }\item[{\hyperlink{group__core__types_gaa1618f51db67eaa145db101d8c8431d8}{glm\+::vec2} const \&}]{Rotate }\end{DoxyParamCaption})}
+
+
+
+Definition at line 89 of file dummy.\+cpp.
+
+\mbox{\Hypertarget{dummy_8cpp_a0294e2a1faa1a1ff720a35ac06b4282a}\label{dummy_8cpp_a0294e2a1faa1a1ff720a35ac06b4282a}} 
+\index{dummy.\+cpp@{dummy.\+cpp}!gl\+Uniform\+Matrix4fv@{gl\+Uniform\+Matrix4fv}}
+\index{gl\+Uniform\+Matrix4fv@{gl\+Uniform\+Matrix4fv}!dummy.\+cpp@{dummy.\+cpp}}
+\subsubsection{\texorpdfstring{gl\+Uniform\+Matrix4fv()}{glUniformMatrix4fv()}}
+{\footnotesize\ttfamily void gl\+Uniform\+Matrix4fv (\begin{DoxyParamCaption}\item[{\hyperlink{dummy_8cpp_aa311c7f0d6ec4f1a33f9235c3651b86b}{G\+Luint}}]{,  }\item[{int}]{,  }\item[{int}]{,  }\item[{float $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 81 of file dummy.\+cpp.
+
+\mbox{\Hypertarget{dummy_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{dummy_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{dummy.\+cpp@{dummy.\+cpp}!main@{main}}
+\index{main@{main}!dummy.\+cpp@{dummy.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 189 of file dummy.\+cpp.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{dummy_8cpp_a623331c07fc0f8a0702ce22d5911cdce}\label{dummy_8cpp_a623331c07fc0f8a0702ce22d5911cdce}} 
+\index{dummy.\+cpp@{dummy.\+cpp}!Position\+Data\+F16@{Position\+Data\+F16}}
+\index{Position\+Data\+F16@{Position\+Data\+F16}!dummy.\+cpp@{dummy.\+cpp}}
+\subsubsection{\texorpdfstring{Position\+Data\+F16}{PositionDataF16}}
+{\footnotesize\ttfamily \hyperlink{group__core__precision_ga4fd29415871152bfb5abd588334147c8}{glm\+::uint} const Position\+Data\+F16\mbox{[}\hyperlink{dummy_8cpp_ae3c003d05267c25d4a98289af6f53150}{Vertex\+Count}\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+\{
+    \hyperlink{group__core__precision_ga4fd29415871152bfb5abd588334147c8}{glm::uint}(\hyperlink{group__core__func__packing_ga0659ddaf09727551c7bf51655d2a65cf}{glm::packUnorm2x16}(\hyperlink{structglm_1_1detail_1_1tvec2}{glm::vec2}(-1.0f, -1.0f))),
+    \hyperlink{group__core__precision_ga4fd29415871152bfb5abd588334147c8}{glm::uint}(\hyperlink{group__core__func__packing_ga0659ddaf09727551c7bf51655d2a65cf}{glm::packUnorm2x16}(\hyperlink{structglm_1_1detail_1_1tvec2}{glm::vec2}( 1.0f, -1.0f))),
+    \hyperlink{group__core__precision_ga4fd29415871152bfb5abd588334147c8}{glm::uint}(\hyperlink{group__core__func__packing_ga0659ddaf09727551c7bf51655d2a65cf}{glm::packUnorm2x16}(\hyperlink{structglm_1_1detail_1_1tvec2}{glm::vec2}( 1.0f, 1.0f))),
+    \hyperlink{group__core__precision_ga4fd29415871152bfb5abd588334147c8}{glm::uint}(\hyperlink{group__core__func__packing_ga0659ddaf09727551c7bf51655d2a65cf}{glm::packUnorm2x16}(\hyperlink{structglm_1_1detail_1_1tvec2}{glm::vec2}(-1.0f, 1.0f)))
+\}
+\end{DoxyCode}
+
+
+Definition at line 117 of file dummy.\+cpp.
+
+\mbox{\Hypertarget{dummy_8cpp_a92b2eec5a6c4ffb6f29c6d8e13e0080b}\label{dummy_8cpp_a92b2eec5a6c4ffb6f29c6d8e13e0080b}} 
+\index{dummy.\+cpp@{dummy.\+cpp}!Position\+Data\+F32@{Position\+Data\+F32}}
+\index{Position\+Data\+F32@{Position\+Data\+F32}!dummy.\+cpp@{dummy.\+cpp}}
+\subsubsection{\texorpdfstring{Position\+Data\+F32}{PositionDataF32}}
+{\footnotesize\ttfamily \hyperlink{group__core__types_gaa1618f51db67eaa145db101d8c8431d8}{glm\+::vec2} const Position\+Data\+F32\mbox{[}\hyperlink{dummy_8cpp_ae3c003d05267c25d4a98289af6f53150}{Vertex\+Count}\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+\{
+    \hyperlink{group__core__types_gaa1618f51db67eaa145db101d8c8431d8}{glm::vec2}(-1.0f,-1.0f),
+    \hyperlink{group__core__types_gaa1618f51db67eaa145db101d8c8431d8}{glm::vec2}( 1.0f,-1.0f),
+    \hyperlink{group__core__types_gaa1618f51db67eaa145db101d8c8431d8}{glm::vec2}( 1.0f, 1.0f),
+    \hyperlink{group__core__types_gaa1618f51db67eaa145db101d8c8431d8}{glm::vec2}(-1.0f, 1.0f)
+    \}
+\end{DoxyCode}
+
+
+Definition at line 108 of file dummy.\+cpp.
+
+\mbox{\Hypertarget{dummy_8cpp_ab2a2ed827c18e8e6575f93d202375655}\label{dummy_8cpp_ab2a2ed827c18e8e6575f93d202375655}} 
+\index{dummy.\+cpp@{dummy.\+cpp}!Position\+Data\+I32@{Position\+Data\+I32}}
+\index{Position\+Data\+I32@{Position\+Data\+I32}!dummy.\+cpp@{dummy.\+cpp}}
+\subsubsection{\texorpdfstring{Position\+Data\+I32}{PositionDataI32}}
+{\footnotesize\ttfamily \hyperlink{group__gtc__type__precision_gabb9ac4a278f8a8e3a3928dc9bef81089}{glm\+::i32vec2} const Position\+Data\+I32\mbox{[}\hyperlink{dummy_8cpp_ae3c003d05267c25d4a98289af6f53150}{Vertex\+Count}\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+\{
+    \hyperlink{group__gtc__type__precision_gabb9ac4a278f8a8e3a3928dc9bef81089}{glm::i32vec2} (-1,-1),
+    \hyperlink{group__gtc__type__precision_gabb9ac4a278f8a8e3a3928dc9bef81089}{glm::i32vec2} ( 1,-1),
+    \hyperlink{group__gtc__type__precision_gabb9ac4a278f8a8e3a3928dc9bef81089}{glm::i32vec2} ( 1, 1),
+    \hyperlink{group__gtc__type__precision_gabb9ac4a278f8a8e3a3928dc9bef81089}{glm::i32vec2} (-1, 1)
+\}
+\end{DoxyCode}
+
+
+Definition at line 135 of file dummy.\+cpp.
+
+\mbox{\Hypertarget{dummy_8cpp_acff1a2e6796e89c896c36a0c931a5434}\label{dummy_8cpp_acff1a2e6796e89c896c36a0c931a5434}} 
+\index{dummy.\+cpp@{dummy.\+cpp}!Position\+Data\+I8@{Position\+Data\+I8}}
+\index{Position\+Data\+I8@{Position\+Data\+I8}!dummy.\+cpp@{dummy.\+cpp}}
+\subsubsection{\texorpdfstring{Position\+Data\+I8}{PositionDataI8}}
+{\footnotesize\ttfamily \hyperlink{group__gtc__type__precision_gafd7bbd3878c298014276975f999a8677}{glm\+::i8vec2} const Position\+Data\+I8\mbox{[}\hyperlink{dummy_8cpp_ae3c003d05267c25d4a98289af6f53150}{Vertex\+Count}\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+\{
+    \hyperlink{group__gtc__type__precision_gafd7bbd3878c298014276975f999a8677}{glm::i8vec2}(-1,-1),
+    \hyperlink{group__gtc__type__precision_gafd7bbd3878c298014276975f999a8677}{glm::i8vec2}( 1,-1),
+    \hyperlink{group__gtc__type__precision_gafd7bbd3878c298014276975f999a8677}{glm::i8vec2}( 1, 1),
+    \hyperlink{group__gtc__type__precision_gafd7bbd3878c298014276975f999a8677}{glm::i8vec2}(-1, 1)
+\}
+\end{DoxyCode}
+
+
+Definition at line 126 of file dummy.\+cpp.
+
+\mbox{\Hypertarget{dummy_8cpp_a4ca71799a1c0df3fa171deddbb111f24}\label{dummy_8cpp_a4ca71799a1c0df3fa171deddbb111f24}} 
+\index{dummy.\+cpp@{dummy.\+cpp}!Position\+Size\+F16@{Position\+Size\+F16}}
+\index{Position\+Size\+F16@{Position\+Size\+F16}!dummy.\+cpp@{dummy.\+cpp}}
+\subsubsection{\texorpdfstring{Position\+Size\+F16}{PositionSizeF16}}
+{\footnotesize\ttfamily std\+::size\+\_\+t const Position\+Size\+F16 = \hyperlink{dummy_8cpp_ae3c003d05267c25d4a98289af6f53150}{Vertex\+Count} $\ast$ sizeof(\hyperlink{group__core__precision_ga4fd29415871152bfb5abd588334147c8}{glm\+::uint})}
+
+
+
+Definition at line 116 of file dummy.\+cpp.
+
+\mbox{\Hypertarget{dummy_8cpp_ad54c4871c16725244165bbe5c44c427e}\label{dummy_8cpp_ad54c4871c16725244165bbe5c44c427e}} 
+\index{dummy.\+cpp@{dummy.\+cpp}!Position\+Size\+F32@{Position\+Size\+F32}}
+\index{Position\+Size\+F32@{Position\+Size\+F32}!dummy.\+cpp@{dummy.\+cpp}}
+\subsubsection{\texorpdfstring{Position\+Size\+F32}{PositionSizeF32}}
+{\footnotesize\ttfamily std\+::size\+\_\+t const Position\+Size\+F32 = \hyperlink{dummy_8cpp_ae3c003d05267c25d4a98289af6f53150}{Vertex\+Count} $\ast$ sizeof(\hyperlink{group__core__types_gaa1618f51db67eaa145db101d8c8431d8}{glm\+::vec2})}
+
+
+
+Definition at line 107 of file dummy.\+cpp.
+
+\mbox{\Hypertarget{dummy_8cpp_ae2d5a61ddba681d3d31b4461c771c085}\label{dummy_8cpp_ae2d5a61ddba681d3d31b4461c771c085}} 
+\index{dummy.\+cpp@{dummy.\+cpp}!Position\+Size\+I32@{Position\+Size\+I32}}
+\index{Position\+Size\+I32@{Position\+Size\+I32}!dummy.\+cpp@{dummy.\+cpp}}
+\subsubsection{\texorpdfstring{Position\+Size\+I32}{PositionSizeI32}}
+{\footnotesize\ttfamily std\+::size\+\_\+t const Position\+Size\+I32 = \hyperlink{dummy_8cpp_ae3c003d05267c25d4a98289af6f53150}{Vertex\+Count} $\ast$ sizeof(\hyperlink{group__gtc__type__precision_gabb9ac4a278f8a8e3a3928dc9bef81089}{glm\+::i32vec2})}
+
+
+
+Definition at line 134 of file dummy.\+cpp.
+
+\mbox{\Hypertarget{dummy_8cpp_a7ef7f55c6d10fe75b077f6db69fbd7a6}\label{dummy_8cpp_a7ef7f55c6d10fe75b077f6db69fbd7a6}} 
+\index{dummy.\+cpp@{dummy.\+cpp}!Position\+Size\+I8@{Position\+Size\+I8}}
+\index{Position\+Size\+I8@{Position\+Size\+I8}!dummy.\+cpp@{dummy.\+cpp}}
+\subsubsection{\texorpdfstring{Position\+Size\+I8}{PositionSizeI8}}
+{\footnotesize\ttfamily std\+::size\+\_\+t const Position\+Size\+I8 = \hyperlink{dummy_8cpp_ae3c003d05267c25d4a98289af6f53150}{Vertex\+Count} $\ast$ sizeof(\hyperlink{group__gtc__type__precision_gafd7bbd3878c298014276975f999a8677}{glm\+::i8vec2})}
+
+
+
+Definition at line 125 of file dummy.\+cpp.
+
+\mbox{\Hypertarget{dummy_8cpp_ae3c003d05267c25d4a98289af6f53150}\label{dummy_8cpp_ae3c003d05267c25d4a98289af6f53150}} 
+\index{dummy.\+cpp@{dummy.\+cpp}!Vertex\+Count@{Vertex\+Count}}
+\index{Vertex\+Count@{Vertex\+Count}!dummy.\+cpp@{dummy.\+cpp}}
+\subsubsection{\texorpdfstring{Vertex\+Count}{VertexCount}}
+{\footnotesize\ttfamily std\+::size\+\_\+t const Vertex\+Count = 4}
+
+
+
+Definition at line 105 of file dummy.\+cpp.
+

@@ -1,0 +1,118 @@
+\hypertarget{classglimac_1_1_height_map}{}\section{glimac\+:\+:Height\+Map Class Reference}
+\label{classglimac_1_1_height_map}\index{glimac\+::\+Height\+Map@{glimac\+::\+Height\+Map}}
+
+
+{\ttfamily \#include $<$Height\+Map.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classglimac_1_1_height_map_a512bb9cd033c9da607f3311b00a46ad8}{Height\+Map} (unsigned int width, unsigned int height, float resw, float resh, float resv)
+\item 
+unsigned int \hyperlink{classglimac_1_1_height_map_ab1e48683d69d8babea763adff3d02d10}{get\+Width} () const
+\item 
+unsigned int \hyperlink{classglimac_1_1_height_map_a39288ae594f75d66aeb364832ec0adc1}{get\+Height} () const
+\item 
+void \hyperlink{classglimac_1_1_height_map_a4f20bdf9b7147e7795cf78a181dc3458}{insert} (unsigned int i, unsigned int j, float value)
+\item 
+std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \hyperlink{classglimac_1_1_height_map_a5b4bb1e8f62b95d8058c307dddcdd412}{get\+Height\+Data} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represent a Height Map 
+
+Definition at line 18 of file Height\+Map.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classglimac_1_1_height_map_a512bb9cd033c9da607f3311b00a46ad8}\label{classglimac_1_1_height_map_a512bb9cd033c9da607f3311b00a46ad8}} 
+\index{glimac\+::\+Height\+Map@{glimac\+::\+Height\+Map}!Height\+Map@{Height\+Map}}
+\index{Height\+Map@{Height\+Map}!glimac\+::\+Height\+Map@{glimac\+::\+Height\+Map}}
+\subsubsection{\texorpdfstring{Height\+Map()}{HeightMap()}}
+{\footnotesize\ttfamily glimac\+::\+Height\+Map\+::\+Height\+Map (\begin{DoxyParamCaption}\item[{unsigned int}]{width,  }\item[{unsigned int}]{height,  }\item[{float}]{resw,  }\item[{float}]{resh,  }\item[{float}]{resv }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor for the \hyperlink{classglimac_1_1_height_map}{Height\+Map} 
+\begin{DoxyParams}{Parameters}
+{\em width} & Width of the \hyperlink{classglimac_1_1_height_map}{Height\+Map} \\
+\hline
+{\em height} & Height of the \hyperlink{classglimac_1_1_height_map}{Height\+Map} \\
+\hline
+{\em resw} & Resolution for the width \\
+\hline
+{\em resh} & Resolution for the height \\
+\hline
+{\em resv} & Resolution for the values of the \hyperlink{classglimac_1_1_height_map}{Height\+Map} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 29 of file Height\+Map.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglimac_1_1_height_map_a39288ae594f75d66aeb364832ec0adc1}\label{classglimac_1_1_height_map_a39288ae594f75d66aeb364832ec0adc1}} 
+\index{glimac\+::\+Height\+Map@{glimac\+::\+Height\+Map}!get\+Height@{get\+Height}}
+\index{get\+Height@{get\+Height}!glimac\+::\+Height\+Map@{glimac\+::\+Height\+Map}}
+\subsubsection{\texorpdfstring{get\+Height()}{getHeight()}}
+{\footnotesize\ttfamily unsigned int glimac\+::\+Height\+Map\+::get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Getter for the height of the \hyperlink{classglimac_1_1_height_map}{Height\+Map} \begin{DoxyReturn}{Returns}
+the height 
+\end{DoxyReturn}
+
+
+Definition at line 47 of file Height\+Map.\+hpp.
+
+\mbox{\Hypertarget{classglimac_1_1_height_map_a5b4bb1e8f62b95d8058c307dddcdd412}\label{classglimac_1_1_height_map_a5b4bb1e8f62b95d8058c307dddcdd412}} 
+\index{glimac\+::\+Height\+Map@{glimac\+::\+Height\+Map}!get\+Height\+Data@{get\+Height\+Data}}
+\index{get\+Height\+Data@{get\+Height\+Data}!glimac\+::\+Height\+Map@{glimac\+::\+Height\+Map}}
+\subsubsection{\texorpdfstring{get\+Height\+Data()}{getHeightData()}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$float$>$ $>$ glimac\+::\+Height\+Map\+::get\+Height\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Getter for the data of the \hyperlink{classglimac_1_1_height_map}{Height\+Map} \begin{DoxyReturn}{Returns}
+The data of the \hyperlink{classglimac_1_1_height_map}{Height\+Map} 
+\end{DoxyReturn}
+
+
+Definition at line 65 of file Height\+Map.\+hpp.
+
+\mbox{\Hypertarget{classglimac_1_1_height_map_ab1e48683d69d8babea763adff3d02d10}\label{classglimac_1_1_height_map_ab1e48683d69d8babea763adff3d02d10}} 
+\index{glimac\+::\+Height\+Map@{glimac\+::\+Height\+Map}!get\+Width@{get\+Width}}
+\index{get\+Width@{get\+Width}!glimac\+::\+Height\+Map@{glimac\+::\+Height\+Map}}
+\subsubsection{\texorpdfstring{get\+Width()}{getWidth()}}
+{\footnotesize\ttfamily unsigned int glimac\+::\+Height\+Map\+::get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Getter for the width of the \hyperlink{classglimac_1_1_height_map}{Height\+Map} \begin{DoxyReturn}{Returns}
+the width 
+\end{DoxyReturn}
+
+
+Definition at line 39 of file Height\+Map.\+hpp.
+
+\mbox{\Hypertarget{classglimac_1_1_height_map_a4f20bdf9b7147e7795cf78a181dc3458}\label{classglimac_1_1_height_map_a4f20bdf9b7147e7795cf78a181dc3458}} 
+\index{glimac\+::\+Height\+Map@{glimac\+::\+Height\+Map}!insert@{insert}}
+\index{insert@{insert}!glimac\+::\+Height\+Map@{glimac\+::\+Height\+Map}}
+\subsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily void glimac\+::\+Height\+Map\+::insert (\begin{DoxyParamCaption}\item[{unsigned int}]{i,  }\item[{unsigned int}]{j,  }\item[{float}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Insert a float in the height map 
+\begin{DoxyParams}{Parameters}
+{\em i} & Index x of the \hyperlink{classglimac_1_1_height_map}{Height\+Map} \\
+\hline
+{\em j} & Index z of the \hyperlink{classglimac_1_1_height_map}{Height\+Map} \\
+\hline
+{\em value} & Value to insert in the \hyperlink{classglimac_1_1_height_map}{Height\+Map} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 57 of file Height\+Map.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+glimac/include/glimac/\hyperlink{_height_map_8hpp}{Height\+Map.\+hpp}\end{DoxyCompactItemize}

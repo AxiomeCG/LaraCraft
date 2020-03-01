@@ -1,0 +1,65 @@
+\hypertarget{intersect_8hpp}{}\section{third-\/party/include/glm/gtx/intersect.hpp File Reference}
+\label{intersect_8hpp}\index{third-\/party/include/glm/gtx/intersect.\+hpp@{third-\/party/include/glm/gtx/intersect.\+hpp}}
+{\ttfamily \#include \char`\"{}../glm.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../gtx/closest\+\_\+point.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}intersect.\+inl\char`\"{}}\newline
+Include dependency graph for intersect.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{intersect_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{intersect_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespaceglm}{glm}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename gen\+Type $>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} bool \hyperlink{group__gtx__intersect_gad3697a9700ea379739a667ea02573488}{glm\+::intersect\+Ray\+Plane} (gen\+Type const \&orig, gen\+Type const \&dir, gen\+Type const \&plane\+Orig, gen\+Type const \&plane\+Normal, typename gen\+Type\+::value\+\_\+type \&intersection\+Distance)
+\item 
+{\footnotesize template$<$typename gen\+Type $>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} bool \hyperlink{group__gtx__intersect_gab16c1b47c10451e7604b51b39a7ef21d}{glm\+::intersect\+Ray\+Triangle} (gen\+Type const \&orig, gen\+Type const \&dir, gen\+Type const \&vert0, gen\+Type const \&vert1, gen\+Type const \&vert2, gen\+Type \&bary\+Position)
+\item 
+{\footnotesize template$<$typename gen\+Type $>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} bool \hyperlink{group__gtx__intersect_ga9d29b9b3acb504d43986502f42740df4}{glm\+::intersect\+Line\+Triangle} (gen\+Type const \&orig, gen\+Type const \&dir, gen\+Type const \&vert0, gen\+Type const \&vert1, gen\+Type const \&vert2, gen\+Type \&position)
+\item 
+{\footnotesize template$<$typename gen\+Type $>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} bool \hyperlink{group__gtx__intersect_gac88f8cd84c4bcb5b947d56acbbcfa56e}{glm\+::intersect\+Ray\+Sphere} (gen\+Type const \&ray\+Starting, gen\+Type const \&ray\+Normalized\+Direction, gen\+Type const \&sphere\+Center, typename gen\+Type\+::value\+\_\+type const sphere\+Radius\+Squered, typename gen\+Type\+::value\+\_\+type \&intersection\+Distance)
+\item 
+{\footnotesize template$<$typename gen\+Type $>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} bool \hyperlink{group__gtx__intersect_gad28c00515b823b579c608aafa1100c1d}{glm\+::intersect\+Ray\+Sphere} (gen\+Type const \&ray\+Starting, gen\+Type const \&ray\+Normalized\+Direction, gen\+Type const \&sphere\+Center, const typename gen\+Type\+::value\+\_\+type sphere\+Radius, gen\+Type \&intersection\+Position, gen\+Type \&intersection\+Normal)
+\item 
+{\footnotesize template$<$typename gen\+Type $>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} bool \hyperlink{group__gtx__intersect_ga9c68139f3d8a4f3d7fe45f9dbc0de5b7}{glm\+::intersect\+Line\+Sphere} (gen\+Type const \&point0, gen\+Type const \&point1, gen\+Type const \&sphere\+Center, typename gen\+Type\+::value\+\_\+type sphere\+Radius, gen\+Type \&intersection\+Position1, gen\+Type \&intersection\+Normal1, gen\+Type \&intersection\+Position2=gen\+Type(), gen\+Type \&intersection\+Normal2=gen\+Type())
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Open\+GL Mathematics (glm.\+g-\/truc.\+net)
+
+Copyright (c) 2005 -\/ 2014 G-\/\+Truc Creation (www.\+g-\/truc.\+net) Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \char`\"{}\+Software\char`\"{}), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions\+:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+T\+HE S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED \char`\"{}\+A\+S I\+S\char`\"{}, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+TY OF A\+NY K\+I\+ND, E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED, I\+N\+C\+L\+U\+D\+I\+NG B\+UT N\+OT L\+I\+M\+I\+T\+ED TO T\+HE W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY, F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+ND N\+O\+N\+I\+N\+F\+R\+I\+N\+G\+E\+M\+E\+NT. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE A\+U\+T\+H\+O\+RS OR C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY C\+L\+A\+IM, D\+A\+M\+A\+G\+ES OR O\+T\+H\+ER L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN AN A\+C\+T\+I\+ON OF C\+O\+N\+T\+R\+A\+CT, T\+O\+RT OR O\+T\+H\+E\+R\+W\+I\+SE, A\+R\+I\+S\+I\+NG F\+R\+OM, O\+UT OF OR IN C\+O\+N\+N\+E\+C\+T\+I\+ON W\+I\+TH T\+HE S\+O\+F\+T\+W\+A\+RE OR T\+HE U\+SE OR O\+T\+H\+ER D\+E\+A\+L\+I\+N\+GS IN T\+HE S\+O\+F\+T\+W\+A\+RE.
+
+\hyperlink{group__gtx__intersect}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+intersect}
+
+\begin{DoxyDate}{Date}
+2007-\/04-\/03 / 2011-\/06-\/07 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Christophe Riccio
+\end{DoxyAuthor}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__core}{G\+L\+M Core} (dependence) 
+
+\hyperlink{group__gtx__closest__point}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+closest\+\_\+point} (dependence) 
+\end{DoxySeeAlso}

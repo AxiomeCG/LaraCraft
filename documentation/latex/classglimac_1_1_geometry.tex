@@ -1,0 +1,130 @@
+\hypertarget{classglimac_1_1_geometry}{}\section{glimac\+:\+:Geometry Class Reference}
+\label{classglimac_1_1_geometry}\index{glimac\+::\+Geometry@{glimac\+::\+Geometry}}
+
+
+{\ttfamily \#include $<$Geometry.\+hpp$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structglimac_1_1_geometry_1_1_material}{Material}
+\item 
+struct \hyperlink{structglimac_1_1_geometry_1_1_mesh}{Mesh}
+\item 
+struct \hyperlink{structglimac_1_1_geometry_1_1_vertex}{Vertex}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{structglimac_1_1_geometry_1_1_vertex}{Vertex} $\ast$ \hyperlink{classglimac_1_1_geometry_add889566d1d4d2fea740d84cf5e3c18f}{get\+Vertex\+Buffer} () const
+\item 
+size\+\_\+t \hyperlink{classglimac_1_1_geometry_adf2d769d9b6195c2ab88f6dfe6abd8d9}{get\+Vertex\+Count} () const
+\item 
+const unsigned int $\ast$ \hyperlink{classglimac_1_1_geometry_a26b9a7ccfd6a574284fb054821ed6bbd}{get\+Index\+Buffer} () const
+\item 
+size\+\_\+t \hyperlink{classglimac_1_1_geometry_aaadc2607a96a09f9fdc36190809e915b}{get\+Index\+Count} () const
+\item 
+const \hyperlink{structglimac_1_1_geometry_1_1_mesh}{Mesh} $\ast$ \hyperlink{classglimac_1_1_geometry_ae86a5f63f1e2770ddc110412761aa98a}{get\+Mesh\+Buffer} () const
+\item 
+size\+\_\+t \hyperlink{classglimac_1_1_geometry_ab57f1169fb19e5a02866d2f36308dd91}{get\+Mesh\+Count} () const
+\item 
+bool \hyperlink{classglimac_1_1_geometry_af796a2bd4c60c32de47b3bcb53bb3cef}{load\+O\+BJ} (const \hyperlink{classglimac_1_1_file_path}{File\+Path} \&filepath, const \hyperlink{classglimac_1_1_file_path}{File\+Path} \&mtl\+Base\+Path, bool load\+Textures=true)
+\item 
+const \hyperlink{structglimac_1_1_b_box3f}{B\+Box3f} \& \hyperlink{classglimac_1_1_geometry_aa91aac0c120e51e59e192a518e790311}{get\+Bounding\+Box} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 12 of file Geometry.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglimac_1_1_geometry_aa91aac0c120e51e59e192a518e790311}\label{classglimac_1_1_geometry_aa91aac0c120e51e59e192a518e790311}} 
+\index{glimac\+::\+Geometry@{glimac\+::\+Geometry}!get\+Bounding\+Box@{get\+Bounding\+Box}}
+\index{get\+Bounding\+Box@{get\+Bounding\+Box}!glimac\+::\+Geometry@{glimac\+::\+Geometry}}
+\subsubsection{\texorpdfstring{get\+Bounding\+Box()}{getBoundingBox()}}
+{\footnotesize\ttfamily const \hyperlink{structglimac_1_1_b_box3f}{B\+Box3f}\& glimac\+::\+Geometry\+::get\+Bounding\+Box (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 82 of file Geometry.\+hpp.
+
+\mbox{\Hypertarget{classglimac_1_1_geometry_a26b9a7ccfd6a574284fb054821ed6bbd}\label{classglimac_1_1_geometry_a26b9a7ccfd6a574284fb054821ed6bbd}} 
+\index{glimac\+::\+Geometry@{glimac\+::\+Geometry}!get\+Index\+Buffer@{get\+Index\+Buffer}}
+\index{get\+Index\+Buffer@{get\+Index\+Buffer}!glimac\+::\+Geometry@{glimac\+::\+Geometry}}
+\subsubsection{\texorpdfstring{get\+Index\+Buffer()}{getIndexBuffer()}}
+{\footnotesize\ttfamily const unsigned int$\ast$ glimac\+::\+Geometry\+::get\+Index\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 64 of file Geometry.\+hpp.
+
+\mbox{\Hypertarget{classglimac_1_1_geometry_aaadc2607a96a09f9fdc36190809e915b}\label{classglimac_1_1_geometry_aaadc2607a96a09f9fdc36190809e915b}} 
+\index{glimac\+::\+Geometry@{glimac\+::\+Geometry}!get\+Index\+Count@{get\+Index\+Count}}
+\index{get\+Index\+Count@{get\+Index\+Count}!glimac\+::\+Geometry@{glimac\+::\+Geometry}}
+\subsubsection{\texorpdfstring{get\+Index\+Count()}{getIndexCount()}}
+{\footnotesize\ttfamily size\+\_\+t glimac\+::\+Geometry\+::get\+Index\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 68 of file Geometry.\+hpp.
+
+\mbox{\Hypertarget{classglimac_1_1_geometry_ae86a5f63f1e2770ddc110412761aa98a}\label{classglimac_1_1_geometry_ae86a5f63f1e2770ddc110412761aa98a}} 
+\index{glimac\+::\+Geometry@{glimac\+::\+Geometry}!get\+Mesh\+Buffer@{get\+Mesh\+Buffer}}
+\index{get\+Mesh\+Buffer@{get\+Mesh\+Buffer}!glimac\+::\+Geometry@{glimac\+::\+Geometry}}
+\subsubsection{\texorpdfstring{get\+Mesh\+Buffer()}{getMeshBuffer()}}
+{\footnotesize\ttfamily const \hyperlink{structglimac_1_1_geometry_1_1_mesh}{Mesh}$\ast$ glimac\+::\+Geometry\+::get\+Mesh\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 72 of file Geometry.\+hpp.
+
+\mbox{\Hypertarget{classglimac_1_1_geometry_ab57f1169fb19e5a02866d2f36308dd91}\label{classglimac_1_1_geometry_ab57f1169fb19e5a02866d2f36308dd91}} 
+\index{glimac\+::\+Geometry@{glimac\+::\+Geometry}!get\+Mesh\+Count@{get\+Mesh\+Count}}
+\index{get\+Mesh\+Count@{get\+Mesh\+Count}!glimac\+::\+Geometry@{glimac\+::\+Geometry}}
+\subsubsection{\texorpdfstring{get\+Mesh\+Count()}{getMeshCount()}}
+{\footnotesize\ttfamily size\+\_\+t glimac\+::\+Geometry\+::get\+Mesh\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 76 of file Geometry.\+hpp.
+
+\mbox{\Hypertarget{classglimac_1_1_geometry_add889566d1d4d2fea740d84cf5e3c18f}\label{classglimac_1_1_geometry_add889566d1d4d2fea740d84cf5e3c18f}} 
+\index{glimac\+::\+Geometry@{glimac\+::\+Geometry}!get\+Vertex\+Buffer@{get\+Vertex\+Buffer}}
+\index{get\+Vertex\+Buffer@{get\+Vertex\+Buffer}!glimac\+::\+Geometry@{glimac\+::\+Geometry}}
+\subsubsection{\texorpdfstring{get\+Vertex\+Buffer()}{getVertexBuffer()}}
+{\footnotesize\ttfamily const \hyperlink{structglimac_1_1_geometry_1_1_vertex}{Vertex}$\ast$ glimac\+::\+Geometry\+::get\+Vertex\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 56 of file Geometry.\+hpp.
+
+\mbox{\Hypertarget{classglimac_1_1_geometry_adf2d769d9b6195c2ab88f6dfe6abd8d9}\label{classglimac_1_1_geometry_adf2d769d9b6195c2ab88f6dfe6abd8d9}} 
+\index{glimac\+::\+Geometry@{glimac\+::\+Geometry}!get\+Vertex\+Count@{get\+Vertex\+Count}}
+\index{get\+Vertex\+Count@{get\+Vertex\+Count}!glimac\+::\+Geometry@{glimac\+::\+Geometry}}
+\subsubsection{\texorpdfstring{get\+Vertex\+Count()}{getVertexCount()}}
+{\footnotesize\ttfamily size\+\_\+t glimac\+::\+Geometry\+::get\+Vertex\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 60 of file Geometry.\+hpp.
+
+\mbox{\Hypertarget{classglimac_1_1_geometry_af796a2bd4c60c32de47b3bcb53bb3cef}\label{classglimac_1_1_geometry_af796a2bd4c60c32de47b3bcb53bb3cef}} 
+\index{glimac\+::\+Geometry@{glimac\+::\+Geometry}!load\+O\+BJ@{load\+O\+BJ}}
+\index{load\+O\+BJ@{load\+O\+BJ}!glimac\+::\+Geometry@{glimac\+::\+Geometry}}
+\subsubsection{\texorpdfstring{load\+O\+B\+J()}{loadOBJ()}}
+{\footnotesize\ttfamily bool glimac\+::\+Geometry\+::load\+O\+BJ (\begin{DoxyParamCaption}\item[{const \hyperlink{classglimac_1_1_file_path}{File\+Path} \&}]{filepath,  }\item[{const \hyperlink{classglimac_1_1_file_path}{File\+Path} \&}]{mtl\+Base\+Path,  }\item[{bool}]{load\+Textures = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 24 of file Geometry.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+glimac/include/glimac/\hyperlink{_geometry_8hpp}{Geometry.\+hpp}\item 
+glimac/src/\hyperlink{_geometry_8cpp}{Geometry.\+cpp}\end{DoxyCompactItemize}

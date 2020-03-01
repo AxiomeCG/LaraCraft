@@ -1,0 +1,122 @@
+\hypertarget{classglimac_1_1_vegetation_map}{}\section{glimac\+:\+:Vegetation\+Map Class Reference}
+\label{classglimac_1_1_vegetation_map}\index{glimac\+::\+Vegetation\+Map@{glimac\+::\+Vegetation\+Map}}
+
+
+{\ttfamily \#include $<$Vegetation\+Map.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classglimac_1_1_vegetation_map_a49f60532f0d24614587c698a04871e7e}{Vegetation\+Map} (unsigned int width, unsigned int height, float resw, float resh, float resv)
+\item 
+unsigned int \hyperlink{classglimac_1_1_vegetation_map_a129e6a0197f0ff9fb0d5d7f8ed6a9b78}{get\+Width} () const
+\item 
+unsigned int \hyperlink{classglimac_1_1_vegetation_map_a01260f4f36662b96c754902cd3e2e203}{get\+Height} () const
+\item 
+void \hyperlink{classglimac_1_1_vegetation_map_a95dd8bddf998e034565d5353dee84a75}{insert} (unsigned int i, unsigned int j, float r, float g, float b)
+\item 
+std\+::vector$<$ std\+::vector$<$ \hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3} $>$ $>$ \hyperlink{classglimac_1_1_vegetation_map_ac8629079c4237ecccb141c871f1be874}{get\+Vegetation\+Data} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represent a Vegetation Map 
+
+Definition at line 19 of file Vegetation\+Map.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classglimac_1_1_vegetation_map_a49f60532f0d24614587c698a04871e7e}\label{classglimac_1_1_vegetation_map_a49f60532f0d24614587c698a04871e7e}} 
+\index{glimac\+::\+Vegetation\+Map@{glimac\+::\+Vegetation\+Map}!Vegetation\+Map@{Vegetation\+Map}}
+\index{Vegetation\+Map@{Vegetation\+Map}!glimac\+::\+Vegetation\+Map@{glimac\+::\+Vegetation\+Map}}
+\subsubsection{\texorpdfstring{Vegetation\+Map()}{VegetationMap()}}
+{\footnotesize\ttfamily glimac\+::\+Vegetation\+Map\+::\+Vegetation\+Map (\begin{DoxyParamCaption}\item[{unsigned int}]{width,  }\item[{unsigned int}]{height,  }\item[{float}]{resw,  }\item[{float}]{resh,  }\item[{float}]{resv }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor for the Vegetation Map 
+\begin{DoxyParams}{Parameters}
+{\em width} & Width of the \hyperlink{classglimac_1_1_vegetation_map}{Vegetation\+Map} \\
+\hline
+{\em height} & Height of the \hyperlink{classglimac_1_1_vegetation_map}{Vegetation\+Map} \\
+\hline
+{\em resw} & Resolution for the width \\
+\hline
+{\em resh} & Resolution for the height \\
+\hline
+{\em resv} & Resolution for the values of the \hyperlink{classglimac_1_1_vegetation_map}{Vegetation\+Map} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 29 of file Vegetation\+Map.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglimac_1_1_vegetation_map_a01260f4f36662b96c754902cd3e2e203}\label{classglimac_1_1_vegetation_map_a01260f4f36662b96c754902cd3e2e203}} 
+\index{glimac\+::\+Vegetation\+Map@{glimac\+::\+Vegetation\+Map}!get\+Height@{get\+Height}}
+\index{get\+Height@{get\+Height}!glimac\+::\+Vegetation\+Map@{glimac\+::\+Vegetation\+Map}}
+\subsubsection{\texorpdfstring{get\+Height()}{getHeight()}}
+{\footnotesize\ttfamily unsigned int glimac\+::\+Vegetation\+Map\+::get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Getter for the height of the \hyperlink{classglimac_1_1_vegetation_map}{Vegetation\+Map} \begin{DoxyReturn}{Returns}
+the height 
+\end{DoxyReturn}
+
+
+Definition at line 47 of file Vegetation\+Map.\+hpp.
+
+\mbox{\Hypertarget{classglimac_1_1_vegetation_map_ac8629079c4237ecccb141c871f1be874}\label{classglimac_1_1_vegetation_map_ac8629079c4237ecccb141c871f1be874}} 
+\index{glimac\+::\+Vegetation\+Map@{glimac\+::\+Vegetation\+Map}!get\+Vegetation\+Data@{get\+Vegetation\+Data}}
+\index{get\+Vegetation\+Data@{get\+Vegetation\+Data}!glimac\+::\+Vegetation\+Map@{glimac\+::\+Vegetation\+Map}}
+\subsubsection{\texorpdfstring{get\+Vegetation\+Data()}{getVegetationData()}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$\hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3}$>$ $>$ glimac\+::\+Vegetation\+Map\+::get\+Vegetation\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Getter for the data of the \hyperlink{classglimac_1_1_vegetation_map}{Vegetation\+Map} \begin{DoxyReturn}{Returns}
+The data of the \hyperlink{classglimac_1_1_vegetation_map}{Vegetation\+Map} 
+\end{DoxyReturn}
+
+
+Definition at line 67 of file Vegetation\+Map.\+hpp.
+
+\mbox{\Hypertarget{classglimac_1_1_vegetation_map_a129e6a0197f0ff9fb0d5d7f8ed6a9b78}\label{classglimac_1_1_vegetation_map_a129e6a0197f0ff9fb0d5d7f8ed6a9b78}} 
+\index{glimac\+::\+Vegetation\+Map@{glimac\+::\+Vegetation\+Map}!get\+Width@{get\+Width}}
+\index{get\+Width@{get\+Width}!glimac\+::\+Vegetation\+Map@{glimac\+::\+Vegetation\+Map}}
+\subsubsection{\texorpdfstring{get\+Width()}{getWidth()}}
+{\footnotesize\ttfamily unsigned int glimac\+::\+Vegetation\+Map\+::get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Getter for the width of the \hyperlink{classglimac_1_1_vegetation_map}{Vegetation\+Map} \begin{DoxyReturn}{Returns}
+the width 
+\end{DoxyReturn}
+
+
+Definition at line 39 of file Vegetation\+Map.\+hpp.
+
+\mbox{\Hypertarget{classglimac_1_1_vegetation_map_a95dd8bddf998e034565d5353dee84a75}\label{classglimac_1_1_vegetation_map_a95dd8bddf998e034565d5353dee84a75}} 
+\index{glimac\+::\+Vegetation\+Map@{glimac\+::\+Vegetation\+Map}!insert@{insert}}
+\index{insert@{insert}!glimac\+::\+Vegetation\+Map@{glimac\+::\+Vegetation\+Map}}
+\subsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily void glimac\+::\+Vegetation\+Map\+::insert (\begin{DoxyParamCaption}\item[{unsigned int}]{i,  }\item[{unsigned int}]{j,  }\item[{float}]{r,  }\item[{float}]{g,  }\item[{float}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Insert a vec3 in the vegetation map 
+\begin{DoxyParams}{Parameters}
+{\em i} & Index x of the \hyperlink{classglimac_1_1_vegetation_map}{Vegetation\+Map} \\
+\hline
+{\em j} & Index z of the \hyperlink{classglimac_1_1_vegetation_map}{Vegetation\+Map} \\
+\hline
+{\em r} & Value of red \\
+\hline
+{\em g} & Value of green \\
+\hline
+{\em b} & Value of the blue \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 59 of file Vegetation\+Map.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+glimac/include/glimac/\hyperlink{_vegetation_map_8hpp}{Vegetation\+Map.\+hpp}\end{DoxyCompactItemize}

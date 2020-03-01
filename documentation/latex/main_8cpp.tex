@@ -1,0 +1,360 @@
+\hypertarget{main_8cpp}{}\section{T\+P\+\_\+\+Mastercraft/main.cpp File Reference}
+\label{main_8cpp}\index{T\+P\+\_\+\+Mastercraft/main.\+cpp@{T\+P\+\_\+\+Mastercraft/main.\+cpp}}
+{\ttfamily \#include $<$glimac/\+Chunk.\+hpp$>$}\newline
+{\ttfamily \#include $<$glimac/\+Color\+Map.\+hpp$>$}\newline
+{\ttfamily \#include $<$glimac/\+Constrained\+Camera.\+hpp$>$}\newline
+{\ttfamily \#include $<$glimac/\+Cube.\+hpp$>$}\newline
+{\ttfamily \#include $<$glimac/\+Anti\+Cube.\+hpp$>$}\newline
+{\ttfamily \#include $<$glimac/\+G\+L\+F\+W\+Window\+Manager.\+hpp$>$}\newline
+{\ttfamily \#include $<$glimac/\+Simple\+Textured\+Skybox\+Program.\+hpp$>$}\newline
+{\ttfamily \#include $<$G\+L/glew.\+h$>$}\newline
+{\ttfamily \#include $<$glimac/\+Directional\+Light.\+hpp$>$}\newline
+{\ttfamily \#include $<$glimac/\+File\+Path.\+hpp$>$}\newline
+{\ttfamily \#include $<$glimac/\+Global\+Program.\+hpp$>$}\newline
+{\ttfamily \#include $<$glimac/\+Height\+Map.\+hpp$>$}\newline
+{\ttfamily \#include $<$glimac/\+Image.\+hpp$>$}\newline
+{\ttfamily \#include $<$glimac/\+Vegetation\+Map.\+hpp$>$}\newline
+{\ttfamily \#include $<$glimac/common.\+hpp$>$}\newline
+{\ttfamily \#include $<$cstddef$>$}\newline
+{\ttfamily \#include $<$glimac/\+Pnj.\+hpp$>$}\newline
+{\ttfamily \#include $<$glimac/\+Sphere.\+hpp$>$}\newline
+{\ttfamily \#include $<$glimac/\+Tree.\+hpp$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+Include dependency graph for main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{main_8cpp_a87c7c5942f8b27d39365308708e09ee8}{draw\+V\+AO} (const \hyperlink{class_global_program}{Global\+Program} \&program, long vertex\+Count, const \hyperlink{group__core__types_ga7dcd2365c2e368e6af5b7adeb6a9c8df}{mat4} \&proj\+Matrix, const \hyperlink{group__core__types_ga7dcd2365c2e368e6af5b7adeb6a9c8df}{mat4} \&view\+Matrix, const \hyperlink{group__core__types_ga7dcd2365c2e368e6af5b7adeb6a9c8df}{mat4} \&model\+Matrix, const \hyperlink{class_directional_light}{Directional\+Light} \&\hyperlink{structlight}{light})
+\item 
+void \hyperlink{main_8cpp_a53927f4e2933db7e0d40e454d56dfd61}{draw\+Skybox} (const \hyperlink{classglimac_1_1_simple_textured_skybox_program}{Simple\+Textured\+Skybox\+Program} \&program, long vertex\+Count, const \hyperlink{group__core__types_ga7dcd2365c2e368e6af5b7adeb6a9c8df}{mat4} \&proj\+Matrix, const \hyperlink{group__core__types_ga7dcd2365c2e368e6af5b7adeb6a9c8df}{mat4} \&view\+Matrix, const \hyperlink{group__core__types_ga7dcd2365c2e368e6af5b7adeb6a9c8df}{mat4} \&model\+Matrix)
+\item 
+void \hyperlink{main_8cpp_a974a021e89301ab64c32af54a16afdd6}{generate\+All\+Chunks} (const \hyperlink{classglimac_1_1_height_map}{Height\+Map} \&height\+Map, const \hyperlink{class_offset_texture_map}{Offset\+Texture\+Map} \&offset\+Texture\+Map, std\+::vector$<$ std\+::vector$<$ \hyperlink{class_chunk}{Chunk} $>$$>$ \&chunk\+Vector)
+\item 
+void \hyperlink{main_8cpp_a28bfa6fe5bc06bd96c9b106a6062b505}{generate\+Tree\+List} (const \hyperlink{classglimac_1_1_height_map}{Height\+Map} \&height\+Map, const \hyperlink{classglimac_1_1_vegetation_map}{Vegetation\+Map} \&vegetation\+Map, std\+::vector$<$ std\+::vector$<$ \hyperlink{class_tree}{Tree} $>$$>$ \&tree\+List)
+\item 
+void \hyperlink{main_8cpp_a1af240f10ea75f26699b8df6f7492bad}{generate\+Surrounding\+Chunk\+Vertex\+From\+All\+Chunks} (std\+::vector$<$ std\+::vector$<$ \hyperlink{class_chunk}{Chunk} $>$$>$ chunk\+List, long \&global\+Count, std\+::vector$<$ \hyperlink{structglimac_1_1_shape_vertex}{Shape\+Vertex} $>$ \&concat\+Data\+List, int offset\+X1, int offset\+X2, int offset\+Z1, int offset\+Z2)
+\item 
+void \hyperlink{main_8cpp_a633eea16f72cd1b80b4923c7f06fd1e9}{refresh\+Chunk\+V\+BO} (const std\+::vector$<$ std\+::vector$<$ \hyperlink{class_chunk}{Chunk} $>$$>$ \&chunk\+List, std\+::vector$<$ \hyperlink{structglimac_1_1_shape_vertex}{Shape\+Vertex} $>$ \&concat\+Data\+List, long \&global\+Number\+Of\+Vertex, \hyperlink{dummy_8cpp_aa311c7f0d6ec4f1a33f9235c3651b86b}{G\+Luint} \&vbo, int current\+ChunkX, int current\+ChunkZ, int distance\+Chunk\+Loaded)
+\item 
+void \hyperlink{main_8cpp_aa2a982116dd0f104084feecfc65cbd82}{where\+AmI} (const \hyperlink{classglimac_1_1_constrained_camera}{Constrained\+Camera} \&camera, int \&chunk\+NumberX, int \&chunk\+NumberZ)
+\item 
+void \hyperlink{main_8cpp_ab42f3c3699c212b8562f27b6bdd99942}{bind\+V\+B\+O\+To\+V\+AO} (\hyperlink{dummy_8cpp_aa311c7f0d6ec4f1a33f9235c3651b86b}{G\+Luint} vbo, \hyperlink{dummy_8cpp_aa311c7f0d6ec4f1a33f9235c3651b86b}{G\+Luint} vao, const \hyperlink{dummy_8cpp_aa311c7f0d6ec4f1a33f9235c3651b86b}{G\+Luint} V\+E\+R\+T\+E\+X\+\_\+\+A\+T\+T\+R\+\_\+\+P\+O\+S\+I\+T\+I\+ON, const \hyperlink{dummy_8cpp_aa311c7f0d6ec4f1a33f9235c3651b86b}{G\+Luint} V\+E\+R\+T\+E\+X\+\_\+\+A\+T\+T\+R\+\_\+\+N\+O\+R\+M\+AL, const \hyperlink{dummy_8cpp_aa311c7f0d6ec4f1a33f9235c3651b86b}{G\+Luint} V\+E\+R\+T\+E\+X\+\_\+\+A\+T\+T\+R\+\_\+\+T\+E\+X\+T\+U\+RE)
+\item 
+void \hyperlink{main_8cpp_a87b24e0799ec1c2fd985f5f795b047f8}{configure\+V\+AO} (\hyperlink{dummy_8cpp_aa311c7f0d6ec4f1a33f9235c3651b86b}{G\+Luint} vao, \hyperlink{dummy_8cpp_aa311c7f0d6ec4f1a33f9235c3651b86b}{G\+Luint} \&V\+E\+R\+T\+E\+X\+\_\+\+A\+T\+T\+R\+\_\+\+P\+O\+S\+I\+T\+I\+ON, \hyperlink{dummy_8cpp_aa311c7f0d6ec4f1a33f9235c3651b86b}{G\+Luint} \&V\+E\+R\+T\+E\+X\+\_\+\+A\+T\+T\+R\+\_\+\+N\+O\+R\+M\+AL, \hyperlink{dummy_8cpp_aa311c7f0d6ec4f1a33f9235c3651b86b}{G\+Luint} \&V\+E\+R\+T\+E\+X\+\_\+\+A\+T\+T\+R\+\_\+\+T\+E\+X\+T\+U\+RE)
+\item 
+void \hyperlink{main_8cpp_aec1e38a35a3dd4dab638bd83e2a90793}{load\+Pnj\+In\+V\+BO} (const \hyperlink{classglimac_1_1_sphere}{Sphere} \&sphere, \hyperlink{dummy_8cpp_aa311c7f0d6ec4f1a33f9235c3651b86b}{G\+Luint} vbo\+Pnj)
+\item 
+void \hyperlink{main_8cpp_a6676e344bda5a7b9ccbe27361f51cd7d}{load\+Pnj\+Texture\+Location} (std\+::unique\+\_\+ptr$<$ \hyperlink{classglimac_1_1_image}{Image} $>$ \&pnj\+Image\+Ptr, \hyperlink{dummy_8cpp_aa311c7f0d6ec4f1a33f9235c3651b86b}{G\+Luint} pnj\+Texture\+Location)
+\item 
+void \hyperlink{main_8cpp_a7733086ce44d12c10571a2e425a34cb1}{load\+Atlas\+Texture\+Location} (std\+::unique\+\_\+ptr$<$ \hyperlink{classglimac_1_1_image}{Image} $>$ \&atlas\+Image\+Ptr, \hyperlink{dummy_8cpp_aa311c7f0d6ec4f1a33f9235c3651b86b}{G\+Luint} atlas\+Texture\+Location)
+\item 
+void \hyperlink{main_8cpp_a201d72530b51eaa8a761813dd74b6ad0}{load\+Skybox\+Texture\+Location} (std\+::unique\+\_\+ptr$<$ \hyperlink{classglimac_1_1_image}{Image} $>$ \&skybox\+Image\+Ptr, \hyperlink{dummy_8cpp_aa311c7f0d6ec4f1a33f9235c3651b86b}{G\+Luint} skybox\+Texture\+Location)
+\item 
+int \hyperlink{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_ab42f3c3699c212b8562f27b6bdd99942}\label{main_8cpp_ab42f3c3699c212b8562f27b6bdd99942}} 
+\index{main.\+cpp@{main.\+cpp}!bind\+V\+B\+O\+To\+V\+AO@{bind\+V\+B\+O\+To\+V\+AO}}
+\index{bind\+V\+B\+O\+To\+V\+AO@{bind\+V\+B\+O\+To\+V\+AO}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{bind\+V\+B\+O\+To\+V\+A\+O()}{bindVBOToVAO()}}
+{\footnotesize\ttfamily void bind\+V\+B\+O\+To\+V\+AO (\begin{DoxyParamCaption}\item[{\hyperlink{dummy_8cpp_aa311c7f0d6ec4f1a33f9235c3651b86b}{G\+Luint}}]{vbo,  }\item[{\hyperlink{dummy_8cpp_aa311c7f0d6ec4f1a33f9235c3651b86b}{G\+Luint}}]{vao,  }\item[{const \hyperlink{dummy_8cpp_aa311c7f0d6ec4f1a33f9235c3651b86b}{G\+Luint}}]{V\+E\+R\+T\+E\+X\+\_\+\+A\+T\+T\+R\+\_\+\+P\+O\+S\+I\+T\+I\+ON,  }\item[{const \hyperlink{dummy_8cpp_aa311c7f0d6ec4f1a33f9235c3651b86b}{G\+Luint}}]{V\+E\+R\+T\+E\+X\+\_\+\+A\+T\+T\+R\+\_\+\+N\+O\+R\+M\+AL,  }\item[{const \hyperlink{dummy_8cpp_aa311c7f0d6ec4f1a33f9235c3651b86b}{G\+Luint}}]{V\+E\+R\+T\+E\+X\+\_\+\+A\+T\+T\+R\+\_\+\+T\+E\+X\+T\+U\+RE }\end{DoxyParamCaption})}
+
+Binds a vao on a vbo with the common way of doing it in O\+P\+E\+N\+GL with the three attributes that are commonly used in this application 
+\begin{DoxyParams}{Parameters}
+{\em vbo} & V\+BO to bind \\
+\hline
+{\em vao} & V\+AO to bind to the V\+BO \\
+\hline
+{\em V\+E\+R\+T\+E\+X\+\_\+\+A\+T\+T\+R\+\_\+\+P\+O\+S\+I\+T\+I\+ON} & Vertex attribute of position \\
+\hline
+{\em V\+E\+R\+T\+E\+X\+\_\+\+A\+T\+T\+R\+\_\+\+N\+O\+R\+M\+AL} & Vertex attribute for the normals \\
+\hline
+{\em V\+E\+R\+T\+E\+X\+\_\+\+A\+T\+T\+R\+\_\+\+T\+E\+X\+T\+U\+RE} & Vertex attribute for the texture coordinates \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 209 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a87b24e0799ec1c2fd985f5f795b047f8}\label{main_8cpp_a87b24e0799ec1c2fd985f5f795b047f8}} 
+\index{main.\+cpp@{main.\+cpp}!configure\+V\+AO@{configure\+V\+AO}}
+\index{configure\+V\+AO@{configure\+V\+AO}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{configure\+V\+A\+O()}{configureVAO()}}
+{\footnotesize\ttfamily void configure\+V\+AO (\begin{DoxyParamCaption}\item[{\hyperlink{dummy_8cpp_aa311c7f0d6ec4f1a33f9235c3651b86b}{G\+Luint}}]{vao,  }\item[{\hyperlink{dummy_8cpp_aa311c7f0d6ec4f1a33f9235c3651b86b}{G\+Luint} \&}]{V\+E\+R\+T\+E\+X\+\_\+\+A\+T\+T\+R\+\_\+\+P\+O\+S\+I\+T\+I\+ON,  }\item[{\hyperlink{dummy_8cpp_aa311c7f0d6ec4f1a33f9235c3651b86b}{G\+Luint} \&}]{V\+E\+R\+T\+E\+X\+\_\+\+A\+T\+T\+R\+\_\+\+N\+O\+R\+M\+AL,  }\item[{\hyperlink{dummy_8cpp_aa311c7f0d6ec4f1a33f9235c3651b86b}{G\+Luint} \&}]{V\+E\+R\+T\+E\+X\+\_\+\+A\+T\+T\+R\+\_\+\+T\+E\+X\+T\+U\+RE }\end{DoxyParamCaption})}
+
+Configures the vao to accept the common attributes that are used by all our basic structures and datas 
+\begin{DoxyParams}{Parameters}
+{\em vao} & V\+AO to configure \\
+\hline
+{\em V\+E\+R\+T\+E\+X\+\_\+\+A\+T\+T\+R\+\_\+\+P\+O\+S\+I\+T\+I\+ON} & Vertex attribute of position \\
+\hline
+{\em V\+E\+R\+T\+E\+X\+\_\+\+A\+T\+T\+R\+\_\+\+N\+O\+R\+M\+AL} & Vertex attribute for the normals \\
+\hline
+{\em V\+E\+R\+T\+E\+X\+\_\+\+A\+T\+T\+R\+\_\+\+T\+E\+X\+T\+U\+RE} & Vertex attribute for the texture coordinates \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 239 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a53927f4e2933db7e0d40e454d56dfd61}\label{main_8cpp_a53927f4e2933db7e0d40e454d56dfd61}} 
+\index{main.\+cpp@{main.\+cpp}!draw\+Skybox@{draw\+Skybox}}
+\index{draw\+Skybox@{draw\+Skybox}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{draw\+Skybox()}{drawSkybox()}}
+{\footnotesize\ttfamily void draw\+Skybox (\begin{DoxyParamCaption}\item[{const \hyperlink{classglimac_1_1_simple_textured_skybox_program}{Simple\+Textured\+Skybox\+Program} \&}]{program,  }\item[{long}]{vertex\+Count,  }\item[{const \hyperlink{group__core__types_ga7dcd2365c2e368e6af5b7adeb6a9c8df}{mat4} \&}]{proj\+Matrix,  }\item[{const \hyperlink{group__core__types_ga7dcd2365c2e368e6af5b7adeb6a9c8df}{mat4} \&}]{view\+Matrix,  }\item[{const \hyperlink{group__core__types_ga7dcd2365c2e368e6af5b7adeb6a9c8df}{mat4} \&}]{model\+Matrix }\end{DoxyParamCaption})}
+
+Draws the skybox 
+\begin{DoxyParams}{Parameters}
+{\em program} & Program that contains the shaders to use with the uniform variables \\
+\hline
+{\em vertex\+Count} & Number of vertex in the skybox V\+BO \\
+\hline
+{\em proj\+Matrix} & Projection matrix \\
+\hline
+{\em view\+Matrix} & View matrix \\
+\hline
+{\em model\+Matrix} & Model matrix \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 74 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a87c7c5942f8b27d39365308708e09ee8}\label{main_8cpp_a87c7c5942f8b27d39365308708e09ee8}} 
+\index{main.\+cpp@{main.\+cpp}!draw\+V\+AO@{draw\+V\+AO}}
+\index{draw\+V\+AO@{draw\+V\+AO}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{draw\+V\+A\+O()}{drawVAO()}}
+{\footnotesize\ttfamily void draw\+V\+AO (\begin{DoxyParamCaption}\item[{const \hyperlink{class_global_program}{Global\+Program} \&}]{program,  }\item[{long}]{vertex\+Count,  }\item[{const \hyperlink{group__core__types_ga7dcd2365c2e368e6af5b7adeb6a9c8df}{mat4} \&}]{proj\+Matrix,  }\item[{const \hyperlink{group__core__types_ga7dcd2365c2e368e6af5b7adeb6a9c8df}{mat4} \&}]{view\+Matrix,  }\item[{const \hyperlink{group__core__types_ga7dcd2365c2e368e6af5b7adeb6a9c8df}{mat4} \&}]{model\+Matrix,  }\item[{const \hyperlink{class_directional_light}{Directional\+Light} \&}]{light }\end{DoxyParamCaption})}
+
+Draws a V\+AO already bound with a V\+BO 
+\begin{DoxyParams}{Parameters}
+{\em program} & Program to use for shaders to use with the uniform variables \\
+\hline
+{\em vertex\+Count} & Number of vertex to draw (in the bounded V\+BO) \\
+\hline
+{\em proj\+Matrix} & Matrix of projection to use \\
+\hline
+{\em view\+Matrix} & Matrix of view to use \\
+\hline
+{\em model\+Matrix} & Matrix of model to use \\
+\hline
+{\em light} & Directional light for the vao. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 39 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a974a021e89301ab64c32af54a16afdd6}\label{main_8cpp_a974a021e89301ab64c32af54a16afdd6}} 
+\index{main.\+cpp@{main.\+cpp}!generate\+All\+Chunks@{generate\+All\+Chunks}}
+\index{generate\+All\+Chunks@{generate\+All\+Chunks}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{generate\+All\+Chunks()}{generateAllChunks()}}
+{\footnotesize\ttfamily void generate\+All\+Chunks (\begin{DoxyParamCaption}\item[{const \hyperlink{classglimac_1_1_height_map}{Height\+Map} \&}]{height\+Map,  }\item[{const \hyperlink{class_offset_texture_map}{Offset\+Texture\+Map} \&}]{offset\+Texture\+Map,  }\item[{std\+::vector$<$ std\+::vector$<$ \hyperlink{class_chunk}{Chunk} $>$$>$ \&}]{chunk\+Vector }\end{DoxyParamCaption})}
+
+Generating all the computing for the current map loaded 
+\begin{DoxyParams}{Parameters}
+{\em height\+Map} & Height map to use to generate the map \\
+\hline
+{\em offset\+Texture\+Map} & Offset texture map to use to determine the different texture to use and to fetch the atlas texture \\
+\hline
+{\em chunk\+Vector} & Resulting chunk vector that will contains all the chunks of the map \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 96 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a1af240f10ea75f26699b8df6f7492bad}\label{main_8cpp_a1af240f10ea75f26699b8df6f7492bad}} 
+\index{main.\+cpp@{main.\+cpp}!generate\+Surrounding\+Chunk\+Vertex\+From\+All\+Chunks@{generate\+Surrounding\+Chunk\+Vertex\+From\+All\+Chunks}}
+\index{generate\+Surrounding\+Chunk\+Vertex\+From\+All\+Chunks@{generate\+Surrounding\+Chunk\+Vertex\+From\+All\+Chunks}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{generate\+Surrounding\+Chunk\+Vertex\+From\+All\+Chunks()}{generateSurroundingChunkVertexFromAllChunks()}}
+{\footnotesize\ttfamily void generate\+Surrounding\+Chunk\+Vertex\+From\+All\+Chunks (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \hyperlink{class_chunk}{Chunk} $>$$>$}]{chunk\+List,  }\item[{long \&}]{global\+Count,  }\item[{std\+::vector$<$ \hyperlink{structglimac_1_1_shape_vertex}{Shape\+Vertex} $>$ \&}]{concat\+Data\+List,  }\item[{int}]{offset\+X1,  }\item[{int}]{offset\+X2,  }\item[{int}]{offset\+Z1,  }\item[{int}]{offset\+Z2 }\end{DoxyParamCaption})}
+
+Fetch all the surrounding chunks from the pregenerated chunk list based on a given position (the camera position) 
+\begin{DoxyParams}{Parameters}
+{\em chunk\+List} & Pregenerated list of chunks \\
+\hline
+{\em global\+Count} & Number of vertex on the whole area (from all the chunks surrounding the player) \\
+\hline
+{\em concat\+Data\+List} & Concatenation of all the vertex of all the chunks to have a 1D list of vertex \\
+\hline
+{\em offset\+X1} & Origin on the x axis for the bundle of chunk considered \\
+\hline
+{\em offset\+X2} & End on the x axis for the bundle of chunk considered \\
+\hline
+{\em offset\+Z1} & Origin on the z axis for the bundle of chunk considered \\
+\hline
+{\em offset\+Z2} & End on the z axis for the bundle of chunk considered \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 143 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a28bfa6fe5bc06bd96c9b106a6062b505}\label{main_8cpp_a28bfa6fe5bc06bd96c9b106a6062b505}} 
+\index{main.\+cpp@{main.\+cpp}!generate\+Tree\+List@{generate\+Tree\+List}}
+\index{generate\+Tree\+List@{generate\+Tree\+List}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{generate\+Tree\+List()}{generateTreeList()}}
+{\footnotesize\ttfamily void generate\+Tree\+List (\begin{DoxyParamCaption}\item[{const \hyperlink{classglimac_1_1_height_map}{Height\+Map} \&}]{height\+Map,  }\item[{const \hyperlink{classglimac_1_1_vegetation_map}{Vegetation\+Map} \&}]{vegetation\+Map,  }\item[{std\+::vector$<$ std\+::vector$<$ \hyperlink{class_tree}{Tree} $>$$>$ \&}]{tree\+List }\end{DoxyParamCaption})}
+
+Generates all the trees in the map 
+\begin{DoxyParams}{Parameters}
+{\em height\+Map} & Height map to use to place the trees \\
+\hline
+{\em vegetation\+Map} & Vegetation map that condition the position in x and z for the trees \\
+\hline
+{\em tree\+List} & Resulting list of tree for the whole map \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 116 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a7733086ce44d12c10571a2e425a34cb1}\label{main_8cpp_a7733086ce44d12c10571a2e425a34cb1}} 
+\index{main.\+cpp@{main.\+cpp}!load\+Atlas\+Texture\+Location@{load\+Atlas\+Texture\+Location}}
+\index{load\+Atlas\+Texture\+Location@{load\+Atlas\+Texture\+Location}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{load\+Atlas\+Texture\+Location()}{loadAtlasTextureLocation()}}
+{\footnotesize\ttfamily void load\+Atlas\+Texture\+Location (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \hyperlink{classglimac_1_1_image}{Image} $>$ \&}]{atlas\+Image\+Ptr,  }\item[{\hyperlink{dummy_8cpp_aa311c7f0d6ec4f1a33f9235c3651b86b}{G\+Luint}}]{atlas\+Texture\+Location }\end{DoxyParamCaption})}
+
+Loads the atlas 
+\begin{DoxyParams}{Parameters}
+{\em atlas\+Image\+Ptr} & Atlas image \\
+\hline
+{\em atlas\+Texture\+Location} & Atlas image texture location \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 285 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_aec1e38a35a3dd4dab638bd83e2a90793}\label{main_8cpp_aec1e38a35a3dd4dab638bd83e2a90793}} 
+\index{main.\+cpp@{main.\+cpp}!load\+Pnj\+In\+V\+BO@{load\+Pnj\+In\+V\+BO}}
+\index{load\+Pnj\+In\+V\+BO@{load\+Pnj\+In\+V\+BO}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{load\+Pnj\+In\+V\+B\+O()}{loadPnjInVBO()}}
+{\footnotesize\ttfamily void load\+Pnj\+In\+V\+BO (\begin{DoxyParamCaption}\item[{const \hyperlink{classglimac_1_1_sphere}{Sphere} \&}]{sphere,  }\item[{\hyperlink{dummy_8cpp_aa311c7f0d6ec4f1a33f9235c3651b86b}{G\+Luint}}]{vbo\+Pnj }\end{DoxyParamCaption})}
+
+Loads the pnj in the vbo 
+\begin{DoxyParams}{Parameters}
+{\em sphere} & Sphere to use as base for the P\+NJ \\
+\hline
+{\em vbo\+Pnj} & vbo of the pnj \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 255 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a6676e344bda5a7b9ccbe27361f51cd7d}\label{main_8cpp_a6676e344bda5a7b9ccbe27361f51cd7d}} 
+\index{main.\+cpp@{main.\+cpp}!load\+Pnj\+Texture\+Location@{load\+Pnj\+Texture\+Location}}
+\index{load\+Pnj\+Texture\+Location@{load\+Pnj\+Texture\+Location}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{load\+Pnj\+Texture\+Location()}{loadPnjTextureLocation()}}
+{\footnotesize\ttfamily void load\+Pnj\+Texture\+Location (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \hyperlink{classglimac_1_1_image}{Image} $>$ \&}]{pnj\+Image\+Ptr,  }\item[{\hyperlink{dummy_8cpp_aa311c7f0d6ec4f1a33f9235c3651b86b}{G\+Luint}}]{pnj\+Texture\+Location }\end{DoxyParamCaption})}
+
+Loads the pnj texture location 
+\begin{DoxyParams}{Parameters}
+{\em pnj\+Image\+Ptr} & Pointer to the image to use as texture \\
+\hline
+{\em pnj\+Texture\+Location} & Location for the pnj texture \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 268 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a201d72530b51eaa8a761813dd74b6ad0}\label{main_8cpp_a201d72530b51eaa8a761813dd74b6ad0}} 
+\index{main.\+cpp@{main.\+cpp}!load\+Skybox\+Texture\+Location@{load\+Skybox\+Texture\+Location}}
+\index{load\+Skybox\+Texture\+Location@{load\+Skybox\+Texture\+Location}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{load\+Skybox\+Texture\+Location()}{loadSkyboxTextureLocation()}}
+{\footnotesize\ttfamily void load\+Skybox\+Texture\+Location (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \hyperlink{classglimac_1_1_image}{Image} $>$ \&}]{skybox\+Image\+Ptr,  }\item[{\hyperlink{dummy_8cpp_aa311c7f0d6ec4f1a33f9235c3651b86b}{G\+Luint}}]{skybox\+Texture\+Location }\end{DoxyParamCaption})}
+
+Loads the skybox texture 
+\begin{DoxyParams}{Parameters}
+{\em skybox\+Image\+Ptr} & Image of the skybox \\
+\hline
+{\em skybox\+Texture\+Location} & Skybox texture location \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 302 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{main.\+cpp@{main.\+cpp}!main@{main}}
+\index{main@{main}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+Atlas texture
+
+P\+NJ texture
+
+Skybox day texture
+
+Skybox night texture
+
+M\+AP I\+N\+F\+OS
+
+G\+E\+N\+E\+R\+A\+T\+I\+ON OF T\+HE V\+B\+Os
+
+L\+O\+A\+D\+I\+NG V\+B\+Os
+
+M\+AP
+
+P\+NJ
+
+S\+K\+Y\+B\+OX
+
+T\+R\+E\+Es
+
+V\+A\+Os G\+E\+N\+E\+R\+A\+T\+I\+ON
+
+B\+I\+N\+D\+I\+NG OF V\+A\+Os
+
+B\+I\+N\+D\+I\+NG OF T\+HE V\+BO ON T\+HE V\+AO
+
+D\+R\+AW M\+AP
+
+D\+R\+AW T\+R\+EE
+
+D\+R\+AW P\+NJ
+
+Definition at line 314 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a633eea16f72cd1b80b4923c7f06fd1e9}\label{main_8cpp_a633eea16f72cd1b80b4923c7f06fd1e9}} 
+\index{main.\+cpp@{main.\+cpp}!refresh\+Chunk\+V\+BO@{refresh\+Chunk\+V\+BO}}
+\index{refresh\+Chunk\+V\+BO@{refresh\+Chunk\+V\+BO}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{refresh\+Chunk\+V\+B\+O()}{refreshChunkVBO()}}
+{\footnotesize\ttfamily void refresh\+Chunk\+V\+BO (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ \hyperlink{class_chunk}{Chunk} $>$$>$ \&}]{chunk\+List,  }\item[{std\+::vector$<$ \hyperlink{structglimac_1_1_shape_vertex}{Shape\+Vertex} $>$ \&}]{concat\+Data\+List,  }\item[{long \&}]{global\+Number\+Of\+Vertex,  }\item[{\hyperlink{dummy_8cpp_aa311c7f0d6ec4f1a33f9235c3651b86b}{G\+Luint} \&}]{vbo,  }\item[{int}]{current\+ChunkX,  }\item[{int}]{current\+ChunkZ,  }\item[{int}]{distance\+Chunk\+Loaded }\end{DoxyParamCaption})}
+
+
+
+Definition at line 171 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_aa2a982116dd0f104084feecfc65cbd82}\label{main_8cpp_aa2a982116dd0f104084feecfc65cbd82}} 
+\index{main.\+cpp@{main.\+cpp}!where\+AmI@{where\+AmI}}
+\index{where\+AmI@{where\+AmI}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{where\+Am\+I()}{whereAmI()}}
+{\footnotesize\ttfamily void where\+AmI (\begin{DoxyParamCaption}\item[{const \hyperlink{classglimac_1_1_constrained_camera}{Constrained\+Camera} \&}]{camera,  }\item[{int \&}]{chunk\+NumberX,  }\item[{int \&}]{chunk\+NumberZ }\end{DoxyParamCaption})}
+
+Gives a couple of value that indicates the id of the chunk where the camera is. 
+\begin{DoxyParams}{Parameters}
+{\em camera} & Camera used \\
+\hline
+{\em chunk\+NumberX} & Position of the camera in number of chunk on X \\
+\hline
+{\em chunk\+NumberZ} & Position of the camera in number of chunk on Z \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 194 of file main.\+cpp.
+

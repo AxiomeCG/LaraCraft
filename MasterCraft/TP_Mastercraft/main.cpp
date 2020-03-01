@@ -27,6 +27,15 @@
 
 using namespace glimac;
 
+/**
+ * Draws a VAO already bound with a VBO
+ * @param program Program to use for shaders to use with the uniform variables
+ * @param vertexCount Number of vertex to draw (in the bounded VBO)
+ * @param projMatrix Matrix of projection to use
+ * @param viewMatrix Matrix of view to use
+ * @param modelMatrix Matrix of model to use
+ * @param light Directional light for the vao.
+ */
 void drawVAO(const GlobalProgram &program, long vertexCount,
              const mat4 &projMatrix, const mat4 &viewMatrix,
              const mat4 &modelMatrix, const DirectionalLight &light) {
@@ -49,11 +58,19 @@ void drawVAO(const GlobalProgram &program, long vertexCount,
 
   glUniform3fv(program.uLightDir_vsId, 1,
                value_ptr(light.getLightDirection(
-                   viewMatrix))); // TODO Check if it's natural
+                   viewMatrix)));
   glUniform3fv(program.uLightIntensityId, 1, value_ptr(light.lightIntensity));
   glDrawArrays(GL_TRIANGLES, 0, vertexCount);
 }
 
+/**
+ * Draws the skybox
+ * @param program Program that contains the shaders to use with the uniform variables
+ * @param vertexCount Number of vertex in the skybox VBO
+ * @param projMatrix Projection matrix
+ * @param viewMatrix View matrix
+ * @param modelMatrix Model matrix
+ */
 void drawSkybox(const SimpleTexturedSkyboxProgram &program, long vertexCount,
                 const mat4 &projMatrix, const mat4 &viewMatrix,
                 const mat4 &modelMatrix) {
@@ -70,6 +87,12 @@ void drawSkybox(const SimpleTexturedSkyboxProgram &program, long vertexCount,
   glDrawArrays(GL_TRIANGLES, 0, vertexCount);
 }
 
+/**
+ * Generating all the computing for the current map loaded
+ * @param heightMap Height map to use to generate the map
+ * @param offsetTextureMap Offset texture map to use to determine the different texture to use and to fetch the atlas texture
+ * @param chunkVector Resulting chunk vector that will contains all the chunks of the map
+ */
 void generateAllChunks(const HeightMap &heightMap,
                        const OffsetTextureMap &offsetTextureMap,
 
@@ -84,6 +107,12 @@ void generateAllChunks(const HeightMap &heightMap,
   }
 }
 
+/**
+ * Generates all the trees in the map
+ * @param heightMap Height map to use to place the trees
+ * @param vegetationMap Vegetation map that condition the position in x and z for the trees
+ * @param treeList Resulting list of tree for the whole map
+ */
 void generateTreeList(const HeightMap &heightMap,
                       const VegetationMap &vegetationMap,
                       std::vector<std::vector<Tree>> &treeList) {
@@ -101,6 +130,16 @@ void generateTreeList(const HeightMap &heightMap,
   }
 }
 
+/**
+ * Fetch all the surrounding chunks from the pregenerated chunk list based on a given position (the camera position)
+ * @param chunkList Pregenerated list of chunks
+ * @param globalCount Number of vertex on the whole area (from all the chunks surrounding the player)
+ * @param concatDataList Concatenation of all the vertex of all the chunks to have a 1D list of vertex
+ * @param offsetX1 Origin on the x axis for the bundle of chunk considered
+ * @param offsetX2 End on the x axis for the bundle of chunk considered
+ * @param offsetZ1 Origin on the z axis for the bundle of chunk considered
+ * @param offsetZ2 End on the z axis for the bundle of chunk considered
+ */
 void generateSurroundingChunkVertexFromAllChunks(
     std::vector<std::vector<Chunk>> chunkList, long &globalCount,
     std::vector<ShapeVertex> &concatDataList, int offsetX1, int offsetX2,
@@ -118,6 +157,17 @@ void generateSurroundingChunkVertexFromAllChunks(
   }
 }
 
+/**
+ * Draws or redraws the chunk vbo
+ * @example The player moved outside the bounds of the current displayed map and it is mandatory to generate the following part of the map for the player to access it
+ * @param chunkList List of chunk pregenerated
+ * @param concatDataList Result concatenated list of vertex to display
+ * @param globalNumberOfVertex Number total of vertex to display in the VBO
+ * @param vbo VBO for the chunks
+ * @param currentChunkX Current position of the chunk in X (meant to be the current position of the player and the number of chunk on which he is)
+ * @param currentChunkZ Current position of the chunk in Z (meant to be the current position of the player and the number of chunk on which he is)
+ * @param distanceChunkLoaded Number of surrounding chunks to fetch around the current chunk
+ */
 void refreshChunkVBO(const std::vector<std::vector<Chunk>> &chunkList,
                      std::vector<ShapeVertex> &concatDataList,
                      long &globalNumberOfVertex, GLuint &vbo, int currentChunkX,
@@ -135,12 +185,27 @@ void refreshChunkVBO(const std::vector<std::vector<Chunk>> &chunkList,
   glBindBuffer(GL_ARRAY_BUFFER, 0);
 }
 
+/**
+ * Gives a couple of value that indicates the id of the chunk where the camera is.
+ * @param camera Camera used
+ * @param chunkNumberX Position of the camera in number of chunk on X
+ * @param chunkNumberZ Position of the camera in number of chunk on Z
+ */
 void whereAmI(const ConstrainedCamera &camera, int &chunkNumberX,
               int &chunkNumberZ) {
   chunkNumberX = camera.getPosition().x / 16;
   chunkNumberZ = camera.getPosition().z / 16;
 }
 
+
+/**
+ * Binds a vao on a vbo with the common way of doing it in OPENGL with the three attributes that are commonly used in this application
+ * @param vbo VBO to bind
+ * @param vao VAO to bind to the VBO
+ * @param VERTEX_ATTR_POSITION Vertex attribute of position
+ * @param VERTEX_ATTR_NORMAL Vertex attribute for the normals
+ * @param VERTEX_ATTR_TEXTURE Vertex attribute for the texture coordinates
+ */
 void bindVBOToVAO(GLuint vbo, GLuint vao, const GLuint VERTEX_ATTR_POSITION,
                   const GLuint VERTEX_ATTR_NORMAL,
                   const GLuint VERTEX_ATTR_TEXTURE) {
@@ -164,6 +229,13 @@ void bindVBOToVAO(GLuint vbo, GLuint vao, const GLuint VERTEX_ATTR_POSITION,
   glBindVertexArray(0);
 }
 
+/**
+ * Configures the vao to accept the common attributes that are used by all our basic structures and datas
+ * @param vao VAO to configure
+ * @param VERTEX_ATTR_POSITION Vertex attribute of position
+ * @param VERTEX_ATTR_NORMAL Vertex attribute for the normals
+ * @param VERTEX_ATTR_TEXTURE Vertex attribute for the texture coordinates
+ */
 void configureVAO(GLuint vao, GLuint &VERTEX_ATTR_POSITION,
                   GLuint &VERTEX_ATTR_NORMAL, GLuint &VERTEX_ATTR_TEXTURE) {
 
@@ -175,14 +247,11 @@ void configureVAO(GLuint vao, GLuint &VERTEX_ATTR_POSITION,
   glBindVertexArray(0);
 }
 
-void loadPnjInVBO(const Cube &cube, GLuint vboPnj) {
-  glBindBuffer(GL_ARRAY_BUFFER, vboPnj);
-  glBufferData(GL_ARRAY_BUFFER, cube.getVertexCount() * sizeof(ShapeVertex),
-               cube.getDataPointer(), GL_STATIC_DRAW);
-  // Debinding d'un VBO sur la cible GL_ARRAY_BUFFER:
-  glBindBuffer(GL_ARRAY_BUFFER, 0);
-}
-
+/**
+ * Loads the pnj in the vbo
+ * @param sphere Sphere to use as base for the PNJ
+ * @param vboPnj vbo of the pnj
+ */
 void loadPnjInVBO(const Sphere &sphere, GLuint vboPnj) {
   glBindBuffer(GL_ARRAY_BUFFER, vboPnj);
   glBufferData(GL_ARRAY_BUFFER, sphere.getVertexCount() * sizeof(ShapeVertex),
@@ -191,6 +260,11 @@ void loadPnjInVBO(const Sphere &sphere, GLuint vboPnj) {
   glBindBuffer(GL_ARRAY_BUFFER, 0);
 }
 
+/**
+ * Loads the pnj texture location
+ * @param pnjImagePtr Pointer to the image to use as texture
+ * @param pnjTextureLocation Location for the pnj texture
+ */
 void loadPnjTextureLocation(std::unique_ptr<Image> &pnjImagePtr,
                             GLuint pnjTextureLocation) {
   glBindTexture(GL_TEXTURE_2D, pnjTextureLocation);
@@ -203,6 +277,11 @@ void loadPnjTextureLocation(std::unique_ptr<Image> &pnjImagePtr,
   glBindTexture(GL_TEXTURE_2D, 0);
 }
 
+/**
+ * Loads the atlas
+ * @param atlasImagePtr Atlas image
+ * @param atlasTextureLocation Atlas image texture location
+ */
 void loadAtlasTextureLocation(std::unique_ptr<Image> &atlasImagePtr,
                               GLuint atlasTextureLocation) {
   glBindTexture(GL_TEXTURE_2D, atlasTextureLocation);
@@ -215,6 +294,11 @@ void loadAtlasTextureLocation(std::unique_ptr<Image> &atlasImagePtr,
   glBindTexture(GL_TEXTURE_2D, 0);
 }
 
+/**
+ * Loads the skybox texture
+ * @param skyboxImagePtr Image of the skybox
+ * @param skyboxTextureLocation Skybox texture location
+ */
 void loadSkyboxTextureLocation(std::unique_ptr<Image> &skyboxImagePtr,
                                GLuint skyboxTextureLocation) {
   glBindTexture(GL_TEXTURE_2D, skyboxTextureLocation);
@@ -277,14 +361,6 @@ int main(int argc, char **argv) {
 
   std::unique_ptr<Image> pnjImagePtr =
       loadImage("TP_Mastercraft/assets/textures/blocks/baseball.jpeg");
-  assert(pnjImagePtr != nullptr);
-
-  std::unique_ptr<Image> snowImagePtr =
-      loadImage("TP_Mastercraft/assets/textures/blocks/snow.png");
-  assert(pnjImagePtr != nullptr);
-
-  std::unique_ptr<Image> stoneImagePtr =
-      loadImage("TP_Mastercraft/assets/textures/blocks/stone.png");
   assert(pnjImagePtr != nullptr);
 
   std::unique_ptr<Image> dayImagePtr =
@@ -591,14 +667,17 @@ int main(int argc, char **argv) {
   glDeleteTextures(1, &atlasTextureLocation);
   glDeleteTextures(1, &pnjTextureLocation);
   glDeleteTextures(1, &skyboxDayTextureLocation);
+  glDeleteTextures(1, &skyboxNightTextureLocation);
 
   glDeleteBuffers(1, &mapVbo);
   glDeleteBuffers(1, &pnjVbo);
   glDeleteBuffers(1, &skyVbo);
+  glDeleteBuffers(1, &treeVbo);
 
   glDeleteVertexArrays(1, &mapVao);
   glDeleteVertexArrays(1, &pnjVao);
   glDeleteVertexArrays(1, &skyVao);
+  glDeleteVertexArrays(1, &treeVao);
 
   return EXIT_SUCCESS;
 }

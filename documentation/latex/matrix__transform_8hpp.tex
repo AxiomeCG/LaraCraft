@@ -1,0 +1,88 @@
+\hypertarget{matrix__transform_8hpp}{}\section{third-\/party/include/glm/gtc/matrix\+\_\+transform.hpp File Reference}
+\label{matrix__transform_8hpp}\index{third-\/party/include/glm/gtc/matrix\+\_\+transform.\+hpp@{third-\/party/include/glm/gtc/matrix\+\_\+transform.\+hpp}}
+{\ttfamily \#include \char`\"{}../mat4x4.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../vec2.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../vec3.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../vec4.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../gtc/constants.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}matrix\+\_\+transform.\+inl\char`\"{}}\newline
+Include dependency graph for matrix\+\_\+transform.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{matrix__transform_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{matrix__transform_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespaceglm}{glm}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} detail\+::tmat4x4$<$ T, P $>$ \hyperlink{group__gtc__matrix__transform_ga1501de0fa580dcc491b67e0685bbc7c2}{glm\+::translate} (detail\+::tmat4x4$<$ T, P $>$ const \&m, detail\+::tvec3$<$ T, P $>$ const \&v)
+\item 
+{\footnotesize template$<$typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} detail\+::tmat4x4$<$ T, P $>$ \hyperlink{group__gtc__matrix__transform_ga61e65a3bb227c267d1a15113d1056fb1}{glm\+::rotate} (detail\+::tmat4x4$<$ T, P $>$ const \&m, T const \&angle, detail\+::tvec3$<$ T, P $>$ const \&axis)
+\item 
+{\footnotesize template$<$typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} detail\+::tmat4x4$<$ T, P $>$ \hyperlink{group__gtc__matrix__transform_gabd40959f269abd16c256a4f59ab03d62}{glm\+::scale} (detail\+::tmat4x4$<$ T, P $>$ const \&m, detail\+::tvec3$<$ T, P $>$ const \&v)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} detail\+::tmat4x4$<$ T, defaultp $>$ \hyperlink{group__gtc__matrix__transform_gac393e9262776e4980731c386123e4377}{glm\+::ortho} (T const \&left, T const \&right, T const \&bottom, T const \&top, T const \&z\+Near, T const \&z\+Far)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} detail\+::tmat4x4$<$ T, defaultp $>$ \hyperlink{group__gtc__matrix__transform_gab03587bce3510aa5d2f4e5f1be6c2370}{glm\+::ortho} (T const \&left, T const \&right, T const \&bottom, T const \&top)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} detail\+::tmat4x4$<$ T, defaultp $>$ \hyperlink{group__gtc__matrix__transform_ga486d3d6819c04880559f3dccd38f9f58}{glm\+::frustum} (T const \&left, T const \&right, T const \&bottom, T const \&top, T const \&near, T const \&far)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} detail\+::tmat4x4$<$ T, defaultp $>$ \hyperlink{group__gtc__matrix__transform_ga6c82aa0ea748cfbb16887d81cf6c5a10}{glm\+::perspective} (T const \&fovy, T const \&aspect, T const \&near, T const \&far)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} detail\+::tmat4x4$<$ T, defaultp $>$ \hyperlink{group__gtc__matrix__transform_gac00bf68d4f7ec62380b84c5354567f71}{glm\+::perspective\+Fov} (T const \&fov, T const \&width, T const \&height, T const \&near, T const \&far)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} detail\+::tmat4x4$<$ T, defaultp $>$ \hyperlink{group__gtc__matrix__transform_ga63ba1ddb9c4a08d4e58becd0dc5b725a}{glm\+::infinite\+Perspective} (T fovy, T aspect, T near)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} detail\+::tmat4x4$<$ T, defaultp $>$ \hyperlink{group__gtc__matrix__transform_ga9d67732836d71a79dc21eb8f87603cb7}{glm\+::tweaked\+Infinite\+Perspective} (T fovy, T aspect, T near)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} detail\+::tmat4x4$<$ T, defaultp $>$ \hyperlink{group__gtc__matrix__transform_gade8abc58c0ac541163e872eb66f3e5de}{glm\+::tweaked\+Infinite\+Perspective} (T fovy, T aspect, T near, T ep)
+\item 
+{\footnotesize template$<$typename T , typename U , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} detail\+::tvec3$<$ T, P $>$ \hyperlink{group__gtc__matrix__transform_ga41227b7b98882dcbaa8dab52df372c7b}{glm\+::project} (detail\+::tvec3$<$ T, P $>$ const \&obj, detail\+::tmat4x4$<$ T, P $>$ const \&model, detail\+::tmat4x4$<$ T, P $>$ const \&proj, detail\+::tvec4$<$ U, P $>$ const \&viewport)
+\item 
+{\footnotesize template$<$typename T , typename U , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} detail\+::tvec3$<$ T, P $>$ \hyperlink{group__gtc__matrix__transform_ga4b0a9086d15e2a743ecd7b6128146af1}{glm\+::un\+Project} (detail\+::tvec3$<$ T, P $>$ const \&win, detail\+::tmat4x4$<$ T, P $>$ const \&model, detail\+::tmat4x4$<$ T, P $>$ const \&proj, detail\+::tvec4$<$ U, P $>$ const \&viewport)
+\item 
+{\footnotesize template$<$typename T , precision P, typename U $>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} detail\+::tmat4x4$<$ T, P $>$ \hyperlink{group__gtc__matrix__transform_ga0fb64f04bf5ad52523fcd4b10b46aff6}{glm\+::pick\+Matrix} (detail\+::tvec2$<$ T, P $>$ const \&center, detail\+::tvec2$<$ T, P $>$ const \&delta, detail\+::tvec4$<$ U, P $>$ const \&viewport)
+\item 
+{\footnotesize template$<$typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} detail\+::tmat4x4$<$ T, P $>$ \hyperlink{group__gtc__matrix__transform_ga454fdf3163c2779eeeeeb9d75907ce97}{glm\+::look\+At} (detail\+::tvec3$<$ T, P $>$ const \&eye, detail\+::tvec3$<$ T, P $>$ const \&center, detail\+::tvec3$<$ T, P $>$ const \&up)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Open\+GL Mathematics (glm.\+g-\/truc.\+net)
+
+Copyright (c) 2005 -\/ 2014 G-\/\+Truc Creation (www.\+g-\/truc.\+net) Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \char`\"{}\+Software\char`\"{}), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions\+:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+T\+HE S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED \char`\"{}\+A\+S I\+S\char`\"{}, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+TY OF A\+NY K\+I\+ND, E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED, I\+N\+C\+L\+U\+D\+I\+NG B\+UT N\+OT L\+I\+M\+I\+T\+ED TO T\+HE W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY, F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+ND N\+O\+N\+I\+N\+F\+R\+I\+N\+G\+E\+M\+E\+NT. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE A\+U\+T\+H\+O\+RS OR C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY C\+L\+A\+IM, D\+A\+M\+A\+G\+ES OR O\+T\+H\+ER L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN AN A\+C\+T\+I\+ON OF C\+O\+N\+T\+R\+A\+CT, T\+O\+RT OR O\+T\+H\+E\+R\+W\+I\+SE, A\+R\+I\+S\+I\+NG F\+R\+OM, O\+UT OF OR IN C\+O\+N\+N\+E\+C\+T\+I\+ON W\+I\+TH T\+HE S\+O\+F\+T\+W\+A\+RE OR T\+HE U\+SE OR O\+T\+H\+ER D\+E\+A\+L\+I\+N\+GS IN T\+HE S\+O\+F\+T\+W\+A\+RE.
+
+\hyperlink{group__gtc__matrix__transform}{G\+L\+M\+\_\+\+G\+T\+C\+\_\+matrix\+\_\+transform}
+
+\begin{DoxyDate}{Date}
+2009-\/04-\/29 / 2011-\/05-\/16 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Christophe Riccio
+\end{DoxyAuthor}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__core}{G\+L\+M Core} (dependence) 
+
+\hyperlink{group__gtx__transform}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform} 
+
+\hyperlink{group__gtx__transform2}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform2} 
+\end{DoxySeeAlso}

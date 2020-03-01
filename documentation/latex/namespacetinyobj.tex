@@ -1,0 +1,73 @@
+\hypertarget{namespacetinyobj}{}\section{tinyobj Namespace Reference}
+\label{namespacetinyobj}\index{tinyobj@{tinyobj}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structtinyobj_1_1material__t}{material\+\_\+t}
+\item 
+class \hyperlink{classtinyobj_1_1_material_file_reader}{Material\+File\+Reader}
+\item 
+class \hyperlink{classtinyobj_1_1_material_reader}{Material\+Reader}
+\item 
+struct \hyperlink{structtinyobj_1_1mesh__t}{mesh\+\_\+t}
+\item 
+struct \hyperlink{structtinyobj_1_1obj__shape}{obj\+\_\+shape}
+\item 
+struct \hyperlink{structtinyobj_1_1shape__t}{shape\+\_\+t}
+\item 
+struct \hyperlink{structtinyobj_1_1vertex__index}{vertex\+\_\+index}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespacetinyobj_a02670ede322e1cc5172fbaff43a1bdb5}{Init\+Material} (\hyperlink{structtinyobj_1_1material__t}{material\+\_\+t} \&\hyperlink{structmaterial}{material})
+\item 
+std\+::string \hyperlink{namespacetinyobj_aff17f9085eec34bcc7ba97025122e732}{Load\+Mtl} (std\+::map$<$ std\+::string, int $>$ \&material\+\_\+map, std\+::vector$<$ \hyperlink{structtinyobj_1_1material__t}{material\+\_\+t} $>$ \&materials, std\+::istream \&in\+Stream)
+\item 
+std\+::string \hyperlink{namespacetinyobj_a8a1b09e98bbe6ad056bf30fdce87b3c5}{Load\+Obj} (std\+::vector$<$ \hyperlink{structtinyobj_1_1shape__t}{shape\+\_\+t} $>$ \&shapes, std\+::vector$<$ \hyperlink{structtinyobj_1_1material__t}{material\+\_\+t} $>$ \&materials, const char $\ast$filename, const char $\ast$mtl\+\_\+basepath)
+\item 
+std\+::string \hyperlink{namespacetinyobj_acb20cdb095743e069eac27c0b95d32b8}{Load\+Obj} (std\+::vector$<$ \hyperlink{structtinyobj_1_1shape__t}{shape\+\_\+t} $>$ \&shapes, std\+::vector$<$ \hyperlink{structtinyobj_1_1material__t}{material\+\_\+t} $>$ \&materials, std\+::istream \&in\+Stream, \hyperlink{classtinyobj_1_1_material_reader}{Material\+Reader} \&read\+Mat\+Fn)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacetinyobj_a02670ede322e1cc5172fbaff43a1bdb5}\label{namespacetinyobj_a02670ede322e1cc5172fbaff43a1bdb5}} 
+\index{tinyobj@{tinyobj}!Init\+Material@{Init\+Material}}
+\index{Init\+Material@{Init\+Material}!tinyobj@{tinyobj}}
+\subsubsection{\texorpdfstring{Init\+Material()}{InitMaterial()}}
+{\footnotesize\ttfamily void tinyobj\+::\+Init\+Material (\begin{DoxyParamCaption}\item[{\hyperlink{structtinyobj_1_1material__t}{material\+\_\+t} \&}]{material }\end{DoxyParamCaption})}
+
+
+
+Definition at line 205 of file tiny\+\_\+obj\+\_\+loader.\+cpp.
+
+\mbox{\Hypertarget{namespacetinyobj_aff17f9085eec34bcc7ba97025122e732}\label{namespacetinyobj_aff17f9085eec34bcc7ba97025122e732}} 
+\index{tinyobj@{tinyobj}!Load\+Mtl@{Load\+Mtl}}
+\index{Load\+Mtl@{Load\+Mtl}!tinyobj@{tinyobj}}
+\subsubsection{\texorpdfstring{Load\+Mtl()}{LoadMtl()}}
+{\footnotesize\ttfamily std\+::string tinyobj\+::\+Load\+Mtl (\begin{DoxyParamCaption}\item[{std\+::map$<$ std\+::string, int $>$ \&}]{material\+\_\+map,  }\item[{std\+::vector$<$ \hyperlink{structtinyobj_1_1material__t}{material\+\_\+t} $>$ \&}]{materials,  }\item[{std\+::istream \&}]{in\+Stream }\end{DoxyParamCaption})}
+
+Loads materials into std\+::map Returns an empty string if successful 
+
+Definition at line 282 of file tiny\+\_\+obj\+\_\+loader.\+cpp.
+
+\mbox{\Hypertarget{namespacetinyobj_a8a1b09e98bbe6ad056bf30fdce87b3c5}\label{namespacetinyobj_a8a1b09e98bbe6ad056bf30fdce87b3c5}} 
+\index{tinyobj@{tinyobj}!Load\+Obj@{Load\+Obj}}
+\index{Load\+Obj@{Load\+Obj}!tinyobj@{tinyobj}}
+\subsubsection{\texorpdfstring{Load\+Obj()}{LoadObj()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::string tinyobj\+::\+Load\+Obj (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \hyperlink{structtinyobj_1_1shape__t}{shape\+\_\+t} $>$ \&}]{shapes,  }\item[{std\+::vector$<$ \hyperlink{structtinyobj_1_1material__t}{material\+\_\+t} $>$ \&}]{materials,  }\item[{const char $\ast$}]{filename,  }\item[{const char $\ast$}]{mtl\+\_\+basepath = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Loads .obj from a file. \textquotesingle{}shapes\textquotesingle{} will be filled with parsed shape data The function returns error string. Returns empty string when loading .obj success. \textquotesingle{}mtl\+\_\+basepath\textquotesingle{} is optional, and used for base path for .mtl file. 
+
+Definition at line 494 of file tiny\+\_\+obj\+\_\+loader.\+cpp.
+
+\mbox{\Hypertarget{namespacetinyobj_acb20cdb095743e069eac27c0b95d32b8}\label{namespacetinyobj_acb20cdb095743e069eac27c0b95d32b8}} 
+\index{tinyobj@{tinyobj}!Load\+Obj@{Load\+Obj}}
+\index{Load\+Obj@{Load\+Obj}!tinyobj@{tinyobj}}
+\subsubsection{\texorpdfstring{Load\+Obj()}{LoadObj()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::string tinyobj\+::\+Load\+Obj (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \hyperlink{structtinyobj_1_1shape__t}{shape\+\_\+t} $>$ \&}]{shapes,  }\item[{std\+::vector$<$ \hyperlink{structtinyobj_1_1material__t}{material\+\_\+t} $>$ \&}]{materials,  }\item[{std\+::istream \&}]{in\+Stream,  }\item[{\hyperlink{classtinyobj_1_1_material_reader}{Material\+Reader} \&}]{read\+Mat\+Fn }\end{DoxyParamCaption})}
+
+Loads object from a std\+::istream, uses Get\+Mtl\+I\+Stream\+Fn to retrieve std\+::istream for materials. Returns empty string when loading .obj success. 
+
+Definition at line 520 of file tiny\+\_\+obj\+\_\+loader.\+cpp.
+

@@ -1,0 +1,155 @@
+\hypertarget{io_8hpp}{}\section{third-\/party/include/glm/gtx/io.hpp File Reference}
+\label{io_8hpp}\index{third-\/party/include/glm/gtx/io.\+hpp@{third-\/party/include/glm/gtx/io.\+hpp}}
+{\ttfamily \#include \char`\"{}../glm.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../gtx/quaternion.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$iosfwd$>$}\newline
+{\ttfamily \#include $<$locale$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include \char`\"{}io.\+inl\char`\"{}}\newline
+Include dependency graph for io.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{io_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{io_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classglm_1_1io_1_1format__punct}{glm\+::io\+::format\+\_\+punct$<$ C\+Ty $>$}
+\item 
+class \hyperlink{classglm_1_1io_1_1basic__state__saver}{glm\+::io\+::basic\+\_\+state\+\_\+saver$<$ C\+Ty, C\+Tr $>$}
+\item 
+class \hyperlink{classglm_1_1io_1_1basic__format__saver}{glm\+::io\+::basic\+\_\+format\+\_\+saver$<$ C\+Ty, C\+Tr $>$}
+\item 
+struct \hyperlink{structglm_1_1io_1_1precision}{glm\+::io\+::precision}
+\item 
+struct \hyperlink{structglm_1_1io_1_1width}{glm\+::io\+::width}
+\item 
+struct \hyperlink{structglm_1_1io_1_1delimeter}{glm\+::io\+::delimeter$<$ C\+Ty $>$}
+\item 
+struct \hyperlink{structglm_1_1io_1_1order}{glm\+::io\+::order}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespaceglm}{glm}
+\item 
+ \hyperlink{namespaceglm_1_1io}{glm\+::io}
+\item 
+ \hyperlink{namespaceglm_1_1detail}{glm\+::detail}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{io_8hpp_ad83909b04c764be09f4c7ec1ac823baf}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+io}~\hyperlink{setup_8hpp_a442f8390886e02510575dcd6da4a29c0}{G\+L\+M\+\_\+\+V\+E\+R\+S\+I\+ON}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef basic\+\_\+state\+\_\+saver$<$ char $>$ \hyperlink{namespaceglm_1_1io_a84d63ac771c3125d38f144dc15234764}{glm\+::io\+::state\+\_\+saver}
+\item 
+typedef basic\+\_\+state\+\_\+saver$<$ wchar\+\_\+t $>$ \hyperlink{namespaceglm_1_1io_a7a46501fc459c05fa3dc0f2bcbf3e92f}{glm\+::io\+::wstate\+\_\+saver}
+\item 
+typedef basic\+\_\+format\+\_\+saver$<$ char $>$ \hyperlink{namespaceglm_1_1io_afdc168a994ef9e9ca4295578e9097495}{glm\+::io\+::format\+\_\+saver}
+\item 
+typedef basic\+\_\+format\+\_\+saver$<$ wchar\+\_\+t $>$ \hyperlink{namespaceglm_1_1io_a6229ca888648a0ff823eb120f61de481}{glm\+::io\+::wformat\+\_\+saver}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespaceglm_1_1io_a3497781803fe594a37177e05ab2a795f}{glm\+::io\+::order\+\_\+type} \{ \hyperlink{namespaceglm_1_1io_a3497781803fe594a37177e05ab2a795faab661780f7f081ee11c34be9b0742229}{glm\+::io\+::column\+\_\+major}, 
+\hyperlink{namespaceglm_1_1io_a3497781803fe594a37177e05ab2a795fad080bb2f932ea4078fd0fc10ea1c991c}{glm\+::io\+::row\+\_\+major}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename F\+Ty , typename C\+Ty , typename C\+Tr $>$ }\\F\+Ty const  \& \hyperlink{namespaceglm_1_1io_a7ae96c71704bbf3c6e61543a7e731bc4}{glm\+::io\+::get\+\_\+facet} (std\+::basic\+\_\+ios$<$ C\+Ty, C\+Tr $>$ \&)
+\item 
+{\footnotesize template$<$typename F\+Ty , typename C\+Ty , typename C\+Tr $>$ }\\std\+::basic\+\_\+ios$<$ C\+Ty, C\+Tr $>$ \& \hyperlink{namespaceglm_1_1io_a892800782557e1591ffcf8460578f8a8}{glm\+::io\+::formatted} (std\+::basic\+\_\+ios$<$ C\+Ty, C\+Tr $>$ \&)
+\item 
+{\footnotesize template$<$typename F\+Ty , typename C\+Ty , typename C\+Tr $>$ }\\std\+::basic\+\_\+ios$<$ C\+Ty, C\+Tr $>$ \& \hyperlink{namespaceglm_1_1io_a3095de031a9c7c3dd9bab670381c3cdb}{glm\+::io\+::unformattet} (std\+::basic\+\_\+ios$<$ C\+Ty, C\+Tr $>$ \&)
+\item 
+{\footnotesize template$<$typename C\+Ty , typename C\+Tr $>$ }\\std\+::basic\+\_\+ostream$<$ C\+Ty, C\+Tr $>$ \& \hyperlink{namespaceglm_1_1io_aa5761ee427320d2121a97a7450256e3b}{glm\+::io\+::operator$<$$<$} (std\+::basic\+\_\+ostream$<$ C\+Ty, C\+Tr $>$ \&, precision const \&)
+\item 
+{\footnotesize template$<$typename C\+Ty , typename C\+Tr $>$ }\\std\+::basic\+\_\+ostream$<$ C\+Ty, C\+Tr $>$ \& \hyperlink{namespaceglm_1_1io_a61e151e99a1d05cb604f0bede66996be}{glm\+::io\+::operator$<$$<$} (std\+::basic\+\_\+ostream$<$ C\+Ty, C\+Tr $>$ \&, width const \&)
+\item 
+{\footnotesize template$<$typename C\+Ty , typename C\+Tr $>$ }\\std\+::basic\+\_\+ostream$<$ C\+Ty, C\+Tr $>$ \& \hyperlink{namespaceglm_1_1io_a721b0bde3ed5f7d7b11a1d90d22a8ad3}{glm\+::io\+::operator$<$$<$} (std\+::basic\+\_\+ostream$<$ C\+Ty, C\+Tr $>$ \&, delimeter$<$ C\+Ty $>$ const \&)
+\item 
+{\footnotesize template$<$typename C\+Ty , typename C\+Tr $>$ }\\std\+::basic\+\_\+ostream$<$ C\+Ty, C\+Tr $>$ \& \hyperlink{namespaceglm_1_1io_a72020640c68a8c4e010b7d3f02a0ca92}{glm\+::io\+::operator$<$$<$} (std\+::basic\+\_\+ostream$<$ C\+Ty, C\+Tr $>$ \&, order const \&)
+\item 
+{\footnotesize template$<$typename C\+Ty , typename C\+Tr , typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} std\+::basic\+\_\+ostream$<$ C\+Ty, C\+Tr $>$ \& \hyperlink{namespaceglm_1_1detail_a8667168fbf5de398ce4ddcc07305fcd1}{glm\+::detail\+::operator$<$$<$} (std\+::basic\+\_\+ostream$<$ C\+Ty, C\+Tr $>$ \&, tquat$<$ T, P $>$ const \&)
+\item 
+{\footnotesize template$<$typename C\+Ty , typename C\+Tr , typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} std\+::basic\+\_\+ostream$<$ C\+Ty, C\+Tr $>$ \& \hyperlink{namespaceglm_1_1detail_a8ac8bc5f320ee89654636d745642e642}{glm\+::detail\+::operator$<$$<$} (std\+::basic\+\_\+ostream$<$ C\+Ty, C\+Tr $>$ \&, tvec2$<$ T, P $>$ const \&)
+\item 
+{\footnotesize template$<$typename C\+Ty , typename C\+Tr , typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} std\+::basic\+\_\+ostream$<$ C\+Ty, C\+Tr $>$ \& \hyperlink{namespaceglm_1_1detail_ab24e24a7a3a9a3c129153f26490a6d23}{glm\+::detail\+::operator$<$$<$} (std\+::basic\+\_\+ostream$<$ C\+Ty, C\+Tr $>$ \&, tvec3$<$ T, P $>$ const \&)
+\item 
+{\footnotesize template$<$typename C\+Ty , typename C\+Tr , typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} std\+::basic\+\_\+ostream$<$ C\+Ty, C\+Tr $>$ \& \hyperlink{namespaceglm_1_1detail_af674fccce5b6e7d50d3ace5f0b15c4a9}{glm\+::detail\+::operator$<$$<$} (std\+::basic\+\_\+ostream$<$ C\+Ty, C\+Tr $>$ \&, tvec4$<$ T, P $>$ const \&)
+\item 
+{\footnotesize template$<$typename C\+Ty , typename C\+Tr , typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} std\+::basic\+\_\+ostream$<$ C\+Ty, C\+Tr $>$ \& \hyperlink{namespaceglm_1_1detail_a662d75fe155acf30f731d4a609ae21cc}{glm\+::detail\+::operator$<$$<$} (std\+::basic\+\_\+ostream$<$ C\+Ty, C\+Tr $>$ \&, tmat2x2$<$ T, P $>$ const \&)
+\item 
+{\footnotesize template$<$typename C\+Ty , typename C\+Tr , typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} std\+::basic\+\_\+ostream$<$ C\+Ty, C\+Tr $>$ \& \hyperlink{namespaceglm_1_1detail_ac12725bb5345042a7fdb3fdd51ab5b66}{glm\+::detail\+::operator$<$$<$} (std\+::basic\+\_\+ostream$<$ C\+Ty, C\+Tr $>$ \&, tmat2x3$<$ T, P $>$ const \&)
+\item 
+{\footnotesize template$<$typename C\+Ty , typename C\+Tr , typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} std\+::basic\+\_\+ostream$<$ C\+Ty, C\+Tr $>$ \& \hyperlink{namespaceglm_1_1detail_aaad582284e83e5781eeb2f796bff7cb1}{glm\+::detail\+::operator$<$$<$} (std\+::basic\+\_\+ostream$<$ C\+Ty, C\+Tr $>$ \&, tmat2x4$<$ T, P $>$ const \&)
+\item 
+{\footnotesize template$<$typename C\+Ty , typename C\+Tr , typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} std\+::basic\+\_\+ostream$<$ C\+Ty, C\+Tr $>$ \& \hyperlink{namespaceglm_1_1detail_a350e7f345ece9ec5884d02e80c55c06a}{glm\+::detail\+::operator$<$$<$} (std\+::basic\+\_\+ostream$<$ C\+Ty, C\+Tr $>$ \&, tmat3x2$<$ T, P $>$ const \&)
+\item 
+{\footnotesize template$<$typename C\+Ty , typename C\+Tr , typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} std\+::basic\+\_\+ostream$<$ C\+Ty, C\+Tr $>$ \& \hyperlink{namespaceglm_1_1detail_ab3f253f82e3c23a88ff18be13f1be464}{glm\+::detail\+::operator$<$$<$} (std\+::basic\+\_\+ostream$<$ C\+Ty, C\+Tr $>$ \&, tmat3x3$<$ T, P $>$ const \&)
+\item 
+{\footnotesize template$<$typename C\+Ty , typename C\+Tr , typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} std\+::basic\+\_\+ostream$<$ C\+Ty, C\+Tr $>$ \& \hyperlink{namespaceglm_1_1detail_a619214f7e66133fa451ce691b03ba944}{glm\+::detail\+::operator$<$$<$} (std\+::basic\+\_\+ostream$<$ C\+Ty, C\+Tr $>$ \&, tmat3x4$<$ T, P $>$ const \&)
+\item 
+{\footnotesize template$<$typename C\+Ty , typename C\+Tr , typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} std\+::basic\+\_\+ostream$<$ C\+Ty, C\+Tr $>$ \& \hyperlink{namespaceglm_1_1detail_a622231b67b1cf5f10e41ebd95d0decd5}{glm\+::detail\+::operator$<$$<$} (std\+::basic\+\_\+ostream$<$ C\+Ty, C\+Tr $>$ \&, tmat4x2$<$ T, P $>$ const \&)
+\item 
+{\footnotesize template$<$typename C\+Ty , typename C\+Tr , typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} std\+::basic\+\_\+ostream$<$ C\+Ty, C\+Tr $>$ \& \hyperlink{namespaceglm_1_1detail_a22615fe61a9c5e8772e8c1c92c83706c}{glm\+::detail\+::operator$<$$<$} (std\+::basic\+\_\+ostream$<$ C\+Ty, C\+Tr $>$ \&, tmat4x3$<$ T, P $>$ const \&)
+\item 
+{\footnotesize template$<$typename C\+Ty , typename C\+Tr , typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} std\+::basic\+\_\+ostream$<$ C\+Ty, C\+Tr $>$ \& \hyperlink{namespaceglm_1_1detail_a5fd039742510bfb6228186ce25095eaf}{glm\+::detail\+::operator$<$$<$} (std\+::basic\+\_\+ostream$<$ C\+Ty, C\+Tr $>$ \&, tmat4x4$<$ T, P $>$ const \&)
+\item 
+{\footnotesize template$<$typename C\+Ty , typename C\+Tr , typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} std\+::basic\+\_\+ostream$<$ C\+Ty, C\+Tr $>$ \& \hyperlink{namespaceglm_1_1detail_a69b2928a32129ad46ef76cd57fe02fda}{glm\+::detail\+::operator$<$$<$} (std\+::basic\+\_\+ostream$<$ C\+Ty, C\+Tr $>$ \&, std\+::pair$<$ tmat4x4$<$ T, P $>$ const, tmat4x4$<$ T, P $>$ const $>$ const \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Open\+GL Mathematics (glm.\+g-\/truc.\+net)
+
+Copyright (c) 2005 -\/ 2013 G-\/\+Truc Creation (www.\+g-\/truc.\+net) Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \char`\"{}\+Software\char`\"{}), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions\+:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+T\+HE S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED \char`\"{}\+A\+S I\+S\char`\"{}, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+TY OF A\+NY K\+I\+ND, E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED, I\+N\+C\+L\+U\+D\+I\+NG B\+UT N\+OT L\+I\+M\+I\+T\+ED TO T\+HE W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY, F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+ND N\+O\+N\+I\+N\+F\+R\+I\+N\+G\+E\+M\+E\+NT. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE A\+U\+T\+H\+O\+RS OR C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY C\+L\+A\+IM, D\+A\+M\+A\+G\+ES OR O\+T\+H\+ER L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN AN A\+C\+T\+I\+ON OF C\+O\+N\+T\+R\+A\+CT, T\+O\+RT OR O\+T\+H\+E\+R\+W\+I\+SE, A\+R\+I\+S\+I\+NG F\+R\+OM, O\+UT OF OR IN C\+O\+N\+N\+E\+C\+T\+I\+ON W\+I\+TH T\+HE S\+O\+F\+T\+W\+A\+RE OR T\+HE U\+SE OR O\+T\+H\+ER D\+E\+A\+L\+I\+N\+GS IN T\+HE S\+O\+F\+T\+W\+A\+RE.
+
+\hyperlink{group__gtx__io}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+io}
+
+\begin{DoxyDate}{Date}
+2013-\/11-\/22 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Jan P Springer (\href{mailto:regnirpsj@gmail.com}{\tt regnirpsj@gmail.\+com})
+\end{DoxyAuthor}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__core}{G\+L\+M Core} (dependence) 
+
+\hyperlink{group__gtc__quaternion}{G\+L\+M\+\_\+\+G\+T\+C\+\_\+quaternion} (dependence) 
+\end{DoxySeeAlso}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{io_8hpp_ad83909b04c764be09f4c7ec1ac823baf}\label{io_8hpp_ad83909b04c764be09f4c7ec1ac823baf}} 
+\index{io.\+hpp@{io.\+hpp}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+io@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+io}}
+\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+io@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+io}!io.\+hpp@{io.\+hpp}}
+\subsubsection{\texorpdfstring{G\+L\+M\+\_\+\+G\+T\+X\+\_\+io}{GLM\_GTX\_io}}
+{\footnotesize\ttfamily \#define G\+L\+M\+\_\+\+G\+T\+X\+\_\+io~\hyperlink{setup_8hpp_a442f8390886e02510575dcd6da4a29c0}{G\+L\+M\+\_\+\+V\+E\+R\+S\+I\+ON}}
+
+
+
+Definition at line 44 of file io.\+hpp.
+

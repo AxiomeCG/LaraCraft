@@ -1,0 +1,122 @@
+\hypertarget{classglimac_1_1_color_map}{}\section{glimac\+:\+:Color\+Map Class Reference}
+\label{classglimac_1_1_color_map}\index{glimac\+::\+Color\+Map@{glimac\+::\+Color\+Map}}
+
+
+{\ttfamily \#include $<$Color\+Map.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classglimac_1_1_color_map_a3df6bdd6b30e844e1444581eff5876f6}{Color\+Map} (unsigned int width, unsigned int height, float resw, float resh, float resv)
+\item 
+unsigned int \hyperlink{classglimac_1_1_color_map_a760221f166c7194706706ecb1b01f289}{get\+Width} () const
+\item 
+unsigned int \hyperlink{classglimac_1_1_color_map_a863f67a6f8da5b60cd24960e2213d99f}{get\+Height} () const
+\item 
+void \hyperlink{classglimac_1_1_color_map_ade62811c7a95b53010f2836018639f0b}{insert} (unsigned int i, unsigned int j, float r, float g, float b)
+\item 
+std\+::vector$<$ std\+::vector$<$ \hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3} $>$ $>$ \hyperlink{classglimac_1_1_color_map_a2f7ab5c97d42782cbde567a261a3c099}{get\+Color\+Data} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represent a Color Map 
+
+Definition at line 19 of file Color\+Map.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classglimac_1_1_color_map_a3df6bdd6b30e844e1444581eff5876f6}\label{classglimac_1_1_color_map_a3df6bdd6b30e844e1444581eff5876f6}} 
+\index{glimac\+::\+Color\+Map@{glimac\+::\+Color\+Map}!Color\+Map@{Color\+Map}}
+\index{Color\+Map@{Color\+Map}!glimac\+::\+Color\+Map@{glimac\+::\+Color\+Map}}
+\subsubsection{\texorpdfstring{Color\+Map()}{ColorMap()}}
+{\footnotesize\ttfamily glimac\+::\+Color\+Map\+::\+Color\+Map (\begin{DoxyParamCaption}\item[{unsigned int}]{width,  }\item[{unsigned int}]{height,  }\item[{float}]{resw,  }\item[{float}]{resh,  }\item[{float}]{resv }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor for the Color\+Mapp 
+\begin{DoxyParams}{Parameters}
+{\em width} & Width of the \hyperlink{classglimac_1_1_color_map}{Color\+Map} \\
+\hline
+{\em height} & Height of the \hyperlink{classglimac_1_1_color_map}{Color\+Map} \\
+\hline
+{\em resw} & Resolution for the width \\
+\hline
+{\em resh} & Resolution for the height \\
+\hline
+{\em resv} & Resolution for the values of the \hyperlink{classglimac_1_1_color_map}{Color\+Map} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 31 of file Color\+Map.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglimac_1_1_color_map_a2f7ab5c97d42782cbde567a261a3c099}\label{classglimac_1_1_color_map_a2f7ab5c97d42782cbde567a261a3c099}} 
+\index{glimac\+::\+Color\+Map@{glimac\+::\+Color\+Map}!get\+Color\+Data@{get\+Color\+Data}}
+\index{get\+Color\+Data@{get\+Color\+Data}!glimac\+::\+Color\+Map@{glimac\+::\+Color\+Map}}
+\subsubsection{\texorpdfstring{get\+Color\+Data()}{getColorData()}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$\hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3}$>$ $>$ glimac\+::\+Color\+Map\+::get\+Color\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Getter for the data of the \hyperlink{classglimac_1_1_color_map}{Color\+Map} \begin{DoxyReturn}{Returns}
+The data of the \hyperlink{classglimac_1_1_color_map}{Color\+Map} 
+\end{DoxyReturn}
+
+
+Definition at line 69 of file Color\+Map.\+hpp.
+
+\mbox{\Hypertarget{classglimac_1_1_color_map_a863f67a6f8da5b60cd24960e2213d99f}\label{classglimac_1_1_color_map_a863f67a6f8da5b60cd24960e2213d99f}} 
+\index{glimac\+::\+Color\+Map@{glimac\+::\+Color\+Map}!get\+Height@{get\+Height}}
+\index{get\+Height@{get\+Height}!glimac\+::\+Color\+Map@{glimac\+::\+Color\+Map}}
+\subsubsection{\texorpdfstring{get\+Height()}{getHeight()}}
+{\footnotesize\ttfamily unsigned int glimac\+::\+Color\+Map\+::get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Getter for the height of the \hyperlink{classglimac_1_1_color_map}{Color\+Map} \begin{DoxyReturn}{Returns}
+the height 
+\end{DoxyReturn}
+
+
+Definition at line 49 of file Color\+Map.\+hpp.
+
+\mbox{\Hypertarget{classglimac_1_1_color_map_a760221f166c7194706706ecb1b01f289}\label{classglimac_1_1_color_map_a760221f166c7194706706ecb1b01f289}} 
+\index{glimac\+::\+Color\+Map@{glimac\+::\+Color\+Map}!get\+Width@{get\+Width}}
+\index{get\+Width@{get\+Width}!glimac\+::\+Color\+Map@{glimac\+::\+Color\+Map}}
+\subsubsection{\texorpdfstring{get\+Width()}{getWidth()}}
+{\footnotesize\ttfamily unsigned int glimac\+::\+Color\+Map\+::get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Getter for the width of the \hyperlink{classglimac_1_1_color_map}{Color\+Map} \begin{DoxyReturn}{Returns}
+the width 
+\end{DoxyReturn}
+
+
+Definition at line 41 of file Color\+Map.\+hpp.
+
+\mbox{\Hypertarget{classglimac_1_1_color_map_ade62811c7a95b53010f2836018639f0b}\label{classglimac_1_1_color_map_ade62811c7a95b53010f2836018639f0b}} 
+\index{glimac\+::\+Color\+Map@{glimac\+::\+Color\+Map}!insert@{insert}}
+\index{insert@{insert}!glimac\+::\+Color\+Map@{glimac\+::\+Color\+Map}}
+\subsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily void glimac\+::\+Color\+Map\+::insert (\begin{DoxyParamCaption}\item[{unsigned int}]{i,  }\item[{unsigned int}]{j,  }\item[{float}]{r,  }\item[{float}]{g,  }\item[{float}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Insert a vec3 in the color map 
+\begin{DoxyParams}{Parameters}
+{\em i} & Index x of the \hyperlink{classglimac_1_1_color_map}{Color\+Map} \\
+\hline
+{\em j} & Index z of the \hyperlink{classglimac_1_1_color_map}{Color\+Map} \\
+\hline
+{\em r} & Value of red \\
+\hline
+{\em g} & Value of green \\
+\hline
+{\em b} & Value of the blue \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 61 of file Color\+Map.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+glimac/include/glimac/\hyperlink{_color_map_8hpp}{Color\+Map.\+hpp}\end{DoxyCompactItemize}

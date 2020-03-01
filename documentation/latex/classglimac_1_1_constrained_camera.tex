@@ -1,0 +1,211 @@
+\hypertarget{classglimac_1_1_constrained_camera}{}\section{glimac\+:\+:Constrained\+Camera Class Reference}
+\label{classglimac_1_1_constrained_camera}\index{glimac\+::\+Constrained\+Camera@{glimac\+::\+Constrained\+Camera}}
+
+
+{\ttfamily \#include $<$Constrained\+Camera.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classglimac_1_1_constrained_camera_a41efc809fafa6a68e7c2870a7c3fbfa1}{Constrained\+Camera} (const std\+::vector$<$ std\+::vector$<$ float $>$$>$ \&height\+Data, const std\+::vector$<$ std\+::vector$<$ \hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3} $>$$>$ \&vegetation\+Data, float heigth\+Of\+Entity)
+\item 
+\hyperlink{classglimac_1_1_constrained_camera_a9ff368356c4c751a949c648759e5de78}{Constrained\+Camera} (float x, float z, const std\+::vector$<$ std\+::vector$<$ float $>$$>$ \&height\+Data, const std\+::vector$<$ std\+::vector$<$ \hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3} $>$$>$ \&vegetation\+Data, float height\+Of\+Entity)
+\item 
+void \hyperlink{classglimac_1_1_constrained_camera_a3a74d3c7f7804a0b1a64a46b2d602cea}{move\+Left} (float t)
+\item 
+void \hyperlink{classglimac_1_1_constrained_camera_a3152184b206c433d3b2619c0a86b22e1}{move\+Front} (float t)
+\item 
+void \hyperlink{classglimac_1_1_constrained_camera_a7dec7758e2a9c7b97c95f332410ae606}{rotate\+Left} (float degrees)
+\item 
+void \hyperlink{classglimac_1_1_constrained_camera_ae6ebbd25294f956ed2f513710cecc576}{rotate\+Up} (float degrees)
+\item 
+\hyperlink{group__core__types_ga7dcd2365c2e368e6af5b7adeb6a9c8df}{glm\+::mat4} \hyperlink{classglimac_1_1_constrained_camera_aedb07f0ce070319d50e4600b350d4c20}{get\+View\+Matrix} () const
+\item 
+\hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3} \hyperlink{classglimac_1_1_constrained_camera_a2d3652297267c22fbcf35efbec70349a}{get\+Position} () const
+\item 
+bool \hyperlink{classglimac_1_1_constrained_camera_a77a986ffa98ff09f3fcafc6c7d235e99}{i\+Am\+Flying} ()
+\item 
+void \hyperlink{classglimac_1_1_constrained_camera_aea3292bf2d944d9c99dd8c05e3898e54}{start\+Flying} ()
+\item 
+void \hyperlink{classglimac_1_1_constrained_camera_a532520a86171f57f721c37a9da6b7232}{stop\+Flying} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represent a camera that can walk and fly 
+
+Definition at line 16 of file Constrained\+Camera.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classglimac_1_1_constrained_camera_a41efc809fafa6a68e7c2870a7c3fbfa1}\label{classglimac_1_1_constrained_camera_a41efc809fafa6a68e7c2870a7c3fbfa1}} 
+\index{glimac\+::\+Constrained\+Camera@{glimac\+::\+Constrained\+Camera}!Constrained\+Camera@{Constrained\+Camera}}
+\index{Constrained\+Camera@{Constrained\+Camera}!glimac\+::\+Constrained\+Camera@{glimac\+::\+Constrained\+Camera}}
+\subsubsection{\texorpdfstring{Constrained\+Camera()}{ConstrainedCamera()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily glimac\+::\+Constrained\+Camera\+::\+Constrained\+Camera (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ float $>$$>$ \&}]{height\+Data,  }\item[{const std\+::vector$<$ std\+::vector$<$ \hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3} $>$$>$ \&}]{vegetation\+Data,  }\item[{float}]{heigth\+Of\+Entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor of a \hyperlink{classglimac_1_1_constrained_camera}{Constrained\+Camera} 
+\begin{DoxyParams}{Parameters}
+{\em height\+Data} & Data of the \hyperlink{classglimac_1_1_height_map}{Height\+Map} used \\
+\hline
+{\em vegetation\+Data} & Data of the Vegetation\+Data used \\
+\hline
+{\em heigth\+Of\+Entity} & Height of the Camera (emulate a human) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 25 of file Constrained\+Camera.\+hpp.
+
+\mbox{\Hypertarget{classglimac_1_1_constrained_camera_a9ff368356c4c751a949c648759e5de78}\label{classglimac_1_1_constrained_camera_a9ff368356c4c751a949c648759e5de78}} 
+\index{glimac\+::\+Constrained\+Camera@{glimac\+::\+Constrained\+Camera}!Constrained\+Camera@{Constrained\+Camera}}
+\index{Constrained\+Camera@{Constrained\+Camera}!glimac\+::\+Constrained\+Camera@{glimac\+::\+Constrained\+Camera}}
+\subsubsection{\texorpdfstring{Constrained\+Camera()}{ConstrainedCamera()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily glimac\+::\+Constrained\+Camera\+::\+Constrained\+Camera (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{z,  }\item[{const std\+::vector$<$ std\+::vector$<$ float $>$$>$ \&}]{height\+Data,  }\item[{const std\+::vector$<$ std\+::vector$<$ \hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3} $>$$>$ \&}]{vegetation\+Data,  }\item[{float}]{height\+Of\+Entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor of a \hyperlink{classglimac_1_1_constrained_camera}{Constrained\+Camera} 
+\begin{DoxyParams}{Parameters}
+{\em x} & Position on the x axis \\
+\hline
+{\em z} & Position on the z axis \\
+\hline
+{\em height\+Data} & Data of the \hyperlink{classglimac_1_1_height_map}{Height\+Map} used \\
+\hline
+{\em vegetation\+Data} & Data of the Vegetation\+Data used \\
+\hline
+{\em height\+Of\+Entity} & Height of the Camera (emulate a human) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 45 of file Constrained\+Camera.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglimac_1_1_constrained_camera_a2d3652297267c22fbcf35efbec70349a}\label{classglimac_1_1_constrained_camera_a2d3652297267c22fbcf35efbec70349a}} 
+\index{glimac\+::\+Constrained\+Camera@{glimac\+::\+Constrained\+Camera}!get\+Position@{get\+Position}}
+\index{get\+Position@{get\+Position}!glimac\+::\+Constrained\+Camera@{glimac\+::\+Constrained\+Camera}}
+\subsubsection{\texorpdfstring{get\+Position()}{getPosition()}}
+{\footnotesize\ttfamily \hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3} glimac\+::\+Constrained\+Camera\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter for the position of the Camera \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 59 of file Constrained\+Camera.\+cpp.
+
+\mbox{\Hypertarget{classglimac_1_1_constrained_camera_aedb07f0ce070319d50e4600b350d4c20}\label{classglimac_1_1_constrained_camera_aedb07f0ce070319d50e4600b350d4c20}} 
+\index{glimac\+::\+Constrained\+Camera@{glimac\+::\+Constrained\+Camera}!get\+View\+Matrix@{get\+View\+Matrix}}
+\index{get\+View\+Matrix@{get\+View\+Matrix}!glimac\+::\+Constrained\+Camera@{glimac\+::\+Constrained\+Camera}}
+\subsubsection{\texorpdfstring{get\+View\+Matrix()}{getViewMatrix()}}
+{\footnotesize\ttfamily \hyperlink{group__core__types_ga7dcd2365c2e368e6af5b7adeb6a9c8df}{glm\+::mat4} glimac\+::\+Constrained\+Camera\+::get\+View\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter for the View\+Matrix of the Camera \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 55 of file Constrained\+Camera.\+cpp.
+
+\mbox{\Hypertarget{classglimac_1_1_constrained_camera_a77a986ffa98ff09f3fcafc6c7d235e99}\label{classglimac_1_1_constrained_camera_a77a986ffa98ff09f3fcafc6c7d235e99}} 
+\index{glimac\+::\+Constrained\+Camera@{glimac\+::\+Constrained\+Camera}!i\+Am\+Flying@{i\+Am\+Flying}}
+\index{i\+Am\+Flying@{i\+Am\+Flying}!glimac\+::\+Constrained\+Camera@{glimac\+::\+Constrained\+Camera}}
+\subsubsection{\texorpdfstring{i\+Am\+Flying()}{iAmFlying()}}
+{\footnotesize\ttfamily bool glimac\+::\+Constrained\+Camera\+::i\+Am\+Flying (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Test whether or not the Camera is flying \begin{DoxyReturn}{Returns}
+true if flying, false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 97 of file Constrained\+Camera.\+hpp.
+
+\mbox{\Hypertarget{classglimac_1_1_constrained_camera_a3152184b206c433d3b2619c0a86b22e1}\label{classglimac_1_1_constrained_camera_a3152184b206c433d3b2619c0a86b22e1}} 
+\index{glimac\+::\+Constrained\+Camera@{glimac\+::\+Constrained\+Camera}!move\+Front@{move\+Front}}
+\index{move\+Front@{move\+Front}!glimac\+::\+Constrained\+Camera@{glimac\+::\+Constrained\+Camera}}
+\subsubsection{\texorpdfstring{move\+Front()}{moveFront()}}
+{\footnotesize\ttfamily void glimac\+::\+Constrained\+Camera\+::move\+Front (\begin{DoxyParamCaption}\item[{float}]{t }\end{DoxyParamCaption})}
+
+Move front or back depending on the value given 
+\begin{DoxyParams}{Parameters}
+{\em t} & Direction to go \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 30 of file Constrained\+Camera.\+cpp.
+
+\mbox{\Hypertarget{classglimac_1_1_constrained_camera_a3a74d3c7f7804a0b1a64a46b2d602cea}\label{classglimac_1_1_constrained_camera_a3a74d3c7f7804a0b1a64a46b2d602cea}} 
+\index{glimac\+::\+Constrained\+Camera@{glimac\+::\+Constrained\+Camera}!move\+Left@{move\+Left}}
+\index{move\+Left@{move\+Left}!glimac\+::\+Constrained\+Camera@{glimac\+::\+Constrained\+Camera}}
+\subsubsection{\texorpdfstring{move\+Left()}{moveLeft()}}
+{\footnotesize\ttfamily void glimac\+::\+Constrained\+Camera\+::move\+Left (\begin{DoxyParamCaption}\item[{float}]{t }\end{DoxyParamCaption})}
+
+Move left or right depending on the value given 
+\begin{DoxyParams}{Parameters}
+{\em t} & Direction to go \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 18 of file Constrained\+Camera.\+cpp.
+
+\mbox{\Hypertarget{classglimac_1_1_constrained_camera_a7dec7758e2a9c7b97c95f332410ae606}\label{classglimac_1_1_constrained_camera_a7dec7758e2a9c7b97c95f332410ae606}} 
+\index{glimac\+::\+Constrained\+Camera@{glimac\+::\+Constrained\+Camera}!rotate\+Left@{rotate\+Left}}
+\index{rotate\+Left@{rotate\+Left}!glimac\+::\+Constrained\+Camera@{glimac\+::\+Constrained\+Camera}}
+\subsubsection{\texorpdfstring{rotate\+Left()}{rotateLeft()}}
+{\footnotesize\ttfamily void glimac\+::\+Constrained\+Camera\+::rotate\+Left (\begin{DoxyParamCaption}\item[{float}]{degrees }\end{DoxyParamCaption})}
+
+Rotate left or right depending on the value given 
+\begin{DoxyParams}{Parameters}
+{\em degrees} & Degree of rotation \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 42 of file Constrained\+Camera.\+cpp.
+
+\mbox{\Hypertarget{classglimac_1_1_constrained_camera_ae6ebbd25294f956ed2f513710cecc576}\label{classglimac_1_1_constrained_camera_ae6ebbd25294f956ed2f513710cecc576}} 
+\index{glimac\+::\+Constrained\+Camera@{glimac\+::\+Constrained\+Camera}!rotate\+Up@{rotate\+Up}}
+\index{rotate\+Up@{rotate\+Up}!glimac\+::\+Constrained\+Camera@{glimac\+::\+Constrained\+Camera}}
+\subsubsection{\texorpdfstring{rotate\+Up()}{rotateUp()}}
+{\footnotesize\ttfamily void glimac\+::\+Constrained\+Camera\+::rotate\+Up (\begin{DoxyParamCaption}\item[{float}]{degrees }\end{DoxyParamCaption})}
+
+Rotate up or down depending on the value given 
+\begin{DoxyParams}{Parameters}
+{\em degrees} & Degree of rotation \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 47 of file Constrained\+Camera.\+cpp.
+
+\mbox{\Hypertarget{classglimac_1_1_constrained_camera_aea3292bf2d944d9c99dd8c05e3898e54}\label{classglimac_1_1_constrained_camera_aea3292bf2d944d9c99dd8c05e3898e54}} 
+\index{glimac\+::\+Constrained\+Camera@{glimac\+::\+Constrained\+Camera}!start\+Flying@{start\+Flying}}
+\index{start\+Flying@{start\+Flying}!glimac\+::\+Constrained\+Camera@{glimac\+::\+Constrained\+Camera}}
+\subsubsection{\texorpdfstring{start\+Flying()}{startFlying()}}
+{\footnotesize\ttfamily void glimac\+::\+Constrained\+Camera\+::start\+Flying (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set Camera to flying 
+
+Definition at line 104 of file Constrained\+Camera.\+hpp.
+
+\mbox{\Hypertarget{classglimac_1_1_constrained_camera_a532520a86171f57f721c37a9da6b7232}\label{classglimac_1_1_constrained_camera_a532520a86171f57f721c37a9da6b7232}} 
+\index{glimac\+::\+Constrained\+Camera@{glimac\+::\+Constrained\+Camera}!stop\+Flying@{stop\+Flying}}
+\index{stop\+Flying@{stop\+Flying}!glimac\+::\+Constrained\+Camera@{glimac\+::\+Constrained\+Camera}}
+\subsubsection{\texorpdfstring{stop\+Flying()}{stopFlying()}}
+{\footnotesize\ttfamily void glimac\+::\+Constrained\+Camera\+::stop\+Flying (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set Camera to not flying 
+
+Definition at line 111 of file Constrained\+Camera.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+glimac/include/glimac/\hyperlink{_constrained_camera_8hpp}{Constrained\+Camera.\+hpp}\item 
+glimac/src/\hyperlink{_constrained_camera_8cpp}{Constrained\+Camera.\+cpp}\end{DoxyCompactItemize}

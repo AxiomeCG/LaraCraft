@@ -1,0 +1,124 @@
+\hypertarget{classglimac_1_1_s_d_l_window_manager}{}\section{glimac\+:\+:S\+D\+L\+Window\+Manager Class Reference}
+\label{classglimac_1_1_s_d_l_window_manager}\index{glimac\+::\+S\+D\+L\+Window\+Manager@{glimac\+::\+S\+D\+L\+Window\+Manager}}
+
+
+{\ttfamily \#include $<$S\+D\+L\+Window\+Manager.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classglimac_1_1_s_d_l_window_manager_aaddb3bc2ec58bc1e818276e81605520f}{S\+D\+L\+Window\+Manager} (uint32\+\_\+t width, uint32\+\_\+t height, const char $\ast$title)
+\item 
+\hyperlink{classglimac_1_1_s_d_l_window_manager_a135c3b4ec63bf47ce3b39f2485a0026e}{$\sim$\+S\+D\+L\+Window\+Manager} ()
+\item 
+bool \hyperlink{classglimac_1_1_s_d_l_window_manager_a4b2fd3e74f00c28d3b03e0cff3bb0131}{poll\+Event} (S\+D\+L\+\_\+\+Event \&e)
+\item 
+bool \hyperlink{classglimac_1_1_s_d_l_window_manager_afa3e15ceca501ac52df29b1906cbb083}{is\+Key\+Pressed} (S\+D\+L\+Key key) const
+\item 
+bool \hyperlink{classglimac_1_1_s_d_l_window_manager_a3f970279f069c97d64845687f1af5743}{is\+Mouse\+Button\+Pressed} (uint32\+\_\+t button) const
+\item 
+\hyperlink{group__core__types_ga9e6ce9cfc7919976b318197e18d8a065}{glm\+::ivec2} \hyperlink{classglimac_1_1_s_d_l_window_manager_aac32964a8c7e0e0e790b8fab29ac2831}{get\+Mouse\+Position} () const
+\item 
+void \hyperlink{classglimac_1_1_s_d_l_window_manager_aee6b4f60e5b418a99d35360aea48bd41}{swap\+Buffers} ()
+\item 
+float \hyperlink{classglimac_1_1_s_d_l_window_manager_ae79e8321234999083adda1287cf825fe}{get\+Time} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 9 of file S\+D\+L\+Window\+Manager.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classglimac_1_1_s_d_l_window_manager_aaddb3bc2ec58bc1e818276e81605520f}\label{classglimac_1_1_s_d_l_window_manager_aaddb3bc2ec58bc1e818276e81605520f}} 
+\index{glimac\+::\+S\+D\+L\+Window\+Manager@{glimac\+::\+S\+D\+L\+Window\+Manager}!S\+D\+L\+Window\+Manager@{S\+D\+L\+Window\+Manager}}
+\index{S\+D\+L\+Window\+Manager@{S\+D\+L\+Window\+Manager}!glimac\+::\+S\+D\+L\+Window\+Manager@{glimac\+::\+S\+D\+L\+Window\+Manager}}
+\subsubsection{\texorpdfstring{S\+D\+L\+Window\+Manager()}{SDLWindowManager()}}
+{\footnotesize\ttfamily glimac\+::\+S\+D\+L\+Window\+Manager\+::\+S\+D\+L\+Window\+Manager (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{width,  }\item[{uint32\+\_\+t}]{height,  }\item[{const char $\ast$}]{title }\end{DoxyParamCaption})}
+
+
+
+Definition at line 6 of file S\+D\+L\+Window\+Manager.\+cpp.
+
+\mbox{\Hypertarget{classglimac_1_1_s_d_l_window_manager_a135c3b4ec63bf47ce3b39f2485a0026e}\label{classglimac_1_1_s_d_l_window_manager_a135c3b4ec63bf47ce3b39f2485a0026e}} 
+\index{glimac\+::\+S\+D\+L\+Window\+Manager@{glimac\+::\+S\+D\+L\+Window\+Manager}!````~S\+D\+L\+Window\+Manager@{$\sim$\+S\+D\+L\+Window\+Manager}}
+\index{````~S\+D\+L\+Window\+Manager@{$\sim$\+S\+D\+L\+Window\+Manager}!glimac\+::\+S\+D\+L\+Window\+Manager@{glimac\+::\+S\+D\+L\+Window\+Manager}}
+\subsubsection{\texorpdfstring{$\sim$\+S\+D\+L\+Window\+Manager()}{~SDLWindowManager()}}
+{\footnotesize\ttfamily glimac\+::\+S\+D\+L\+Window\+Manager\+::$\sim$\+S\+D\+L\+Window\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 18 of file S\+D\+L\+Window\+Manager.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglimac_1_1_s_d_l_window_manager_aac32964a8c7e0e0e790b8fab29ac2831}\label{classglimac_1_1_s_d_l_window_manager_aac32964a8c7e0e0e790b8fab29ac2831}} 
+\index{glimac\+::\+S\+D\+L\+Window\+Manager@{glimac\+::\+S\+D\+L\+Window\+Manager}!get\+Mouse\+Position@{get\+Mouse\+Position}}
+\index{get\+Mouse\+Position@{get\+Mouse\+Position}!glimac\+::\+S\+D\+L\+Window\+Manager@{glimac\+::\+S\+D\+L\+Window\+Manager}}
+\subsubsection{\texorpdfstring{get\+Mouse\+Position()}{getMousePosition()}}
+{\footnotesize\ttfamily \hyperlink{group__core__types_ga9e6ce9cfc7919976b318197e18d8a065}{glm\+::ivec2} glimac\+::\+S\+D\+L\+Window\+Manager\+::get\+Mouse\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 35 of file S\+D\+L\+Window\+Manager.\+cpp.
+
+\mbox{\Hypertarget{classglimac_1_1_s_d_l_window_manager_ae79e8321234999083adda1287cf825fe}\label{classglimac_1_1_s_d_l_window_manager_ae79e8321234999083adda1287cf825fe}} 
+\index{glimac\+::\+S\+D\+L\+Window\+Manager@{glimac\+::\+S\+D\+L\+Window\+Manager}!get\+Time@{get\+Time}}
+\index{get\+Time@{get\+Time}!glimac\+::\+S\+D\+L\+Window\+Manager@{glimac\+::\+S\+D\+L\+Window\+Manager}}
+\subsubsection{\texorpdfstring{get\+Time()}{getTime()}}
+{\footnotesize\ttfamily float glimac\+::\+S\+D\+L\+Window\+Manager\+::get\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 45 of file S\+D\+L\+Window\+Manager.\+cpp.
+
+\mbox{\Hypertarget{classglimac_1_1_s_d_l_window_manager_afa3e15ceca501ac52df29b1906cbb083}\label{classglimac_1_1_s_d_l_window_manager_afa3e15ceca501ac52df29b1906cbb083}} 
+\index{glimac\+::\+S\+D\+L\+Window\+Manager@{glimac\+::\+S\+D\+L\+Window\+Manager}!is\+Key\+Pressed@{is\+Key\+Pressed}}
+\index{is\+Key\+Pressed@{is\+Key\+Pressed}!glimac\+::\+S\+D\+L\+Window\+Manager@{glimac\+::\+S\+D\+L\+Window\+Manager}}
+\subsubsection{\texorpdfstring{is\+Key\+Pressed()}{isKeyPressed()}}
+{\footnotesize\ttfamily bool glimac\+::\+S\+D\+L\+Window\+Manager\+::is\+Key\+Pressed (\begin{DoxyParamCaption}\item[{S\+D\+L\+Key}]{key }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 26 of file S\+D\+L\+Window\+Manager.\+cpp.
+
+\mbox{\Hypertarget{classglimac_1_1_s_d_l_window_manager_a3f970279f069c97d64845687f1af5743}\label{classglimac_1_1_s_d_l_window_manager_a3f970279f069c97d64845687f1af5743}} 
+\index{glimac\+::\+S\+D\+L\+Window\+Manager@{glimac\+::\+S\+D\+L\+Window\+Manager}!is\+Mouse\+Button\+Pressed@{is\+Mouse\+Button\+Pressed}}
+\index{is\+Mouse\+Button\+Pressed@{is\+Mouse\+Button\+Pressed}!glimac\+::\+S\+D\+L\+Window\+Manager@{glimac\+::\+S\+D\+L\+Window\+Manager}}
+\subsubsection{\texorpdfstring{is\+Mouse\+Button\+Pressed()}{isMouseButtonPressed()}}
+{\footnotesize\ttfamily bool glimac\+::\+S\+D\+L\+Window\+Manager\+::is\+Mouse\+Button\+Pressed (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{button }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 31 of file S\+D\+L\+Window\+Manager.\+cpp.
+
+\mbox{\Hypertarget{classglimac_1_1_s_d_l_window_manager_a4b2fd3e74f00c28d3b03e0cff3bb0131}\label{classglimac_1_1_s_d_l_window_manager_a4b2fd3e74f00c28d3b03e0cff3bb0131}} 
+\index{glimac\+::\+S\+D\+L\+Window\+Manager@{glimac\+::\+S\+D\+L\+Window\+Manager}!poll\+Event@{poll\+Event}}
+\index{poll\+Event@{poll\+Event}!glimac\+::\+S\+D\+L\+Window\+Manager@{glimac\+::\+S\+D\+L\+Window\+Manager}}
+\subsubsection{\texorpdfstring{poll\+Event()}{pollEvent()}}
+{\footnotesize\ttfamily bool glimac\+::\+S\+D\+L\+Window\+Manager\+::poll\+Event (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Event \&}]{e }\end{DoxyParamCaption})}
+
+
+
+Definition at line 22 of file S\+D\+L\+Window\+Manager.\+cpp.
+
+\mbox{\Hypertarget{classglimac_1_1_s_d_l_window_manager_aee6b4f60e5b418a99d35360aea48bd41}\label{classglimac_1_1_s_d_l_window_manager_aee6b4f60e5b418a99d35360aea48bd41}} 
+\index{glimac\+::\+S\+D\+L\+Window\+Manager@{glimac\+::\+S\+D\+L\+Window\+Manager}!swap\+Buffers@{swap\+Buffers}}
+\index{swap\+Buffers@{swap\+Buffers}!glimac\+::\+S\+D\+L\+Window\+Manager@{glimac\+::\+S\+D\+L\+Window\+Manager}}
+\subsubsection{\texorpdfstring{swap\+Buffers()}{swapBuffers()}}
+{\footnotesize\ttfamily void glimac\+::\+S\+D\+L\+Window\+Manager\+::swap\+Buffers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 41 of file S\+D\+L\+Window\+Manager.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+glimac/include/glimac/\hyperlink{_s_d_l_window_manager_8hpp}{S\+D\+L\+Window\+Manager.\+hpp}\item 
+glimac/src/\hyperlink{_s_d_l_window_manager_8cpp}{S\+D\+L\+Window\+Manager.\+cpp}\end{DoxyCompactItemize}

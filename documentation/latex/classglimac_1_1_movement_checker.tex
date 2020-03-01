@@ -1,0 +1,113 @@
+\hypertarget{classglimac_1_1_movement_checker}{}\section{glimac\+:\+:Movement\+Checker Class Reference}
+\label{classglimac_1_1_movement_checker}\index{glimac\+::\+Movement\+Checker@{glimac\+::\+Movement\+Checker}}
+
+
+{\ttfamily \#include $<$Movement\+Checker.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classglimac_1_1_movement_checker_aa1caa8e0675e3c877e2c4f398e150016}{Movement\+Checker} (std\+::vector$<$ std\+::vector$<$ float $>$$>$ height\+Data, std\+::vector$<$ std\+::vector$<$ \hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3} $>$$>$ vegetation\+Data)
+\item 
+bool \hyperlink{classglimac_1_1_movement_checker_a6071f115812fb9ee54e71b6fb64ace2b}{is\+Within\+Boundaries} (\hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3} future\+Position)
+\item 
+bool \hyperlink{classglimac_1_1_movement_checker_a0ec58cde714926cf1f7b7e9d8c9ca1df}{can\+Move\+To\+The\+Other\+Cube} (\hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3} current\+Position, \hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3} future\+Position)
+\item 
+\hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3} \hyperlink{classglimac_1_1_movement_checker_a42d9202e15606562e493f70ca3305e1b}{leveled\+Future\+Position} (\hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3} current\+Position, \hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3} future\+Position, float height\+Of\+Entity)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classglimac_1_1_movement_checker}{Movement\+Checker} allowing movement or not 
+
+Definition at line 16 of file Movement\+Checker.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classglimac_1_1_movement_checker_aa1caa8e0675e3c877e2c4f398e150016}\label{classglimac_1_1_movement_checker_aa1caa8e0675e3c877e2c4f398e150016}} 
+\index{glimac\+::\+Movement\+Checker@{glimac\+::\+Movement\+Checker}!Movement\+Checker@{Movement\+Checker}}
+\index{Movement\+Checker@{Movement\+Checker}!glimac\+::\+Movement\+Checker@{glimac\+::\+Movement\+Checker}}
+\subsubsection{\texorpdfstring{Movement\+Checker()}{MovementChecker()}}
+{\footnotesize\ttfamily glimac\+::\+Movement\+Checker\+::\+Movement\+Checker (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ float $>$$>$}]{height\+Data,  }\item[{std\+::vector$<$ std\+::vector$<$ \hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3} $>$$>$}]{vegetation\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor for the \hyperlink{classglimac_1_1_movement_checker}{Movement\+Checker} 
+\begin{DoxyParams}{Parameters}
+{\em height\+Data} & Data of the \hyperlink{classglimac_1_1_height_map}{Height\+Map} \\
+\hline
+{\em vegetation\+Data} & Data of the \hyperlink{classglimac_1_1_vegetation_map}{Vegetation\+Map} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 23 of file Movement\+Checker.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classglimac_1_1_movement_checker_a0ec58cde714926cf1f7b7e9d8c9ca1df}\label{classglimac_1_1_movement_checker_a0ec58cde714926cf1f7b7e9d8c9ca1df}} 
+\index{glimac\+::\+Movement\+Checker@{glimac\+::\+Movement\+Checker}!can\+Move\+To\+The\+Other\+Cube@{can\+Move\+To\+The\+Other\+Cube}}
+\index{can\+Move\+To\+The\+Other\+Cube@{can\+Move\+To\+The\+Other\+Cube}!glimac\+::\+Movement\+Checker@{glimac\+::\+Movement\+Checker}}
+\subsubsection{\texorpdfstring{can\+Move\+To\+The\+Other\+Cube()}{canMoveToTheOtherCube()}}
+{\footnotesize\ttfamily bool glimac\+::\+Movement\+Checker\+::can\+Move\+To\+The\+Other\+Cube (\begin{DoxyParamCaption}\item[{\hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3}}]{current\+Position,  }\item[{\hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3}}]{future\+Position }\end{DoxyParamCaption})}
+
+Test whether or not the entity can move to another cube 
+\begin{DoxyParams}{Parameters}
+{\em current\+Position} & Current position of the entity \\
+\hline
+{\em future\+Position} & Future position of the entity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if can move, false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 29 of file Movement\+Checker.\+cpp.
+
+\mbox{\Hypertarget{classglimac_1_1_movement_checker_a6071f115812fb9ee54e71b6fb64ace2b}\label{classglimac_1_1_movement_checker_a6071f115812fb9ee54e71b6fb64ace2b}} 
+\index{glimac\+::\+Movement\+Checker@{glimac\+::\+Movement\+Checker}!is\+Within\+Boundaries@{is\+Within\+Boundaries}}
+\index{is\+Within\+Boundaries@{is\+Within\+Boundaries}!glimac\+::\+Movement\+Checker@{glimac\+::\+Movement\+Checker}}
+\subsubsection{\texorpdfstring{is\+Within\+Boundaries()}{isWithinBoundaries()}}
+{\footnotesize\ttfamily bool glimac\+::\+Movement\+Checker\+::is\+Within\+Boundaries (\begin{DoxyParamCaption}\item[{\hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3}}]{future\+Position }\end{DoxyParamCaption})}
+
+Test whether or not the future position is within the boundaries of the map 
+\begin{DoxyParams}{Parameters}
+{\em future\+Position} & Future position of the entity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if within boundaries, false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 11 of file Movement\+Checker.\+cpp.
+
+\mbox{\Hypertarget{classglimac_1_1_movement_checker_a42d9202e15606562e493f70ca3305e1b}\label{classglimac_1_1_movement_checker_a42d9202e15606562e493f70ca3305e1b}} 
+\index{glimac\+::\+Movement\+Checker@{glimac\+::\+Movement\+Checker}!leveled\+Future\+Position@{leveled\+Future\+Position}}
+\index{leveled\+Future\+Position@{leveled\+Future\+Position}!glimac\+::\+Movement\+Checker@{glimac\+::\+Movement\+Checker}}
+\subsubsection{\texorpdfstring{leveled\+Future\+Position()}{leveledFuturePosition()}}
+{\footnotesize\ttfamily \hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3} glimac\+::\+Movement\+Checker\+::leveled\+Future\+Position (\begin{DoxyParamCaption}\item[{\hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3}}]{current\+Position,  }\item[{\hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3}}]{future\+Position,  }\item[{float}]{height\+Of\+Entity }\end{DoxyParamCaption})}
+
+Level future position 
+\begin{DoxyParams}{Parameters}
+{\em current\+Position} & Current position of the entity \\
+\hline
+{\em future\+Position} & Future position of the entity \\
+\hline
+{\em height\+Of\+Entity} & Height of the entity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 50 of file Movement\+Checker.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+glimac/include/glimac/\hyperlink{_movement_checker_8hpp}{Movement\+Checker.\+hpp}\item 
+glimac/src/\hyperlink{_movement_checker_8cpp}{Movement\+Checker.\+cpp}\end{DoxyCompactItemize}

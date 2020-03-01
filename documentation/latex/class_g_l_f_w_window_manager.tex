@@ -1,0 +1,196 @@
+\hypertarget{class_g_l_f_w_window_manager}{}\section{G\+L\+F\+W\+Window\+Manager Class Reference}
+\label{class_g_l_f_w_window_manager}\index{G\+L\+F\+W\+Window\+Manager@{G\+L\+F\+W\+Window\+Manager}}
+
+
+{\ttfamily \#include $<$G\+L\+F\+W\+Window\+Manager.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_g_l_f_w_window_manager_a137231d0368f438f0a053c763078f397}{G\+L\+F\+W\+Window\+Manager} (int width, int height, const char $\ast$app\+Name, \hyperlink{namespacewindow_modes_ad00676c38b0aa6cac2c15a7d3a8748e4}{window\+Modes\+::\+Window\+Mode} window\+Mode)
+\item 
+\hyperlink{class_g_l_f_w_window_manager_a3e5bc2c912c04fce110f034fa779957c}{$\sim$\+G\+L\+F\+W\+Window\+Manager} ()
+\item 
+G\+L\+F\+Wwindow $\ast$ \hyperlink{class_g_l_f_w_window_manager_a5e1013598a0231e8d007302bde7530f1}{get\+Window} ()
+\item 
+int \hyperlink{class_g_l_f_w_window_manager_a9e0b406a5a51f6eab704a3a040699754}{window\+Should\+Close} ()
+\item 
+void \hyperlink{class_g_l_f_w_window_manager_aa142a9ea2b49460c3992a5f706b22579}{swap\+Buffers} ()
+\item 
+void \hyperlink{class_g_l_f_w_window_manager_a9f79fd3595b9681b04898ef0e11e10bd}{poll\+Event} ()
+\item 
+int \hyperlink{class_g_l_f_w_window_manager_aee22f247d0e79d1f51a4eed39b0b90e6}{get\+Mouse\+Button} (int mouse\+Button\+Id)
+\item 
+int \hyperlink{class_g_l_f_w_window_manager_add348ae1a74b7d33d18df173277859d2}{get\+Key} (int key)
+\item 
+void \hyperlink{class_g_l_f_w_window_manager_a5b283783f61366b19b3270d8fa7020f0}{get\+Cursor\+Position} (double $\ast$pX, double $\ast$pY)
+\item 
+void \hyperlink{class_g_l_f_w_window_manager_ac42e3f0fbc9f348b37b50a3cbb3a0205}{handle\+Events\+For\+F\+P\+S\+Constrained\+View} (\hyperlink{classglimac_1_1_constrained_camera}{glimac\+::\+Constrained\+Camera} \&camera, float angle)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Window manager to handle G\+L\+FW and simplify the code. 
+
+Definition at line 26 of file G\+L\+F\+W\+Window\+Manager.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_l_f_w_window_manager_a137231d0368f438f0a053c763078f397}\label{class_g_l_f_w_window_manager_a137231d0368f438f0a053c763078f397}} 
+\index{G\+L\+F\+W\+Window\+Manager@{G\+L\+F\+W\+Window\+Manager}!G\+L\+F\+W\+Window\+Manager@{G\+L\+F\+W\+Window\+Manager}}
+\index{G\+L\+F\+W\+Window\+Manager@{G\+L\+F\+W\+Window\+Manager}!G\+L\+F\+W\+Window\+Manager@{G\+L\+F\+W\+Window\+Manager}}
+\subsubsection{\texorpdfstring{G\+L\+F\+W\+Window\+Manager()}{GLFWWindowManager()}}
+{\footnotesize\ttfamily G\+L\+F\+W\+Window\+Manager\+::\+G\+L\+F\+W\+Window\+Manager (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height,  }\item[{const char $\ast$}]{app\+Name,  }\item[{\hyperlink{namespacewindow_modes_ad00676c38b0aa6cac2c15a7d3a8748e4}{window\+Modes\+::\+Window\+Mode}}]{window\+Mode }\end{DoxyParamCaption})}
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em width} & Width of the window \\
+\hline
+{\em height} & Height of the window \\
+\hline
+{\em app\+Name} & Name of the application \\
+\hline
+{\em window\+Mode} & Mode of the window \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 4 of file G\+L\+F\+W\+Window\+Manager.\+cpp.
+
+\mbox{\Hypertarget{class_g_l_f_w_window_manager_a3e5bc2c912c04fce110f034fa779957c}\label{class_g_l_f_w_window_manager_a3e5bc2c912c04fce110f034fa779957c}} 
+\index{G\+L\+F\+W\+Window\+Manager@{G\+L\+F\+W\+Window\+Manager}!````~G\+L\+F\+W\+Window\+Manager@{$\sim$\+G\+L\+F\+W\+Window\+Manager}}
+\index{````~G\+L\+F\+W\+Window\+Manager@{$\sim$\+G\+L\+F\+W\+Window\+Manager}!G\+L\+F\+W\+Window\+Manager@{G\+L\+F\+W\+Window\+Manager}}
+\subsubsection{\texorpdfstring{$\sim$\+G\+L\+F\+W\+Window\+Manager()}{~GLFWWindowManager()}}
+{\footnotesize\ttfamily G\+L\+F\+W\+Window\+Manager\+::$\sim$\+G\+L\+F\+W\+Window\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor. Flushes the G\+L\+FW objects generated in the initialization 
+
+Definition at line 10 of file G\+L\+F\+W\+Window\+Manager.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_l_f_w_window_manager_a5b283783f61366b19b3270d8fa7020f0}\label{class_g_l_f_w_window_manager_a5b283783f61366b19b3270d8fa7020f0}} 
+\index{G\+L\+F\+W\+Window\+Manager@{G\+L\+F\+W\+Window\+Manager}!get\+Cursor\+Position@{get\+Cursor\+Position}}
+\index{get\+Cursor\+Position@{get\+Cursor\+Position}!G\+L\+F\+W\+Window\+Manager@{G\+L\+F\+W\+Window\+Manager}}
+\subsubsection{\texorpdfstring{get\+Cursor\+Position()}{getCursorPosition()}}
+{\footnotesize\ttfamily void G\+L\+F\+W\+Window\+Manager\+::get\+Cursor\+Position (\begin{DoxyParamCaption}\item[{double $\ast$}]{pX,  }\item[{double $\ast$}]{pY }\end{DoxyParamCaption})}
+
+Writes in the parameters to get the cursor position 
+\begin{DoxyParams}{Parameters}
+{\em pX} & pointer on the X value to write \\
+\hline
+{\em pY} & pointer on the Y value to write \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 61 of file G\+L\+F\+W\+Window\+Manager.\+cpp.
+
+\mbox{\Hypertarget{class_g_l_f_w_window_manager_add348ae1a74b7d33d18df173277859d2}\label{class_g_l_f_w_window_manager_add348ae1a74b7d33d18df173277859d2}} 
+\index{G\+L\+F\+W\+Window\+Manager@{G\+L\+F\+W\+Window\+Manager}!get\+Key@{get\+Key}}
+\index{get\+Key@{get\+Key}!G\+L\+F\+W\+Window\+Manager@{G\+L\+F\+W\+Window\+Manager}}
+\subsubsection{\texorpdfstring{get\+Key()}{getKey()}}
+{\footnotesize\ttfamily int G\+L\+F\+W\+Window\+Manager\+::get\+Key (\begin{DoxyParamCaption}\item[{int}]{key }\end{DoxyParamCaption})}
+
+Returns the status of the asked keyboard key 
+\begin{DoxyParams}{Parameters}
+{\em key} & G\+L\+FW id of the keyboard key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int that represents the status of the asked key 
+\end{DoxyReturn}
+
+
+Definition at line 59 of file G\+L\+F\+W\+Window\+Manager.\+cpp.
+
+\mbox{\Hypertarget{class_g_l_f_w_window_manager_aee22f247d0e79d1f51a4eed39b0b90e6}\label{class_g_l_f_w_window_manager_aee22f247d0e79d1f51a4eed39b0b90e6}} 
+\index{G\+L\+F\+W\+Window\+Manager@{G\+L\+F\+W\+Window\+Manager}!get\+Mouse\+Button@{get\+Mouse\+Button}}
+\index{get\+Mouse\+Button@{get\+Mouse\+Button}!G\+L\+F\+W\+Window\+Manager@{G\+L\+F\+W\+Window\+Manager}}
+\subsubsection{\texorpdfstring{get\+Mouse\+Button()}{getMouseButton()}}
+{\footnotesize\ttfamily int G\+L\+F\+W\+Window\+Manager\+::get\+Mouse\+Button (\begin{DoxyParamCaption}\item[{int}]{mouse\+Button\+Id }\end{DoxyParamCaption})}
+
+Returns the status of the asked mouse button 
+\begin{DoxyParams}{Parameters}
+{\em mouse\+Button\+Id} & G\+L\+FW id of the mouse button \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int that represents the status of the asked key 
+\end{DoxyReturn}
+
+
+Definition at line 55 of file G\+L\+F\+W\+Window\+Manager.\+cpp.
+
+\mbox{\Hypertarget{class_g_l_f_w_window_manager_a5e1013598a0231e8d007302bde7530f1}\label{class_g_l_f_w_window_manager_a5e1013598a0231e8d007302bde7530f1}} 
+\index{G\+L\+F\+W\+Window\+Manager@{G\+L\+F\+W\+Window\+Manager}!get\+Window@{get\+Window}}
+\index{get\+Window@{get\+Window}!G\+L\+F\+W\+Window\+Manager@{G\+L\+F\+W\+Window\+Manager}}
+\subsubsection{\texorpdfstring{get\+Window()}{getWindow()}}
+{\footnotesize\ttfamily G\+L\+F\+Wwindow $\ast$ G\+L\+F\+W\+Window\+Manager\+::get\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Getter on the G\+L\+FW window object \begin{DoxyReturn}{Returns}
+G\+L\+FW window object 
+\end{DoxyReturn}
+
+
+Definition at line 45 of file G\+L\+F\+W\+Window\+Manager.\+cpp.
+
+\mbox{\Hypertarget{class_g_l_f_w_window_manager_ac42e3f0fbc9f348b37b50a3cbb3a0205}\label{class_g_l_f_w_window_manager_ac42e3f0fbc9f348b37b50a3cbb3a0205}} 
+\index{G\+L\+F\+W\+Window\+Manager@{G\+L\+F\+W\+Window\+Manager}!handle\+Events\+For\+F\+P\+S\+Constrained\+View@{handle\+Events\+For\+F\+P\+S\+Constrained\+View}}
+\index{handle\+Events\+For\+F\+P\+S\+Constrained\+View@{handle\+Events\+For\+F\+P\+S\+Constrained\+View}!G\+L\+F\+W\+Window\+Manager@{G\+L\+F\+W\+Window\+Manager}}
+\subsubsection{\texorpdfstring{handle\+Events\+For\+F\+P\+S\+Constrained\+View()}{handleEventsForFPSConstrainedView()}}
+{\footnotesize\ttfamily void G\+L\+F\+W\+Window\+Manager\+::handle\+Events\+For\+F\+P\+S\+Constrained\+View (\begin{DoxyParamCaption}\item[{\hyperlink{classglimac_1_1_constrained_camera}{glimac\+::\+Constrained\+Camera} \&}]{camera,  }\item[{float}]{angle }\end{DoxyParamCaption})}
+
+Handles the inputs received to simulate an F\+PS view with a Constrained\+Camera \begin{DoxySeeAlso}{See also}
+Constrained\+Camera 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em camera} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 65 of file G\+L\+F\+W\+Window\+Manager.\+cpp.
+
+\mbox{\Hypertarget{class_g_l_f_w_window_manager_a9f79fd3595b9681b04898ef0e11e10bd}\label{class_g_l_f_w_window_manager_a9f79fd3595b9681b04898ef0e11e10bd}} 
+\index{G\+L\+F\+W\+Window\+Manager@{G\+L\+F\+W\+Window\+Manager}!poll\+Event@{poll\+Event}}
+\index{poll\+Event@{poll\+Event}!G\+L\+F\+W\+Window\+Manager@{G\+L\+F\+W\+Window\+Manager}}
+\subsubsection{\texorpdfstring{poll\+Event()}{pollEvent()}}
+{\footnotesize\ttfamily void G\+L\+F\+W\+Window\+Manager\+::poll\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Polls an event in the event queue 
+
+Definition at line 53 of file G\+L\+F\+W\+Window\+Manager.\+cpp.
+
+\mbox{\Hypertarget{class_g_l_f_w_window_manager_aa142a9ea2b49460c3992a5f706b22579}\label{class_g_l_f_w_window_manager_aa142a9ea2b49460c3992a5f706b22579}} 
+\index{G\+L\+F\+W\+Window\+Manager@{G\+L\+F\+W\+Window\+Manager}!swap\+Buffers@{swap\+Buffers}}
+\index{swap\+Buffers@{swap\+Buffers}!G\+L\+F\+W\+Window\+Manager@{G\+L\+F\+W\+Window\+Manager}}
+\subsubsection{\texorpdfstring{swap\+Buffers()}{swapBuffers()}}
+{\footnotesize\ttfamily void G\+L\+F\+W\+Window\+Manager\+::swap\+Buffers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Swaps the rendering buffers with G\+L\+FW 
+
+Definition at line 51 of file G\+L\+F\+W\+Window\+Manager.\+cpp.
+
+\mbox{\Hypertarget{class_g_l_f_w_window_manager_a9e0b406a5a51f6eab704a3a040699754}\label{class_g_l_f_w_window_manager_a9e0b406a5a51f6eab704a3a040699754}} 
+\index{G\+L\+F\+W\+Window\+Manager@{G\+L\+F\+W\+Window\+Manager}!window\+Should\+Close@{window\+Should\+Close}}
+\index{window\+Should\+Close@{window\+Should\+Close}!G\+L\+F\+W\+Window\+Manager@{G\+L\+F\+W\+Window\+Manager}}
+\subsubsection{\texorpdfstring{window\+Should\+Close()}{windowShouldClose()}}
+{\footnotesize\ttfamily int G\+L\+F\+W\+Window\+Manager\+::window\+Should\+Close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns a number that means if the window must be closed. Aimed to break the application loop \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 47 of file G\+L\+F\+W\+Window\+Manager.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+glimac/include/glimac/\hyperlink{_g_l_f_w_window_manager_8hpp}{G\+L\+F\+W\+Window\+Manager.\+hpp}\item 
+glimac/src/\hyperlink{_g_l_f_w_window_manager_8cpp}{G\+L\+F\+W\+Window\+Manager.\+cpp}\end{DoxyCompactItemize}

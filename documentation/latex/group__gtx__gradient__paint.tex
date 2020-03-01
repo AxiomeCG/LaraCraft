@@ -1,0 +1,57 @@
+\hypertarget{group__gtx__gradient__paint}{}\section{G\+L\+M\+\_\+\+G\+T\+X\+\_\+gradient\+\_\+paint}
+\label{group__gtx__gradient__paint}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+gradient\+\_\+paint@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+gradient\+\_\+paint}}
+
+
+Functions that return the color of procedural gradient for specific coordinates. $<$\hyperlink{gradient__paint_8hpp}{glm/gtx/gradient\+\_\+paint.\+hpp}$>$ need to be included to use these functionalities.  
+
+
+Collaboration diagram for G\+L\+M\+\_\+\+G\+T\+X\+\_\+gradient\+\_\+paint\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__gtx__gradient__paint}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} T \hyperlink{group__gtx__gradient__paint_ga864c46234e363137b717119231f422f6}{glm\+::radial\+Gradient} (\hyperlink{structglm_1_1detail_1_1tvec2}{detail\+::tvec2}$<$ T, P $>$ const \&Center, T const \&Radius, \hyperlink{structglm_1_1detail_1_1tvec2}{detail\+::tvec2}$<$ T, P $>$ const \&Focal, \hyperlink{structglm_1_1detail_1_1tvec2}{detail\+::tvec2}$<$ T, P $>$ const \&Position)
+\item 
+{\footnotesize template$<$typename T , precision P$>$ }\\\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} T \hyperlink{group__gtx__gradient__paint_ga01eb377864e98f86bd44378e1b86eb22}{glm\+::linear\+Gradient} (\hyperlink{structglm_1_1detail_1_1tvec2}{detail\+::tvec2}$<$ T, P $>$ const \&Point0, \hyperlink{structglm_1_1detail_1_1tvec2}{detail\+::tvec2}$<$ T, P $>$ const \&Point1, \hyperlink{structglm_1_1detail_1_1tvec2}{detail\+::tvec2}$<$ T, P $>$ const \&Position)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions that return the color of procedural gradient for specific coordinates. $<$\hyperlink{gradient__paint_8hpp}{glm/gtx/gradient\+\_\+paint.\+hpp}$>$ need to be included to use these functionalities. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__gtx__gradient__paint_ga01eb377864e98f86bd44378e1b86eb22}\label{group__gtx__gradient__paint_ga01eb377864e98f86bd44378e1b86eb22}} 
+\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+gradient\+\_\+paint@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+gradient\+\_\+paint}!linear\+Gradient@{linear\+Gradient}}
+\index{linear\+Gradient@{linear\+Gradient}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+gradient\+\_\+paint@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+gradient\+\_\+paint}}
+\subsubsection{\texorpdfstring{linear\+Gradient()}{linearGradient()}}
+{\footnotesize\ttfamily template$<$typename T , precision P$>$ \\
+\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} T glm\+::linear\+Gradient (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1detail_1_1tvec2}{detail\+::tvec2}$<$ T, P $>$ const \&}]{Point0,  }\item[{\hyperlink{structglm_1_1detail_1_1tvec2}{detail\+::tvec2}$<$ T, P $>$ const \&}]{Point1,  }\item[{\hyperlink{structglm_1_1detail_1_1tvec2}{detail\+::tvec2}$<$ T, P $>$ const \&}]{Position }\end{DoxyParamCaption})}
+
+Return a color from a linear gradient. \begin{DoxySeeAlso}{See also}
+-\/ \hyperlink{group__gtx__gradient__paint}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+gradient\+\_\+paint} 
+\end{DoxySeeAlso}
+
+
+Definition at line 34 of file gradient\+\_\+paint.\+inl.
+
+\mbox{\Hypertarget{group__gtx__gradient__paint_ga864c46234e363137b717119231f422f6}\label{group__gtx__gradient__paint_ga864c46234e363137b717119231f422f6}} 
+\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+gradient\+\_\+paint@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+gradient\+\_\+paint}!radial\+Gradient@{radial\+Gradient}}
+\index{radial\+Gradient@{radial\+Gradient}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+gradient\+\_\+paint@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+gradient\+\_\+paint}}
+\subsubsection{\texorpdfstring{radial\+Gradient()}{radialGradient()}}
+{\footnotesize\ttfamily template$<$typename T , precision P$>$ \\
+\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL} T glm\+::radial\+Gradient (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1detail_1_1tvec2}{detail\+::tvec2}$<$ T, P $>$ const \&}]{Center,  }\item[{T const \&}]{Radius,  }\item[{\hyperlink{structglm_1_1detail_1_1tvec2}{detail\+::tvec2}$<$ T, P $>$ const \&}]{Focal,  }\item[{\hyperlink{structglm_1_1detail_1_1tvec2}{detail\+::tvec2}$<$ T, P $>$ const \&}]{Position }\end{DoxyParamCaption})}
+
+Return a color from a radial gradient. \begin{DoxySeeAlso}{See also}
+-\/ \hyperlink{group__gtx__gradient__paint}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+gradient\+\_\+paint} 
+\end{DoxySeeAlso}
+
+
+Definition at line 14 of file gradient\+\_\+paint.\+inl.
+

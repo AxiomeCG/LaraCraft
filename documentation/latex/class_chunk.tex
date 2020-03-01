@@ -1,0 +1,112 @@
+\hypertarget{class_chunk}{}\section{Chunk Class Reference}
+\label{class_chunk}\index{Chunk@{Chunk}}
+
+
+{\ttfamily \#include $<$Chunk.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_chunk_a33bf33185f6730fd5fc53848e2e11cc9}{Chunk} (const \hyperlink{group__core__types_gaa1618f51db67eaa145db101d8c8431d8}{glm\+::vec2} \&position, const \hyperlink{classglimac_1_1_height_map}{Height\+Map} \&height\+Map, const \hyperlink{class_offset_texture_map}{Offset\+Texture\+Map} \&texture\+Map)
+\item 
+const \hyperlink{structglimac_1_1_shape_vertex}{Shape\+Vertex} $\ast$ \hyperlink{class_chunk_ae718ab2053dedc39bdca0db795b1eec1}{get\+Data\+Pointer} () const
+\item 
+std\+::vector$<$ \hyperlink{structglimac_1_1_shape_vertex}{glimac\+::\+Shape\+Vertex} $>$ \hyperlink{class_chunk_a3d98f0c77cbac2a770ccb0447e4b7031}{get\+Data\+Vector} () const
+\item 
+G\+Lsizei \hyperlink{class_chunk_ac4a282e5b7f412244e73b0d3a8177af1}{get\+Vertex\+Count} () const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::vector$<$ std\+::vector$<$ bool $>$ $>$ $>$ \hyperlink{class_chunk_afe86634c18099b7975b0ce2de7a040ec}{is\+Filled3\+D\+Vector}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents a 16$\ast$256$\ast$16 bundle of cubes. In first approximation, a chunk section is made of only one texture. A coordinate (x,y,z) coordinate in the matrix can be either empty (no cube) or filled with a cube of the material. 
+
+Definition at line 24 of file Chunk.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_chunk_a33bf33185f6730fd5fc53848e2e11cc9}\label{class_chunk_a33bf33185f6730fd5fc53848e2e11cc9}} 
+\index{Chunk@{Chunk}!Chunk@{Chunk}}
+\index{Chunk@{Chunk}!Chunk@{Chunk}}
+\subsubsection{\texorpdfstring{Chunk()}{Chunk()}}
+{\footnotesize\ttfamily Chunk\+::\+Chunk (\begin{DoxyParamCaption}\item[{const \hyperlink{group__core__types_gaa1618f51db67eaa145db101d8c8431d8}{glm\+::vec2} \&}]{position,  }\item[{const \hyperlink{classglimac_1_1_height_map}{Height\+Map} \&}]{height\+Map,  }\item[{const \hyperlink{class_offset_texture_map}{Offset\+Texture\+Map} \&}]{texture\+Map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor for the \hyperlink{class_chunk}{Chunk} 
+\begin{DoxyParams}{Parameters}
+{\em position} & Coordinates x and z on the map \\
+\hline
+{\em height\+Map} & The Height\+Map used \\
+\hline
+{\em texture\+Map} & \hyperlink{class_offset_texture_map}{Offset\+Texture\+Map} used \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 33 of file Chunk.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_chunk_ae718ab2053dedc39bdca0db795b1eec1}\label{class_chunk_ae718ab2053dedc39bdca0db795b1eec1}} 
+\index{Chunk@{Chunk}!get\+Data\+Pointer@{get\+Data\+Pointer}}
+\index{get\+Data\+Pointer@{get\+Data\+Pointer}!Chunk@{Chunk}}
+\subsubsection{\texorpdfstring{get\+Data\+Pointer()}{getDataPointer()}}
+{\footnotesize\ttfamily const \hyperlink{structglimac_1_1_shape_vertex}{Shape\+Vertex} $\ast$ Chunk\+::get\+Data\+Pointer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter on the pointer data on vertices. \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 89 of file Chunk.\+cpp.
+
+\mbox{\Hypertarget{class_chunk_a3d98f0c77cbac2a770ccb0447e4b7031}\label{class_chunk_a3d98f0c77cbac2a770ccb0447e4b7031}} 
+\index{Chunk@{Chunk}!get\+Data\+Vector@{get\+Data\+Vector}}
+\index{get\+Data\+Vector@{get\+Data\+Vector}!Chunk@{Chunk}}
+\subsubsection{\texorpdfstring{get\+Data\+Vector()}{getDataVector()}}
+{\footnotesize\ttfamily std\+::vector$<$ \hyperlink{structglimac_1_1_shape_vertex}{glimac\+::\+Shape\+Vertex} $>$ Chunk\+::get\+Data\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter on the vector on vertices. \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 85 of file Chunk.\+cpp.
+
+\mbox{\Hypertarget{class_chunk_ac4a282e5b7f412244e73b0d3a8177af1}\label{class_chunk_ac4a282e5b7f412244e73b0d3a8177af1}} 
+\index{Chunk@{Chunk}!get\+Vertex\+Count@{get\+Vertex\+Count}}
+\index{get\+Vertex\+Count@{get\+Vertex\+Count}!Chunk@{Chunk}}
+\subsubsection{\texorpdfstring{get\+Vertex\+Count()}{getVertexCount()}}
+{\footnotesize\ttfamily G\+Lsizei Chunk\+::get\+Vertex\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter on the number of vertices in the cube \begin{DoxyReturn}{Returns}
+the number of vertices in the cube 
+\end{DoxyReturn}
+
+
+Definition at line 83 of file Chunk.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_chunk_afe86634c18099b7975b0ce2de7a040ec}\label{class_chunk_afe86634c18099b7975b0ce2de7a040ec}} 
+\index{Chunk@{Chunk}!is\+Filled3\+D\+Vector@{is\+Filled3\+D\+Vector}}
+\index{is\+Filled3\+D\+Vector@{is\+Filled3\+D\+Vector}!Chunk@{Chunk}}
+\subsubsection{\texorpdfstring{is\+Filled3\+D\+Vector}{isFilled3DVector}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$std\+::vector$<$bool$>$ $>$ $>$ Chunk\+::is\+Filled3\+D\+Vector}
+
+3D array that tells if there is a cube at this position Beware that the order of the coordinate is not usual (x -\/$>$ z -\/$>$ height (y)) 
+
+Definition at line 87 of file Chunk.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+glimac/include/glimac/\hyperlink{_chunk_8hpp}{Chunk.\+hpp}\item 
+glimac/src/\hyperlink{_chunk_8cpp}{Chunk.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,90 @@
+\hypertarget{class_offset_texture_map}{}\section{Offset\+Texture\+Map Class Reference}
+\label{class_offset_texture_map}\index{Offset\+Texture\+Map@{Offset\+Texture\+Map}}
+
+
+{\ttfamily \#include $<$Offset\+Texture\+Map.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_offset_texture_map_afeb20fdd993b9d4482c4c72384f884d4}{Offset\+Texture\+Map} (const \hyperlink{classglimac_1_1_color_map}{Color\+Map} \&color\+Map)
+\item 
+std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \hyperlink{class_offset_texture_map_a6bbac444751f0796e88bd98548fa5682}{get\+Texture\+Data} () const
+\item 
+unsigned int \hyperlink{class_offset_texture_map_af96d09140f305cebb8e39fabcef79d63}{get\+Width} () const
+\item 
+unsigned int \hyperlink{class_offset_texture_map_a8b02667e403b0a21e817e844a01b8dd4}{get\+Height} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The aim of this class is to optimize the access to the right offset of the Texture while generating the chunks. This map is supposed to be a translation of the color map in offsets. The previous way was to check on generation if this was a Green, or Yellow or whatever color cube. That mean a test for each loop. Due to pipeline architecture of the C\+PU, we were taking a lot of penalties with no real statistic heuristic about what color can show up. Now we are treating only one time the color map to translate it as Texture Map that will have no check, just random access to a vector 
+
+Definition at line 21 of file Offset\+Texture\+Map.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_offset_texture_map_afeb20fdd993b9d4482c4c72384f884d4}\label{class_offset_texture_map_afeb20fdd993b9d4482c4c72384f884d4}} 
+\index{Offset\+Texture\+Map@{Offset\+Texture\+Map}!Offset\+Texture\+Map@{Offset\+Texture\+Map}}
+\index{Offset\+Texture\+Map@{Offset\+Texture\+Map}!Offset\+Texture\+Map@{Offset\+Texture\+Map}}
+\subsubsection{\texorpdfstring{Offset\+Texture\+Map()}{OffsetTextureMap()}}
+{\footnotesize\ttfamily Offset\+Texture\+Map\+::\+Offset\+Texture\+Map (\begin{DoxyParamCaption}\item[{const \hyperlink{classglimac_1_1_color_map}{Color\+Map} \&}]{color\+Map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Constructor for the \hyperlink{class_offset_texture_map}{Offset\+Texture\+Map} 
+\begin{DoxyParams}{Parameters}
+{\em color\+Map} & Color\+Map to reformat for the \hyperlink{class_offset_texture_map}{Offset\+Texture\+Map} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 7 of file Offset\+Texture\+Map.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_offset_texture_map_a8b02667e403b0a21e817e844a01b8dd4}\label{class_offset_texture_map_a8b02667e403b0a21e817e844a01b8dd4}} 
+\index{Offset\+Texture\+Map@{Offset\+Texture\+Map}!get\+Height@{get\+Height}}
+\index{get\+Height@{get\+Height}!Offset\+Texture\+Map@{Offset\+Texture\+Map}}
+\subsubsection{\texorpdfstring{get\+Height()}{getHeight()}}
+{\footnotesize\ttfamily unsigned int Offset\+Texture\+Map\+::get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter for the height of the \hyperlink{class_offset_texture_map}{Offset\+Texture\+Map} \begin{DoxyReturn}{Returns}
+Height of the \hyperlink{class_offset_texture_map}{Offset\+Texture\+Map} 
+\end{DoxyReturn}
+
+
+Definition at line 38 of file Offset\+Texture\+Map.\+cpp.
+
+\mbox{\Hypertarget{class_offset_texture_map_a6bbac444751f0796e88bd98548fa5682}\label{class_offset_texture_map_a6bbac444751f0796e88bd98548fa5682}} 
+\index{Offset\+Texture\+Map@{Offset\+Texture\+Map}!get\+Texture\+Data@{get\+Texture\+Data}}
+\index{get\+Texture\+Data@{get\+Texture\+Data}!Offset\+Texture\+Map@{Offset\+Texture\+Map}}
+\subsubsection{\texorpdfstring{get\+Texture\+Data()}{getTextureData()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ float $>$ $>$ Offset\+Texture\+Map\+::get\+Texture\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter for the data of the \hyperlink{class_offset_texture_map}{Offset\+Texture\+Map} \begin{DoxyReturn}{Returns}
+Data of the \hyperlink{class_offset_texture_map}{Offset\+Texture\+Map} 
+\end{DoxyReturn}
+
+
+Definition at line 40 of file Offset\+Texture\+Map.\+cpp.
+
+\mbox{\Hypertarget{class_offset_texture_map_af96d09140f305cebb8e39fabcef79d63}\label{class_offset_texture_map_af96d09140f305cebb8e39fabcef79d63}} 
+\index{Offset\+Texture\+Map@{Offset\+Texture\+Map}!get\+Width@{get\+Width}}
+\index{get\+Width@{get\+Width}!Offset\+Texture\+Map@{Offset\+Texture\+Map}}
+\subsubsection{\texorpdfstring{get\+Width()}{getWidth()}}
+{\footnotesize\ttfamily unsigned int Offset\+Texture\+Map\+::get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter for the width of the \hyperlink{class_offset_texture_map}{Offset\+Texture\+Map} \begin{DoxyReturn}{Returns}
+Width of the \hyperlink{class_offset_texture_map}{Offset\+Texture\+Map} 
+\end{DoxyReturn}
+
+
+Definition at line 36 of file Offset\+Texture\+Map.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+glimac/include/glimac/\hyperlink{_offset_texture_map_8hpp}{Offset\+Texture\+Map.\+hpp}\item 
+glimac/src/\hyperlink{_offset_texture_map_8cpp}{Offset\+Texture\+Map.\+cpp}\end{DoxyCompactItemize}

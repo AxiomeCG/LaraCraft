@@ -6,7 +6,6 @@
 4. `cmake ../MasterCraft`
 5. `make`
 
-Now you have a bunch of `TP_...` folder containing the different compiled examples/projects.
 For the moment the CMake file is configured to compile only sources that are contained in a folder prefixed by `TP`.
 
 To execute MasterCraft :

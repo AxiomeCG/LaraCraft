@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/TP3_exo5_multi_shaders.dir/exo5_multi_shaders.cpp.o  -o TP3_exo5_multi_shaders ../glimac/libglimac.a -Wl,-Bstatic -lSDLmain -Wl,-Bdynamic -lSDL -lpthread -lGL -lGLU -lGLEW /usr/lib/x86_64-linux-gnu/libglfw.so.3.2 

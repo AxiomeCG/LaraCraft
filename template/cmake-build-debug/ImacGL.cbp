@@ -1,0 +1,1751 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="ImacGL"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\CMake\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\glfw3\;CMake Files\glimac\;CMake Files\TP1\;CMake Files\TP2\;CMake Files\TP3\;CMake Files\TP4\;CMake Files\TP5\;CMake Files\TP_Mastercraft\;CMake Files\TP_template\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glimac">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/glimac/libglimac.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/glimac"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/SDL"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/third-party/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include/glimac"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/glimac/Makefile&quot;  VERBOSE=1 glimac"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/glimac/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/glimac/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/glimac/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glimac/fast">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/glimac/libglimac.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/glimac"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/SDL"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/third-party/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include/glimac"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/glimac/Makefile&quot;  VERBOSE=1 glimac/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/glimac/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/glimac/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/glimac/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP1_exo3_structure_vertex">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1/TP1_exo3_structure_vertex" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/include/SDL"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/third-party/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP1/../glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP1/../glupem/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 TP1_exo3_structure_vertex"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP1_exo3_structure_vertex/fast">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1/TP1_exo3_structure_vertex" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/include/SDL"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/third-party/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP1/../glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP1/../glupem/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 TP1_exo3_structure_vertex/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP1_exo1_triangle_blanc">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1/TP1_exo1_triangle_blanc" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/include/SDL"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/third-party/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP1/../glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP1/../glupem/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 TP1_exo1_triangle_blanc"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP1_exo1_triangle_blanc/fast">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1/TP1_exo1_triangle_blanc" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/include/SDL"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/third-party/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP1/../glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP1/../glupem/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 TP1_exo1_triangle_blanc/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP1_exo4_quad_color">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1/TP1_exo4_quad_color" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/include/SDL"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/third-party/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP1/../glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP1/../glupem/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 TP1_exo4_quad_color"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP1_exo4_quad_color/fast">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1/TP1_exo4_quad_color" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/include/SDL"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/third-party/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP1/../glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP1/../glupem/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 TP1_exo4_quad_color/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP1_exo1_triangle_couleurs">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1/TP1_exo1_triangle_couleurs" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/include/SDL"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/third-party/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP1/../glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP1/../glupem/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 TP1_exo1_triangle_couleurs"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP1_exo1_triangle_couleurs/fast">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1/TP1_exo1_triangle_couleurs" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/include/SDL"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/third-party/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP1/../glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP1/../glupem/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 TP1_exo1_triangle_couleurs/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP2_mandelbrot">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/TP2_mandelbrot" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/include/SDL"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/third-party/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 TP2_mandelbrot"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP2_mandelbrot/fast">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/TP2_mandelbrot" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/include/SDL"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/third-party/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 TP2_mandelbrot/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP2_color2D">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/TP2_color2D" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/include/SDL"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/third-party/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 TP2_color2D"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP2_color2D/fast">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/TP2_color2D" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/include/SDL"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/third-party/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 TP2_color2D/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP2_spin">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/TP2_spin" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/include/SDL"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/third-party/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 TP2_spin"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP2_spin/fast">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/TP2_spin" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/include/SDL"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/third-party/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 TP2_spin/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP2_suite">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/TP2_suite" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/include/SDL"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/third-party/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 TP2_suite"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP2_suite/fast">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/TP2_suite" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/include/SDL"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/third-party/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 TP2_suite/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP2_multiSpin">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/TP2_multiSpin" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/include/SDL"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/third-party/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 TP2_multiSpin"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP2_multiSpin/fast">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/TP2_multiSpin" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/include/SDL"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/third-party/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 TP2_multiSpin/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP2_triforce">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/TP2_triforce" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/include/SDL"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/third-party/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 TP2_triforce"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP2_triforce/fast">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/TP2_triforce" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/include/SDL"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/third-party/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 TP2_triforce/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP3_exo2_luna">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/TP3_exo2_luna" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/include/SDL"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/third-party/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 TP3_exo2_luna"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP3_exo2_luna/fast">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/TP3_exo2_luna" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/include/SDL"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/third-party/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 TP3_exo2_luna/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP3_exo1_sphere">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/TP3_exo1_sphere" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/include/SDL"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/third-party/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 TP3_exo1_sphere"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP3_exo1_sphere/fast">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/TP3_exo1_sphere" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/include/SDL"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/third-party/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 TP3_exo1_sphere/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP3_exo4_multi_tex">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/TP3_exo4_multi_tex" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/include/SDL"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/third-party/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 TP3_exo4_multi_tex"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP3_exo4_multi_tex/fast">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/TP3_exo4_multi_tex" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/include/SDL"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/third-party/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 TP3_exo4_multi_tex/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP3_exo3_earth">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/TP3_exo3_earth" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/include/SDL"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/third-party/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 TP3_exo3_earth"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP3_exo3_earth/fast">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/TP3_exo3_earth" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/include/SDL"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/third-party/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 TP3_exo3_earth/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP3_exo5_multi_shaders">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/TP3_exo5_multi_shaders" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/include/SDL"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/third-party/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 TP3_exo5_multi_shaders"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP3_exo5_multi_shaders/fast">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/TP3_exo5_multi_shaders" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/include/SDL"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/third-party/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 TP3_exo5_multi_shaders/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP3/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP4_exo1_track">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP4/TP4_exo1_track" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP4"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/include/SDL"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/third-party/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP4/Makefile&quot;  VERBOSE=1 TP4_exo1_track"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP4/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP4/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP4/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP4_exo1_track/fast">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP4/TP4_exo1_track" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP4"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/include/SDL"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/third-party/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP4/Makefile&quot;  VERBOSE=1 TP4_exo1_track/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP4/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP4/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP4/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP4_exo2_freefly">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP4/TP4_exo2_freefly" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP4"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/include/SDL"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/third-party/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP4/Makefile&quot;  VERBOSE=1 TP4_exo2_freefly"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP4/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP4/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP4/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP4_exo2_freefly/fast">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP4/TP4_exo2_freefly" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP4"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/include/SDL"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/third-party/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP4/Makefile&quot;  VERBOSE=1 TP4_exo2_freefly/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP4/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP4/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP4/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP5_exo1_dirlight">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP5/TP5_exo1_dirlight" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP5"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/include/SDL"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/third-party/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP5/Makefile&quot;  VERBOSE=1 TP5_exo1_dirlight"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP5/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP5/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP5/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP5_exo1_dirlight/fast">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP5/TP5_exo1_dirlight" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP5"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/include/SDL"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/third-party/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP5/Makefile&quot;  VERBOSE=1 TP5_exo1_dirlight/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP5/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP5/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP5/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP_Mastercraft_main">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_Mastercraft/TP_Mastercraft_main" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_Mastercraft"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/include/SDL"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/third-party/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP_Mastercraft/../glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP_Mastercraft/../glupem/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_Mastercraft/Makefile&quot;  VERBOSE=1 TP_Mastercraft_main"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_Mastercraft/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_Mastercraft/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_Mastercraft/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP_Mastercraft_main/fast">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_Mastercraft/TP_Mastercraft_main" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_Mastercraft"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/include/SDL"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/third-party/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP_Mastercraft/../glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP_Mastercraft/../glupem/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_Mastercraft/Makefile&quot;  VERBOSE=1 TP_Mastercraft_main/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_Mastercraft/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_Mastercraft/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_Mastercraft/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP_Mastercraft_old_main">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_Mastercraft/TP_Mastercraft_old_main" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_Mastercraft"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/include/SDL"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/third-party/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP_Mastercraft/../glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP_Mastercraft/../glupem/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_Mastercraft/Makefile&quot;  VERBOSE=1 TP_Mastercraft_old_main"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_Mastercraft/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_Mastercraft/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_Mastercraft/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP_Mastercraft_old_main/fast">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_Mastercraft/TP_Mastercraft_old_main" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_Mastercraft"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/usr/include/SDL"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/third-party/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP_Mastercraft/../glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP_Mastercraft/../glupem/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_Mastercraft/Makefile&quot;  VERBOSE=1 TP_Mastercraft_old_main/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_Mastercraft/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_Mastercraft/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_Mastercraft/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP_template_SDLtemplate">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_template/TP_template_SDLtemplate" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_template"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/SDL"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/third-party/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_template/Makefile&quot;  VERBOSE=1 TP_template_SDLtemplate"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_template/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_template/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_template/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP_template_SDLtemplate/fast">
+				<Option output="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_template/TP_template_SDLtemplate" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_template"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/SDL"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include"/>
+					<Add directory="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/third-party/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_template/Makefile&quot;  VERBOSE=1 TP_template_SDLtemplate/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_template/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_template/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adam/Bureau/upem/M2/s1/synthese/projet/template/cmake-build-debug/TP_template/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP1">
+			<Option target="TP1_exo3_structure_vertex"/>
+			<Option target="TP1_exo1_triangle_blanc"/>
+			<Option target="TP1_exo4_quad_color"/>
+			<Option target="TP1_exo1_triangle_couleurs"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP1/exo1_triangle_blanc.cpp">
+			<Option target="TP1_exo1_triangle_blanc"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP1/exo1_triangle_couleurs.cpp">
+			<Option target="TP1_exo1_triangle_couleurs"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP1/exo3_structure_vertex.cpp">
+			<Option target="TP1_exo3_structure_vertex"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP1/exo4_quad_color.cpp">
+			<Option target="TP1_exo4_quad_color"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP1/shaders/triangle.fs.glsl">
+			<Option target="TP1_exo3_structure_vertex"/>
+			<Option target="TP1_exo1_triangle_blanc"/>
+			<Option target="TP1_exo4_quad_color"/>
+			<Option target="TP1_exo1_triangle_couleurs"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP1/shaders/triangle.vs.glsl">
+			<Option target="TP1_exo3_structure_vertex"/>
+			<Option target="TP1_exo1_triangle_blanc"/>
+			<Option target="TP1_exo4_quad_color"/>
+			<Option target="TP1_exo1_triangle_couleurs"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP2/color2D.cpp">
+			<Option target="TP2_color2D"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP2/mandelbrot.cpp">
+			<Option target="TP2_mandelbrot"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP2/multiSpin.cpp">
+			<Option target="TP2_multiSpin"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP2/shaders/color2D.fs.glsl">
+			<Option target="TP2_mandelbrot"/>
+			<Option target="TP2_color2D"/>
+			<Option target="TP2_spin"/>
+			<Option target="TP2_suite"/>
+			<Option target="TP2_multiSpin"/>
+			<Option target="TP2_triforce"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP2/shaders/color2D.vs.glsl">
+			<Option target="TP2_mandelbrot"/>
+			<Option target="TP2_color2D"/>
+			<Option target="TP2_spin"/>
+			<Option target="TP2_suite"/>
+			<Option target="TP2_multiSpin"/>
+			<Option target="TP2_triforce"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP2/shaders/grey2D.fs.glsl">
+			<Option target="TP2_mandelbrot"/>
+			<Option target="TP2_color2D"/>
+			<Option target="TP2_spin"/>
+			<Option target="TP2_suite"/>
+			<Option target="TP2_multiSpin"/>
+			<Option target="TP2_triforce"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP2/shaders/halo2D.fs.glsl">
+			<Option target="TP2_mandelbrot"/>
+			<Option target="TP2_color2D"/>
+			<Option target="TP2_spin"/>
+			<Option target="TP2_suite"/>
+			<Option target="TP2_multiSpin"/>
+			<Option target="TP2_triforce"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP2/shaders/mandelbrot.fs.glsl">
+			<Option target="TP2_mandelbrot"/>
+			<Option target="TP2_color2D"/>
+			<Option target="TP2_spin"/>
+			<Option target="TP2_suite"/>
+			<Option target="TP2_multiSpin"/>
+			<Option target="TP2_triforce"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP2/shaders/mandelbrot.vs.glsl">
+			<Option target="TP2_mandelbrot"/>
+			<Option target="TP2_color2D"/>
+			<Option target="TP2_spin"/>
+			<Option target="TP2_suite"/>
+			<Option target="TP2_multiSpin"/>
+			<Option target="TP2_triforce"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP2/shaders/matrix.vs.glsl">
+			<Option target="TP2_mandelbrot"/>
+			<Option target="TP2_color2D"/>
+			<Option target="TP2_spin"/>
+			<Option target="TP2_suite"/>
+			<Option target="TP2_multiSpin"/>
+			<Option target="TP2_triforce"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP2/shaders/proc.fs.glsl">
+			<Option target="TP2_mandelbrot"/>
+			<Option target="TP2_color2D"/>
+			<Option target="TP2_spin"/>
+			<Option target="TP2_suite"/>
+			<Option target="TP2_multiSpin"/>
+			<Option target="TP2_triforce"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP2/shaders/spin.fs.glsl">
+			<Option target="TP2_mandelbrot"/>
+			<Option target="TP2_color2D"/>
+			<Option target="TP2_spin"/>
+			<Option target="TP2_suite"/>
+			<Option target="TP2_multiSpin"/>
+			<Option target="TP2_triforce"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP2/shaders/spin.vs.glsl">
+			<Option target="TP2_mandelbrot"/>
+			<Option target="TP2_color2D"/>
+			<Option target="TP2_spin"/>
+			<Option target="TP2_suite"/>
+			<Option target="TP2_multiSpin"/>
+			<Option target="TP2_triforce"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP2/shaders/tex2D.fs.glsl">
+			<Option target="TP2_mandelbrot"/>
+			<Option target="TP2_color2D"/>
+			<Option target="TP2_spin"/>
+			<Option target="TP2_suite"/>
+			<Option target="TP2_multiSpin"/>
+			<Option target="TP2_triforce"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP2/shaders/tex2D.vs.glsl">
+			<Option target="TP2_mandelbrot"/>
+			<Option target="TP2_color2D"/>
+			<Option target="TP2_spin"/>
+			<Option target="TP2_suite"/>
+			<Option target="TP2_multiSpin"/>
+			<Option target="TP2_triforce"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP2/shaders/triforce.fs.glsl">
+			<Option target="TP2_mandelbrot"/>
+			<Option target="TP2_color2D"/>
+			<Option target="TP2_spin"/>
+			<Option target="TP2_suite"/>
+			<Option target="TP2_multiSpin"/>
+			<Option target="TP2_triforce"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP2/shaders/triforce.vs.glsl">
+			<Option target="TP2_mandelbrot"/>
+			<Option target="TP2_color2D"/>
+			<Option target="TP2_spin"/>
+			<Option target="TP2_suite"/>
+			<Option target="TP2_multiSpin"/>
+			<Option target="TP2_triforce"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP2/spin.cpp">
+			<Option target="TP2_spin"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP2/suite.cpp">
+			<Option target="TP2_suite"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP2/triforce.cpp">
+			<Option target="TP2_triforce"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP3/exo1_sphere.cpp">
+			<Option target="TP3_exo1_sphere"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP3/exo2_luna.cpp">
+			<Option target="TP3_exo2_luna"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP3/exo3_earth.cpp">
+			<Option target="TP3_exo3_earth"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP3/exo4_multi_tex.cpp">
+			<Option target="TP3_exo4_multi_tex"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP3/exo5_multi_shaders.cpp">
+			<Option target="TP3_exo5_multi_shaders"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP3/shaders/3D.vs.glsl">
+			<Option target="TP3_exo2_luna"/>
+			<Option target="TP3_exo1_sphere"/>
+			<Option target="TP3_exo4_multi_tex"/>
+			<Option target="TP3_exo3_earth"/>
+			<Option target="TP3_exo5_multi_shaders"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP3/shaders/multiTex3D.fs.glsl">
+			<Option target="TP3_exo2_luna"/>
+			<Option target="TP3_exo1_sphere"/>
+			<Option target="TP3_exo4_multi_tex"/>
+			<Option target="TP3_exo3_earth"/>
+			<Option target="TP3_exo5_multi_shaders"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP3/shaders/normals.fs.glsl">
+			<Option target="TP3_exo2_luna"/>
+			<Option target="TP3_exo1_sphere"/>
+			<Option target="TP3_exo4_multi_tex"/>
+			<Option target="TP3_exo3_earth"/>
+			<Option target="TP3_exo5_multi_shaders"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP3/shaders/tex3D.fs.glsl">
+			<Option target="TP3_exo2_luna"/>
+			<Option target="TP3_exo1_sphere"/>
+			<Option target="TP3_exo4_multi_tex"/>
+			<Option target="TP3_exo3_earth"/>
+			<Option target="TP3_exo5_multi_shaders"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP4/exo1_track.cpp">
+			<Option target="TP4_exo1_track"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP4/exo2_freefly.cpp">
+			<Option target="TP4_exo2_freefly"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP4/shaders/3D.vs.glsl">
+			<Option target="TP4_exo1_track"/>
+			<Option target="TP4_exo2_freefly"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP4/shaders/multiTex3D.fs.glsl">
+			<Option target="TP4_exo1_track"/>
+			<Option target="TP4_exo2_freefly"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP4/shaders/normals.fs.glsl">
+			<Option target="TP4_exo1_track"/>
+			<Option target="TP4_exo2_freefly"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP4/shaders/tex3D.fs.glsl">
+			<Option target="TP4_exo1_track"/>
+			<Option target="TP4_exo2_freefly"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP5/exo1_dirlight.cpp">
+			<Option target="TP5_exo1_dirlight"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP5/shaders/3D.vs.glsl">
+			<Option target="TP5_exo1_dirlight"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP5/shaders/directionallight.fs.glsl">
+			<Option target="TP5_exo1_dirlight"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP5/shaders/multiTex3D.fs.glsl">
+			<Option target="TP5_exo1_dirlight"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP5/shaders/normals.fs.glsl">
+			<Option target="TP5_exo1_dirlight"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP5/shaders/tex3D.fs.glsl">
+			<Option target="TP5_exo1_dirlight"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP_Mastercraft">
+			<Option target="TP_Mastercraft_main"/>
+			<Option target="TP_Mastercraft_old_main"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP_Mastercraft/main.cpp">
+			<Option target="TP_Mastercraft_main"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP_Mastercraft/old_main.cpp">
+			<Option target="TP_Mastercraft_old_main"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP_Mastercraft/shaders/3D.vs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+			<Option target="TP_Mastercraft_old_main"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP_Mastercraft/shaders/debug.fs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+			<Option target="TP_Mastercraft_old_main"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP_Mastercraft/shaders/debug2D.vs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+			<Option target="TP_Mastercraft_old_main"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP_Mastercraft/shaders/directionallight.fs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+			<Option target="TP_Mastercraft_old_main"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP_Mastercraft/shaders/multiTex3D.fs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+			<Option target="TP_Mastercraft_old_main"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP_Mastercraft/shaders/multiTextured3DCubeLight.fs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+			<Option target="TP_Mastercraft_old_main"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP_Mastercraft/shaders/normals.fs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+			<Option target="TP_Mastercraft_old_main"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP_Mastercraft/shaders/simpleTexture3DLight.fs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+			<Option target="TP_Mastercraft_old_main"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP_Mastercraft/shaders/tex3D.fs.glsl">
+			<Option target="TP_Mastercraft_main"/>
+			<Option target="TP_Mastercraft_old_main"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP_template/SDLtemplate.cpp">
+			<Option target="TP_template_SDLtemplate"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include/glimac/AntiCube.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include/glimac/BBox.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include/glimac/Chunk.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include/glimac/ChunkColumn.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include/glimac/ColorMap.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include/glimac/Cone.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include/glimac/ConstrainedCamera.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include/glimac/Cube.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include/glimac/DirectionalLight.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include/glimac/FilePath.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include/glimac/FreeflyCamera.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include/glimac/GLFWWindowManager.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include/glimac/Geometry.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include/glimac/GlobalProgram.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include/glimac/HeightMap.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include/glimac/Image.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include/glimac/MovementChecker.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include/glimac/MultiTexturedCubeProgram.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include/glimac/OffsetTextureMap.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include/glimac/Pnj.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include/glimac/Program.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include/glimac/SDLWindowManager.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include/glimac/Shader.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include/glimac/SimpleTexturedSkyboxProgram.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include/glimac/Sphere.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include/glimac/TextureOffsetEnum.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include/glimac/TrackballCamera.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include/glimac/Tree.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include/glimac/VegetationMap.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include/glimac/common.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/include/glimac/glm.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/src/AntiCube.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/src/Chunk.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/src/ColorMap.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/src/Cone.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/src/ConstrainedCamera.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/src/Cube.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/src/FreeflyCamera.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/src/GLFWWindowManager.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/src/Geometry.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/src/HeightMap.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/src/Image.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/src/MovementChecker.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/src/OffsetTextureMap.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/src/Pnj.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/src/Program.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/src/SDLWindowManager.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/src/Shader.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/src/Sphere.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/src/TextureOffsetEnum.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/src/TrackballCamera.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/src/Tree.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/src/VegetationMap.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/src/tiny_obj_loader.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/src/tiny_obj_loader.h">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/CMake/FindGLEW.cmake">
+			<Option virtualFolder="CMake Files\CMake\"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/../../../../../../../../../usr/lib/x86_64-linux-gnu/cmake/glfw3/glfw3Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\glfw3\"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/../../../../../../../../../usr/lib/x86_64-linux-gnu/cmake/glfw3/glfw3ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\glfw3\"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/../../../../../../../../../usr/lib/x86_64-linux-gnu/cmake/glfw3/glfw3Targets-none.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\glfw3\"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/../../../../../../../../../usr/lib/x86_64-linux-gnu/cmake/glfw3/glfw3Targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\glfw3\"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/glimac/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\glimac\"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP1/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\TP1\"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP2/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\TP2\"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP3/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\TP3\"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP4/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\TP4\"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP5/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\TP5\"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP_Mastercraft/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\TP_Mastercraft\"/>
+		</Unit>
+		<Unit filename="/home/adam/Bureau/upem/M2/s1/synthese/projet/template/TP_template/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\TP_template\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

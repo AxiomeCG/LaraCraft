@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/TP5_exo1_dirlight.dir/exo1_dirlight.cpp.o  -o TP5_exo1_dirlight ../glimac/libglimac.a -Wl,-Bstatic -lSDLmain -Wl,-Bdynamic -lSDL -lpthread -lGL -lGLU -lGLEW /usr/lib/x86_64-linux-gnu/libglfw.so.3.2 

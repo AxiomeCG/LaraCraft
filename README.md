@@ -1,8 +1,3 @@
-# LaraCraft
-Minecraft clone in OpenGL (C++)
-
-<img src="https://i.imgur.com/fNwcfH3.png" height="400">
-
 # Getting started
 
 1. Clone the repository
@@ -14,8 +9,20 @@ Minecraft clone in OpenGL (C++)
 Now you have a bunch of `TP_...` folder containing the different compiled examples/projects.
 For the moment the CMake file is configured to compile only sources that are contained in a folder prefixed by `TP`.
 
+# Extra libraries used
+
+- GLFW (Tested with OSX and Ubuntu)
+
+
 # Trivia
 
 - Shaders are copied by the cmake command, you need to `cmake` everytime you modify a shader.
-- `glupem` is the lib based on glimac that is used to conduct the project. 
+- glimac has been modified with our classes to perform this MasterCraft.
 
+# Known issues
+
+
+# LaraCraft
+Minecraft clone in OpenGL (C++)
+
+<img src="https://i.imgur.com/fNwcfH3.png" height="400">

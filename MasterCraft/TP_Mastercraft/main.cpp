@@ -296,16 +296,16 @@ int main(int argc, char **argv) {
   assert(pnjImagePtr != nullptr);
 
   std::unique_ptr<HeightMap> heightMapPtr = loadHeightMap(
-      "TP_Mastercraft/assets/terrain/16_16_perlin/map.png", 1.0f, 1.0f, 0.2f);
+      "TP_Mastercraft/assets/terrain/64_64_perlin/map.png", 1.0f, 1.0f, 0.2f);
   assert(heightMapPtr != nullptr);
   auto ptr = heightMapPtr->getHeightData();
 
   std::unique_ptr<ColorMap> colorMapPtr = loadColorMap(
-      "TP_Mastercraft/assets/terrain/16_16_perlin/color.png", 1.0f, 1.0f, 1.0f);
+      "TP_Mastercraft/assets/terrain/64_64_perlin/color.png", 1.0f, 1.0f, 1.0f);
   assert(colorMapPtr != nullptr);
 
   std::unique_ptr<VegetationMap> vegetationMapPtr = loadVegetationMap(
-      "TP_Mastercraft/assets/terrain/16_16_perlin/vege.png", 1.0f, 1.0f, 1.0f);
+      "TP_Mastercraft/assets/terrain/64_64_perlin/vege.png", 1.0f, 1.0f, 1.0f);
   assert(vegetationMapPtr != nullptr);
   auto ptrColor = colorMapPtr->getColorData();
 
